@@ -1,140 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo</title>
-    <url>/2020/12/08/Hexo/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/12/08/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Java学习笔记（一）</title>
-    <url>/2021/03/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<h1 id="Java语言概述"><a href="#Java语言概述" class="headerlink" title="Java语言概述"></a>Java语言概述</h1><p>Java语言的概述一级Java语言的发展史</p>
-<ol>
-<li>JDK：Java开发工具箱，（做Java开发必须安装的，这是最根本的一个环境）不是集成开发环境，JDK中是Java最核心的库</li>
-<li>J2SE：标准版（基础，要学Java，必须先学SE。基础语法＋基础库）</li>
-<li>J2EE：企业版（专门为企业开发软件，为企业提供解决方案，例如OA办公系统）</li>
-<li>J2ME：微型版（专门为微型设备做嵌入式开发。）</li>
-</ol>
-<p>Java诞生十周年改名JavaSE JavaEE JavaME</p>
-<h2 id="Java语言特性"><a href="#Java语言特性" class="headerlink" title="Java语言特性"></a>Java语言特性</h2><h3 id="简单性"><a href="#简单性" class="headerlink" title="简单性"></a>简单性</h3><ul>
-<li>Java中真正操作内存的：JVM（Java虚拟机）</li>
-</ul>
-<p>对于C或C++来说，程序员可以直接通过指针来操作内存，而Java虚拟机执行过程中再去操作内存。</p>
-<p>Java语言底层是C++所以说jvm是使用C++语言写好的一个虚拟的电脑</p>
-<p>Java语言屏蔽了指针概念，程序员不能直接操作指针，或者说程序员不能直接操作内存 ，这种方式也有缺点</p>
-<ul>
-<li>优点：不容易导致内存泄漏，简单</li>
-<li>缺点：效率问题，包括驾驭感都比较差</li>
-</ul>
-<h3 id="Java是堪称完全面向对象的"><a href="#Java是堪称完全面向对象的" class="headerlink" title="Java是堪称完全面向对象的"></a>Java是堪称完全面向对象的</h3><p>采用面向对象的方式，可以让复杂问题简单化</p>
-<h3 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h3><ul>
-<li>自动垃圾回收机制（gc机制）</li>
-</ul>
-<p>相对于C语言来说，Java更健壮，不易导致内存泄漏。JVM负责调度gc机制，程序员不需要干涉。</p>
-<h3 id="Java完美支持多线程开发"><a href="#Java完美支持多线程开发" class="headerlink" title="Java完美支持多线程开发"></a>Java完美支持多线程开发</h3><h3 id="可移植性-跨平台"><a href="#可移植性-跨平台" class="headerlink" title="可移植性/跨平台"></a>可移植性/跨平台</h3><ul>
-<li>Java语言只要编写一次，可以做到到处运行</li>
-</ul>
-<p>JVM这种机制实现了跨平台，</p>
-<ul>
-<li>优点，一次编写到处运行</li>
-<li>缺点：麻烦，对于运行Java程序来说，必须先安装一个JVM</li>
-</ul>
-<h2 id="JDK-JRE-JVM三者之间的关系？"><a href="#JDK-JRE-JVM三者之间的关系？" class="headerlink" title="JDK,JRE,JVM三者之间的关系？"></a>JDK,JRE,JVM三者之间的关系？</h2><ul>
-<li>JDK：Java开发工具箱</li>
-<li>JRE：Java运行环境</li>
-<li>JVM：Java虚拟机</li>
-</ul>
-<p>JDK包括JRE，JRE包括JVM<br>JVM是不可以独立安装的</p>
-<h2 id="对Java的加装与执行的理解（理论比较重要）"><a href="#对Java的加装与执行的理解（理论比较重要）" class="headerlink" title="对Java的加装与执行的理解（理论比较重要）"></a>对Java的加装与执行的理解（理论比较重要）</h2><p>Java程序从编写到最终运行经历了哪些过程？？</p>
-<p>Java程序非常重要的两个阶段</p>
-<ul>
-<li>编译阶段</li>
-<li>运行阶段</li>
-</ul>
-<p>注意：Java程序员直接编写的Java代码（普通文本）是无法执行被JVM识别的。Java程序员编写的Java代码这种普通文本必须经过一个编译，蒋政普通文本代码变成字节码<br>JVM能识别字节码，Java代码这种普通文本变成字节码的过程被称为编译</p>
-<ol>
-<li><p>编译阶段和运行阶段可以再不同的操作系统上完成吗？<br>可以</p>
-</li>
-<li><p>Java源代码一旦编译之后，源代码可以删除吗？只留下字节码可以执行吗？<br>可以，但是最好不要删除源代码，可以重新打开进行修改。</p>
-</li>
-<li><p>放源代码的文件扩展名必须是 .java<br>编译生成的字节码文件扩展名是 .class</p>
-</li>
-<li><p>字节码文件是二进制文件吗？<br>字节码文件不是二进制文件，如果是二进制的话，就不需要JVM，因为操作系统可以直接执行二进制了</p>
-</li>
-<li><p>另外需要注意的是，<br>一个Java源文件可以编译生成多个最终运行的class文件</p>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2021/03/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/</url>
-    <content><![CDATA[<p>@<a href="%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95">TOC</a></p>
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
-
-
-
-<h1 id="一、JVM虚拟机"><a href="#一、JVM虚拟机" class="headerlink" title="一、JVM虚拟机"></a>一、JVM虚拟机</h1><ol>
-<li>栈<br>在方法被调用的时候，该方法需要的内存空间在栈中分配</li>
-<li>堆<br>凡是通过new运算符创建的对象，储存在堆内存中</li>
-<li>方法区<br>类加载器classloader，将xxx.class字节码文件装载到JVM的时候<br>会将字节码文件装载到方法区中，方法区中存放代码片段</li>
-</ol>
-<h1 id="二、内存栈"><a href="#二、内存栈" class="headerlink" title="二、内存栈"></a>二、内存栈</h1><ul>
-<li>栈数据结构stack</li>
-</ul>
-<ol>
-<li>Java语言把常用的数据结构已经都写好了</li>
-<li>进栈入栈push</li>
-<li>出栈pop</li>
-<li>栈帧永远指向栈顶部的元素</li>
-<li>数据结构特点：先进后出</li>
-<li>注意处于栈顶部的元素最具活跃权</li>
-</ol>
-<h1 id="三、方法执行时内存变化"><a href="#三、方法执行时内存变化" class="headerlink" title="三、方法执行时内存变化"></a>三、方法执行时内存变化</h1><ol>
-<li>方法不调用是不会在栈中分配空间的</li>
-<li>方法只有在调用的时候会分配空间，并且调用就是压栈</li>
-<li>方法结束后该方法需要的空间就会释放，发生弹栈</li>
-</ol>
-<h1 id="四、方法重载"><a href="#四、方法重载" class="headerlink" title="四、方法重载"></a>四、方法重载</h1><ol>
-<li>Java怎么进行方法区分<ul>
-<li>Java编译器通过方法名进行区分</li>
-<li>Java语言中允许方法名相同的情况出现，可以通过参数类型区分</li>
-</ul>
-</li>
-<li>什么时候发生方法重载<ul>
-<li>在同一个类中</li>
-<li>方法名相同</li>
-<li>参数列表不同（个数、类型、顺序）<br>①和修饰符列表不相同<br>②println方法Sun公司Java团队写的，</li>
-</ul>
-</li>
-</ol>
-<h1 id="五、递归算法"><a href="#五、递归算法" class="headerlink" title="五、递归算法"></a>五、递归算法</h1><ol>
-<li>方法递归，方法自己调用自己</li>
-<li>递归必须要有结束条件<br> 递归有合法结束条件，有时候也会出现栈内存溢出错误，因为递归太深一直压栈</li>
-<li>实际开发中不建议轻易使用递归，能用for，while代替，尽量使用循环代替，循环效率高，调用内存少，少数情况不递归无法实现</li>
-<li>出现栈内存溢出<br>（1）先检查递归结束条件对不对<br>（2）手动调整JVM栈内存初始化大小<br>（3）继续扩大栈内存大小Java -x</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/2021/03/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/</url>
     <content><![CDATA[<p>@<a href="%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95">TOC</a></p>
@@ -206,6 +72,56 @@ boolean false      char \u0000 引用数据类型 null</code></pre>
 ]]></content>
   </entry>
   <entry>
+    <title></title>
+    <url>/2021/03/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/</url>
+    <content><![CDATA[<p>@<a href="%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95">TOC</a></p>
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+
+
+
+<h1 id="一、JVM虚拟机"><a href="#一、JVM虚拟机" class="headerlink" title="一、JVM虚拟机"></a>一、JVM虚拟机</h1><ol>
+<li>栈<br>在方法被调用的时候，该方法需要的内存空间在栈中分配</li>
+<li>堆<br>凡是通过new运算符创建的对象，储存在堆内存中</li>
+<li>方法区<br>类加载器classloader，将xxx.class字节码文件装载到JVM的时候<br>会将字节码文件装载到方法区中，方法区中存放代码片段</li>
+</ol>
+<h1 id="二、内存栈"><a href="#二、内存栈" class="headerlink" title="二、内存栈"></a>二、内存栈</h1><ul>
+<li>栈数据结构stack</li>
+</ul>
+<ol>
+<li>Java语言把常用的数据结构已经都写好了</li>
+<li>进栈入栈push</li>
+<li>出栈pop</li>
+<li>栈帧永远指向栈顶部的元素</li>
+<li>数据结构特点：先进后出</li>
+<li>注意处于栈顶部的元素最具活跃权</li>
+</ol>
+<h1 id="三、方法执行时内存变化"><a href="#三、方法执行时内存变化" class="headerlink" title="三、方法执行时内存变化"></a>三、方法执行时内存变化</h1><ol>
+<li>方法不调用是不会在栈中分配空间的</li>
+<li>方法只有在调用的时候会分配空间，并且调用就是压栈</li>
+<li>方法结束后该方法需要的空间就会释放，发生弹栈</li>
+</ol>
+<h1 id="四、方法重载"><a href="#四、方法重载" class="headerlink" title="四、方法重载"></a>四、方法重载</h1><ol>
+<li>Java怎么进行方法区分<ul>
+<li>Java编译器通过方法名进行区分</li>
+<li>Java语言中允许方法名相同的情况出现，可以通过参数类型区分</li>
+</ul>
+</li>
+<li>什么时候发生方法重载<ul>
+<li>在同一个类中</li>
+<li>方法名相同</li>
+<li>参数列表不同（个数、类型、顺序）<br>①和修饰符列表不相同<br>②println方法Sun公司Java团队写的，</li>
+</ul>
+</li>
+</ol>
+<h1 id="五、递归算法"><a href="#五、递归算法" class="headerlink" title="五、递归算法"></a>五、递归算法</h1><ol>
+<li>方法递归，方法自己调用自己</li>
+<li>递归必须要有结束条件<br> 递归有合法结束条件，有时候也会出现栈内存溢出错误，因为递归太深一直压栈</li>
+<li>实际开发中不建议轻易使用递归，能用for，while代替，尽量使用循环代替，循环效率高，调用内存少，少数情况不递归无法实现</li>
+<li>出现栈内存溢出<br>（1）先检查递归结束条件对不对<br>（2）手动调整JVM栈内存初始化大小<br>（3）继续扩大栈内存大小Java -x</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>Java学习笔记（二）</title>
     <url>/2021/03/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
     <content><![CDATA[<h2 id="一、注释"><a href="#一、注释" class="headerlink" title="一、注释"></a>一、注释</h2><p> //1.单行注释</p>
@@ -264,6 +180,90 @@ boolean false      char \u0000 引用数据类型 null</code></pre>
 <li><p>三目运算符有时候可以让代码很简练</p>
 </li>
 </ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>Java学习笔记（一）</title>
+    <url>/2021/03/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="Java语言概述"><a href="#Java语言概述" class="headerlink" title="Java语言概述"></a>Java语言概述</h1><p>Java语言的概述一级Java语言的发展史</p>
+<ol>
+<li>JDK：Java开发工具箱，（做Java开发必须安装的，这是最根本的一个环境）不是集成开发环境，JDK中是Java最核心的库</li>
+<li>J2SE：标准版（基础，要学Java，必须先学SE。基础语法＋基础库）</li>
+<li>J2EE：企业版（专门为企业开发软件，为企业提供解决方案，例如OA办公系统）</li>
+<li>J2ME：微型版（专门为微型设备做嵌入式开发。）</li>
+</ol>
+<p>Java诞生十周年改名JavaSE JavaEE JavaME</p>
+<h2 id="Java语言特性"><a href="#Java语言特性" class="headerlink" title="Java语言特性"></a>Java语言特性</h2><h3 id="简单性"><a href="#简单性" class="headerlink" title="简单性"></a>简单性</h3><ul>
+<li>Java中真正操作内存的：JVM（Java虚拟机）</li>
+</ul>
+<p>对于C或C++来说，程序员可以直接通过指针来操作内存，而Java虚拟机执行过程中再去操作内存。</p>
+<p>Java语言底层是C++所以说jvm是使用C++语言写好的一个虚拟的电脑</p>
+<p>Java语言屏蔽了指针概念，程序员不能直接操作指针，或者说程序员不能直接操作内存 ，这种方式也有缺点</p>
+<ul>
+<li>优点：不容易导致内存泄漏，简单</li>
+<li>缺点：效率问题，包括驾驭感都比较差</li>
+</ul>
+<h3 id="Java是堪称完全面向对象的"><a href="#Java是堪称完全面向对象的" class="headerlink" title="Java是堪称完全面向对象的"></a>Java是堪称完全面向对象的</h3><p>采用面向对象的方式，可以让复杂问题简单化</p>
+<h3 id="健壮性"><a href="#健壮性" class="headerlink" title="健壮性"></a>健壮性</h3><ul>
+<li>自动垃圾回收机制（gc机制）</li>
+</ul>
+<p>相对于C语言来说，Java更健壮，不易导致内存泄漏。JVM负责调度gc机制，程序员不需要干涉。</p>
+<h3 id="Java完美支持多线程开发"><a href="#Java完美支持多线程开发" class="headerlink" title="Java完美支持多线程开发"></a>Java完美支持多线程开发</h3><h3 id="可移植性-跨平台"><a href="#可移植性-跨平台" class="headerlink" title="可移植性/跨平台"></a>可移植性/跨平台</h3><ul>
+<li>Java语言只要编写一次，可以做到到处运行</li>
+</ul>
+<p>JVM这种机制实现了跨平台，</p>
+<ul>
+<li>优点，一次编写到处运行</li>
+<li>缺点：麻烦，对于运行Java程序来说，必须先安装一个JVM</li>
+</ul>
+<h2 id="JDK-JRE-JVM三者之间的关系？"><a href="#JDK-JRE-JVM三者之间的关系？" class="headerlink" title="JDK,JRE,JVM三者之间的关系？"></a>JDK,JRE,JVM三者之间的关系？</h2><ul>
+<li>JDK：Java开发工具箱</li>
+<li>JRE：Java运行环境</li>
+<li>JVM：Java虚拟机</li>
+</ul>
+<p>JDK包括JRE，JRE包括JVM<br>JVM是不可以独立安装的</p>
+<h2 id="对Java的加装与执行的理解（理论比较重要）"><a href="#对Java的加装与执行的理解（理论比较重要）" class="headerlink" title="对Java的加装与执行的理解（理论比较重要）"></a>对Java的加装与执行的理解（理论比较重要）</h2><p>Java程序从编写到最终运行经历了哪些过程？？</p>
+<p>Java程序非常重要的两个阶段</p>
+<ul>
+<li>编译阶段</li>
+<li>运行阶段</li>
+</ul>
+<p>注意：Java程序员直接编写的Java代码（普通文本）是无法执行被JVM识别的。Java程序员编写的Java代码这种普通文本必须经过一个编译，蒋政普通文本代码变成字节码<br>JVM能识别字节码，Java代码这种普通文本变成字节码的过程被称为编译</p>
+<ol>
+<li><p>编译阶段和运行阶段可以再不同的操作系统上完成吗？<br>可以</p>
+</li>
+<li><p>Java源代码一旦编译之后，源代码可以删除吗？只留下字节码可以执行吗？<br>可以，但是最好不要删除源代码，可以重新打开进行修改。</p>
+</li>
+<li><p>放源代码的文件扩展名必须是 .java<br>编译生成的字节码文件扩展名是 .class</p>
+</li>
+<li><p>字节码文件是二进制文件吗？<br>字节码文件不是二进制文件，如果是二进制的话，就不需要JVM，因为操作系统可以直接执行二进制了</p>
+</li>
+<li><p>另外需要注意的是，<br>一个Java源文件可以编译生成多个最终运行的class文件</p>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hexo</title>
+    <url>/2020/12/08/Hexo/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/12/08/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
 </search>
