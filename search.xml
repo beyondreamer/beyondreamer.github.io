@@ -2,57 +2,747 @@
 <search>
   <entry>
     <title></title>
-    <url>/2021/03/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/</url>
-    <content><![CDATA[<p>@<a href="%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95">TOC</a></p>
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
-
-
-
-<h1 id="一、面向对象和面向过程的区别"><a href="#一、面向对象和面向过程的区别" class="headerlink" title="一、面向对象和面向过程的区别"></a>一、面向对象和面向过程的区别</h1><pre><code>C 完全面向过程
-C++ 一半面向过程一半面向对象
-Java 完全面向对象</code></pre>
-<h2 id="1-什么是面向过程的开发方式"><a href="#1-什么是面向过程的开发方式" class="headerlink" title="1.什么是面向过程的开发方式"></a>1.什么是面向过程的开发方式</h2><ol>
-<li>特点<br>①注重步骤<br>②注重因果关系</li>
+    <url>/2021/03/14/Java%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B9%9D%EF%BC%89/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/03/14/Java%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AB%EF%BC%89/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/03/14/Java%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%83%EF%BC%89/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/03/14/Java%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/03/14/Java%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%94%EF%BC%89/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/03/14/Java%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/03/14/Java%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Java进阶学习笔记（二）</title>
+    <url>/2021/03/14/Java%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h2><ol>
+<li>final是Java语言中的一个关键字</li>
+<li>表示最终的不可变的</li>
+<li>final修饰的变量<ul>
+<li>只能赋值一次</li>
+</ul>
+</li>
+<li>final修饰的方法<ul>
+<li>无法被覆盖，被重写</li>
+</ul>
+</li>
+<li>final修饰的类<ul>
+<li>无法继承</li>
+</ul>
+</li>
+<li>final控制不了能不能调用</li>
+</ol>
+<h3 id="final修饰的引用"><a href="#final修饰的引用" class="headerlink" title="final修饰的引用"></a>final修饰的引用</h3><ol>
+<li>final修饰的引用只能指向一个对象，并且它只能永远指向该对象</li>
+<li>并且该方法执行过程中，该引用指向对象后，该对象不会被垃圾回收器回收，知道当前方法结束，才会释放空间</li>
+<li>虽然final的引用指向对象A后，不能再重新向B,但是对象A内部的数据可以被修改</li>
+</ol>
+<h3 id="final修饰的实例变量"><a href="#final修饰的实例变量" class="headerlink" title="final修饰的实例变量"></a>final修饰的实例变量</h3><ol>
+<li>final修饰的实例变量，系统不管赋默认值，要求程序员必须手动赋值</li>
+<li>赶在系统赋默认值之前即可</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>IDEA工具的使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java进阶学习笔记（一）</title>
+    <url>/2021/03/14/Java%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="IDEA工具的快捷键及设置"><a href="#IDEA工具的快捷键及设置" class="headerlink" title="IDEA工具的快捷键及设置"></a>IDEA工具的快捷键及设置</h2><ol>
+<li>字体设置<br>file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
+<li>快速生成main()方法<ul>
+<li>psvm</li>
+</ul>
+</li>
+<li>快速生成System.out.println()<ul>
+<li>sout</li>
+</ul>
+</li>
+<li>IDEA自动保存</li>
+<li>删除一行<ul>
+<li>ctrl+y</li>
+</ul>
+</li>
+<li>运行——<ul>
+<li>右键+run</li>
+<li>ctrl+shift+F10</li>
+</ul>
+</li>
+<li>退出窗口<ul>
+<li>esc</li>
+</ul>
+</li>
+<li>新增/新建/添加<ul>
+<li>alt+insert</li>
+</ul>
+</li>
+<li>窗口变大变小<ul>
+<li>ctrl+shift+F12</li>
+</ul>
+</li>
+<li>切换Java程序窗口<ul>
+<li>alt+右箭头/左箭头</li>
+</ul>
+</li>
+<li>切换窗口<ul>
+<li>alt+快捷键</li>
+</ul>
+</li>
+<li>提示方法的参数<ul>
+<li>ctrl+p</li>
+</ul>
+</li>
+<li>注释<ul>
+<li>单行注释ctrl+/</li>
+<li>多行注释ctrl+shift+/</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>IDEA工具的使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java学习笔记（八）</title>
+    <url>/2021/03/13/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AB%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><h3 id="一．多态的基础语法"><a href="#一．多态的基础语法" class="headerlink" title="一．多态的基础语法"></a>一．多态的基础语法</h3><ol>
+<li>Java中允许（向上转型子转父（类似自动类型转换））和（向下转型父转子（类似强制类型转换加转换符））{必须具有继承关系}</li>
+<li>编译阶段只知道引用的数据类型，静态绑定成功</li>
+<li>运行阶段，动态绑定，动态执行</li>
+<li>多态表示多种形态，编译阶段一种（绑定父类方法），运行阶段一种（绑定子类方法）</li>
+<li>什么时候使用向下转型（子类特有方法）</li>
+<li>向上转型 子到父 自动类型转换 animal a = new cat();</li>
+<li>向下转型 父到子 强制类型转换 cat c = (cat)a;<ol>
+<li>Java.lang.NullPointException:空指针异常</li>
+<li>Java.lang.ClassCastException:类型转换异常</li>
+</ol>
+</li>
+</ol>
+<h3 id="二．Instanceof-运算符"><a href="#二．Instanceof-运算符" class="headerlink" title="二．Instanceof 运算符"></a>二．Instanceof 运算符</h3><ol>
+<li>Instanceof运算符可以在运行阶段动态判断引用指向的对象的类型</li>
+<li>语法结构<ol>
+<li>(引用 instanceof 类型)</li>
+<li>运算结果只能是true/false</li>
+</ol>
+</li>
+</ol>
+<h3 id="三．多态在开发中的应用"><a href="#三．多态在开发中的应用" class="headerlink" title="三．多态在开发中的应用"></a>三．多态在开发中的应用</h3><h3 id="四．软件开发原则"><a href="#四．软件开发原则" class="headerlink" title="四．软件开发原则"></a>四．软件开发原则</h3><ol>
+<li>开闭原则<ol>
+<li>对扩展开放，</li>
+<li>对修改关闭，</li>
+</ol>
+</li>
+</ol>
+<h3 id="五．静态方法不存在覆盖"><a href="#五．静态方法不存在覆盖" class="headerlink" title="五．静态方法不存在覆盖"></a>五．静态方法不存在覆盖</h3><ol>
+<li>多态和对象有关</li>
+<li>静态方法不需要对象</li>
+</ol>
+<h3 id="六．私有方法不能覆盖"><a href="#六．私有方法不能覆盖" class="headerlink" title="六．私有方法不能覆盖"></a>六．私有方法不能覆盖</h3>]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>Java多态</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java学习笔记（七）</title>
+    <url>/2021/03/13/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%83%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ol>
+<li>使用继承机制来解决代码复用问题</li>
+<li>子类extends父类<ol>
+<li>基本作用：子类继承父类</li>
+<li>主要作用：有了方法覆盖和多态机制</li>
+</ol>
+</li>
+</ol>
+<h3 id="一．继承的相关特性"><a href="#一．继承的相关特性" class="headerlink" title="一．继承的相关特性"></a>一．继承的相关特性</h3><ol>
+<li>b类继承a类，则称a类为超类、父类（superclass）、基类；b类则称为子类（subclass）</li>
+<li>Java不支持多继承，c++支持多继承，体现Java简单性（c++更接近现实一点，同时继承两方特点）</li>
+<li>Java可以产生间接继承的结果<br>（1）z直接继承y，间接继承x；</li>
+<li>Java中规定，子类继承父类，除构造方法不能被继承外，其他都可以继承，但是私有的属性无法在子类中直接访问（可以间接访问）</li>
+<li>Java中的类没有显示继承任何类，则默认继承object类（Java中提供的根类），也就是说，一个对象与生俱来就具有object类中的所有特性</li>
+<li>继承也存在一些缺点，类继承后导致两个类耦合度非常高，父类改变子类也随之改变</li>
+</ol>
+<h3 id="二．什么时候使用继承"><a href="#二．什么时候使用继承" class="headerlink" title="二．什么时候使用继承"></a>二．什么时候使用继承</h3><ol>
+<li>Is a 能够描述的都可以使用继承</li>
+<li>任何一个类没有显示继承任何类，默认继承object类<ol>
+<li>String[] args</li>
+<li>System.out.println()<ul>
+<li>System是一个类名，.out后面没()，说明out是变量名（静态变量）</li>
+</ul>
+</li>
+<li>多看JDK源代码（lib.src.zip）</li>
+</ol>
+</li>
+</ol>
+<h3 id="三．Object类中的方法"><a href="#三．Object类中的方法" class="headerlink" title="三．Object类中的方法"></a>三．Object类中的方法</h3><ol>
+<li>当源码当中一个方法以;结尾，并且修饰符列表中有native关键字，表示调用c++写的dll程序（dll动态链接库文件）</li>
+<li>toString()（实例方法）输出类名和对象在内存堆中的内存地址（内存地址经过哈希算法得出的十六进制的数字）</li>
+</ol>
+<h3 id="四．方法覆盖"><a href="#四．方法覆盖" class="headerlink" title="四．方法覆盖"></a>四．方法覆盖</h3><ol>
+<li>子类对父类方法重新编写override，overwrite</li>
+<li>什么时候方法重载<ol>
+<li>在同一个类中</li>
+<li>方法名相同</li>
+<li>参数列表不同（个数，顺序，类型不同）</li>
+</ol>
+</li>
+<li>当子类对父类继承过来的方法进行方法覆盖之后，子类只执行覆盖之后的方法</li>
+<li>怎么构成方法覆盖<ol>
+<li>两个类必须有继承关系</li>
+<li>重写之后的方法和之前的方法具有<ol>
+<li>相同的返回值类型</li>
+<li>相同的方法名</li>
+<li>相同的形式参数列表</li>
+</ol>
+</li>
+<li>访问权限不能更低，可以更高</li>
+<li>重写之后的方法，不能比之前的方法抛出更多异常，可以更少</li>
+</ol>
+</li>
+<li>注意事项（有关多态）<ol>
+<li>方法覆盖只针对方法，和属性无关</li>
+<li>私有方法，构造方法，不能被覆盖，</li>
+<li>只针对实例方法，静态方法覆盖没有意义</li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>Java继承</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java学习笔记（六）</title>
+    <url>/2021/03/13/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="Static"><a href="#Static" class="headerlink" title="Static"></a>Static</h2><ol>
+<li>Static意为静态</li>
+<li>所有static关键字修饰的都是类相关的，类级别的</li>
+<li>所有static修饰的都是采用类名.的方式访问</li>
+<li>Static修饰的变量：静态变量</li>
+<li>Static修饰的方法：静态方法</li>
+<li>实例相关的，都是对象相关的，引用.的方式访问，需要先new对象（可能空指针异常）</li>
+<li>静态相关的，都是类相关的，类名.的方式访问，不需要new对象</li>
+</ol>
+<h3 id="一．变量的分类"><a href="#一．变量的分类" class="headerlink" title="一．变量的分类"></a>一．变量的分类</h3><ol>
+<li>根据声明的位置进行划分<ol>
+<li>在方法体中声明的变量：局部变量</li>
+<li>在方法体外声明的变量：成员变量</li>
 </ol>
 <ul>
-<li>缺点<br>代码和代码之间耦合度太高，扩展力太差</li>
-<li>优点<br>小型项目，采用面向过程方式进行开发，效率高<h2 id="2-什么是面向对象的开发方式"><a href="#2-什么是面向对象的开发方式" class="headerlink" title="2.什么是面向对象的开发方式"></a>2.什么是面向对象的开发方式</h2></li>
+<li>实例变量 无static</li>
+<li>静态变量 有static</li>
+<li>实例方法 无static</li>
+<li>静态方法 有static</li>
 </ul>
-<ol>
-<li>将现实世界分隔成几个小的单元，然后每一个单元都实现成对象，然后驱动一下，让各个对象之间协作起来形成一个系统</li>
-<li>特点<br>耦合度低，扩展力强<h2 id="3-采用面向对象的方式贯穿整个系统，涉及三个术语"><a href="#3-采用面向对象的方式贯穿整个系统，涉及三个术语" class="headerlink" title="3.采用面向对象的方式贯穿整个系统，涉及三个术语"></a>3.采用面向对象的方式贯穿整个系统，涉及三个术语</h2>OOA：面向对象分析<br>OOD：面向对象设计<br>OOP：面向对象编程</li>
+</li>
 </ol>
+<h3 id="二．什么时候声明实例变量，什么时候声明静态变量"><a href="#二．什么时候声明实例变量，什么时候声明静态变量" class="headerlink" title="二．什么时候声明实例变量，什么时候声明静态变量"></a>二．什么时候声明实例变量，什么时候声明静态变量</h3><ol>
+<li>静态变量在类加载时初始化分配好空间，不需要new对象</li>
+<li>静态变量储存在方法区</li>
+<li>所有对象的某个属性值都是一样的，不建议定义为实例变量（对象级别），建议定义为静态变量（类级别）</li>
+</ol>
+<h3 id="三．什么时候定义实例方法，什么时候定义静态方法"><a href="#三．什么时候定义实例方法，什么时候定义静态方法" class="headerlink" title="三．什么时候定义实例方法，什么时候定义静态方法"></a>三．什么时候定义实例方法，什么时候定义静态方法</h3><ol>
+<li>当这个方法体当中，直接访问了实例变量，这个方法一定是实例方法。</li>
+<li>工具类当中的方法，一般都是静态的。</li>
+</ol>
+<h3 id="四．静态代码块"><a href="#四．静态代码块" class="headerlink" title="四．静态代码块"></a>四．静态代码块</h3><ol>
+<li>Static{<br>静态代码块；<br>}</li>
+<li>Static静态代码块什么时候执行呢？<ol>
+<li>类加载时执行，并且只执行一次</li>
+<li>静态代码块，在main方法之前执行，自上而下的顺序执行</li>
+</ol>
+</li>
+<li>静态代码块作用<ol>
+<li>不常用（不是吗，每个类都要写）</li>
+<li>提供一个类加载的时间点（例如日志信息）</li>
+</ol>
+</li>
+</ol>
+<h3 id="五．实例代码块"><a href="#五．实例代码块" class="headerlink" title="五．实例代码块"></a>五．实例代码块</h3><ol>
+<li>{<br>}</li>
+<li>实例语句块执行时间<ol>
+<li>实例语句块在构造方法执行之前执行</li>
+<li>提供了构造方法之前的特殊时机</li>
+</ol>
+</li>
+</ol>
+<h2 id="This"><a href="#This" class="headerlink" title="This"></a>This</h2><ol>
+<li>关键字this</li>
+<li>一个对象是一个this，this是一个变量，一个引用，this保存当前对象的内存地址，指向自身，this代表当前对象</li>
+<li>This只能使用于在实例方法中，谁调用实例方法，谁就是this</li>
+<li>This大部分情况下可以省略，区分实例变量和局部变量时不能省略this</li>
+<li>为什么this不能使用于静态方法？（静态方法不需要对象）</li>
+<li>This也可以用在构造方法中，还可以用在构造方法中<ol>
+<li>通过当前的构造方法去调用另一个本类的构造方法</li>
+<li>This(实际参数);</li>
+<li>This语句必须是首行</li>
+</ol>
+</li>
+</ol>
+<h2 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h2><ol>
+<li>super与this</li>
+<li>super(实参)的作用是初始化当前对象的父类型特征，并不是创建新对象，实际上新对象只创建了一个。</li>
+<li>this<ol>
+<li>能出现在实例方法和构造方法中</li>
+<li>This.和this()</li>
+<li>this不能使用在静态方法中</li>
+<li>This.大部分情况下可以省略，区分局部变量和实例变量时不能省略</li>
+<li>This()只能出现在构造方法第一行，通当前的构造方法中去调用“本类”其他的构造方法，目的是代码复用</li>
+</ol>
+</li>
+<li>Super<ol>
+<li>能出现在实例方法和构造方法中</li>
+<li>super.和super()</li>
+<li>Super不能使用在静态方法中</li>
+<li>super.大部分情况下可以省略，时不能省略</li>
+<li>Super()只能出现在构造方法第一行，通当前的构造方法中去调用“父类”其他的构造方法，目的是创建，子类对象的时候，先初始化父类特征</li>
+<li>Super()表示通过子类的构造方法调用父类的构造方法</li>
+</ol>
+</li>
+</ol>
+<h3 id="一．Super语法"><a href="#一．Super语法" class="headerlink" title="一．Super语法"></a>一．Super语法</h3><ol>
+<li>当一个构造方法第一行<ol>
+<li>既没有this()又没有super()的话，默认会有一个super()；</li>
+<li>表示通过当前子类的构造方法调用父类的无参数构造方法</li>
+<li>所以必须保证父类的无参数构造方法存在</li>
+</ol>
+</li>
+<li>子类构造方法执行时必然调用父类构造方法</li>
+<li>注意：this()和super()不能共存，它们只能出现在构造方法第一行</li>
+<li>在Java中不管是new什么对象，最后object类的无参数构造函数一定会执行（object类的无参构造方法处于栈顶部）</li>
+<li>如果父类和子类有同名属性，子类想访问父类属性需要加super()</li>
+<li>super不能单独用必须加”.”，super不是引用，不保存地址，不指向任何对象，只代表当前对象内部的那一块父类特征</li>
+<li>super.属性名【访问父类的属性】</li>
+<li>super.方法名(实参)【访问父类的方法】</li>
+<li>super(实参)【调用父类构造方法】</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>Java关键字</tag>
+        <tag>static</tag>
+        <tag>this</tag>
+        <tag>super</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构笔记（二）</title>
+    <url>/2021/03/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="线性结构"><a href="#线性结构" class="headerlink" title="线性结构"></a>线性结构</h2><h3 id="2-1线性表及其表现"><a href="#2-1线性表及其表现" class="headerlink" title="2.1线性表及其表现"></a>2.1线性表及其表现</h3><h4 id="什么是线性表？"><a href="#什么是线性表？" class="headerlink" title="什么是线性表？"></a>什么是线性表？</h4><p>线性表是由同类型<strong>数据结构</strong>构成<strong>有序序列</strong>的线性结构</p>
+<ul>
+<li>表中元素个数称为线性表的<strong>长度</strong></li>
+<li>线性表没有元素时，称为<strong>空表</strong></li>
+<li>表起始位置称<strong>表头</strong>，表结束位置称<strong>表尾</strong></li>
+</ul>
+<h3 id="2-2线性表的抽象数据类型描述"><a href="#2-2线性表的抽象数据类型描述" class="headerlink" title="2.2线性表的抽象数据类型描述"></a>2.2线性表的抽象数据类型描述</h3><p><strong>类型名称</strong>：线性表<br><strong>数据对象集</strong>：线性表是n(&gt;=0)个元素构成的有序序列($a_{1},a_{2}…$)<br><strong>操作集</strong>：线性表L，整数i表示位置，元素X，线性表的基本操作有：</p>
+<ol>
+<li><code>List MakeEmpty()</code>：初始化一个空线性表</li>
+<li><code>ElementType FindKth(int K,List L)</code>：根据位序K，返回相应元素</li>
+<li><code>int Find(ElementType X,List L)</code>：在线性表L中查找X的第一次出现位置</li>
+<li><code>void Insert(ElementType X,int i,List L)</code>：在位序i先插入一个新元素X</li>
+<li><code>void Delete(int i,List L)</code>:删除指定位序i的元素</li>
+<li><code>int Length(List L)</code>：返回线性表L的长度n</li>
+</ol>
+<h4 id="2-2-1线性表的顺序存储实现"><a href="#2-2-1线性表的顺序存储实现" class="headerlink" title="2.2.1线性表的顺序存储实现"></a>2.2.1线性表的顺序存储实现</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> *<span class="title">List</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>&#123;</span></span><br><span class="line">    ElementType Data[MAXSIZE];</span><br><span class="line">    <span class="keyword">int</span> Last;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> <span class="title">L</span>;</span></span><br><span class="line">List PtrL;</span><br></pre></td></tr></table></figure>
+
+<p>主要操作的实现</p>
+<ol>
+<li><p>初始化（建立空的顺序表）</p>
+ <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">List <span class="title">MakeEmpty</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    List Ptrl;</span><br><span class="line">    Ptrl = (List)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct LNode));</span><br><span class="line">    Ptrl-&gt;Last = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">return</span> Ptrl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查找</p>
+ <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Find</span><span class="params">(ElementType X,List Ptrl)</span>   </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;=Ptrl-&gt;Last&amp;&amp;Ptrl-&gt;Data[i]!=X)</span><br><span class="line">        i++;</span><br><span class="line">    <span class="keyword">if</span>(i&gt;Ptrl-&gt;Last)<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>插入</p>
+</li>
+</ol>
+<ul>
+<li><p>先移动后插入</p>
+  <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Insert</span><span class="params">(ElementType X,<span class="keyword">int</span> i,List Ptrl)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> j;</span><br><span class="line">    <span class="keyword">if</span>(Ptrl-&gt;Last==MAXSIZE<span class="number">-1</span>)<span class="comment">/*表空间满不能插入*/</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;表满&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;Ptrl-&gt;Last+<span class="number">2</span>)<span class="comment">/*检查位置是否合法*/</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;位置不合法&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(j=Ptrl-&gt;Last;j&gt;=i<span class="number">-1</span>;j--)<span class="comment">/*将其倒序移动*/</span></span><br><span class="line">    &#123;</span><br><span class="line">        Ptrl-&gt;Data[j+<span class="number">1</span>] = Ptrl-&gt;Data[j];</span><br><span class="line">    &#125;</span><br><span class="line">    Ptrl-&gt;Data[i<span class="number">-1</span>]=X;</span><br><span class="line">    Ptrl-&gt;Last++;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="4">
+<li>删除</li>
+</ol>
+<ul>
+<li><p>后面的元素依次前移</p>
+  <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Delete</span><span class="params">(<span class="keyword">int</span> i,List Ptrl)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> j;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span>&#125;&#125;i&gt;Ptrl-&gt;Last+<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;不存在该元素&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(j=i;j&lt;=Ptrl-&gt;Last;j++)<span class="comment">/*将其向前移动*/</span></span><br><span class="line">    &#123;</span><br><span class="line">        Ptrl-&gt;Data[j<span class="number">-1</span>]=Ptrl-&gt;Data[j];</span><br><span class="line">    &#125;</span><br><span class="line">    Ptrl-&gt;Last--;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="2-2-2线性表的链式存储实现"><a href="#2-2-2线性表的链式存储实现" class="headerlink" title="2.2.2线性表的链式存储实现"></a>2.2.2线性表的链式存储实现</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> *<span class="title">List</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Data;</span><br><span class="line">    List Next;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> <span class="title">L</span>;</span></span><br><span class="line">List Ptrl;</span><br></pre></td></tr></table></figure>
+
+<p>主要操作的实现</p>
+<ol>
+<li><p>求表长</p>
+ <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Length</span><span class="params">(List Ptrl)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    List p = Ptrl;</span><br><span class="line">    <span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(p)</span><br><span class="line">    &#123;</span><br><span class="line">        p = p-&gt;Next;</span><br><span class="line">        j++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> j;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查找</p>
+<ul>
+<li><p>按序号查找FindKth</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">List <span class="title">FindKth</span><span class="params">(<span class="keyword">int</span> K,List Ptrl)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    List p = Ptrl;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>&amp;&amp;i&lt;K)</span><br><span class="line">    &#123;</span><br><span class="line">        p = p-&gt;Next;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(i==K)<span class="keyword">return</span> p;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>按值查找Find</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">List <span class="title">Find</span><span class="params">(ElementType X,List Ptrl)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    List p = Ptrl;</span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>&amp;&amp;p-&gt;Data!=X)</span><br><span class="line">    &#123;</span><br><span class="line">        p = p-&gt;Next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>插入</p>
+<ul>
+<li><p>先构造一个新节点，用s指向</p>
+</li>
+<li><p>再找到链表的第i-1个节点，用p指向</p>
+</li>
+<li><p>然后修改指针，插入节点（p之后插入新节点是s）</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">List <span class="title">Insert</span><span class="params">(ElementType X,<span class="keyword">int</span> i,List Ptrl)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    List p,s;</span><br><span class="line">    <span class="keyword">if</span>(i==<span class="number">1</span>)<span class="comment">/*新节点插入在表头*/</span></span><br><span class="line">    &#123;</span><br><span class="line">        s = (List)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct LNode));</span><br><span class="line">        s-&gt;Data = X;</span><br><span class="line">        s-&gt;Next = Ptrl;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">    p = FindKth(i<span class="number">-1</span>,Ptrl);<span class="comment">/*查找第i-1个节点*/</span></span><br><span class="line">    <span class="keyword">if</span>(p==<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;参数出错&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        s = (List)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct LNode));</span><br><span class="line">        s-&gt;Data = X;</span><br><span class="line">        s-&gt;Next = p-&gt;Next;<span class="comment">/*新节点插入在第i-1个节点后面*/</span></span><br><span class="line">        p-&gt;Next = s;</span><br><span class="line">        <span class="keyword">return</span> Ptrl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>删除</p>
+<ul>
+<li><p>先找到链表的第i-1个节点，用p指向</p>
+</li>
+<li><p>用s指针指向要被删除的节点（p的下一个节点）</p>
+</li>
+<li><p>然后修改指针，删除s所指节点</p>
+</li>
+<li><p>最后释放s所指节点的空间</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">List <span class="title">Delete</span><span class="params">(<span class="keyword">int</span> i,List Ptrl)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    List p,s;</span><br><span class="line">    <span class="keyword">if</span>(i==<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        s = Ptrl;</span><br><span class="line">        <span class="keyword">if</span>(Ptrl!=<span class="literal">NULL</span>) Ptrl= Ptrl-&gt;Next;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">        <span class="built_in">free</span>(s);</span><br><span class="line">        <span class="keyword">return</span> Ptrl;</span><br><span class="line">    &#125;</span><br><span class="line">    p = FindKth(i<span class="number">-1</span>,Ptrl);</span><br><span class="line">    <span class="keyword">if</span>(p = <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;该节点不存在&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(p-&gt;Next==<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;后一个节点不存在&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        s = p-&gt;Next;</span><br><span class="line">        p-&gt;Next = s-&gt;Next;</span><br><span class="line">        <span class="built_in">free</span>(s);</span><br><span class="line">        <span class="keyword">return</span> Ptrl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="广义表"><a href="#广义表" class="headerlink" title="广义表"></a>广义表</h4><ul>
+<li>广义表是<strong>线性表的推广</strong></li>
+<li>对于线性表而言，n个元素都是基本的<strong>单元素</strong></li>
+<li>广义表中，这些元素不仅可以是单元素也可以是<strong>另一个广义表</strong></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">GNode</span> *<span class="title">GList</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">GNode</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> Tag;<span class="comment">/*标志域：0表示节点是单元素，1表示结点是广义表*/</span></span><br><span class="line">    <span class="class"><span class="keyword">union</span>&#123;</span><span class="comment">/*子表指针域Sublist域单元素数据域Data共用存储空间*/</span></span><br><span class="line">        ElementType Data;</span><br><span class="line">        GList SubList;</span><br><span class="line">    &#125;URegion;</span><br><span class="line">    Glist Next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3堆栈"><a href="#2-3堆栈" class="headerlink" title="2.3堆栈"></a>2.3堆栈</h3><h4 id="堆栈的抽象数据类型描述"><a href="#堆栈的抽象数据类型描述" class="headerlink" title="堆栈的抽象数据类型描述"></a>堆栈的抽象数据类型描述</h4><ul>
+<li>具有一定操作约束的线性表</li>
+<li>只在栈顶做插入删除</li>
+<li>插入数据：<strong>入栈（push）</strong></li>
+<li>删除数据：<strong>出栈（pop）</strong></li>
+<li><strong>后入先出</strong>：Last In First Out(LIFO)</li>
+</ul>
+<p><strong>类型名称</strong>：堆栈<br><strong>数据对象集</strong>：一个有0个或多个元素的有穷线性表<br><strong>操作集</strong>：长度为Maxsize的堆栈Stack 栈顶元素item</p>
+<ol>
+<li><code>Stack CreatStack(int Maxsize)</code>:生成空堆栈</li>
+<li><code>int IsFull(Stack S,int Maxsize)</code>:判断堆栈是否已满</li>
+<li><code>void Push(Stack S,ElementType item)</code>:将元素压入堆栈</li>
+<li><code>int isEmpty(Stack S)</code>:判断堆栈是否为空</li>
+<li><code>ElementType Pop(Stack S)</code>:删除并返回栈顶元素</li>
+</ol>
+<h4 id="堆栈的顺序存储的实现"><a href="#堆栈的顺序存储的实现" class="headerlink" title="堆栈的顺序存储的实现"></a>堆栈的顺序存储的实现</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize <span class="meta-string">&lt;存储数据元素的最大个数&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">Stack</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Data[MaxSize];</span><br><span class="line">    <span class="keyword">int</span> Top;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>入栈</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span><span class="params">(Stack Ptrl,ElementType item)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Ptrl-&gt;Top==MaxSize)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;堆栈满&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        Ptrl-&gt;Data[++(Ptrl-&gt;Top)] = item;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>线性结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构笔记（一）</title>
+    <url>/2021/03/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="1基本概念"><a href="#1基本概念" class="headerlink" title="1基本概念"></a>1基本概念</h2><h3 id="1-1数据结构"><a href="#1-1数据结构" class="headerlink" title="1.1数据结构"></a>1.1数据结构</h3><ul>
+<li>解决问题方法的效率，跟数据的组织方式有关。</li>
+</ul>
+<h4 id="1-1-2关于空间使用"><a href="#1-1-2关于空间使用" class="headerlink" title="1.1.2关于空间使用"></a>1.1.2关于空间使用</h4><ul>
+<li>解决问题方法的效率，跟空间的利用效率有关。</li>
+</ul>
+<h4 id="1-1-3关于算法效率"><a href="#1-1-3关于算法效率" class="headerlink" title="1.1.3关于算法效率"></a>1.1.3关于算法效率</h4><ul>
+<li>clock():捕捉从程序运行开始到clock()被调用是所耗费的时间。这个时间单位是clock tick，即“时钟打点”。</li>
+<li>常数CLK_TCK:机器时钟每秒所走的时钟打点数。</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">clock_t</span> start, stop;</span><br><span class="line"><span class="comment">/* clock_t是clock()函数返回的变量类型*/</span></span><br><span class="line"><span class="keyword">double</span> duration;</span><br><span class="line"><span class="comment">/* 记录被测函数运行时间，以秒为单位*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;   <span class="comment">/* 不在测试范围内的准备工作写在clock()调用之前*/</span></span><br><span class="line">    start = clock();    <span class="comment">/*开始计时*/</span></span><br><span class="line">    MyFunction();   <span class="comment">/* 被测函数加在这里*/</span></span><br><span class="line">    stop = clock;   <span class="comment">/* 停止计时*/</span></span><br><span class="line">    duration = ((<span class="keyword">double</span>)(stop - start))/CLK_TCK;</span><br><span class="line">    <span class="comment">/* 其他不在测试范围的处理写在后面*/</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>注意：如果一个函数跑的太快，无法被测，让被测函数<strong>重复运行</strong>充分多次，使得测出的总的时钟打点间隔充分长，最后计算被测函数<strong>平均每场</strong>运行的时间即可！</p>
+</li>
+<li><p>解决问题方法的效率，跟算法的巧妙程度有关。</p>
+</li>
+</ul>
+<h4 id="1-1-3抽象数据类型"><a href="#1-1-3抽象数据类型" class="headerlink" title="1.1.3抽象数据类型"></a>1.1.3抽象数据类型</h4><h5 id="什么是数据结构"><a href="#什么是数据结构" class="headerlink" title="什么是数据结构"></a>什么是数据结构</h5><ul>
+<li><strong>数据对象</strong>在计算机中的组织方式<ul>
+<li>逻辑结构（线性结构、树形结构、图的结构）</li>
+<li>物理存储结构</li>
+</ul>
+</li>
+<li>数据对象必定与一系列加在其上的<strong>操作</strong>相关联</li>
+<li>完成这些操作所用的方法就是<strong>算法</strong></li>
+</ul>
+<h5 id="抽象数据类型"><a href="#抽象数据类型" class="headerlink" title="抽象数据类型"></a>抽象数据类型</h5><ul>
+<li>数据类型<ul>
+<li>数据对象集</li>
+<li>数据集合相关联的操作集</li>
+</ul>
+</li>
+<li>抽象：描述数据类型的方法不依赖于具体实现<ul>
+<li>与存放数据的机器无关</li>
+<li>与数据存储的物理结构无关</li>
+<li>与实现操作的算法和编程语言结构无关</li>
+</ul>
+</li>
+</ul>
+<p>只与描述对象集合相关操作集“<strong>是什么</strong>”，并不涉及到“<strong>如何做到</strong>”的问题</p>
+<p>例：</p>
+<p><strong>类型名称</strong>：矩阵（Matrix）</p>
+<p><strong>数据对象集</strong>：一个$M*N$的矩阵…</p>
+<p><strong>操作集</strong>：对于任意矩阵A、B、C、D</p>
+<ul>
+<li>操作函数及说明…</li>
+</ul>
+<h3 id="1-2算法的定义"><a href="#1-2算法的定义" class="headerlink" title="1.2算法的定义"></a>1.2算法的定义</h3><ul>
+<li>算法<ul>
+<li>一个有限指令集</li>
+<li>接受一些输入</li>
+<li>产生输出</li>
+<li>一定在有限步骤之后终止</li>
+<li>每一条指令必须<ul>
+<li>有充分明确的目标，不可以有歧义</li>
+<li>计算机能处理的范围之内</li>
+<li>描述应不依赖于任何一种计算机语言以及具体实现手段</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-2-2什么是好的算法"><a href="#1-2-2什么是好的算法" class="headerlink" title="1.2.2什么是好的算法"></a>1.2.2什么是好的算法</h4><ul>
+<li><p><strong>空间复杂度$S(n)$**——根据算法写成的程序在执行时</strong>占用存储单元的长度**。这个长度往往与输入数据的规模有关。空间复杂度过高的算法可能导致使用的内存超限，造成程序非正常中断。</p>
+</li>
+<li><p><strong>时间复杂度$T(n)$**——根据算法写成的程序在执行时</strong>耗费时间的长度**。这个长度往往也与输入数据的规模有关。时间复杂度过高的低效算法可能导致我们在有生之年都等不到运行结果。</p>
+</li>
+<li><p>在分析一般算法的效率时，我们经常关注下面两种复杂度</p>
+<ul>
+<li>最坏情况复杂度$T_{worst}(n)$</li>
+<li>平均最坏复杂度$T_{avg}(n)$<br>$$T_{avg}(n)\leq T_{worst}(n)$$</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-2-3复杂度的渐进表示法"><a href="#1-2-3复杂度的渐进表示法" class="headerlink" title="1.2.3复杂度的渐进表示法"></a>1.2.3复杂度的渐进表示法</h4><ol>
+<li><p>$T(n)=O(f(n))$表示存在常数$C&gt;0,n_{0}&gt;0$使得当$n&gt;=n_{0}$时有$T(n)\leq C*f(n)$</p>
+</li>
+<li><p>$T(n)=O(g(n))$表示存在常数$C&gt;0,n_{0}&gt;0$使得当$n&gt;=n_{0}$时有$T(n)\leq C*g(n)$</p>
+</li>
+<li><p>若两段算法分别有复杂度$T_{1}(n)=O(f_{1}(n))$和$T_{2}(n)=O(f_{2}(n)$则</p>
+<ul>
+<li>$T_{1}(n)+T_{2}(n)=max(O(f_{1}(n)),O(f_{2}(n)))$</li>
+<li>$T_{1}(n)*T_{2}(n)=O(f_{1}(n)*f_{2}(n))$</li>
+</ul>
+</li>
+</ol>
+<h4 id="1-3-1最大连续子列和"><a href="#1-3-1最大连续子列和" class="headerlink" title="1.3.1最大连续子列和"></a>1.3.1最大连续子列和</h4><p>给定N个整数的序列{$A_{1},A_{2},A_{3}…A_{N}$},求函数$f(i,j) = max(0 , \sum_{k=i}^j A_{k} )$</p>
+<p>$T(n)=O(n^2)$算法</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">MaxSubseqSum</span><span class="params">(<span class="keyword">int</span> A[],<span class="keyword">int</span> N)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> ThisSum, MaxSum=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> i,j;</span><br><span class="line">  <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; N; i++)<span class="comment">/*i是子列的左端位置*/</span></span><br><span class="line">  &#123;</span><br><span class="line">    ThisSum = <span class="number">0</span>;<span class="comment">/*ThisSum是从A[i]到A[j]的子列和*/</span></span><br><span class="line">    <span class="keyword">for</span>(j = i; j &lt; N; j++)<span class="comment">/*j是子列右端位置*/</span></span><br><span class="line">    &#123;</span><br><span class="line">      ThisSum+=A[j];</span><br><span class="line">      <span class="comment">/*对于相同的i不同的j只要在j-1次循环的基础上累加1即可*/</span></span><br><span class="line">      <span class="keyword">if</span>(ThisSum &gt; MaxSum)<span class="comment">/*如果得到的子列和更大则更新结果*/</span></span><br><span class="line">        MaxSum = ThisSum;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> MaxSum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>分治算法</p>
+<p>$T(n)=O(n*log(n))$</p>
+<p>在线处理</p>
+<p>$T(n)=O(n)$</p>
+<pre><code class="c">int MaxSubseqSum4(int A[],int N)
+&#123;
+  int ThisSum,MaxSum;
+  int i;
+  ThisSum = MaxSum=0;
+  for(i=0;i&lt;n;i++)
+  &#123;
+    ThisSum+=A[i];
+    if(ThisSum&gt;MaxSum)
+      MaxSum = ThisSum;
+    else if(ThisSum&lt;0;)
+      ThisSum=0;
+  &#125;
+  return MaxSum;
+&#125;</code></pre>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>数据结构基本概念</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java学习笔记（五）</title>
+    <url>/2021/03/09/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%94%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="一．构造方法constructor"><a href="#一．构造方法constructor" class="headerlink" title="一．构造方法constructor"></a>一．构造方法constructor</h2><h3 id="1．什么是构造方法"><a href="#1．什么是构造方法" class="headerlink" title="1．什么是构造方法"></a>1．什么是构造方法</h3><ol>
+<li>构造方法也是一个特殊的方法，通过构造方法可以完成对象的创建，以及实例变量的初始化，换句话来说，构造方法是用来创建对象，并同时给对象的属性赋值</li>
+<li>语法结构</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] 构造方法名 (形式参数列表)&#123;</span><br><span class="line">    构造方法体</span><br><span class="line">    通常在构造方法体中给属性赋值，完成属性的初始化</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修饰符列表public</li>
+<li>构造方法名必须和类名一致</li>
+<li>构造方法不需要指定返回值类型</li>
+</ul>
+<ol start="3">
+<li>调用构造方法</li>
+</ol>
+<p><code>New 构造方法名(实际参数列表)</code></p>
+<ul>
+<li>当一个类中手动的提供了构造方法，那么系统将不再提供无参数的构造方法（建议把无参数构造方法写出来）</li>
+<li>当一个类没有提供任何构造方法，系统会默认构造一个没有参数的构造方法（缺省构造器）</li>
+<li>无参数构造方法和有参数构造方法都可以调用</li>
+<li>无参数构造方法虽然没有代码但是默认在这里赋系统默认值</li>
+<li>构造方法可以重载</li>
+</ul>
+<h2 id="二．封装"><a href="#二．封装" class="headerlink" title="二．封装"></a>二．封装</h2><h3 id="1．封装的作用"><a href="#1．封装的作用" class="headerlink" title="1．封装的作用"></a>1．封装的作用</h3><ol>
+<li>保证内部结构的安全</li>
+<li>屏蔽复杂，暴露简单</li>
+</ol>
+<h3 id="2．怎么进行封装"><a href="#2．怎么进行封装" class="headerlink" title="2．怎么进行封装"></a>2．怎么进行封装</h3><ol>
+<li>属性私有化（private）<ul>
+<li>Private表示私有的，被这个关键字修饰之后，该数据只能在本类中访问，出类不能访问。</li>
+</ul>
+</li>
+<li>对外提供简单的操作入口<ol>
+<li>带有static的方法</li>
+<li>不带有static的方法，用new对象引用去访问</li>
+</ol>
+<ul>
+<li>称为实例方法，对象级别的方法（对象被称为实例，实例相关的都需要new对象，和引用来访问）</li>
+</ul>
+</li>
+<li>空指针异常导致的最本质的原因是？<ol>
+<li>空引用访问实例相关的数据，会导致空指针异常</li>
+<li>实例相关的包括，实例变量+实例方法</li>
+</ol>
+</li>
+<li>对外提供公开的get方法和set方法作为操作入口，并且都不带static</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] 返回值类型 方法名 (形式参数列表)&#123;&#125;</span><br><span class="line"><span class="comment">/*get方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">(无参)</span></span>&#123;<span class="comment">//get属性名首字母大写</span></span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*set方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span> <span class="params">(<span class="keyword">int</span> a（一个参数）)</span></span>&#123;</span><br><span class="line">    A = a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5．封装代码实现两步</p>
+<ul>
+<li>属性私有化  一个属性提供get和set方法</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>Java构造方法</tag>
+        <tag>Java封装</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java学习笔记（四）</title>
+    <url>/2021/03/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="一、面向对象和面向过程的区别"><a href="#一、面向对象和面向过程的区别" class="headerlink" title="一、面向对象和面向过程的区别"></a>一、面向对象和面向过程的区别</h2><ul>
+<li>C 完全面向过程</li>
+<li>C++ 一半面向过程一半面向对象</li>
+<li>Java 完全面向对象</li>
+</ul>
+<h3 id="1-什么是面向过程的开发方式"><a href="#1-什么是面向过程的开发方式" class="headerlink" title="1.什么是面向过程的开发方式"></a>1.什么是面向过程的开发方式</h3><ol>
+<li>特点<ol>
+<li>注重步骤</li>
+<li>注重因果关系</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>缺点<ul>
+<li>代码和代码之间耦合度太高，扩展力太差</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>小型项目，采用面向过程方式进行开发，效率高</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-什么是面向对象的开发方式"><a href="#2-什么是面向对象的开发方式" class="headerlink" title="2.什么是面向对象的开发方式"></a>2.什么是面向对象的开发方式</h3><ol>
+<li>将现实世界分隔成几个小的单元，然后每一个单元都实现成对象，然后驱动一下，让各个对象之间协作起来形成一个系统</li>
+<li>特点<br>耦合度低，扩展力强</li>
+</ol>
+<h3 id="3-采用面向对象的方式贯穿整个系统，涉及三个术语"><a href="#3-采用面向对象的方式贯穿整个系统，涉及三个术语" class="headerlink" title="3.采用面向对象的方式贯穿整个系统，涉及三个术语"></a>3.采用面向对象的方式贯穿整个系统，涉及三个术语</h3><ul>
+<li>OOA：面向对象分析</li>
+<li>OOD：面向对象设计</li>
+<li>OOP：面向对象编程</li>
+</ul>
 <p>分析-&gt;设计-&gt;编程</p>
-<h2 id="4-面向对象包括三大特征"><a href="#4-面向对象包括三大特征" class="headerlink" title="4.面向对象包括三大特征"></a>4.面向对象包括三大特征</h2><ol>
+<h3 id="4-面向对象包括三大特征"><a href="#4-面向对象包括三大特征" class="headerlink" title="4.面向对象包括三大特征"></a>4.面向对象包括三大特征</h3><ol>
 <li>封装</li>
 <li>继承</li>
-<li>多态<h2 id="5-类和对象的概念"><a href="#5-类和对象的概念" class="headerlink" title="5.类和对象的概念"></a>5.类和对象的概念</h2></li>
+<li>多态</li>
+</ol>
+<h3 id="5-类和对象的概念"><a href="#5-类和对象的概念" class="headerlink" title="5.类和对象的概念"></a>5.类和对象的概念</h3><ol>
 <li>什么是类<br>一种模板，描述所有对象的共同特征信息</li>
 <li>什么是对象<br>实际存在的个体</li>
 </ol>
 <p>Java语言中，要想得到对象，必须先定义一个类，对象是通过类这个模板创造出来的</p>
 <p>术语</p>
-<p>类    对象        实例        实例化        抽象</p>
-<h1 id="二、类的定义"><a href="#二、类的定义" class="headerlink" title="二、类的定义"></a>二、类的定义</h1><h2 id="1．定义"><a href="#1．定义" class="headerlink" title="1．定义"></a>1．定义</h2><pre><code>[修饰符列表] class 类名&#123;&#125; 类体=属性加方法</code></pre>
-<p>属性在代码上以变量的形式存在<br>属性以数据的形式存在（成员变量）</p>
-<pre><code>public class xueSheng&#123;
-    int xueHao;
-&#125;</code></pre>
+<p>类 对象 实例 实例化 抽象</p>
+<h2 id="二、类的定义"><a href="#二、类的定义" class="headerlink" title="二、类的定义"></a>二、类的定义</h2><h3 id="1．定义"><a href="#1．定义" class="headerlink" title="1．定义"></a>1．定义</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">[修饰符列表] <span class="class"><span class="keyword">class</span> 类名</span>&#123;&#125; 类体=属性加方法</span><br><span class="line">属性在代码上以变量的形式存在</span><br><span class="line">属性以数据的形式存在（成员变量）</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">xueSheng</span></span>&#123;</span><br><span class="line"> <span class="keyword">int</span> xueHao;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>java中所有的类都属于引用数据类型</p>
-<h2 id="2．对象的创建和使用"><a href="#2．对象的创建和使用" class="headerlink" title="2．对象的创建和使用"></a>2．对象的创建和使用</h2><ol>
-<li><p>new 类名 ()</p>
-</li>
-<li><p>new是个运算符专门负责对象的创建</p>
-<pre><code> xueSheng s = new xueSheng ();</code></pre>
-</li>
+<h3 id="2．对象的创建和使用"><a href="#2．对象的创建和使用" class="headerlink" title="2．对象的创建和使用"></a>2．对象的创建和使用</h3><ol>
+<li>new 类名 ()</li>
+<li>new是个运算符专门负责对象的创建</li>
 </ol>
-<p>关于编译的过程<br>3. 对于编译器来说先编译test.java会自动找xuesheng.class，如果没有会自动编译xuesheng.java生成.class 文件</p>
-<h2 id="3．成员变量"><a href="#3．成员变量" class="headerlink" title="3．成员变量"></a>3．成员变量</h2><p>没有手动赋值，系统默认赋值</p>
-<pre><code>byte 0                short 0     
-int 0                  long 0L  
-float 0.0F          double 0.0  
-boolean false      char \u0000 引用数据类型 null</code></pre>
-<h2 id="4．实例变量"><a href="#4．实例变量" class="headerlink" title="4．实例变量"></a>4．实例变量</h2><ol>
+<p><code>xueSheng s = new xueSheng ();</code></p>
+<p>关于编译的过程</p>
+<ol start="3">
+<li>对于编译器来说先编译test.java会自动找xuesheng.class，如果没有会自动编译xuesheng.java生成.class 文件</li>
+</ol>
+<h3 id="3．成员变量"><a href="#3．成员变量" class="headerlink" title="3．成员变量"></a>3．成员变量</h3><p>没有手动赋值，系统默认赋值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">byte</span> <span class="number">0</span>				<span class="keyword">short</span> <span class="number">0</span> 	</span><br><span class="line"><span class="keyword">int</span> <span class="number">0</span>  				<span class="keyword">long</span> <span class="number">0L</span>  </span><br><span class="line"><span class="keyword">float</span> <span class="number">0.0F</span>  		<span class="keyword">double</span> <span class="number">0.0</span>  </span><br><span class="line"><span class="keyword">boolean</span> <span class="keyword">false</span>  	<span class="keyword">char</span> \u0000 引用数据类型 <span class="keyword">null</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4．实例变量"><a href="#4．实例变量" class="headerlink" title="4．实例变量"></a>4．实例变量</h3><ol>
 <li>对象级别的变量</li>
 <li>不能通过类名来直接访问实例变量</li>
 </ol>
@@ -63,28 +753,30 @@ boolean false      char \u0000 引用数据类型 null</code></pre>
 <li>怎么访问实例变量：引用.实例变量名</li>
 <li>通过=赋值将堆内存中实例变量的值进行修改</li>
 </ol>
-<h1 id="三、空指针异常"><a href="#三、空指针异常" class="headerlink" title="三、空指针异常"></a>三、空指针异常</h1><ul>
+<h2 id="三、空指针异常"><a href="#三、空指针异常" class="headerlink" title="三、空指针异常"></a>三、空指针异常</h2><ul>
 <li>该对象没有引用指向它了，Java中规定程序员无法直接操作堆内存，只能等待gc把垃圾对象回收走。</li>
 </ul>
-<h1 id="四、方法调用时参数的传递问题"><a href="#四、方法调用时参数的传递问题" class="headerlink" title="四、方法调用时参数的传递问题"></a>四、方法调用时参数的传递问题</h1><ul>
+<h2 id="四、方法调用时参数的传递问题"><a href="#四、方法调用时参数的传递问题" class="headerlink" title="四、方法调用时参数的传递问题"></a>四、方法调用时参数的传递问题</h2><ul>
 <li>Java中规定：参数传递的时候，和类型无关，不管你是基本数据类型，还是引用数据类型</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>Java面向对象</tag>
+      </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>Java学习笔记（三）</title>
     <url>/2021/03/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/</url>
-    <content><![CDATA[<p>@<a href="%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95">TOC</a></p>
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
-
-
-
-<h1 id="一、JVM虚拟机"><a href="#一、JVM虚拟机" class="headerlink" title="一、JVM虚拟机"></a>一、JVM虚拟机</h1><ol>
+    <content><![CDATA[<h2 id="一、JVM虚拟机"><a href="#一、JVM虚拟机" class="headerlink" title="一、JVM虚拟机"></a>一、JVM虚拟机</h2><ol>
 <li>栈<br>在方法被调用的时候，该方法需要的内存空间在栈中分配</li>
 <li>堆<br>凡是通过new运算符创建的对象，储存在堆内存中</li>
 <li>方法区<br>类加载器classloader，将xxx.class字节码文件装载到JVM的时候<br>会将字节码文件装载到方法区中，方法区中存放代码片段</li>
 </ol>
-<h1 id="二、内存栈"><a href="#二、内存栈" class="headerlink" title="二、内存栈"></a>二、内存栈</h1><ul>
+<h2 id="二、内存栈"><a href="#二、内存栈" class="headerlink" title="二、内存栈"></a>二、内存栈</h2><ul>
 <li>栈数据结构stack</li>
 </ul>
 <ol>
@@ -95,12 +787,12 @@ boolean false      char \u0000 引用数据类型 null</code></pre>
 <li>数据结构特点：先进后出</li>
 <li>注意处于栈顶部的元素最具活跃权</li>
 </ol>
-<h1 id="三、方法执行时内存变化"><a href="#三、方法执行时内存变化" class="headerlink" title="三、方法执行时内存变化"></a>三、方法执行时内存变化</h1><ol>
+<h2 id="三、方法执行时内存变化"><a href="#三、方法执行时内存变化" class="headerlink" title="三、方法执行时内存变化"></a>三、方法执行时内存变化</h2><ol>
 <li>方法不调用是不会在栈中分配空间的</li>
 <li>方法只有在调用的时候会分配空间，并且调用就是压栈</li>
 <li>方法结束后该方法需要的空间就会释放，发生弹栈</li>
 </ol>
-<h1 id="四、方法重载"><a href="#四、方法重载" class="headerlink" title="四、方法重载"></a>四、方法重载</h1><ol>
+<h2 id="四、方法重载"><a href="#四、方法重载" class="headerlink" title="四、方法重载"></a>四、方法重载</h2><ol>
 <li>Java怎么进行方法区分<ul>
 <li>Java编译器通过方法名进行区分</li>
 <li>Java语言中允许方法名相同的情况出现，可以通过参数类型区分</li>
@@ -109,28 +801,40 @@ boolean false      char \u0000 引用数据类型 null</code></pre>
 <li>什么时候发生方法重载<ul>
 <li>在同一个类中</li>
 <li>方法名相同</li>
-<li>参数列表不同（个数、类型、顺序）<br>①和修饰符列表不相同<br>②println方法Sun公司Java团队写的，</li>
+<li>参数列表不同（个数、类型、顺序）</li>
 </ul>
 </li>
 </ol>
-<h1 id="五、递归算法"><a href="#五、递归算法" class="headerlink" title="五、递归算法"></a>五、递归算法</h1><ol>
+<h2 id="五、递归算法"><a href="#五、递归算法" class="headerlink" title="五、递归算法"></a>五、递归算法</h2><ol>
 <li>方法递归，方法自己调用自己</li>
-<li>递归必须要有结束条件<br> 递归有合法结束条件，有时候也会出现栈内存溢出错误，因为递归太深一直压栈</li>
+<li>递归必须要有结束条件<br>递归有合法结束条件，有时候也会出现栈内存溢出错误，因为递归太深一直压栈</li>
 <li>实际开发中不建议轻易使用递归，能用for，while代替，尽量使用循环代替，循环效率高，调用内存少，少数情况不递归无法实现</li>
-<li>出现栈内存溢出<br>（1）先检查递归结束条件对不对<br>（2）手动调整JVM栈内存初始化大小<br>（3）继续扩大栈内存大小Java -x</li>
+<li>出现栈内存溢出<ol>
+<li>先检查递归结束条件对不对</li>
+<li>手动调整JVM栈内存初始化大小</li>
+<li>继续扩大栈内存大小Java -x</li>
+</ol>
+</li>
 </ol>
 ]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>Java基本概念</tag>
+      </tags>
   </entry>
   <entry>
     <title>Java学习笔记（二）</title>
     <url>/2021/03/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
-    <content><![CDATA[<h2 id="一、注释"><a href="#一、注释" class="headerlink" title="一、注释"></a>一、注释</h2><p> //1.单行注释</p>
-<p> /*2.多行注释<br> */</p>
-<p> /**<br> *3.注释文档<br> */</p>
+    <content><![CDATA[<h2 id="一、注释"><a href="#一、注释" class="headerlink" title="一、注释"></a>一、注释</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1.单行注释</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*2.多行注释</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*3.注释文档</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="二、引入类"><a href="#二、引入类" class="headerlink" title="二、引入类"></a>二、引入类</h2><ul>
 <li>在Java中任何有效的代码必须写到类体中</li>
 </ul>
-<p>public static void main(String[ ]args){<br> System.out printlin(“Test1”);<br>}</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[ ]args)</span></span>&#123;</span><br><span class="line">   System.<span class="function">out <span class="title">printlin</span><span class="params">(“Test1”)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>注意：</p>
 <ol>
 <li>一个Java文件可以定义多个class文件</li>
@@ -163,7 +867,8 @@ boolean false      char \u0000 引用数据类型 null</code></pre>
 <li>byte short char 类型混合运算先转换成int类型再进行运算</li>
 <li>boolean类型不能参与类型转换</li>
 </ul>
-<p>//输出<br>public class zifuchuanpinjie{<br> public static void main(String[] args){<br>  System.out.println(“110”+300);<br>  //字符串变为”110300”<br> }<br>}<br>//输入<br>public class KeyInput{<br> public static void main(String[] args){<br>  //创建一个键盘扫描器对象<br>  java.util.Scanner s = new java.util.Scanner(System.in);<br>  int user = s.nextInt();<br>  int ssr = s.nextInt();<br> }<br>}</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//输出</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">zifuchuanpinjie</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">      System.out.println(<span class="string">&quot;110&quot;</span>+<span class="number">300</span>);</span><br><span class="line">      <span class="comment">//字符串变为”110300”</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输入</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">KeyInput</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">      <span class="comment">//创建一个键盘扫描器对象</span></span><br><span class="line">      java.util.Scanner s = <span class="keyword">new</span> java.util.Scanner(System.in);</span><br><span class="line">      <span class="keyword">int</span> user = s.nextInt();</span><br><span class="line">      <span class="keyword">int</span> ssr = s.nextInt();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="六、方法"><a href="#六、方法" class="headerlink" title="六、方法"></a>六、方法</h2><ol>
 <li><p>[Public static]修饰符列表+返回值类型+方法名+形式参数列表</p>
 </li>
@@ -181,11 +886,18 @@ boolean false      char \u0000 引用数据类型 null</code></pre>
 </li>
 </ol>
 ]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>Java基本概念</tag>
+      </tags>
   </entry>
   <entry>
     <title>Java学习笔记（一）</title>
     <url>/2021/03/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
-    <content><![CDATA[<h1 id="Java语言概述"><a href="#Java语言概述" class="headerlink" title="Java语言概述"></a>Java语言概述</h1><p>Java语言的概述一级Java语言的发展史</p>
+    <content><![CDATA[<h2 id="Java语言概述"><a href="#Java语言概述" class="headerlink" title="Java语言概述"></a>Java语言概述</h2><p>Java语言的概述一级Java语言的发展史</p>
 <ol>
 <li>JDK：Java开发工具箱，（做Java开发必须安装的，这是最根本的一个环境）不是集成开发环境，JDK中是Java最核心的库</li>
 <li>J2SE：标准版（基础，要学Java，必须先学SE。基础语法＋基础库）</li>
@@ -197,8 +909,7 @@ boolean false      char \u0000 引用数据类型 null</code></pre>
 <li>Java中真正操作内存的：JVM（Java虚拟机）</li>
 </ul>
 <p>对于C或C++来说，程序员可以直接通过指针来操作内存，而Java虚拟机执行过程中再去操作内存。</p>
-<p>Java语言底层是C++所以说jvm是使用C++语言写好的一个虚拟的电脑</p>
-<p>Java语言屏蔽了指针概念，程序员不能直接操作指针，或者说程序员不能直接操作内存 ，这种方式也有缺点</p>
+<p>Java语言底层是C++所以说jvm是使用C++语言写好的一个虚拟的电脑<br>Java语言屏蔽了指针概念，程序员不能直接操作指针，或者说程序员不能直接操作内存 ，这种方式也有缺点</p>
 <ul>
 <li>优点：不容易导致内存泄漏，简单</li>
 <li>缺点：效率问题，包括驾驭感都比较差</li>
@@ -242,11 +953,13 @@ boolean false      char \u0000 引用数据类型 null</code></pre>
 </li>
 </ol>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Hexo</title>
-    <url>/2020/12/08/Hexo/</url>
-    <content><![CDATA[]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>Java语言概述</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>

@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="学习笔记,Java基本概念," />
 
 
 
@@ -94,16 +94,18 @@
 
 
 
-<meta name="description" content="@TOC">
+<meta name="description" content="一、JVM虚拟机 栈在方法被调用的时候，该方法需要的内存空间在栈中分配 堆凡是通过new运算符创建的对象，储存在堆内存中 方法区类加载器classloader，将xxx.class字节码文件装载到JVM的时候会将字节码文件装载到方法区中，方法区中存放代码片段  二、内存栈 栈数据结构stack   Java语言把常用的数据结构已经都写好了 进栈入栈push 出栈pop 栈帧永远指向栈顶部的元素 数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Beyondreamer">
+<meta property="og:title" content="Java学习笔记（三）">
 <meta property="og:url" content="http://example.com/2021/03/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/index.html">
 <meta property="og:site_name" content="Beyondreamer">
-<meta property="og:description" content="@TOC">
+<meta property="og:description" content="一、JVM虚拟机 栈在方法被调用的时候，该方法需要的内存空间在栈中分配 堆凡是通过new运算符创建的对象，储存在堆内存中 方法区类加载器classloader，将xxx.class字节码文件装载到JVM的时候会将字节码文件装载到方法区中，方法区中存放代码片段  二、内存栈 栈数据结构stack   Java语言把常用的数据结构已经都写好了 进栈入栈push 出栈pop 栈帧永远指向栈顶部的元素 数">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-03-08T12:45:30.313Z">
-<meta property="article:modified_time" content="2021-03-08T12:45:36.229Z">
+<meta property="article:modified_time" content="2021-03-13T14:03:02.591Z">
 <meta property="article:author" content="Beyondreamer">
+<meta property="article:tag" content="学习笔记">
+<meta property="article:tag" content="Java基本概念">
 <meta name="twitter:card" content="summary">
 
 
@@ -139,7 +141,7 @@
 
 
 
-  <title> | Beyondreamer</title>
+  <title>Java学习笔记（三） | Beyondreamer</title>
   
 
 
@@ -323,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">Java学习笔记（三）</h1>
         
 
         <div class="post-meta">
@@ -346,6 +348,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -367,7 +391,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1
+                  477
                 </span>
               
 
@@ -404,17 +428,12 @@
       
 
       
-        <p>@<a href="%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95">TOC</a></p>
-<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
-
-
-
-<h1 id="一、JVM虚拟机"><a href="#一、JVM虚拟机" class="headerlink" title="一、JVM虚拟机"></a>一、JVM虚拟机</h1><ol>
+        <h2 id="一、JVM虚拟机"><a href="#一、JVM虚拟机" class="headerlink" title="一、JVM虚拟机"></a>一、JVM虚拟机</h2><ol>
 <li>栈<br>在方法被调用的时候，该方法需要的内存空间在栈中分配</li>
 <li>堆<br>凡是通过new运算符创建的对象，储存在堆内存中</li>
 <li>方法区<br>类加载器classloader，将xxx.class字节码文件装载到JVM的时候<br>会将字节码文件装载到方法区中，方法区中存放代码片段</li>
 </ol>
-<h1 id="二、内存栈"><a href="#二、内存栈" class="headerlink" title="二、内存栈"></a>二、内存栈</h1><ul>
+<h2 id="二、内存栈"><a href="#二、内存栈" class="headerlink" title="二、内存栈"></a>二、内存栈</h2><ul>
 <li>栈数据结构stack</li>
 </ul>
 <ol>
@@ -425,12 +444,12 @@
 <li>数据结构特点：先进后出</li>
 <li>注意处于栈顶部的元素最具活跃权</li>
 </ol>
-<h1 id="三、方法执行时内存变化"><a href="#三、方法执行时内存变化" class="headerlink" title="三、方法执行时内存变化"></a>三、方法执行时内存变化</h1><ol>
+<h2 id="三、方法执行时内存变化"><a href="#三、方法执行时内存变化" class="headerlink" title="三、方法执行时内存变化"></a>三、方法执行时内存变化</h2><ol>
 <li>方法不调用是不会在栈中分配空间的</li>
 <li>方法只有在调用的时候会分配空间，并且调用就是压栈</li>
 <li>方法结束后该方法需要的空间就会释放，发生弹栈</li>
 </ol>
-<h1 id="四、方法重载"><a href="#四、方法重载" class="headerlink" title="四、方法重载"></a>四、方法重载</h1><ol>
+<h2 id="四、方法重载"><a href="#四、方法重载" class="headerlink" title="四、方法重载"></a>四、方法重载</h2><ol>
 <li>Java怎么进行方法区分<ul>
 <li>Java编译器通过方法名进行区分</li>
 <li>Java语言中允许方法名相同的情况出现，可以通过参数类型区分</li>
@@ -439,15 +458,20 @@
 <li>什么时候发生方法重载<ul>
 <li>在同一个类中</li>
 <li>方法名相同</li>
-<li>参数列表不同（个数、类型、顺序）<br>①和修饰符列表不相同<br>②println方法Sun公司Java团队写的，</li>
+<li>参数列表不同（个数、类型、顺序）</li>
 </ul>
 </li>
 </ol>
-<h1 id="五、递归算法"><a href="#五、递归算法" class="headerlink" title="五、递归算法"></a>五、递归算法</h1><ol>
+<h2 id="五、递归算法"><a href="#五、递归算法" class="headerlink" title="五、递归算法"></a>五、递归算法</h2><ol>
 <li>方法递归，方法自己调用自己</li>
-<li>递归必须要有结束条件<br> 递归有合法结束条件，有时候也会出现栈内存溢出错误，因为递归太深一直压栈</li>
+<li>递归必须要有结束条件<br>递归有合法结束条件，有时候也会出现栈内存溢出错误，因为递归太深一直压栈</li>
 <li>实际开发中不建议轻易使用递归，能用for，while代替，尽量使用循环代替，循环效率高，调用内存少，少数情况不递归无法实现</li>
-<li>出现栈内存溢出<br>（1）先检查递归结束条件对不对<br>（2）手动调整JVM栈内存初始化大小<br>（3）继续扩大栈内存大小Java -x</li>
+<li>出现栈内存溢出<ol>
+<li>先检查递归结束条件对不对</li>
+<li>手动调整JVM栈内存初始化大小</li>
+<li>继续扩大栈内存大小Java -x</li>
+</ol>
+</li>
 </ol>
 
       
@@ -463,6 +487,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
+          
+            <a href="/tags/Java%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" rel="tag"><i class="fa fa-tag"></i> Java基本概念</a>
+          
+        </div>
       
 
       
@@ -483,8 +515,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2021/03/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2021/03/08/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89/" rel="prev" title="Java学习笔记（四）">
+                Java学习笔记（四） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -562,14 +594,32 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -601,7 +651,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81JVM%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">1.</span> <span class="nav-text">一、JVM虚拟机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%86%85%E5%AD%98%E6%A0%88"><span class="nav-number">2.</span> <span class="nav-text">二、内存栈</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E6%97%B6%E5%86%85%E5%AD%98%E5%8F%98%E5%8C%96"><span class="nav-number">3.</span> <span class="nav-text">三、方法执行时内存变化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD"><span class="nav-number">4.</span> <span class="nav-text">四、方法重载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">五、递归算法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81JVM%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="nav-number">1.</span> <span class="nav-text">一、JVM虚拟机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%86%85%E5%AD%98%E6%A0%88"><span class="nav-number">2.</span> <span class="nav-text">二、内存栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E6%97%B6%E5%86%85%E5%AD%98%E5%8F%98%E5%8C%96"><span class="nav-number">3.</span> <span class="nav-text">三、方法执行时内存变化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD"><span class="nav-number">4.</span> <span class="nav-text">四、方法重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">五、递归算法</span></a></li></ol></div>
             
 
           </div>
