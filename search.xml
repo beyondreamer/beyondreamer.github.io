@@ -20,36 +20,177 @@
 ]]></content>
   </entry>
   <entry>
-    <title>未完成计划</title>
-    <url>/post/20301.html</url>
-    <content><![CDATA[<ol>
-<li>平衡二叉树</li>
-<li>伸展树</li>
-<li>B树、B+树</li>
-<li>优先队列（堆）、d堆</li>
-<li>左偏堆、斜堆</li>
-<li>二项队列、斐波那契堆</li>
-<li>图论概念和拓扑排序</li>
-<li>最短路</li>
-<li>最小生成树</li>
-<li>并查集+路径压缩</li>
-<li>散列表</li>
+    <title>数据结构笔记（四）队列</title>
+    <url>/post/0.html</url>
+    <content><![CDATA[<h2 id="队列">队列</h2>
+<p><strong>队列</strong>：具有一定操作约束的线性表<br>
+数据插入：入队列（AddQ）<br>
+数据删除：出队列（DeleteQ）<br>
+先来先服务<br>
+先进先出：FIFO</p>
+<h3 id="队列的抽象数据类型描述">队列的抽象数据类型描述</h3>
+<p><strong>类型名称</strong>：队列(Queue)<br>
+<strong>数据对象集</strong>：一个有0个或多个元素的有穷线性表。<br>
+<strong>操作集</strong>：长度为MaxSize的队列Q，队列元素item</p>
+<ol>
+<li><code>Queue CreatQueue( int MaxSize )</code>：生成长度为MaxSize的空队列；</li>
+<li><code>int IsFullQ( Queue Q, int MaxSize )</code>：判断队列Q是否已满；</li>
+<li><code>void AddQ( Queue Q, ElementType item )</code>： 将数据元素item插入队列Q中；</li>
+<li><code>int IsEmptyQ( Queue Q )</code>： 判断队列Q是否为空；</li>
+<li><code>ElementType DeleteQ( Queue Q )</code>：将队头数据元素从队列中删除并返回</li>
 </ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>数据结构笔记（七）二叉搜索树</title>
-    <url>/post/35884.html</url>
-    <content><![CDATA[<h2 id="二叉搜索树">二叉搜索树</h2>
-<p>对于树中的每个节点X，它的左子树的所有关键字值小于X的关键字值，右子树中的所有关键字值大于X的关键字值<br>
-平均深度 $O(logn)$</p>
+<h3 id="队列的顺序存储实现">队列的顺序存储实现</h3>
+<p>通常由一个一维数组和一个记录队列头元素位置的变量front，以及一个记录队列尾元素位置的变量rear组成。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize <span class="meta-string">&lt;储存数据元素的最大个数&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">QNode</span> &#123;</span></span><br><span class="line">ElementType Data[ MaxSize ];</span><br><span class="line"><span class="keyword">int</span> rear;</span><br><span class="line"><span class="keyword">int</span> front;</span><br><span class="line">&#125;; </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">QNode</span> *<span class="title">Queue</span>;</span></span><br></pre></td></tr></table></figure>
 <ol>
 <li>
-<p>MakeEmpty 二叉树的初始化</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">Position</span>;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">SearchTree</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="function">SearchTree <span class="title">MakeEmpty</span><span class="params">(SearchTree T)</span></span>;</span><br><span class="line"><span class="function">Position <span class="title">Find</span><span class="params">(Elementtype X,SearctTree T)</span></span>;</span><br><span class="line"><span class="function">Position <span class="title">FindMin</span><span class="params">(SearchTree T)</span></span>;</span><br><span class="line"><span class="function">Position <span class="title">FindMax</span><span class="params">(SearchTree T)</span></span>;</span><br><span class="line"><span class="function">SearchTree <span class="title">Insert</span><span class="params">(Elementtype X,SearctTree T)</span></span>;</span><br><span class="line"><span class="function">SearchTree <span class="title">Delete</span><span class="params">(Elementtype X,SearctTree T)</span></span>;</span><br><span class="line"><span class="function">ElementType <span class="title">Retrieve</span><span class="params">(Position P)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Element;</span><br><span class="line">    SearchTree Left;</span><br><span class="line">    SearchTree Right;   </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">SearchTree <span class="title">MakeEmpty</span><span class="params">(SearchTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        MakeEmpty(T-&gt;Left);</span><br><span class="line">        MakeEmpty(T-&gt;Left);</span><br><span class="line">        <span class="built_in">free</span>(T);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>入队</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AddQ</span><span class="params">( Queue PtrQ, ElementType item)</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">     <span class="keyword">if</span>((PtrQ-&gt;rear+<span class="number">1</span>)%MaxSize == PtrQ-&gt;front )&#123;</span><br><span class="line">         <span class="built_in">printf</span>(“队列满”); </span><br><span class="line">         <span class="keyword">return</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     PtrQ-&gt;rear = (PtrQ-&gt;rear+<span class="number">1</span>)% MaxSize;</span><br><span class="line">     PtrQ-&gt;Data[PtrQ-&gt;rear] = item;</span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>出队</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">DeleteQ</span> <span class="params">( Queue PtrQ )</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">     <span class="keyword">if</span>(PtrQ-&gt;front == PtrQ-&gt;rear)&#123; </span><br><span class="line">         <span class="built_in">printf</span>(“队列空”);</span><br><span class="line">         <span class="keyword">return</span> ERROR;</span><br><span class="line">     &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">         PtrQ-&gt;front = (PtrQ-&gt;front+<span class="number">1</span>)% MaxSize;</span><br><span class="line">         <span class="keyword">return</span> PtrQ-&gt;Data[PtrQ-&gt;front];</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<h3 id="队列的链式存储实现">队列的链式存储实现</h3>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line"> ElementType Data;</span><br><span class="line"> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">Next</span>;</span></span><br><span class="line">&#125;; </span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">QNode</span>&#123;</span> <span class="comment">/* 链队列结构 */</span></span><br><span class="line"> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">rear</span>;</span> <span class="comment">/* 指向队尾结点 */</span></span><br><span class="line"> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">front</span>;</span> <span class="comment">/* 指向队头结点 */</span></span><br><span class="line">&#125;; </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">QNode</span> *<span class="title">Queue</span>;</span></span><br><span class="line">Queue PtrQ;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>
+<p>不带头结点的链式队列出队操作的一个示例：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">DeleteQ</span> <span class="params">( Queue PtrQ )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">FrontCell</span>;</span> </span><br><span class="line">    ElementType FrontElem;</span><br><span class="line">    <span class="keyword">if</span>(PtrQ-&gt;front == <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(“队列空”); </span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">     &#125;</span><br><span class="line">     FrontCell = PtrQ-&gt;front;</span><br><span class="line">     <span class="keyword">if</span>(PtrQ-&gt;front == PtrQ-&gt;rear)</span><br><span class="line">     <span class="comment">/* 若队列只有一个元素 */</span></span><br><span class="line">     PtrQ-&gt;front = PtrQ-&gt;rear = <span class="literal">NULL</span>;</span><br><span class="line">     <span class="comment">/* 删除后队列置为空 */</span></span><br><span class="line">     <span class="keyword">else</span> </span><br><span class="line">         PtrQ-&gt;front = PtrQ-&gt;front-&gt;Next;</span><br><span class="line">     FrontElem = FrontCell-&gt;Data;</span><br><span class="line">     <span class="built_in">free</span>( FrontCell ); </span><br><span class="line">     <span class="comment">/* 释放被删除结点空间 */</span></span><br><span class="line">     <span class="keyword">return</span> FrontElem;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>线性结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构笔记（六）二叉树</title>
+    <url>/post/0.html</url>
+    <content><![CDATA[<h2 id="二叉树的定义及基本特点">二叉树的定义及基本特点</h2>
+<h3 id="定义">定义</h3>
+<p>二叉树（Binary Tree）是n（n≥0）个结点所构成的集合，它或为空树（n = 0）；或为非空树</p>
+<p>对于非空树T：</p>
+<ol>
+<li>有且仅有一个称之为根的结点</li>
+<li>除根结点以外的其余结点分为两个互不相交的子集T1和T2，分别称为T的左子树和右子树，且T1和T2本身又都是二叉树。</li>
+</ol>
+<h3 id="基本特点">基本特点</h3>
+<ol>
+<li>结点的度小于等于2</li>
+<li>有序树：二叉树的子树有<strong>左右顺序</strong>之分</li>
+</ol>
+<h3 id="二叉树的性质">二叉树的性质</h3>
+<ol>
+<li>在二叉树的第i层上至多有$2^{i-1}$个结点</li>
+<li>深度为k的二叉树至多有$2^k-1$个结点</li>
+<li>对于任何一棵二叉树，若2度的结点数有$n_{2}$个，则叶子数$n_{0}$必定为$n_{2}+1$（即$n_{0}=n_{2}+1$）</li>
+<li>完全二叉树：深度为k 的，有n个结点的二叉树，当且仅当其每一个结点都与深度为k 的满二叉树中编号从1至n的结点一一对应</li>
+<li>满二叉树：一棵深度为k 且有$2k − 1$个结点的二叉树。（特点：每层都“充满”了结点） 满二叉树是完全二叉树的一个特例。</li>
+<li>具有n个结点的完全二叉树的深度必为$⌊log2n⌋＋1$</li>
+<li>对完全二叉树，若从上至下、从左至右编号，则编号为i 的结点，其左孩子编号必为$2i$，其右孩子编号必为$2i＋1$；其双亲的编号必为$\frac {i} {2}$</li>
+</ol>
+<h3 id="二叉树的抽象数据类型定义">二叉树的抽象数据类型定义</h3>
+<p><strong>类型名称</strong>：二叉树<br>
+<strong>数据对象集</strong>：一个有穷的结点集合。若不为空，则由根结点和其左、右二叉子树组成。<br>
+<strong>操作集</strong>：</p>
+<ol>
+<li><code>Boolean IsEmpty( BinTree BT )</code>： 判别BT是否为空；</li>
+<li><code>void Traversal( BinTree BT )</code>：遍历，按某顺序访问每个结点；</li>
+<li><code>BinTree CreatBinTree( )</code>：创建一个二叉树。</li>
+</ol>
+<p>常用的遍历方法有：</p>
+<ol>
+<li><code>void PreOrderTraversal( BinTree BT )</code>：先序----根、左子树、右子树；</li>
+<li><code>void InOrderTraversal( BinTree BT )</code>： 中序—左子树、根、右子树；</li>
+<li><code>void PostOrderTraversal( BinTree BT )</code>：后序—左子树、右子树、根</li>
+<li><code>void LevelOrderTraversal( BinTree BT )</code>：层次遍历，从上到下、从左到右</li>
+</ol>
+<h3 id="二叉树的存储结构">二叉树的存储结构</h3>
+<ol>
+<li>顺序存储</li>
+<li>链式存储</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">BinTree</span>;</span></span><br><span class="line"><span class="keyword">typedef</span> BinTree Position;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Data;</span><br><span class="line">    BinTree Left;BinTree Right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在n个结点的二叉链表中，有(n+1)个空指针域</p>
+<h3 id="遍历二叉树">遍历二叉树</h3>
+<p>DLR—先序遍历，即先根再左再右<br>
+LDR—中序遍历，即先左再根再右<br>
+LRD—后序遍历，即先左再右再根</p>
+<p>若二叉树中各结点的值均不相同，则由二叉树的前序序列和中序序列，或由其后序序列和中序序列均能唯一地确定一棵二叉树，但由前序序列和后序序列却不一定能唯一地确定一棵二叉树。</p>
+<ol>
+<li>递归版先序中序后序</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//递归遍历二叉树</span></span><br><span class="line"><span class="comment">//先序 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PreOrderTraversal</span><span class="params">( BinTree BT )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( BT ) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(“%d”, BT-&gt;Data);</span><br><span class="line">        PreOrderTraversal( BT-&gt;Left );</span><br><span class="line">        PreOrderTraversal( BT-&gt;Right );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//中序 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrderTraversal</span><span class="params">( BinTree BT )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( BT ) &#123;</span><br><span class="line">        InOrderTraversal( BT-&gt;Left );</span><br><span class="line">        <span class="built_in">printf</span>(“%d”, BT-&gt;Data);</span><br><span class="line">        InOrderTraversal( BT-&gt;Right );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//后序</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PostOrderTraversal</span><span class="params">( BinTree BT )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( BT ) &#123;</span><br><span class="line">        PostOrderTraversal( BT-&gt;Left );</span><br><span class="line">        PostOrderTraversal( BT-&gt;Right);</span><br><span class="line">        <span class="built_in">printf</span>(“%d”, BT-&gt;Data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>
+<p>中序遍历的非递归遍历</p>
+<ul>
+<li>遇到一个结点，就把它压栈，并去遍历它的左子树；</li>
+<li>当左子树遍历结束后，从栈顶弹出这个结点并访问它；</li>
+<li>然后按其右指针再去中序遍历该结点的右子树</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//非递归遍历（中序） </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrderTraversal</span><span class="params">( BinTree BT )</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    BinTree T=BT;</span><br><span class="line">    Stack S = CreatStack( MaxSize ); <span class="comment">/*创建并初始化堆栈S*/</span></span><br><span class="line">    <span class="keyword">while</span>( T || !IsEmpty(S) )&#123;</span><br><span class="line">        <span class="keyword">while</span>(T)&#123; <span class="comment">/*一直向左并将沿途结点压入堆栈*/</span></span><br><span class="line">            Push(S,T);</span><br><span class="line">            T = T-&gt;Left;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!IsEmpty(S))&#123;</span><br><span class="line">            T = Pop(S); <span class="comment">/*结点弹出堆栈*/</span></span><br><span class="line">            <span class="built_in">printf</span>(“%<span class="number">5</span>d”, T-&gt;Data); <span class="comment">/*（访问）打印结点*/</span></span><br><span class="line">            T = T-&gt;Right; <span class="comment">/*转向右子树*/</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>先序遍历的非递归遍历算法</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrderTraversal</span><span class="params">( BinTree BT )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    BinTree T BT;</span><br><span class="line">    Stack S = CreatStack( MaxSize ); <span class="comment">/*创建并初始化堆栈S*/</span></span><br><span class="line">    <span class="keyword">while</span>( T || !IsEmpty(S) )&#123;</span><br><span class="line">        <span class="keyword">while</span>(T)&#123; <span class="comment">/*一直向左并将沿途结点压入堆栈*/</span></span><br><span class="line">            Push(S,T);</span><br><span class="line">            T = T-&gt;Left;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!IsEmpty(S))&#123;</span><br><span class="line">            T = Pop(S); <span class="comment">/*结点弹出堆栈*/</span></span><br><span class="line">            <span class="built_in">printf</span>(“%<span class="number">5</span>d”, T-&gt;Data); <span class="comment">/*（访问）打印结点*/</span></span><br><span class="line">            T = T-&gt;Right; <span class="comment">/*转向右子树*/</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>层序遍历</li>
+</ol>
+<ul>
+<li>从队列中取出一个元素；</li>
+<li>访问该元素所指结点；</li>
+<li>若该元素所指结点的左、右孩子结点非空，则将其左、右孩子的指针顺序入队。</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">LevelOrderTraversal</span> <span class="params">( BinTree BT )</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    Queue Q; BinTree T;</span><br><span class="line">    <span class="keyword">if</span>( !BT ) <span class="keyword">return</span>; <span class="comment">/* 若是空树则直接返回 */</span></span><br><span class="line">    Q = CreatQueue( MaxSize ); <span class="comment">/*创建并初始化队列Q*/</span></span><br><span class="line">    AddQ( Q, BT );</span><br><span class="line">    <span class="keyword">while</span> ( !IsEmptyQ( Q ) ) &#123;</span><br><span class="line">        T = DeleteQ( Q );</span><br><span class="line">        <span class="built_in">printf</span>(“%d\n”, T-&gt;Data); <span class="comment">/*访问取出队列的结点*/</span> </span><br><span class="line">        <span class="keyword">if</span> ( T-&gt;Left ) AddQ( Q, T-&gt;Left );</span><br><span class="line">        <span class="keyword">if</span> ( T-&gt;Right ) AddQ( Q, T-&gt;Right );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="二叉树的建立">二叉树的建立</h3>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//建立二叉树 (先序）</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateBiTree</span><span class="params">(BiTree &amp;T)</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;ch;</span><br><span class="line">    <span class="keyword">if</span> (ch==<span class="string">&#x27;#&#x27;</span>)   T=<span class="literal">NULL</span>;   <span class="comment">//递归结束，建空树</span></span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        T=<span class="keyword">new</span> BiTNode;</span><br><span class="line">        T-&gt;data=ch;  <span class="comment">//生成根结点</span></span><br><span class="line">        CreateBiTree(T-&gt;lchild);  <span class="comment">//递归创建左子树</span></span><br><span class="line">        CreateBiTree(T-&gt;rchild); <span class="comment">//递归创建右子树</span></span><br><span class="line">    &#125;         </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<h3 id="其他应用">其他应用</h3>
+<ol>
+<li>复制二叉树</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//复制二叉树</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Copy</span><span class="params">(BiTree T,BiTree &amp;NewT)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T==<span class="literal">NULL</span>)&#123;</span><br><span class="line">        NewT=<span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> ;  </span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        NewT=<span class="keyword">new</span> BiTree;</span><br><span class="line">        NewT-&gt;data=T-&gt;data;</span><br><span class="line">        copy(T-&gt;lchild,NewT-&gt;lchild);</span><br><span class="line">        copy(T-&gt;rchild,NewT-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>二叉树遍历算法的应用</li>
+</ol>
+<pre><code class="language-c">//计算二叉树叶子节点总数
+int LeadCount(BiTree T)&#123;
+    if(T==NULL)  //如果是空树返回0
+        return 0;
+    if (T-&gt;lchild == NULL &amp;&amp; T-&gt;rchild == NULL)
+        return 1; //如果是叶子结点返回1
+    else 
+        return LeafCount(T-&gt;lchild) + LeafCount(T-&gt;rchild);
+&#125;
+
+//计算二叉树的深度
+int Depth(BiTree T)&#123;
+    if(T==NULL)  //如果是空树返回0
+        return 0;
+    else&#123;
+        m=Depth(T-&gt;lchild);
+        n=Depth(T-&gt;rchild);
+        if(m&gt;n) return m+1;
+        else return n+1;
+    &#125;
+&#125;
+
+//计算二叉树中结点的个数
+int NodeCount(BiTree T) &#123;
+    if(T==NULL)
+        return 0;
+    else
+        return NodeCount(T-&gt;lchild)+NodeCount(T-&gt;rchild)+1;
+&#125;
+</code></pre>
 ]]></content>
       <categories>
         <category>数据结构</category>
@@ -60,91 +201,55 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构笔记（三）栈</title>
-    <url>/post/39226.html</url>
-    <content><![CDATA[<h2 id="堆栈">堆栈</h2>
-<h3 id="堆栈的抽象数据类型描述">堆栈的抽象数据类型描述</h3>
+    <title>数据结构笔记（五）树与树的表示</title>
+    <url>/post/14197.html</url>
+    <content><![CDATA[<h2 id="树的定义">树的定义</h2>
+<p>树（Tree）: n（n≥0）个结点构成的有限集合。</p>
 <ul>
-<li>具有一定操作约束的线性表</li>
-<li>只在栈顶做插入删除</li>
-<li>插入数据：<strong>入栈（push）</strong></li>
-<li>删除数据：<strong>出栈（pop）</strong></li>
-<li><strong>后入先出</strong>：Last In First Out(LIFO)</li>
+<li>当n=0时，称为空树；</li>
+<li>对于任一棵非空树（n&gt; 0），它具备以下性质：
+<ul>
+<li>树中有一个称为“根（Root）”的特殊结点，用 r 表示；</li>
+<li>其余结点可分为m(m&gt;0)个互不相交的有限集T1，T2，… ，Tm，其中每个集合本身又是一棵树，称为原来树的“子树（SubTree）”</li>
 </ul>
-<p><strong>类型名称</strong>：堆栈<br>
-<strong>数据对象集</strong>：一个有0个或多个元素的有穷线性表<br>
-<strong>操作集</strong>：长度为Maxsize的堆栈Stack 栈顶元素item</p>
+</li>
+<li>子树是不相交的；</li>
+<li>除了根结点外，每个结点有且仅有一个父结点；</li>
+<li>一棵N个结点的树有N-1条边。</li>
+</ul>
+<h3 id="基本术语">基本术语</h3>
 <ol>
-<li><code>Stack CreatStack(int Maxsize)</code>:生成空堆栈</li>
-<li><code>int IsFull(Stack S,int Maxsize)</code>:判断堆栈是否已满</li>
-<li><code>void Push(Stack S,ElementType item)</code>:将元素压入堆栈</li>
-<li><code>int isEmpty(Stack S)</code>:判断堆栈是否为空</li>
-<li><code>ElementType Pop(Stack S)</code>:删除并返回栈顶元素</li>
+<li>结点的度（Degree）：结点的子树个数</li>
+<li>树的度：树的所有结点中最大的度数</li>
+<li>叶结点（Leaf）：度为0的结点</li>
+<li>父结点（Parent）：有子树的结点是其子树<br>
+的根结点的父结点</li>
+<li>子结点（Child）：若A结点是B结点的父结<br>
+点，则称B结点是A结点的子结点；子结点也<br>
+称孩子结点。</li>
+<li>兄弟结点（Sibling）：具有同一父结点的各<br>
+结点彼此是兄弟结点。</li>
+<li>路径和路径长度：从结点n1到nk的路径为一<br>
+个结点序列n1 , n2,… , nk, ni是 ni+1的父结点。路径所包含边的个数为路径的长度。</li>
+<li>祖先结点(Ancestor)：沿树根到某一结点路<br>
+径上的所有结点都是这个结点的祖先结点。</li>
+<li>子孙结点(Descendant)：某一结点的子树<br>
+中的所有结点是这个结点的子孙。</li>
+<li>结点的层次（Level）：规定根结点在1层，<br>
+其它任一结点的层数是其父结点的层数加1。</li>
+<li>树的深度（Depth）：树中所有结点中的最<br>
+大层次是这棵树的深度。</li>
 </ol>
-<h3 id="堆栈的顺序存储的实现">堆栈的顺序存储的实现</h3>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize <span class="meta-string">&lt;存储数据元素的最大个数&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">Stack</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Data[MaxSize];</span><br><span class="line">    <span class="keyword">int</span> Top;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>
-<p>入栈</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span><span class="params">(Stack Ptrl,ElementType item)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Ptrl-&gt;Top==MaxSize)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;堆栈满&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        Ptrl-&gt;Data[++(Ptrl-&gt;Top)] = item;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>出栈</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">Pop</span><span class="params">(Stack PtrS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Ptrs-&gt;Top==<span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> Error;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (Ptrs-&gt;Data[(PtrS-&gt;Top)--]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="堆栈的链式存储的实现">堆栈的链式存储的实现</h3>
-<p>栈的链式储存实际上就是一个单链表，叫做<strong>链栈</strong>，插入和删除操作只能在链栈的栈顶进行</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">Stack</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">Next</span>;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>
-<p>堆栈的初始化</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">Stack <span class="title">CreatStack</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Stack S;</span><br><span class="line">    S = (Stack)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct SNode));</span><br><span class="line">    S-&gt;Next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> S;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>判断栈空</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">IsEmpty</span><span class="params">(Stack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (S-&gt;Next == <span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>压栈</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span><span class="params">(ElementType item,Stack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">TmpCell</span>;</span></span><br><span class="line">    TmpCell = (struct SNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Struct SNode));</span><br><span class="line">    TmpCell-&gt;Element = item;</span><br><span class="line">    TmpCell-&gt;Next = S-&gt;Next;</span><br><span class="line">    S-&gt;Next = TmpCell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>出栈</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">Pop</span><span class="params">(Stack S)</span><span class="comment">//删除并返回栈顶元素</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">FirstCell</span>;</span></span><br><span class="line">    ElementType TopElem;</span><br><span class="line">    <span class="keyword">if</span>(IsEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        FirstCell = S-&gt;Next;</span><br><span class="line">        S-&gt;Next = FirstCell-&gt;Next;</span><br><span class="line">        TopElem = FirstCell-&gt;Element;</span><br><span class="line">        <span class="built_in">free</span>(FirstCell);</span><br><span class="line">        <span class="keyword">return</span> TopElem</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="应用——后缀表达式">应用——后缀表达式</h3>
-<p>中缀表达式：运算符号位于两个运算数之间a+b<em>c-d/e<br>
-后缀表达式：运算符号位于两个运算数之后abc</em>+de/-</p>
-<h4 id="中缀表达式如何转换为后缀表达式">中缀表达式如何转换为后缀表达式</h4>
-<ul>
-<li>从头到尾读取<strong>中缀表达式的每个对象</strong>对不同对象按不同的情况处理
-<ul>
-<li>运算数：直接输出</li>
-<li>左括号：压入堆栈</li>
-<li>右括号：将<strong>栈顶的运算符弹出并输出</strong>，<strong>直到遇到左括号</strong></li>
-<li>运算符
-<ul>
-<li>若<strong>优先级大于栈顶元素</strong>压栈</li>
-<li>若<strong>优先级小于等于栈顶运算符</strong>，将栈顶运算符弹出并输出，再比较新的运算符，直到该运算符大于栈顶运算符优先级</li>
-</ul>
-</li>
-<li>若各对象处理完毕，则把堆栈中存留的<strong>运算符一并输出</strong></li>
-</ul>
-</li>
-</ul>
-<h4 id="其他">其他</h4>
-<p>函数调用及递归实现<br>
-深度优先搜索<br>
-回溯算法</p>
+<h3 id="树的实现">树的实现</h3>
+<p>儿子兄弟表示法</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">PtrToNode</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Element;</span><br><span class="line">    PtrToNode FirstChild;</span><br><span class="line">    PtrToNode NextSibiling;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>数据结构</category>
       </categories>
       <tags>
         <tag>学习笔记</tag>
-        <tag>线性结构</tag>
+        <tag>树形结构</tag>
       </tags>
   </entry>
   <entry>
@@ -275,6 +380,116 @@
       <tags>
         <tag>学习笔记</tag>
         <tag>线性结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构笔记（三）栈</title>
+    <url>/post/39226.html</url>
+    <content><![CDATA[<h2 id="堆栈">堆栈</h2>
+<h3 id="堆栈的抽象数据类型描述">堆栈的抽象数据类型描述</h3>
+<ul>
+<li>具有一定操作约束的线性表</li>
+<li>只在栈顶做插入删除</li>
+<li>插入数据：<strong>入栈（push）</strong></li>
+<li>删除数据：<strong>出栈（pop）</strong></li>
+<li><strong>后入先出</strong>：Last In First Out(LIFO)</li>
+</ul>
+<p><strong>类型名称</strong>：堆栈<br>
+<strong>数据对象集</strong>：一个有0个或多个元素的有穷线性表<br>
+<strong>操作集</strong>：长度为Maxsize的堆栈Stack 栈顶元素item</p>
+<ol>
+<li><code>Stack CreatStack(int Maxsize)</code>:生成空堆栈</li>
+<li><code>int IsFull(Stack S,int Maxsize)</code>:判断堆栈是否已满</li>
+<li><code>void Push(Stack S,ElementType item)</code>:将元素压入堆栈</li>
+<li><code>int isEmpty(Stack S)</code>:判断堆栈是否为空</li>
+<li><code>ElementType Pop(Stack S)</code>:删除并返回栈顶元素</li>
+</ol>
+<h3 id="堆栈的顺序存储的实现">堆栈的顺序存储的实现</h3>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize <span class="meta-string">&lt;存储数据元素的最大个数&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">Stack</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Data[MaxSize];</span><br><span class="line">    <span class="keyword">int</span> Top;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>
+<p>入栈</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span><span class="params">(Stack Ptrl,ElementType item)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Ptrl-&gt;Top==MaxSize)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;堆栈满&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        Ptrl-&gt;Data[++(Ptrl-&gt;Top)] = item;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>出栈</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">Pop</span><span class="params">(Stack PtrS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Ptrs-&gt;Top==<span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> Error;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (Ptrs-&gt;Data[(PtrS-&gt;Top)--]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="堆栈的链式存储的实现">堆栈的链式存储的实现</h3>
+<p>栈的链式储存实际上就是一个单链表，叫做<strong>链栈</strong>，插入和删除操作只能在链栈的栈顶进行</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">Stack</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">Next</span>;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>
+<p>堆栈的初始化</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">Stack <span class="title">CreatStack</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Stack S;</span><br><span class="line">    S = (Stack)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct SNode));</span><br><span class="line">    S-&gt;Next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> S;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>判断栈空</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">IsEmpty</span><span class="params">(Stack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (S-&gt;Next == <span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>压栈</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span><span class="params">(ElementType item,Stack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">TmpCell</span>;</span></span><br><span class="line">    TmpCell = (struct SNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Struct SNode));</span><br><span class="line">    TmpCell-&gt;Element = item;</span><br><span class="line">    TmpCell-&gt;Next = S-&gt;Next;</span><br><span class="line">    S-&gt;Next = TmpCell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>出栈</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">Pop</span><span class="params">(Stack S)</span><span class="comment">//删除并返回栈顶元素</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">FirstCell</span>;</span></span><br><span class="line">    ElementType TopElem;</span><br><span class="line">    <span class="keyword">if</span>(IsEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        FirstCell = S-&gt;Next;</span><br><span class="line">        S-&gt;Next = FirstCell-&gt;Next;</span><br><span class="line">        TopElem = FirstCell-&gt;Element;</span><br><span class="line">        <span class="built_in">free</span>(FirstCell);</span><br><span class="line">        <span class="keyword">return</span> TopElem</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="应用——后缀表达式">应用——后缀表达式</h3>
+<p>中缀表达式：运算符号位于两个运算数之间a+b<em>c-d/e<br>
+后缀表达式：运算符号位于两个运算数之后abc</em>+de/-</p>
+<h4 id="中缀表达式如何转换为后缀表达式">中缀表达式如何转换为后缀表达式</h4>
+<ul>
+<li>从头到尾读取<strong>中缀表达式的每个对象</strong>对不同对象按不同的情况处理
+<ul>
+<li>运算数：直接输出</li>
+<li>左括号：压入堆栈</li>
+<li>右括号：将<strong>栈顶的运算符弹出并输出</strong>，<strong>直到遇到左括号</strong></li>
+<li>运算符
+<ul>
+<li>若<strong>优先级大于栈顶元素</strong>压栈</li>
+<li>若<strong>优先级小于等于栈顶运算符</strong>，将栈顶运算符弹出并输出，再比较新的运算符，直到该运算符大于栈顶运算符优先级</li>
+</ul>
+</li>
+<li>若各对象处理完毕，则把堆栈中存留的<strong>运算符一并输出</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="其他">其他</h4>
+<p>函数调用及递归实现<br>
+深度优先搜索<br>
+回溯算法</p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>线性结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构笔记（七）二叉搜索树</title>
+    <url>/post/35884.html</url>
+    <content><![CDATA[<h2 id="二叉搜索树">二叉搜索树</h2>
+<p>对于树中的每个节点X，它的左子树的所有关键字值小于X的关键字值，右子树中的所有关键字值大于X的关键字值<br>
+平均深度 $O(logn)$</p>
+<ol>
+<li>
+<p>MakeEmpty 二叉树的初始化</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">Position</span>;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">SearchTree</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="function">SearchTree <span class="title">MakeEmpty</span><span class="params">(SearchTree T)</span></span>;</span><br><span class="line"><span class="function">Position <span class="title">Find</span><span class="params">(Elementtype X,SearctTree T)</span></span>;</span><br><span class="line"><span class="function">Position <span class="title">FindMin</span><span class="params">(SearchTree T)</span></span>;</span><br><span class="line"><span class="function">Position <span class="title">FindMax</span><span class="params">(SearchTree T)</span></span>;</span><br><span class="line"><span class="function">SearchTree <span class="title">Insert</span><span class="params">(Elementtype X,SearctTree T)</span></span>;</span><br><span class="line"><span class="function">SearchTree <span class="title">Delete</span><span class="params">(Elementtype X,SearctTree T)</span></span>;</span><br><span class="line"><span class="function">ElementType <span class="title">Retrieve</span><span class="params">(Position P)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Element;</span><br><span class="line">    SearchTree Left;</span><br><span class="line">    SearchTree Right;   </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">SearchTree <span class="title">MakeEmpty</span><span class="params">(SearchTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        MakeEmpty(T-&gt;Left);</span><br><span class="line">        MakeEmpty(T-&gt;Left);</span><br><span class="line">        <span class="built_in">free</span>(T);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>树形结构</tag>
       </tags>
   </entry>
   <entry>
@@ -409,242 +624,21 @@ $$T_{avg}(n)\leq T_{worst}(n)$$</li>
       </tags>
   </entry>
   <entry>
-    <title>数据结构笔记（五）树与树的表示</title>
-    <url>/post/14197.html</url>
-    <content><![CDATA[<h2 id="树的定义">树的定义</h2>
-<p>树（Tree）: n（n≥0）个结点构成的有限集合。</p>
-<ul>
-<li>当n=0时，称为空树；</li>
-<li>对于任一棵非空树（n&gt; 0），它具备以下性质：
-<ul>
-<li>树中有一个称为“根（Root）”的特殊结点，用 r 表示；</li>
-<li>其余结点可分为m(m&gt;0)个互不相交的有限集T1，T2，… ，Tm，其中每个集合本身又是一棵树，称为原来树的“子树（SubTree）”</li>
-</ul>
-</li>
-<li>子树是不相交的；</li>
-<li>除了根结点外，每个结点有且仅有一个父结点；</li>
-<li>一棵N个结点的树有N-1条边。</li>
-</ul>
-<h3 id="基本术语">基本术语</h3>
-<ol>
-<li>结点的度（Degree）：结点的子树个数</li>
-<li>树的度：树的所有结点中最大的度数</li>
-<li>叶结点（Leaf）：度为0的结点</li>
-<li>父结点（Parent）：有子树的结点是其子树<br>
-的根结点的父结点</li>
-<li>子结点（Child）：若A结点是B结点的父结<br>
-点，则称B结点是A结点的子结点；子结点也<br>
-称孩子结点。</li>
-<li>兄弟结点（Sibling）：具有同一父结点的各<br>
-结点彼此是兄弟结点。</li>
-<li>路径和路径长度：从结点n1到nk的路径为一<br>
-个结点序列n1 , n2,… , nk, ni是 ni+1的父结点。路径所包含边的个数为路径的长度。</li>
-<li>祖先结点(Ancestor)：沿树根到某一结点路<br>
-径上的所有结点都是这个结点的祖先结点。</li>
-<li>子孙结点(Descendant)：某一结点的子树<br>
-中的所有结点是这个结点的子孙。</li>
-<li>结点的层次（Level）：规定根结点在1层，<br>
-其它任一结点的层数是其父结点的层数加1。</li>
-<li>树的深度（Depth）：树中所有结点中的最<br>
-大层次是这棵树的深度。</li>
+    <title>未完成计划</title>
+    <url>/post/20301.html</url>
+    <content><![CDATA[<ol>
+<li>平衡二叉树</li>
+<li>伸展树</li>
+<li>B树、B+树</li>
+<li>优先队列（堆）、d堆</li>
+<li>左偏堆、斜堆</li>
+<li>二项队列、斐波那契堆</li>
+<li>图论概念和拓扑排序</li>
+<li>最短路</li>
+<li>最小生成树</li>
+<li>并查集+路径压缩</li>
+<li>散列表</li>
 </ol>
-<h3 id="树的实现">树的实现</h3>
-<p>儿子兄弟表示法</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">PtrToNode</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Element;</span><br><span class="line">    PtrToNode FirstChild;</span><br><span class="line">    PtrToNode NextSibiling;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>学习笔记</tag>
-        <tag>树形结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/post/0.html</url>
-    <content><![CDATA[<hr>
-<p>title: 数据结构笔记（四）队列<br>
-tags:</p>
-<ul>
-<li>学习笔记</li>
-<li>线性结构<br>
-categories: 数据结构<br>
-abbrlink: 2</li>
-</ul>
-<hr>
-<h2 id="队列">队列</h2>
-<p><strong>队列</strong>：具有一定操作约束的线性表<br>
-数据插入：入队列（AddQ）<br>
-数据删除：出队列（DeleteQ）<br>
-先来先服务<br>
-先进先出：FIFO</p>
-<h3 id="队列的抽象数据类型描述">队列的抽象数据类型描述</h3>
-<p><strong>类型名称</strong>：队列(Queue)<br>
-<strong>数据对象集</strong>：一个有0个或多个元素的有穷线性表。<br>
-<strong>操作集</strong>：长度为MaxSize的队列Q，队列元素item</p>
-<ol>
-<li><code>Queue CreatQueue( int MaxSize )</code>：生成长度为MaxSize的空队列；</li>
-<li><code>int IsFullQ( Queue Q, int MaxSize )</code>：判断队列Q是否已满；</li>
-<li><code>void AddQ( Queue Q, ElementType item )</code>： 将数据元素item插入队列Q中；</li>
-<li><code>int IsEmptyQ( Queue Q )</code>： 判断队列Q是否为空；</li>
-<li><code>ElementType DeleteQ( Queue Q )</code>：将队头数据元素从队列中删除并返回</li>
-</ol>
-<h3 id="队列的顺序存储实现">队列的顺序存储实现</h3>
-<p>通常由一个一维数组和一个记录队列头元素位置的变量front，以及一个记录队列尾元素位置的变量rear组成。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize <span class="meta-string">&lt;储存数据元素的最大个数&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">QNode</span> &#123;</span></span><br><span class="line">ElementType Data[ MaxSize ];</span><br><span class="line"><span class="keyword">int</span> rear;</span><br><span class="line"><span class="keyword">int</span> front;</span><br><span class="line">&#125;; </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">QNode</span> *<span class="title">Queue</span>;</span></span><br></pre></td></tr></table></figure>
-<ol>
-<li>
-<p>入队</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AddQ</span><span class="params">( Queue PtrQ, ElementType item)</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">     <span class="keyword">if</span>((PtrQ-&gt;rear+<span class="number">1</span>)%MaxSize == PtrQ-&gt;front )&#123;</span><br><span class="line">         <span class="built_in">printf</span>(“队列满”); </span><br><span class="line">         <span class="keyword">return</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     PtrQ-&gt;rear = (PtrQ-&gt;rear+<span class="number">1</span>)% MaxSize;</span><br><span class="line">     PtrQ-&gt;Data[PtrQ-&gt;rear] = item;</span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>出队</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">DeleteQ</span> <span class="params">( Queue PtrQ )</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">     <span class="keyword">if</span>(PtrQ-&gt;front == PtrQ-&gt;rear)&#123; </span><br><span class="line">         <span class="built_in">printf</span>(“队列空”);</span><br><span class="line">         <span class="keyword">return</span> ERROR;</span><br><span class="line">     &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">         PtrQ-&gt;front = (PtrQ-&gt;front+<span class="number">1</span>)% MaxSize;</span><br><span class="line">         <span class="keyword">return</span> PtrQ-&gt;Data[PtrQ-&gt;front];</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="队列的链式存储实现">队列的链式存储实现</h3>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line"> ElementType Data;</span><br><span class="line"> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">Next</span>;</span></span><br><span class="line">&#125;; </span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">QNode</span>&#123;</span> <span class="comment">/* 链队列结构 */</span></span><br><span class="line"> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">rear</span>;</span> <span class="comment">/* 指向队尾结点 */</span></span><br><span class="line"> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">front</span>;</span> <span class="comment">/* 指向队头结点 */</span></span><br><span class="line">&#125;; </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">QNode</span> *<span class="title">Queue</span>;</span></span><br><span class="line">Queue PtrQ;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>
-<p>不带头结点的链式队列出队操作的一个示例：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">DeleteQ</span> <span class="params">( Queue PtrQ )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Node</span> *<span class="title">FrontCell</span>;</span> </span><br><span class="line">    ElementType FrontElem;</span><br><span class="line">    <span class="keyword">if</span>(PtrQ-&gt;front == <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(“队列空”); </span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">     &#125;</span><br><span class="line">     FrontCell = PtrQ-&gt;front;</span><br><span class="line">     <span class="keyword">if</span>(PtrQ-&gt;front == PtrQ-&gt;rear)</span><br><span class="line">     <span class="comment">/* 若队列只有一个元素 */</span></span><br><span class="line">     PtrQ-&gt;front = PtrQ-&gt;rear = <span class="literal">NULL</span>;</span><br><span class="line">     <span class="comment">/* 删除后队列置为空 */</span></span><br><span class="line">     <span class="keyword">else</span> </span><br><span class="line">         PtrQ-&gt;front = PtrQ-&gt;front-&gt;Next;</span><br><span class="line">     FrontElem = FrontCell-&gt;Data;</span><br><span class="line">     <span class="built_in">free</span>( FrontCell ); </span><br><span class="line">     <span class="comment">/* 释放被删除结点空间 */</span></span><br><span class="line">     <span class="keyword">return</span> FrontElem;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/post/0.html</url>
-    <content><![CDATA[<hr>
-<p>title: 数据结构笔记（六）二叉树<br>
-tags:</p>
-<ul>
-<li>学习笔记</li>
-<li>树形结构<br>
-categories: 数据结构<br>
-abbrlink: 1</li>
-</ul>
-<hr>
-<h2 id="二叉树的定义及基本特点">二叉树的定义及基本特点</h2>
-<h3 id="定义">定义</h3>
-<p>二叉树（Binary Tree）是n（n≥0）个结点所构成的集合，它或为空树（n = 0）；或为非空树</p>
-<p>对于非空树T：</p>
-<ol>
-<li>有且仅有一个称之为根的结点</li>
-<li>除根结点以外的其余结点分为两个互不相交的子集T1和T2，分别称为T的左子树和右子树，且T1和T2本身又都是二叉树。</li>
-</ol>
-<h3 id="基本特点">基本特点</h3>
-<ol>
-<li>结点的度小于等于2</li>
-<li>有序树：二叉树的子树有<strong>左右顺序</strong>之分</li>
-</ol>
-<h3 id="二叉树的性质">二叉树的性质</h3>
-<ol>
-<li>在二叉树的第i层上至多有$2^{i-1}$个结点</li>
-<li>深度为k的二叉树至多有$2^k-1$个结点</li>
-<li>对于任何一棵二叉树，若2度的结点数有$n_{2}$个，则叶子数$n_{0}$必定为$n_{2}+1$（即$n_{0}=n_{2}+1$）</li>
-<li>完全二叉树：深度为k 的，有n个结点的二叉树，当且仅当其每一个结点都与深度为k 的满二叉树中编号从1至n的结点一一对应</li>
-<li>满二叉树：一棵深度为k 且有$2k − 1$个结点的二叉树。（特点：每层都“充满”了结点） 满二叉树是完全二叉树的一个特例。</li>
-<li>具有n个结点的完全二叉树的深度必为$⌊log2n⌋＋1$</li>
-<li>对完全二叉树，若从上至下、从左至右编号，则编号为i 的结点，其左孩子编号必为$2i$，其右孩子编号必为$2i＋1$；其双亲的编号必为$\frac {i} {2}$</li>
-</ol>
-<h3 id="二叉树的抽象数据类型定义">二叉树的抽象数据类型定义</h3>
-<p><strong>类型名称</strong>：二叉树<br>
-<strong>数据对象集</strong>：一个有穷的结点集合。若不为空，则由根结点和其左、右二叉子树组成。<br>
-<strong>操作集</strong>：</p>
-<ol>
-<li><code>Boolean IsEmpty( BinTree BT )</code>： 判别BT是否为空；</li>
-<li><code>void Traversal( BinTree BT )</code>：遍历，按某顺序访问每个结点；</li>
-<li><code>BinTree CreatBinTree( )</code>：创建一个二叉树。</li>
-</ol>
-<p>常用的遍历方法有：</p>
-<ol>
-<li><code>void PreOrderTraversal( BinTree BT )</code>：先序----根、左子树、右子树；</li>
-<li><code>void InOrderTraversal( BinTree BT )</code>： 中序—左子树、根、右子树；</li>
-<li><code>void PostOrderTraversal( BinTree BT )</code>：后序—左子树、右子树、根</li>
-<li><code>void LevelOrderTraversal( BinTree BT )</code>：层次遍历，从上到下、从左到右</li>
-</ol>
-<h3 id="二叉树的存储结构">二叉树的存储结构</h3>
-<ol>
-<li>顺序存储</li>
-<li>链式存储</li>
-</ol>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">BinTree</span>;</span></span><br><span class="line"><span class="keyword">typedef</span> BinTree Position;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Data;</span><br><span class="line">    BinTree Left;BinTree Right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在n个结点的二叉链表中，有(n+1)个空指针域</p>
-<h3 id="遍历二叉树">遍历二叉树</h3>
-<p>DLR—先序遍历，即先根再左再右<br>
-LDR—中序遍历，即先左再根再右<br>
-LRD—后序遍历，即先左再右再根</p>
-<p>若二叉树中各结点的值均不相同，则由二叉树的前序序列和中序序列，或由其后序序列和中序序列均能唯一地确定一棵二叉树，但由前序序列和后序序列却不一定能唯一地确定一棵二叉树。</p>
-<ol>
-<li>递归版先序中序后序</li>
-</ol>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//递归遍历二叉树</span></span><br><span class="line"><span class="comment">//先序 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PreOrderTraversal</span><span class="params">( BinTree BT )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( BT ) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(“%d”, BT-&gt;Data);</span><br><span class="line">        PreOrderTraversal( BT-&gt;Left );</span><br><span class="line">        PreOrderTraversal( BT-&gt;Right );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//中序 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrderTraversal</span><span class="params">( BinTree BT )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( BT ) &#123;</span><br><span class="line">        InOrderTraversal( BT-&gt;Left );</span><br><span class="line">        <span class="built_in">printf</span>(“%d”, BT-&gt;Data);</span><br><span class="line">        InOrderTraversal( BT-&gt;Right );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//后序</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PostOrderTraversal</span><span class="params">( BinTree BT )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>( BT ) &#123;</span><br><span class="line">        PostOrderTraversal( BT-&gt;Left );</span><br><span class="line">        PostOrderTraversal( BT-&gt;Right);</span><br><span class="line">        <span class="built_in">printf</span>(“%d”, BT-&gt;Data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>
-<p>中序遍历的非递归遍历</p>
-<ul>
-<li>遇到一个结点，就把它压栈，并去遍历它的左子树；</li>
-<li>当左子树遍历结束后，从栈顶弹出这个结点并访问它；</li>
-<li>然后按其右指针再去中序遍历该结点的右子树</li>
-</ul>
-</li>
-</ol>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//非递归遍历（中序） </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrderTraversal</span><span class="params">( BinTree BT )</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    BinTree T=BT;</span><br><span class="line">    Stack S = CreatStack( MaxSize ); <span class="comment">/*创建并初始化堆栈S*/</span></span><br><span class="line">    <span class="keyword">while</span>( T || !IsEmpty(S) )&#123;</span><br><span class="line">        <span class="keyword">while</span>(T)&#123; <span class="comment">/*一直向左并将沿途结点压入堆栈*/</span></span><br><span class="line">            Push(S,T);</span><br><span class="line">            T = T-&gt;Left;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!IsEmpty(S))&#123;</span><br><span class="line">            T = Pop(S); <span class="comment">/*结点弹出堆栈*/</span></span><br><span class="line">            <span class="built_in">printf</span>(“%<span class="number">5</span>d”, T-&gt;Data); <span class="comment">/*（访问）打印结点*/</span></span><br><span class="line">            T = T-&gt;Right; <span class="comment">/*转向右子树*/</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>先序遍历的非递归遍历算法</li>
-</ol>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InOrderTraversal</span><span class="params">( BinTree BT )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    BinTree T BT;</span><br><span class="line">    Stack S = CreatStack( MaxSize ); <span class="comment">/*创建并初始化堆栈S*/</span></span><br><span class="line">    <span class="keyword">while</span>( T || !IsEmpty(S) )&#123;</span><br><span class="line">        <span class="keyword">while</span>(T)&#123; <span class="comment">/*一直向左并将沿途结点压入堆栈*/</span></span><br><span class="line">            Push(S,T);</span><br><span class="line">            T = T-&gt;Left;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!IsEmpty(S))&#123;</span><br><span class="line">            T = Pop(S); <span class="comment">/*结点弹出堆栈*/</span></span><br><span class="line">            <span class="built_in">printf</span>(“%<span class="number">5</span>d”, T-&gt;Data); <span class="comment">/*（访问）打印结点*/</span></span><br><span class="line">            T = T-&gt;Right; <span class="comment">/*转向右子树*/</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>层序遍历</li>
-</ol>
-<ul>
-<li>从队列中取出一个元素；</li>
-<li>访问该元素所指结点；</li>
-<li>若该元素所指结点的左、右孩子结点非空，则将其左、右孩子的指针顺序入队。</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">LevelOrderTraversal</span> <span class="params">( BinTree BT )</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    Queue Q; BinTree T;</span><br><span class="line">    <span class="keyword">if</span>( !BT ) <span class="keyword">return</span>; <span class="comment">/* 若是空树则直接返回 */</span></span><br><span class="line">    Q = CreatQueue( MaxSize ); <span class="comment">/*创建并初始化队列Q*/</span></span><br><span class="line">    AddQ( Q, BT );</span><br><span class="line">    <span class="keyword">while</span> ( !IsEmptyQ( Q ) ) &#123;</span><br><span class="line">        T = DeleteQ( Q );</span><br><span class="line">        <span class="built_in">printf</span>(“%d\n”, T-&gt;Data); <span class="comment">/*访问取出队列的结点*/</span> </span><br><span class="line">        <span class="keyword">if</span> ( T-&gt;Left ) AddQ( Q, T-&gt;Left );</span><br><span class="line">        <span class="keyword">if</span> ( T-&gt;Right ) AddQ( Q, T-&gt;Right );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="二叉树的建立">二叉树的建立</h3>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//建立二叉树 (先序）</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreateBiTree</span><span class="params">(BiTree &amp;T)</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;ch;</span><br><span class="line">    <span class="keyword">if</span> (ch==<span class="string">&#x27;#&#x27;</span>)   T=<span class="literal">NULL</span>;   <span class="comment">//递归结束，建空树</span></span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        T=<span class="keyword">new</span> BiTNode;</span><br><span class="line">        T-&gt;data=ch;  <span class="comment">//生成根结点</span></span><br><span class="line">        CreateBiTree(T-&gt;lchild);  <span class="comment">//递归创建左子树</span></span><br><span class="line">        CreateBiTree(T-&gt;rchild); <span class="comment">//递归创建右子树</span></span><br><span class="line">    &#125;         </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-<h3 id="其他应用">其他应用</h3>
-<ol>
-<li>复制二叉树</li>
-</ol>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//复制二叉树</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Copy</span><span class="params">(BiTree T,BiTree &amp;NewT)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T==<span class="literal">NULL</span>)&#123;</span><br><span class="line">        NewT=<span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> ;  </span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        NewT=<span class="keyword">new</span> BiTree;</span><br><span class="line">        NewT-&gt;data=T-&gt;data;</span><br><span class="line">        copy(T-&gt;lchild,NewT-&gt;lchild);</span><br><span class="line">        copy(T-&gt;rchild,NewT-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>二叉树遍历算法的应用</li>
-</ol>
-<pre><code class="language-c">//计算二叉树叶子节点总数
-int LeadCount(BiTree T)&#123;
-    if(T==NULL)  //如果是空树返回0
-        return 0;
-    if (T-&gt;lchild == NULL &amp;&amp; T-&gt;rchild == NULL)
-        return 1; //如果是叶子结点返回1
-    else 
-        return LeafCount(T-&gt;lchild) + LeafCount(T-&gt;rchild);
-&#125;
-
-//计算二叉树的深度
-int Depth(BiTree T)&#123;
-    if(T==NULL)  //如果是空树返回0
-        return 0;
-    else&#123;
-        m=Depth(T-&gt;lchild);
-        n=Depth(T-&gt;rchild);
-        if(m&gt;n) return m+1;
-        else return n+1;
-    &#125;
-&#125;
-
-//计算二叉树中结点的个数
-int NodeCount(BiTree T) &#123;
-    if(T==NULL)
-        return 0;
-    else
-        return NodeCount(T-&gt;lchild)+NodeCount(T-&gt;rchild)+1;
-&#125;
-</code></pre>
 ]]></content>
   </entry>
   <entry>
@@ -844,6 +838,79 @@ JVM能识别字节码，Java代码这种普通文本变成字节码的过程被�
       </tags>
   </entry>
   <entry>
+    <title>Java学习笔记（三）基本概念</title>
+    <url>/post/5391.html</url>
+    <content><![CDATA[<h2 id="一、JVM虚拟机">一、JVM虚拟机</h2>
+<ol>
+<li>栈<br>
+在方法被调用的时候，该方法需要的内存空间在栈中分配</li>
+<li>堆<br>
+凡是通过new运算符创建的对象，储存在堆内存中</li>
+<li>方法区<br>
+类加载器classloader，将xxx.class字节码文件装载到JVM的时候<br>
+会将字节码文件装载到方法区中，方法区中存放代码片段</li>
+</ol>
+<h2 id="二、内存栈">二、内存栈</h2>
+<ul>
+<li>栈数据结构stack</li>
+</ul>
+<ol>
+<li>Java语言把常用的数据结构已经都写好了</li>
+<li>进栈入栈push</li>
+<li>出栈pop</li>
+<li>栈帧永远指向栈顶部的元素</li>
+<li>数据结构特点：先进后出</li>
+<li>注意处于栈顶部的元素最具活跃权</li>
+</ol>
+<h2 id="三、方法执行时内存变化">三、方法执行时内存变化</h2>
+<ol>
+<li>方法不调用是不会在栈中分配空间的</li>
+<li>方法只有在调用的时候会分配空间，并且调用就是压栈</li>
+<li>方法结束后该方法需要的空间就会释放，发生弹栈</li>
+</ol>
+<h2 id="四、方法重载">四、方法重载</h2>
+<ol>
+<li>Java怎么进行方法区分
+<ul>
+<li>Java编译器通过方法名进行区分</li>
+<li>Java语言中允许方法名相同的情况出现，可以通过参数类型区分</li>
+</ul>
+</li>
+<li>什么时候发生方法重载
+<ul>
+<li>在同一个类中</li>
+<li>方法名相同</li>
+<li>参数列表不同（个数、类型、顺序）</li>
+</ul>
+</li>
+</ol>
+<h2 id="五、递归算法">五、递归算法</h2>
+<ol>
+<li>方法递归，方法自己调用自己</li>
+<li>递归必须要有结束条件<br>
+递归有合法结束条件，有时候也会出现栈内存溢出错误，因为递归太深一直压栈</li>
+<li>实际开发中不建议轻易使用递归，能用for，while代替，尽量使用循环代替，循环效率高，调用内存少，少数情况不递归无法实现</li>
+<li>出现栈内存溢出
+<ol>
+<li>先检查递归结束条件对不对</li>
+<li>手动调整JVM栈内存初始化大小</li>
+<li>继续扩大栈内存大小Java -x</li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>JavaSE基础</category>
+      </categories>
+      <tags>
+        <tag>JavaSE学习笔记</tag>
+        <tag>Java基本概念</tag>
+        <tag>JVM虚拟机</tag>
+        <tag>内存栈</tag>
+        <tag>方法重载</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java学习笔记（二）基础语法</title>
     <url>/post/55918.html</url>
     <content><![CDATA[<h2 id="一、注释">一、注释</h2>
@@ -965,154 +1032,6 @@ BigDecimal类 大实数</p>
       </tags>
   </entry>
   <entry>
-    <title>Java学习笔记（五）构造方法和封装</title>
-    <url>/post/35965.html</url>
-    <content><![CDATA[<h2 id="一．构造方法constructor">一．构造方法constructor</h2>
-<h3 id="1．什么是构造方法">1．什么是构造方法</h3>
-<ol>
-<li>
-<p>构造方法也是一个特殊的方法，通过构造方法可以完成对象的创建，以及实例变量的初始化，换句话来说，构造方法是用来创建对象，并同时给对象的属性赋值</p>
-</li>
-<li>
-<p>语法结构</p>
- <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] 构造方法名 (形式参数列表)&#123;</span><br><span class="line">    构造方法体</span><br><span class="line">    通常在构造方法体中给属性赋值，完成属性的初始化</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>修饰符列表public</li>
-<li>构造方法名必须和类名一致</li>
-<li>构造方法不需要指定返回值类型</li>
-</ul>
-</li>
-<li>
-<p>调用构造方法</p>
-</li>
-</ol>
-<p><code>New 构造方法名(实际参数列表)</code></p>
-<ul>
-<li>当一个类中手动的提供了构造方法，那么系统将不再提供无参数的构造方法（建议把无参数构造方法写出来）</li>
-<li>当一个类没有提供任何构造方法，系统会默认构造一个没有参数的构造方法（缺省构造器）</li>
-<li>无参数构造方法和有参数构造方法都可以调用</li>
-<li>无参数构造方法虽然没有代码但是默认在这里赋系统默认值</li>
-<li>构造方法可以重载</li>
-</ul>
-<h2 id="二．封装">二．封装</h2>
-<h3 id="1．封装的作用">1．封装的作用</h3>
-<ol>
-<li>保证内部结构的安全</li>
-<li>屏蔽复杂，暴露简单</li>
-</ol>
-<h3 id="2．怎么进行封装">2．怎么进行封装</h3>
-<ol>
-<li>属性私有化（private）
-<ul>
-<li>Private表示私有的，被这个关键字修饰之后，该数据只能在本类中访问，出类不能访问。</li>
-</ul>
-</li>
-<li>对外提供简单的操作入口
-<ol>
-<li>带有static的方法</li>
-<li>不带有static的方法，用new对象引用去访问</li>
-</ol>
-<ul>
-<li>称为实例方法，对象级别的方法（对象被称为实例，实例相关的都需要new对象，和引用来访问）</li>
-</ul>
-</li>
-<li>空指针异常导致的最本质的原因是？
-<ol>
-<li>空引用访问实例相关的数据，会导致空指针异常</li>
-<li>实例相关的包括，实例变量+实例方法</li>
-</ol>
-</li>
-<li>对外提供公开的get方法和set方法作为操作入口，并且都不带static</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] 返回值类型 方法名 (形式参数列表)&#123;&#125;</span><br><span class="line"><span class="comment">/*get方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">(无参)</span></span>&#123;<span class="comment">//get属性名首字母大写</span></span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*set方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span> <span class="params">(<span class="keyword">int</span> a（一个参数）)</span></span>&#123;</span><br><span class="line">    A = a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>5．封装代码实现两步</p>
-<ul>
-<li>属性私有化  一个属性提供get和set方法</li>
-</ul>
-]]></content>
-      <categories>
-        <category>JavaSE基础</category>
-      </categories>
-      <tags>
-        <tag>JavaSE学习笔记</tag>
-        <tag>Java构造方法</tag>
-        <tag>Java封装</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java学习笔记（三）基本概念</title>
-    <url>/post/5391.html</url>
-    <content><![CDATA[<h2 id="一、JVM虚拟机">一、JVM虚拟机</h2>
-<ol>
-<li>栈<br>
-在方法被调用的时候，该方法需要的内存空间在栈中分配</li>
-<li>堆<br>
-凡是通过new运算符创建的对象，储存在堆内存中</li>
-<li>方法区<br>
-类加载器classloader，将xxx.class字节码文件装载到JVM的时候<br>
-会将字节码文件装载到方法区中，方法区中存放代码片段</li>
-</ol>
-<h2 id="二、内存栈">二、内存栈</h2>
-<ul>
-<li>栈数据结构stack</li>
-</ul>
-<ol>
-<li>Java语言把常用的数据结构已经都写好了</li>
-<li>进栈入栈push</li>
-<li>出栈pop</li>
-<li>栈帧永远指向栈顶部的元素</li>
-<li>数据结构特点：先进后出</li>
-<li>注意处于栈顶部的元素最具活跃权</li>
-</ol>
-<h2 id="三、方法执行时内存变化">三、方法执行时内存变化</h2>
-<ol>
-<li>方法不调用是不会在栈中分配空间的</li>
-<li>方法只有在调用的时候会分配空间，并且调用就是压栈</li>
-<li>方法结束后该方法需要的空间就会释放，发生弹栈</li>
-</ol>
-<h2 id="四、方法重载">四、方法重载</h2>
-<ol>
-<li>Java怎么进行方法区分
-<ul>
-<li>Java编译器通过方法名进行区分</li>
-<li>Java语言中允许方法名相同的情况出现，可以通过参数类型区分</li>
-</ul>
-</li>
-<li>什么时候发生方法重载
-<ul>
-<li>在同一个类中</li>
-<li>方法名相同</li>
-<li>参数列表不同（个数、类型、顺序）</li>
-</ul>
-</li>
-</ol>
-<h2 id="五、递归算法">五、递归算法</h2>
-<ol>
-<li>方法递归，方法自己调用自己</li>
-<li>递归必须要有结束条件<br>
-递归有合法结束条件，有时候也会出现栈内存溢出错误，因为递归太深一直压栈</li>
-<li>实际开发中不建议轻易使用递归，能用for，while代替，尽量使用循环代替，循环效率高，调用内存少，少数情况不递归无法实现</li>
-<li>出现栈内存溢出
-<ol>
-<li>先检查递归结束条件对不对</li>
-<li>手动调整JVM栈内存初始化大小</li>
-<li>继续扩大栈内存大小Java -x</li>
-</ol>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>JavaSE基础</category>
-      </categories>
-      <tags>
-        <tag>JavaSE学习笔记</tag>
-        <tag>Java基本概念</tag>
-        <tag>JVM虚拟机</tag>
-        <tag>内存栈</tag>
-        <tag>方法重载</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java学习笔记（八）多态</title>
     <url>/post/23987.html</url>
     <content><![CDATA[<h2 id="多态">多态</h2>
@@ -1165,114 +1084,6 @@ BigDecimal类 大实数</p>
         <tag>JavaSE学习笔记</tag>
         <tag>Java多态</tag>
         <tag>Java Instanceof</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java学习笔记（四）面向对象</title>
-    <url>/post/29980.html</url>
-    <content><![CDATA[<h2 id="一、面向对象和面向过程的区别">一、面向对象和面向过程的区别</h2>
-<ul>
-<li>C 完全面向过程</li>
-<li>C++ 一半面向过程一半面向对象</li>
-<li>Java 完全面向对象</li>
-</ul>
-<h3 id="1-什么是面向过程的开发方式">1.什么是面向过程的开发方式</h3>
-<ol>
-<li>特点
-<ol>
-<li>注重步骤</li>
-<li>注重因果关系</li>
-</ol>
-</li>
-</ol>
-<ul>
-<li>缺点
-<ul>
-<li>代码和代码之间耦合度太高，扩展力太差</li>
-</ul>
-</li>
-<li>优点
-<ul>
-<li>小型项目，采用面向过程方式进行开发，效率高</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-什么是面向对象的开发方式">2.什么是面向对象的开发方式</h3>
-<ol>
-<li>将现实世界分隔成几个小的单元，然后每一个单元都实现成对象，然后驱动一下，让各个对象之间协作起来形成一个系统</li>
-<li>特点<br>
-耦合度低，扩展力强</li>
-</ol>
-<h3 id="3-采用面向对象的方式贯穿整个系统，涉及三个术语">3.采用面向对象的方式贯穿整个系统，涉及三个术语</h3>
-<ul>
-<li>OOA：面向对象分析</li>
-<li>OOD：面向对象设计</li>
-<li>OOP：面向对象编程</li>
-</ul>
-<p>分析-&gt;设计-&gt;编程</p>
-<h3 id="4-面向对象包括三大特征">4.面向对象包括三大特征</h3>
-<ol>
-<li>封装</li>
-<li>继承</li>
-<li>多态</li>
-</ol>
-<h3 id="5-类和对象的概念">5.类和对象的概念</h3>
-<ol>
-<li>什么是类<br>
-一种模板，描述所有对象的共同特征信息</li>
-<li>什么是对象<br>
-实际存在的个体</li>
-</ol>
-<p>Java语言中，要想得到对象，必须先定义一个类，对象是通过类这个模板创造出来的</p>
-<p>术语</p>
-<p>类 对象 实例 实例化 抽象</p>
-<h2 id="二、类的定义">二、类的定义</h2>
-<h3 id="1．定义">1．定义</h3>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">[修饰符列表] <span class="class"><span class="keyword">class</span> 类名</span>&#123;&#125; 类体=属性加方法</span><br><span class="line">属性在代码上以变量的形式存在</span><br><span class="line">属性以数据的形式存在（成员变量）</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">xueSheng</span></span>&#123;</span><br><span class="line"> <span class="keyword">int</span> xueHao;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>java中所有的类都属于引用数据类型</p>
-<h3 id="2．对象的创建和使用">2．对象的创建和使用</h3>
-<ol>
-<li>new 类名 ()</li>
-<li>new是个运算符专门负责对象的创建
-<ul>
-<li><code>xueSheng s = new xueSheng ();</code></li>
-</ul>
-</li>
-<li>关于编译的过程，对于编译器来说先编译test.java会自动找xuesheng.class，如果没有会自动编译xuesheng.java生成.class 文件</li>
-</ol>
-<h3 id="3．成员变量">3．成员变量</h3>
-<p>没有手动赋值，系统默认赋值</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">byte</span> <span class="number">0</span>    <span class="keyword">short</span> <span class="number">0</span> </span><br><span class="line"><span class="keyword">int</span> <span class="number">0</span>      <span class="keyword">long</span> <span class="number">0L</span>  </span><br><span class="line"><span class="keyword">float</span> <span class="number">0.0F</span>    <span class="keyword">double</span> <span class="number">0.0</span>  </span><br><span class="line"><span class="keyword">boolean</span> <span class="keyword">false</span>   <span class="keyword">char</span> \u0000 引用数据类型 <span class="keyword">null</span></span><br></pre></td></tr></table></figure>
-<h3 id="4．实例变量">4．实例变量</h3>
-<ol>
-<li>对象级别的变量</li>
-<li>不能通过类名来直接访问实例变量</li>
-</ol>
-<p>对象和引用的区别</p>
-<ol>
-<li>对象是通过new出来的，在堆内存中储存</li>
-<li>引用但凡是变量，并且该变量中保存了内存地址指向了堆内存中的对象</li>
-<li>怎么访问实例变量：引用.实例变量名</li>
-<li>通过=赋值将堆内存中实例变量的值进行修改</li>
-</ol>
-<h2 id="三、空指针异常">三、空指针异常</h2>
-<ul>
-<li>该对象没有引用指向它了，Java中规定程序员无法直接操作堆内存，只能等待gc把垃圾对象回收走。</li>
-</ul>
-<h2 id="四、方法调用时参数的传递问题">四、方法调用时参数的传递问题</h2>
-<ul>
-<li>Java中规定：参数传递的时候，和类型无关，不管你是基本数据类型，还是引用数据类型</li>
-</ul>
-]]></content>
-      <categories>
-        <category>JavaSE基础</category>
-      </categories>
-      <tags>
-        <tag>JavaSE学习笔记</tag>
-        <tag>Java面向对象</tag>
-        <tag>Java类机制</tag>
-        <tag>成员变量</tag>
-        <tag>实例变量</tag>
       </tags>
   </entry>
   <entry>
@@ -1413,6 +1224,189 @@ BigDecimal类 大实数</p>
       </tags>
   </entry>
   <entry>
+    <title>Java学习笔记（五）构造方法和封装</title>
+    <url>/post/35965.html</url>
+    <content><![CDATA[<h2 id="一．构造方法constructor">一．构造方法constructor</h2>
+<h3 id="1．什么是构造方法">1．什么是构造方法</h3>
+<ol>
+<li>
+<p>构造方法也是一个特殊的方法，通过构造方法可以完成对象的创建，以及实例变量的初始化，换句话来说，构造方法是用来创建对象，并同时给对象的属性赋值</p>
+</li>
+<li>
+<p>语法结构</p>
+ <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] 构造方法名 (形式参数列表)&#123;</span><br><span class="line">    构造方法体</span><br><span class="line">    通常在构造方法体中给属性赋值，完成属性的初始化</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>修饰符列表public</li>
+<li>构造方法名必须和类名一致</li>
+<li>构造方法不需要指定返回值类型</li>
+</ul>
+</li>
+<li>
+<p>调用构造方法</p>
+</li>
+</ol>
+<p><code>New 构造方法名(实际参数列表)</code></p>
+<ul>
+<li>当一个类中手动的提供了构造方法，那么系统将不再提供无参数的构造方法（建议把无参数构造方法写出来）</li>
+<li>当一个类没有提供任何构造方法，系统会默认构造一个没有参数的构造方法（缺省构造器）</li>
+<li>无参数构造方法和有参数构造方法都可以调用</li>
+<li>无参数构造方法虽然没有代码但是默认在这里赋系统默认值</li>
+<li>构造方法可以重载</li>
+</ul>
+<h2 id="二．封装">二．封装</h2>
+<h3 id="1．封装的作用">1．封装的作用</h3>
+<ol>
+<li>保证内部结构的安全</li>
+<li>屏蔽复杂，暴露简单</li>
+</ol>
+<h3 id="2．怎么进行封装">2．怎么进行封装</h3>
+<ol>
+<li>属性私有化（private）
+<ul>
+<li>Private表示私有的，被这个关键字修饰之后，该数据只能在本类中访问，出类不能访问。</li>
+</ul>
+</li>
+<li>对外提供简单的操作入口
+<ol>
+<li>带有static的方法</li>
+<li>不带有static的方法，用new对象引用去访问</li>
+</ol>
+<ul>
+<li>称为实例方法，对象级别的方法（对象被称为实例，实例相关的都需要new对象，和引用来访问）</li>
+</ul>
+</li>
+<li>空指针异常导致的最本质的原因是？
+<ol>
+<li>空引用访问实例相关的数据，会导致空指针异常</li>
+<li>实例相关的包括，实例变量+实例方法</li>
+</ol>
+</li>
+<li>对外提供公开的get方法和set方法作为操作入口，并且都不带static</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] 返回值类型 方法名 (形式参数列表)&#123;&#125;</span><br><span class="line"><span class="comment">/*get方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">(无参)</span></span>&#123;<span class="comment">//get属性名首字母大写</span></span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*set方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span> <span class="params">(<span class="keyword">int</span> a（一个参数）)</span></span>&#123;</span><br><span class="line">    A = a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>5．封装代码实现两步</p>
+<ul>
+<li>属性私有化  一个属性提供get和set方法</li>
+</ul>
+]]></content>
+      <categories>
+        <category>JavaSE基础</category>
+      </categories>
+      <tags>
+        <tag>JavaSE学习笔记</tag>
+        <tag>Java构造方法</tag>
+        <tag>Java封装</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java学习笔记（四）面向对象</title>
+    <url>/post/29980.html</url>
+    <content><![CDATA[<h2 id="一、面向对象和面向过程的区别">一、面向对象和面向过程的区别</h2>
+<ul>
+<li>C 完全面向过程</li>
+<li>C++ 一半面向过程一半面向对象</li>
+<li>Java 完全面向对象</li>
+</ul>
+<h3 id="1-什么是面向过程的开发方式">1.什么是面向过程的开发方式</h3>
+<ol>
+<li>特点
+<ol>
+<li>注重步骤</li>
+<li>注重因果关系</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>缺点
+<ul>
+<li>代码和代码之间耦合度太高，扩展力太差</li>
+</ul>
+</li>
+<li>优点
+<ul>
+<li>小型项目，采用面向过程方式进行开发，效率高</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-什么是面向对象的开发方式">2.什么是面向对象的开发方式</h3>
+<ol>
+<li>将现实世界分隔成几个小的单元，然后每一个单元都实现成对象，然后驱动一下，让各个对象之间协作起来形成一个系统</li>
+<li>特点<br>
+耦合度低，扩展力强</li>
+</ol>
+<h3 id="3-采用面向对象的方式贯穿整个系统，涉及三个术语">3.采用面向对象的方式贯穿整个系统，涉及三个术语</h3>
+<ul>
+<li>OOA：面向对象分析</li>
+<li>OOD：面向对象设计</li>
+<li>OOP：面向对象编程</li>
+</ul>
+<p>分析-&gt;设计-&gt;编程</p>
+<h3 id="4-面向对象包括三大特征">4.面向对象包括三大特征</h3>
+<ol>
+<li>封装</li>
+<li>继承</li>
+<li>多态</li>
+</ol>
+<h3 id="5-类和对象的概念">5.类和对象的概念</h3>
+<ol>
+<li>什么是类<br>
+一种模板，描述所有对象的共同特征信息</li>
+<li>什么是对象<br>
+实际存在的个体</li>
+</ol>
+<p>Java语言中，要想得到对象，必须先定义一个类，对象是通过类这个模板创造出来的</p>
+<p>术语</p>
+<p>类 对象 实例 实例化 抽象</p>
+<h2 id="二、类的定义">二、类的定义</h2>
+<h3 id="1．定义">1．定义</h3>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">[修饰符列表] <span class="class"><span class="keyword">class</span> 类名</span>&#123;&#125; 类体=属性加方法</span><br><span class="line">属性在代码上以变量的形式存在</span><br><span class="line">属性以数据的形式存在（成员变量）</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">xueSheng</span></span>&#123;</span><br><span class="line"> <span class="keyword">int</span> xueHao;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>java中所有的类都属于引用数据类型</p>
+<h3 id="2．对象的创建和使用">2．对象的创建和使用</h3>
+<ol>
+<li>new 类名 ()</li>
+<li>new是个运算符专门负责对象的创建
+<ul>
+<li><code>xueSheng s = new xueSheng ();</code></li>
+</ul>
+</li>
+<li>关于编译的过程，对于编译器来说先编译test.java会自动找xuesheng.class，如果没有会自动编译xuesheng.java生成.class 文件</li>
+</ol>
+<h3 id="3．成员变量">3．成员变量</h3>
+<p>没有手动赋值，系统默认赋值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">byte</span> <span class="number">0</span>    <span class="keyword">short</span> <span class="number">0</span> </span><br><span class="line"><span class="keyword">int</span> <span class="number">0</span>      <span class="keyword">long</span> <span class="number">0L</span>  </span><br><span class="line"><span class="keyword">float</span> <span class="number">0.0F</span>    <span class="keyword">double</span> <span class="number">0.0</span>  </span><br><span class="line"><span class="keyword">boolean</span> <span class="keyword">false</span>   <span class="keyword">char</span> \u0000 引用数据类型 <span class="keyword">null</span></span><br></pre></td></tr></table></figure>
+<h3 id="4．实例变量">4．实例变量</h3>
+<ol>
+<li>对象级别的变量</li>
+<li>不能通过类名来直接访问实例变量</li>
+</ol>
+<p>对象和引用的区别</p>
+<ol>
+<li>对象是通过new出来的，在堆内存中储存</li>
+<li>引用但凡是变量，并且该变量中保存了内存地址指向了堆内存中的对象</li>
+<li>怎么访问实例变量：引用.实例变量名</li>
+<li>通过=赋值将堆内存中实例变量的值进行修改</li>
+</ol>
+<h2 id="三、空指针异常">三、空指针异常</h2>
+<ul>
+<li>该对象没有引用指向它了，Java中规定程序员无法直接操作堆内存，只能等待gc把垃圾对象回收走。</li>
+</ul>
+<h2 id="四、方法调用时参数的传递问题">四、方法调用时参数的传递问题</h2>
+<ul>
+<li>Java中规定：参数传递的时候，和类型无关，不管你是基本数据类型，还是引用数据类型</li>
+</ul>
+]]></content>
+      <categories>
+        <category>JavaSE基础</category>
+      </categories>
+      <tags>
+        <tag>JavaSE学习笔记</tag>
+        <tag>Java面向对象</tag>
+        <tag>Java类机制</tag>
+        <tag>成员变量</tag>
+        <tag>实例变量</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java进阶学习笔记（一）IDEA工具的使用</title>
     <url>/post/56893.html</url>
     <content><![CDATA[<h2 id="IDEA工具的快捷键及设置">IDEA工具的快捷键及设置</h2>
@@ -1548,6 +1542,127 @@ file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
       <tags>
         <tag>Java学习笔记</tag>
         <tag>抽象类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java进阶学习笔记（二）final关键字</title>
+    <url>/post/8933.html</url>
+    <content><![CDATA[<h2 id="final关键字">final关键字</h2>
+<ol>
+<li>final是Java语言中的一个关键字</li>
+<li>表示最终的不可变的</li>
+<li>final修饰的变量
+<ul>
+<li>只能赋值一次</li>
+</ul>
+</li>
+<li>final修饰的方法
+<ul>
+<li>无法被覆盖，被重写</li>
+</ul>
+</li>
+<li>final修饰的类
+<ul>
+<li>无法继承</li>
+</ul>
+</li>
+<li>final控制不了能不能调用</li>
+</ol>
+<h3 id="final修饰的引用">final修饰的引用</h3>
+<ol>
+<li>final修饰的引用只能指向一个对象，并且它只能永远指向该对象</li>
+<li>并且该方法执行过程中，该引用指向对象后，该对象不会被垃圾回收器回收，知道当前方法结束，才会释放空间</li>
+<li>虽然final的引用指向对象A后，不能再重新向B,但是对象A内部的数据可以被修改</li>
+</ol>
+<h3 id="final修饰的实例变量">final修饰的实例变量</h3>
+<ol>
+<li>final修饰的实例变量，系统不管赋默认值，要求程序员必须手动赋值</li>
+<li>赶在系统赋默认值之前即可</li>
+<li>一般添加static修饰为静态常量（常量名建议大写单词之间_连接）</li>
+<li>常量和静态变量，都是存储在方法区，并且都是在类加载的时候初始化</li>
+<li>常量一般都是公开的</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java进阶</category>
+      </categories>
+      <tags>
+        <tag>Java学习笔记</tag>
+        <tag>final关键字</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java进阶学习笔记（八）package和import</title>
+    <url>/post/20061.html</url>
+    <content><![CDATA[<h2 id="package和import">package和import</h2>
+<p>包机制<br>
+为了方便程序管理，不同功能的类，分别存放在不同的包下</p>
+<h3 id="package">package</h3>
+<p>包（package）</p>
+<ul>
+<li>把功能相似或相关的类组织在同一个包中</li>
+<li>包也采用了树形目录的存储方式</li>
+<li>通过包也可限定类的访问权限</li>
+<li>包的命名规范
+<ul>
+<li>包采用“逆域名法”进行命名，用”.”分割，单词全部小写</li>
+<li>标准格式 域名后缀.组织机构名.项目名[.模块名].包的职能</li>
+<li>类中需要声明隶属于的包</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>package出现在Java源文件第一行</li>
+<li>带有包名的编译
+<ul>
+<li>javac -d . xxx.java</li>
+</ul>
+</li>
+<li>运行 Java完整类名</li>
+</ol>
+<h3 id="import">import</h3>
+<p>Import关键词用于导入其他包的类</p>
+<ol>
+<li>import什么时候不需要
+<ul>
+<li>java.lang不需要</li>
+<li>同包不需要</li>
+<li>其他都需要</li>
+</ul>
+</li>
+<li>语法
+<ul>
+<li><code>import 完整类名</code></li>
+<li><code>import 包名.*</code></li>
+<li>import只能出现在package语句之下，class声明语句之上</li>
+</ul>
+</li>
+</ol>
+<h3 id="访问控制权限修饰符">访问控制权限修饰符</h3>
+<p>访问修饰符用于控制类、成员变量、方法的访问范围</p>
+<ul>
+<li>Private 私有 只能在类的内部访问</li>
+<li>Public 公共 在任何地方都能访问</li>
+<li>(default) 默认 相同包的其他类可以访问</li>
+<li>Protected 继承 只有继承的子类能访问到</li>
+</ul>
+<ol>
+<li>访问控制权限可以修饰什么？
+<ul>
+<li>4个属性</li>
+<li>4个方法</li>
+<li>类（public和默认）</li>
+<li>接口（public和默认）</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>package和import</tag>
       </tags>
   </entry>
   <entry>
@@ -1693,53 +1808,6 @@ file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
       </tags>
   </entry>
   <entry>
-    <title>Java进阶学习笔记（二）final关键字</title>
-    <url>/post/8933.html</url>
-    <content><![CDATA[<h2 id="final关键字">final关键字</h2>
-<ol>
-<li>final是Java语言中的一个关键字</li>
-<li>表示最终的不可变的</li>
-<li>final修饰的变量
-<ul>
-<li>只能赋值一次</li>
-</ul>
-</li>
-<li>final修饰的方法
-<ul>
-<li>无法被覆盖，被重写</li>
-</ul>
-</li>
-<li>final修饰的类
-<ul>
-<li>无法继承</li>
-</ul>
-</li>
-<li>final控制不了能不能调用</li>
-</ol>
-<h3 id="final修饰的引用">final修饰的引用</h3>
-<ol>
-<li>final修饰的引用只能指向一个对象，并且它只能永远指向该对象</li>
-<li>并且该方法执行过程中，该引用指向对象后，该对象不会被垃圾回收器回收，知道当前方法结束，才会释放空间</li>
-<li>虽然final的引用指向对象A后，不能再重新向B,但是对象A内部的数据可以被修改</li>
-</ol>
-<h3 id="final修饰的实例变量">final修饰的实例变量</h3>
-<ol>
-<li>final修饰的实例变量，系统不管赋默认值，要求程序员必须手动赋值</li>
-<li>赶在系统赋默认值之前即可</li>
-<li>一般添加static修饰为静态常量（常量名建议大写单词之间_连接）</li>
-<li>常量和静态变量，都是存储在方法区，并且都是在类加载的时候初始化</li>
-<li>常量一般都是公开的</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Java进阶</category>
-      </categories>
-      <tags>
-        <tag>Java学习笔记</tag>
-        <tag>final关键字</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java进阶学习笔记（四）接口</title>
     <url>/post/61624.html</url>
     <content><![CDATA[<h2 id="接口">接口</h2>
@@ -1796,80 +1864,6 @@ file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
       <tags>
         <tag>Java学习笔记</tag>
         <tag>接口</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java进阶学习笔记（八）package和import</title>
-    <url>/post/20061.html</url>
-    <content><![CDATA[<h2 id="package和import">package和import</h2>
-<p>包机制<br>
-为了方便程序管理，不同功能的类，分别存放在不同的包下</p>
-<h3 id="package">package</h3>
-<p>包（package）</p>
-<ul>
-<li>把功能相似或相关的类组织在同一个包中</li>
-<li>包也采用了树形目录的存储方式</li>
-<li>通过包也可限定类的访问权限</li>
-<li>包的命名规范
-<ul>
-<li>包采用“逆域名法”进行命名，用”.”分割，单词全部小写</li>
-<li>标准格式 域名后缀.组织机构名.项目名[.模块名].包的职能</li>
-<li>类中需要声明隶属于的包</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>package出现在Java源文件第一行</li>
-<li>带有包名的编译
-<ul>
-<li>javac -d . xxx.java</li>
-</ul>
-</li>
-<li>运行 Java完整类名</li>
-</ol>
-<h3 id="import">import</h3>
-<p>Import关键词用于导入其他包的类</p>
-<ol>
-<li>import什么时候不需要
-<ul>
-<li>java.lang不需要</li>
-<li>同包不需要</li>
-<li>其他都需要</li>
-</ul>
-</li>
-<li>语法
-<ul>
-<li><code>import 完整类名</code></li>
-<li><code>import 包名.*</code></li>
-<li>import只能出现在package语句之下，class声明语句之上</li>
-</ul>
-</li>
-</ol>
-<h3 id="访问控制权限修饰符">访问控制权限修饰符</h3>
-<p>访问修饰符用于控制类、成员变量、方法的访问范围</p>
-<ul>
-<li>Private 私有 只能在类的内部访问</li>
-<li>Public 公共 在任何地方都能访问</li>
-<li>(default) 默认 相同包的其他类可以访问</li>
-<li>Protected 继承 只有继承的子类能访问到</li>
-</ul>
-<ol>
-<li>访问控制权限可以修饰什么？
-<ul>
-<li>4个属性</li>
-<li>4个方法</li>
-<li>类（public和默认）</li>
-<li>接口（public和默认）</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Java基础</category>
-      </categories>
-      <tags>
-        <tag>学习笔记</tag>
-        <tag>package和import</tag>
       </tags>
   </entry>
   <entry>
