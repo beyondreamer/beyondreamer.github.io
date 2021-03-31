@@ -642,6 +642,92 @@ $$T_{avg}(n)\leq T_{worst}(n)$$</li>
 ]]></content>
   </entry>
   <entry>
+    <title>Java学习笔记（七）继承</title>
+    <url>/post/48660.html</url>
+    <content><![CDATA[<h2 id="继承">继承</h2>
+<ol>
+<li>使用继承机制来解决代码复用问题</li>
+<li>子类extends父类
+<ol>
+<li>基本作用：子类继承父类</li>
+<li>主要作用：有了方法覆盖和多态机制</li>
+</ol>
+</li>
+</ol>
+<h3 id="一．继承的相关特性">一．继承的相关特性</h3>
+<ol>
+<li>b类继承a类，则称a类为超类、父类（superclass）、基类；b类则称为子类（subclass）</li>
+<li>Java不支持多继承，c++支持多继承，体现Java简单性（c++更接近现实一点，同时继承两方特点）</li>
+<li>Java可以产生间接继承的结果<br>
+（1）z直接继承y，间接继承x；</li>
+<li>Java中规定，子类继承父类，除构造方法不能被继承外，其他都可以继承，但是私有的属性无法在子类中直接访问（可以间接访问）</li>
+<li>Java中的类没有显示继承任何类，则默认继承object类（Java中提供的根类），也就是说，一个对象与生俱来就具有object类中的所有特性</li>
+<li>继承也存在一些缺点，类继承后导致两个类耦合度非常高，父类改变子类也随之改变</li>
+</ol>
+<h3 id="二．什么时候使用继承">二．什么时候使用继承</h3>
+<ol>
+<li>Is a 能够描述的都可以使用继承</li>
+<li>任何一个类没有显示继承任何类，默认继承object类
+<ol>
+<li>String[] args</li>
+<li>System.out.println()
+<ul>
+<li>System是一个类名，.out后面没()，说明out是变量名（静态变量）</li>
+</ul>
+</li>
+<li>多看JDK源代码（lib.src.zip）</li>
+</ol>
+</li>
+</ol>
+<h3 id="三．Object类中的方法">三．Object类中的方法</h3>
+<ol>
+<li>当源码当中一个方法以;结尾，并且修饰符列表中有native关键字，表示调用c++写的dll程序（dll动态链接库文件）</li>
+<li>toString()（实例方法）输出类名和对象在内存堆中的内存地址（内存地址经过哈希算法得出的十六进制的数字）</li>
+</ol>
+<h3 id="四．方法覆盖">四．方法覆盖</h3>
+<ol>
+<li>子类对父类方法重新编写override，overwrite</li>
+<li>什么时候方法重载
+<ol>
+<li>在同一个类中</li>
+<li>方法名相同</li>
+<li>参数列表不同（个数，顺序，类型不同）</li>
+</ol>
+</li>
+<li>当子类对父类继承过来的方法进行方法覆盖之后，子类只执行覆盖之后的方法</li>
+<li>怎么构成方法覆盖
+<ol>
+<li>两个类必须有继承关系</li>
+<li>重写之后的方法和之前的方法具有
+<ol>
+<li>相同的返回值类型</li>
+<li>相同的方法名</li>
+<li>相同的形式参数列表</li>
+</ol>
+</li>
+<li>访问权限不能更低，可以更高</li>
+<li>重写之后的方法，不能比之前的方法抛出更多异常，可以更少</li>
+</ol>
+</li>
+<li>注意事项（有关多态）
+<ol>
+<li>方法覆盖只针对方法，和属性无关</li>
+<li>私有方法，构造方法，不能被覆盖，</li>
+<li>只针对实例方法，静态方法覆盖没有意义</li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>JavaSE基础</category>
+      </categories>
+      <tags>
+        <tag>JavaSE学习笔记</tag>
+        <tag>Java继承</tag>
+        <tag>Java方法覆盖</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java学习笔记（一）语言概述</title>
     <url>/post/23193.html</url>
     <content><![CDATA[<h2 id="Java语言概述">Java语言概述</h2>
@@ -749,92 +835,6 @@ JVM能识别字节码，Java代码这种普通文本变成字节码的过程被�
         <tag>JavaSE学习笔记</tag>
         <tag>Java语言概述</tag>
         <tag>Java特性</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java学习笔记（七）继承</title>
-    <url>/post/48660.html</url>
-    <content><![CDATA[<h2 id="继承">继承</h2>
-<ol>
-<li>使用继承机制来解决代码复用问题</li>
-<li>子类extends父类
-<ol>
-<li>基本作用：子类继承父类</li>
-<li>主要作用：有了方法覆盖和多态机制</li>
-</ol>
-</li>
-</ol>
-<h3 id="一．继承的相关特性">一．继承的相关特性</h3>
-<ol>
-<li>b类继承a类，则称a类为超类、父类（superclass）、基类；b类则称为子类（subclass）</li>
-<li>Java不支持多继承，c++支持多继承，体现Java简单性（c++更接近现实一点，同时继承两方特点）</li>
-<li>Java可以产生间接继承的结果<br>
-（1）z直接继承y，间接继承x；</li>
-<li>Java中规定，子类继承父类，除构造方法不能被继承外，其他都可以继承，但是私有的属性无法在子类中直接访问（可以间接访问）</li>
-<li>Java中的类没有显示继承任何类，则默认继承object类（Java中提供的根类），也就是说，一个对象与生俱来就具有object类中的所有特性</li>
-<li>继承也存在一些缺点，类继承后导致两个类耦合度非常高，父类改变子类也随之改变</li>
-</ol>
-<h3 id="二．什么时候使用继承">二．什么时候使用继承</h3>
-<ol>
-<li>Is a 能够描述的都可以使用继承</li>
-<li>任何一个类没有显示继承任何类，默认继承object类
-<ol>
-<li>String[] args</li>
-<li>System.out.println()
-<ul>
-<li>System是一个类名，.out后面没()，说明out是变量名（静态变量）</li>
-</ul>
-</li>
-<li>多看JDK源代码（lib.src.zip）</li>
-</ol>
-</li>
-</ol>
-<h3 id="三．Object类中的方法">三．Object类中的方法</h3>
-<ol>
-<li>当源码当中一个方法以;结尾，并且修饰符列表中有native关键字，表示调用c++写的dll程序（dll动态链接库文件）</li>
-<li>toString()（实例方法）输出类名和对象在内存堆中的内存地址（内存地址经过哈希算法得出的十六进制的数字）</li>
-</ol>
-<h3 id="四．方法覆盖">四．方法覆盖</h3>
-<ol>
-<li>子类对父类方法重新编写override，overwrite</li>
-<li>什么时候方法重载
-<ol>
-<li>在同一个类中</li>
-<li>方法名相同</li>
-<li>参数列表不同（个数，顺序，类型不同）</li>
-</ol>
-</li>
-<li>当子类对父类继承过来的方法进行方法覆盖之后，子类只执行覆盖之后的方法</li>
-<li>怎么构成方法覆盖
-<ol>
-<li>两个类必须有继承关系</li>
-<li>重写之后的方法和之前的方法具有
-<ol>
-<li>相同的返回值类型</li>
-<li>相同的方法名</li>
-<li>相同的形式参数列表</li>
-</ol>
-</li>
-<li>访问权限不能更低，可以更高</li>
-<li>重写之后的方法，不能比之前的方法抛出更多异常，可以更少</li>
-</ol>
-</li>
-<li>注意事项（有关多态）
-<ol>
-<li>方法覆盖只针对方法，和属性无关</li>
-<li>私有方法，构造方法，不能被覆盖，</li>
-<li>只针对实例方法，静态方法覆盖没有意义</li>
-</ol>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>JavaSE基础</category>
-      </categories>
-      <tags>
-        <tag>JavaSE学习笔记</tag>
-        <tag>Java继承</tag>
-        <tag>Java方法覆盖</tag>
       </tags>
   </entry>
   <entry>
@@ -1032,6 +1032,81 @@ BigDecimal类 大实数</p>
       </tags>
   </entry>
   <entry>
+    <title>Java学习笔记（五）构造方法和封装</title>
+    <url>/post/35965.html</url>
+    <content><![CDATA[<h2 id="一．构造方法constructor">一．构造方法constructor</h2>
+<h3 id="1．什么是构造方法">1．什么是构造方法</h3>
+<ol>
+<li>
+<p>构造方法也是一个特殊的方法，通过构造方法可以完成对象的创建，以及实例变量的初始化，换句话来说，构造方法是用来创建对象，并同时给对象的属性赋值</p>
+</li>
+<li>
+<p>语法结构</p>
+ <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] 构造方法名 (形式参数列表)&#123;</span><br><span class="line">    构造方法体</span><br><span class="line">    通常在构造方法体中给属性赋值，完成属性的初始化</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>修饰符列表public</li>
+<li>构造方法名必须和类名一致</li>
+<li>构造方法不需要指定返回值类型</li>
+</ul>
+</li>
+<li>
+<p>调用构造方法</p>
+</li>
+</ol>
+<p><code>New 构造方法名(实际参数列表)</code></p>
+<ul>
+<li>当一个类中手动的提供了构造方法，那么系统将不再提供无参数的构造方法（建议把无参数构造方法写出来）</li>
+<li>当一个类没有提供任何构造方法，系统会默认构造一个没有参数的构造方法（缺省构造器）</li>
+<li>无参数构造方法和有参数构造方法都可以调用</li>
+<li>无参数构造方法虽然没有代码但是默认在这里赋系统默认值</li>
+<li>构造方法可以重载</li>
+</ul>
+<h2 id="二．封装">二．封装</h2>
+<h3 id="1．封装的作用">1．封装的作用</h3>
+<ol>
+<li>保证内部结构的安全</li>
+<li>屏蔽复杂，暴露简单</li>
+</ol>
+<h3 id="2．怎么进行封装">2．怎么进行封装</h3>
+<ol>
+<li>属性私有化（private）
+<ul>
+<li>Private表示私有的，被这个关键字修饰之后，该数据只能在本类中访问，出类不能访问。</li>
+</ul>
+</li>
+<li>对外提供简单的操作入口
+<ol>
+<li>带有static的方法</li>
+<li>不带有static的方法，用new对象引用去访问</li>
+</ol>
+<ul>
+<li>称为实例方法，对象级别的方法（对象被称为实例，实例相关的都需要new对象，和引用来访问）</li>
+</ul>
+</li>
+<li>空指针异常导致的最本质的原因是？
+<ol>
+<li>空引用访问实例相关的数据，会导致空指针异常</li>
+<li>实例相关的包括，实例变量+实例方法</li>
+</ol>
+</li>
+<li>对外提供公开的get方法和set方法作为操作入口，并且都不带static</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] 返回值类型 方法名 (形式参数列表)&#123;&#125;</span><br><span class="line"><span class="comment">/*get方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">(无参)</span></span>&#123;<span class="comment">//get属性名首字母大写</span></span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*set方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span> <span class="params">(<span class="keyword">int</span> a（一个参数）)</span></span>&#123;</span><br><span class="line">    A = a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>5．封装代码实现两步</p>
+<ul>
+<li>属性私有化  一个属性提供get和set方法</li>
+</ul>
+]]></content>
+      <categories>
+        <category>JavaSE基础</category>
+      </categories>
+      <tags>
+        <tag>JavaSE学习笔记</tag>
+        <tag>Java构造方法</tag>
+        <tag>Java封装</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java学习笔记（八）多态</title>
     <url>/post/23987.html</url>
     <content><![CDATA[<h2 id="多态">多态</h2>
@@ -1221,81 +1296,6 @@ BigDecimal类 大实数</p>
         <tag>static</tag>
         <tag>this</tag>
         <tag>super</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java学习笔记（五）构造方法和封装</title>
-    <url>/post/35965.html</url>
-    <content><![CDATA[<h2 id="一．构造方法constructor">一．构造方法constructor</h2>
-<h3 id="1．什么是构造方法">1．什么是构造方法</h3>
-<ol>
-<li>
-<p>构造方法也是一个特殊的方法，通过构造方法可以完成对象的创建，以及实例变量的初始化，换句话来说，构造方法是用来创建对象，并同时给对象的属性赋值</p>
-</li>
-<li>
-<p>语法结构</p>
- <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] 构造方法名 (形式参数列表)&#123;</span><br><span class="line">    构造方法体</span><br><span class="line">    通常在构造方法体中给属性赋值，完成属性的初始化</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>修饰符列表public</li>
-<li>构造方法名必须和类名一致</li>
-<li>构造方法不需要指定返回值类型</li>
-</ul>
-</li>
-<li>
-<p>调用构造方法</p>
-</li>
-</ol>
-<p><code>New 构造方法名(实际参数列表)</code></p>
-<ul>
-<li>当一个类中手动的提供了构造方法，那么系统将不再提供无参数的构造方法（建议把无参数构造方法写出来）</li>
-<li>当一个类没有提供任何构造方法，系统会默认构造一个没有参数的构造方法（缺省构造器）</li>
-<li>无参数构造方法和有参数构造方法都可以调用</li>
-<li>无参数构造方法虽然没有代码但是默认在这里赋系统默认值</li>
-<li>构造方法可以重载</li>
-</ul>
-<h2 id="二．封装">二．封装</h2>
-<h3 id="1．封装的作用">1．封装的作用</h3>
-<ol>
-<li>保证内部结构的安全</li>
-<li>屏蔽复杂，暴露简单</li>
-</ol>
-<h3 id="2．怎么进行封装">2．怎么进行封装</h3>
-<ol>
-<li>属性私有化（private）
-<ul>
-<li>Private表示私有的，被这个关键字修饰之后，该数据只能在本类中访问，出类不能访问。</li>
-</ul>
-</li>
-<li>对外提供简单的操作入口
-<ol>
-<li>带有static的方法</li>
-<li>不带有static的方法，用new对象引用去访问</li>
-</ol>
-<ul>
-<li>称为实例方法，对象级别的方法（对象被称为实例，实例相关的都需要new对象，和引用来访问）</li>
-</ul>
-</li>
-<li>空指针异常导致的最本质的原因是？
-<ol>
-<li>空引用访问实例相关的数据，会导致空指针异常</li>
-<li>实例相关的包括，实例变量+实例方法</li>
-</ol>
-</li>
-<li>对外提供公开的get方法和set方法作为操作入口，并且都不带static</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] 返回值类型 方法名 (形式参数列表)&#123;&#125;</span><br><span class="line"><span class="comment">/*get方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">(无参)</span></span>&#123;<span class="comment">//get属性名首字母大写</span></span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*set方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span> <span class="params">(<span class="keyword">int</span> a（一个参数）)</span></span>&#123;</span><br><span class="line">    A = a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>5．封装代码实现两步</p>
-<ul>
-<li>属性私有化  一个属性提供get和set方法</li>
-</ul>
-]]></content>
-      <categories>
-        <category>JavaSE基础</category>
-      </categories>
-      <tags>
-        <tag>JavaSE学习笔记</tag>
-        <tag>Java构造方法</tag>
-        <tag>Java封装</tag>
       </tags>
   </entry>
   <entry>
@@ -1545,53 +1545,6 @@ file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
       </tags>
   </entry>
   <entry>
-    <title>Java进阶学习笔记（二）final关键字</title>
-    <url>/post/8933.html</url>
-    <content><![CDATA[<h2 id="final关键字">final关键字</h2>
-<ol>
-<li>final是Java语言中的一个关键字</li>
-<li>表示最终的不可变的</li>
-<li>final修饰的变量
-<ul>
-<li>只能赋值一次</li>
-</ul>
-</li>
-<li>final修饰的方法
-<ul>
-<li>无法被覆盖，被重写</li>
-</ul>
-</li>
-<li>final修饰的类
-<ul>
-<li>无法继承</li>
-</ul>
-</li>
-<li>final控制不了能不能调用</li>
-</ol>
-<h3 id="final修饰的引用">final修饰的引用</h3>
-<ol>
-<li>final修饰的引用只能指向一个对象，并且它只能永远指向该对象</li>
-<li>并且该方法执行过程中，该引用指向对象后，该对象不会被垃圾回收器回收，知道当前方法结束，才会释放空间</li>
-<li>虽然final的引用指向对象A后，不能再重新向B,但是对象A内部的数据可以被修改</li>
-</ol>
-<h3 id="final修饰的实例变量">final修饰的实例变量</h3>
-<ol>
-<li>final修饰的实例变量，系统不管赋默认值，要求程序员必须手动赋值</li>
-<li>赶在系统赋默认值之前即可</li>
-<li>一般添加static修饰为静态常量（常量名建议大写单词之间_连接）</li>
-<li>常量和静态变量，都是存储在方法区，并且都是在类加载的时候初始化</li>
-<li>常量一般都是公开的</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Java进阶</category>
-      </categories>
-      <tags>
-        <tag>Java学习笔记</tag>
-        <tag>final关键字</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java进阶学习笔记（八）package和import</title>
     <url>/post/20061.html</url>
     <content><![CDATA[<h2 id="package和import">package和import</h2>
@@ -1805,6 +1758,53 @@ file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
         <tag>equals()方法</tag>
         <tag>finalize()方法</tag>
         <tag>hashCode()方法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java进阶学习笔记（二）final关键字</title>
+    <url>/post/8933.html</url>
+    <content><![CDATA[<h2 id="final关键字">final关键字</h2>
+<ol>
+<li>final是Java语言中的一个关键字</li>
+<li>表示最终的不可变的</li>
+<li>final修饰的变量
+<ul>
+<li>只能赋值一次</li>
+</ul>
+</li>
+<li>final修饰的方法
+<ul>
+<li>无法被覆盖，被重写</li>
+</ul>
+</li>
+<li>final修饰的类
+<ul>
+<li>无法继承</li>
+</ul>
+</li>
+<li>final控制不了能不能调用</li>
+</ol>
+<h3 id="final修饰的引用">final修饰的引用</h3>
+<ol>
+<li>final修饰的引用只能指向一个对象，并且它只能永远指向该对象</li>
+<li>并且该方法执行过程中，该引用指向对象后，该对象不会被垃圾回收器回收，知道当前方法结束，才会释放空间</li>
+<li>虽然final的引用指向对象A后，不能再重新向B,但是对象A内部的数据可以被修改</li>
+</ol>
+<h3 id="final修饰的实例变量">final修饰的实例变量</h3>
+<ol>
+<li>final修饰的实例变量，系统不管赋默认值，要求程序员必须手动赋值</li>
+<li>赶在系统赋默认值之前即可</li>
+<li>一般添加static修饰为静态常量（常量名建议大写单词之间_连接）</li>
+<li>常量和静态变量，都是存储在方法区，并且都是在类加载的时候初始化</li>
+<li>常量一般都是公开的</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java进阶</category>
+      </categories>
+      <tags>
+        <tag>Java学习笔记</tag>
+        <tag>final关键字</tag>
       </tags>
   </entry>
   <entry>
