@@ -1027,6 +1027,59 @@ JVM能识别字节码，Java代码这种普通文本变成字节码的过程被�
       </tags>
   </entry>
   <entry>
+    <title>Java学习笔记（八）多态</title>
+    <url>/post/23987.html</url>
+    <content><![CDATA[<h2 id="多态">多态</h2>
+<h3 id="一．多态的基础语法">一．多态的基础语法</h3>
+<ol>
+<li>Java中允许（向上转型子转父（类似自动类型转换））和（向下转型父转子（类似强制类型转换加转换符））{必须具有继承关系}</li>
+<li>编译阶段只知道引用的数据类型，静态绑定成功</li>
+<li>运行阶段，动态绑定，动态执行</li>
+<li>多态表示多种形态，编译阶段一种（绑定父类方法），运行阶段一种（绑定子类方法）</li>
+<li>什么时候使用向下转型（子类特有方法）</li>
+<li>向上转型 子到父 自动类型转换 animal a = new cat();</li>
+<li>向下转型 父到子 强制类型转换 cat c = (cat)a;
+<ol>
+<li>Java.lang.NullPointException:空指针异常</li>
+<li>Java.lang.ClassCastException:类型转换异常</li>
+</ol>
+</li>
+</ol>
+<h3 id="二．Instanceof-运算符">二．Instanceof 运算符</h3>
+<ol>
+<li>Instanceof运算符可以在运行阶段动态判断引用指向的对象的类型</li>
+<li>语法结构
+<ol>
+<li>(引用 instanceof 类型)</li>
+<li>运算结果只能是true/false</li>
+</ol>
+</li>
+</ol>
+<h3 id="三．多态在开发中的应用">三．多态在开发中的应用</h3>
+<h3 id="四．软件开发原则">四．软件开发原则</h3>
+<ol>
+<li>开闭原则
+<ol>
+<li>对扩展开放，</li>
+<li>对修改关闭，</li>
+</ol>
+</li>
+</ol>
+<h3 id="五．静态方法不存在覆盖">五．静态方法不存在覆盖</h3>
+<ol>
+<li>多态和对象有关</li>
+<li>静态方法不需要对象</li>
+</ol>
+<h3 id="六．私有方法不能覆盖">六．私有方法不能覆盖</h3>
+]]></content>
+      <categories>
+        <category>JavaSE基础</category>
+      </categories>
+      <tags>
+        <tag>JavaSE基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java学习笔记（二）基础语法</title>
     <url>/post/55918.html</url>
     <content><![CDATA[<h2 id="一、注释">一、注释</h2>
@@ -1133,163 +1186,6 @@ BigDecimal类 大实数</p>
 <h2 id="八、for-each循环">八、for each循环</h2>
 <p><code>for(variable : collection) statement</code><br>
 定义一个变量用于暂存集合中的每一个元素，并执行相应的语句</p>
-]]></content>
-      <categories>
-        <category>JavaSE基础</category>
-      </categories>
-      <tags>
-        <tag>JavaSE基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java学习笔记（四）面向对象</title>
-    <url>/post/29980.html</url>
-    <content><![CDATA[<h2 id="一、面向对象和面向过程的区别">一、面向对象和面向过程的区别</h2>
-<ul>
-<li>C 完全面向过程</li>
-<li>C++ 一半面向过程一半面向对象</li>
-<li>Java 完全面向对象</li>
-</ul>
-<h3 id="1-什么是面向过程的开发方式">1.什么是面向过程的开发方式</h3>
-<ol>
-<li>特点
-<ol>
-<li>注重步骤</li>
-<li>注重因果关系</li>
-</ol>
-</li>
-</ol>
-<ul>
-<li>缺点
-<ul>
-<li>代码和代码之间耦合度太高，扩展力太差</li>
-</ul>
-</li>
-<li>优点
-<ul>
-<li>小型项目，采用面向过程方式进行开发，效率高</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-什么是面向对象的开发方式">2.什么是面向对象的开发方式</h3>
-<ol>
-<li>将现实世界分隔成几个小的单元，然后每一个单元都实现成对象，然后驱动一下，让各个对象之间协作起来形成一个系统</li>
-<li>特点<br>
-耦合度低，扩展力强</li>
-</ol>
-<h3 id="3-采用面向对象的方式贯穿整个系统，涉及三个术语">3.采用面向对象的方式贯穿整个系统，涉及三个术语</h3>
-<ul>
-<li>OOA：面向对象分析</li>
-<li>OOD：面向对象设计</li>
-<li>OOP：面向对象编程</li>
-</ul>
-<p>分析-&gt;设计-&gt;编程</p>
-<h3 id="4-面向对象包括三大特征">4.面向对象包括三大特征</h3>
-<ol>
-<li>封装</li>
-<li>继承</li>
-<li>多态</li>
-</ol>
-<h3 id="5-类和对象的概念">5.类和对象的概念</h3>
-<ol>
-<li>什么是类<br>
-一种模板，描述所有对象的共同特征信息</li>
-<li>什么是对象<br>
-实际存在的个体</li>
-</ol>
-<p>Java语言中，要想得到对象，必须先定义一个类，对象是通过类这个模板创造出来的</p>
-<p>术语</p>
-<p>类 对象 实例 实例化 抽象</p>
-<h2 id="二、类的定义">二、类的定义</h2>
-<h3 id="1．定义">1．定义</h3>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">[修饰符列表] <span class="class"><span class="keyword">class</span> 类名</span>&#123;&#125; 类体=属性加方法</span><br><span class="line">属性在代码上以变量的形式存在</span><br><span class="line">属性以数据的形式存在（成员变量）</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">xueSheng</span></span>&#123;</span><br><span class="line"> <span class="keyword">int</span> xueHao;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>java中所有的类都属于引用数据类型</p>
-<h3 id="2．对象的创建和使用">2．对象的创建和使用</h3>
-<ol>
-<li>new 类名 ()</li>
-<li>new是个运算符专门负责对象的创建
-<ul>
-<li><code>xueSheng s = new xueSheng ();</code></li>
-</ul>
-</li>
-<li>关于编译的过程，对于编译器来说先编译test.java会自动找xuesheng.class，如果没有会自动编译xuesheng.java生成.class 文件</li>
-</ol>
-<h3 id="3．成员变量">3．成员变量</h3>
-<p>没有手动赋值，系统默认赋值</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">byte</span> <span class="number">0</span>    <span class="keyword">short</span> <span class="number">0</span> </span><br><span class="line"><span class="keyword">int</span> <span class="number">0</span>      <span class="keyword">long</span> <span class="number">0L</span>  </span><br><span class="line"><span class="keyword">float</span> <span class="number">0.0F</span>    <span class="keyword">double</span> <span class="number">0.0</span>  </span><br><span class="line"><span class="keyword">boolean</span> <span class="keyword">false</span>   <span class="keyword">char</span> \u0000 引用数据类型 <span class="keyword">null</span></span><br></pre></td></tr></table></figure>
-<h3 id="4．实例变量">4．实例变量</h3>
-<ol>
-<li>对象级别的变量</li>
-<li>不能通过类名来直接访问实例变量</li>
-</ol>
-<p>对象和引用的区别</p>
-<ol>
-<li>对象是通过new出来的，在堆内存中储存</li>
-<li>引用但凡是变量，并且该变量中保存了内存地址指向了堆内存中的对象</li>
-<li>怎么访问实例变量：引用.实例变量名</li>
-<li>通过=赋值将堆内存中实例变量的值进行修改</li>
-</ol>
-<h2 id="三、空指针异常">三、空指针异常</h2>
-<ul>
-<li>该对象没有引用指向它了，Java中规定程序员无法直接操作堆内存，只能等待gc把垃圾对象回收走。</li>
-</ul>
-<h2 id="四、方法调用时参数的传递问题">四、方法调用时参数的传递问题</h2>
-<ul>
-<li>Java中规定：参数传递的时候，和类型无关，不管你是基本数据类型，还是引用数据类型</li>
-</ul>
-]]></content>
-      <categories>
-        <category>JavaSE基础</category>
-      </categories>
-      <tags>
-        <tag>JavaSE基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java学习笔记（八）多态</title>
-    <url>/post/23987.html</url>
-    <content><![CDATA[<h2 id="多态">多态</h2>
-<h3 id="一．多态的基础语法">一．多态的基础语法</h3>
-<ol>
-<li>Java中允许（向上转型子转父（类似自动类型转换））和（向下转型父转子（类似强制类型转换加转换符））{必须具有继承关系}</li>
-<li>编译阶段只知道引用的数据类型，静态绑定成功</li>
-<li>运行阶段，动态绑定，动态执行</li>
-<li>多态表示多种形态，编译阶段一种（绑定父类方法），运行阶段一种（绑定子类方法）</li>
-<li>什么时候使用向下转型（子类特有方法）</li>
-<li>向上转型 子到父 自动类型转换 animal a = new cat();</li>
-<li>向下转型 父到子 强制类型转换 cat c = (cat)a;
-<ol>
-<li>Java.lang.NullPointException:空指针异常</li>
-<li>Java.lang.ClassCastException:类型转换异常</li>
-</ol>
-</li>
-</ol>
-<h3 id="二．Instanceof-运算符">二．Instanceof 运算符</h3>
-<ol>
-<li>Instanceof运算符可以在运行阶段动态判断引用指向的对象的类型</li>
-<li>语法结构
-<ol>
-<li>(引用 instanceof 类型)</li>
-<li>运算结果只能是true/false</li>
-</ol>
-</li>
-</ol>
-<h3 id="三．多态在开发中的应用">三．多态在开发中的应用</h3>
-<h3 id="四．软件开发原则">四．软件开发原则</h3>
-<ol>
-<li>开闭原则
-<ol>
-<li>对扩展开放，</li>
-<li>对修改关闭，</li>
-</ol>
-</li>
-</ol>
-<h3 id="五．静态方法不存在覆盖">五．静态方法不存在覆盖</h3>
-<ol>
-<li>多态和对象有关</li>
-<li>静态方法不需要对象</li>
-</ol>
-<h3 id="六．私有方法不能覆盖">六．私有方法不能覆盖</h3>
 ]]></content>
       <categories>
         <category>JavaSE基础</category>
@@ -1506,46 +1402,104 @@ file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
       </tags>
   </entry>
   <entry>
-    <title>Java进阶学习笔记（二）final关键字</title>
-    <url>/post/8933.html</url>
-    <content><![CDATA[<h2 id="final关键字">final关键字</h2>
-<ol>
-<li>final是Java语言中的一个关键字</li>
-<li>表示最终的不可变的</li>
-<li>final修饰的变量
+    <title>Java学习笔记（四）面向对象</title>
+    <url>/post/29980.html</url>
+    <content><![CDATA[<h2 id="一、面向对象和面向过程的区别">一、面向对象和面向过程的区别</h2>
 <ul>
-<li>只能赋值一次</li>
+<li>C 完全面向过程</li>
+<li>C++ 一半面向过程一半面向对象</li>
+<li>Java 完全面向对象</li>
+</ul>
+<h3 id="1-什么是面向过程的开发方式">1.什么是面向过程的开发方式</h3>
+<ol>
+<li>特点
+<ol>
+<li>注重步骤</li>
+<li>注重因果关系</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>缺点
+<ul>
+<li>代码和代码之间耦合度太高，扩展力太差</li>
 </ul>
 </li>
-<li>final修饰的方法
+<li>优点
 <ul>
-<li>无法被覆盖，被重写</li>
+<li>小型项目，采用面向过程方式进行开发，效率高</li>
 </ul>
 </li>
-<li>final修饰的类
+</ul>
+<h3 id="2-什么是面向对象的开发方式">2.什么是面向对象的开发方式</h3>
+<ol>
+<li>将现实世界分隔成几个小的单元，然后每一个单元都实现成对象，然后驱动一下，让各个对象之间协作起来形成一个系统</li>
+<li>特点<br>
+耦合度低，扩展力强</li>
+</ol>
+<h3 id="3-采用面向对象的方式贯穿整个系统，涉及三个术语">3.采用面向对象的方式贯穿整个系统，涉及三个术语</h3>
 <ul>
-<li>无法继承</li>
+<li>OOA：面向对象分析</li>
+<li>OOD：面向对象设计</li>
+<li>OOP：面向对象编程</li>
+</ul>
+<p>分析-&gt;设计-&gt;编程</p>
+<h3 id="4-面向对象包括三大特征">4.面向对象包括三大特征</h3>
+<ol>
+<li>封装</li>
+<li>继承</li>
+<li>多态</li>
+</ol>
+<h3 id="5-类和对象的概念">5.类和对象的概念</h3>
+<ol>
+<li>什么是类<br>
+一种模板，描述所有对象的共同特征信息</li>
+<li>什么是对象<br>
+实际存在的个体</li>
+</ol>
+<p>Java语言中，要想得到对象，必须先定义一个类，对象是通过类这个模板创造出来的</p>
+<p>术语</p>
+<p>类 对象 实例 实例化 抽象</p>
+<h2 id="二、类的定义">二、类的定义</h2>
+<h3 id="1．定义">1．定义</h3>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">[修饰符列表] <span class="class"><span class="keyword">class</span> 类名</span>&#123;&#125; 类体=属性加方法</span><br><span class="line">属性在代码上以变量的形式存在</span><br><span class="line">属性以数据的形式存在（成员变量）</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">xueSheng</span></span>&#123;</span><br><span class="line"> <span class="keyword">int</span> xueHao;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>java中所有的类都属于引用数据类型</p>
+<h3 id="2．对象的创建和使用">2．对象的创建和使用</h3>
+<ol>
+<li>new 类名 ()</li>
+<li>new是个运算符专门负责对象的创建
+<ul>
+<li><code>xueSheng s = new xueSheng ();</code></li>
 </ul>
 </li>
-<li>final控制不了能不能调用</li>
+<li>关于编译的过程，对于编译器来说先编译test.java会自动找xuesheng.class，如果没有会自动编译xuesheng.java生成.class 文件</li>
 </ol>
-<h3 id="final修饰的引用">final修饰的引用</h3>
+<h3 id="3．成员变量">3．成员变量</h3>
+<p>没有手动赋值，系统默认赋值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">byte</span> <span class="number">0</span>    <span class="keyword">short</span> <span class="number">0</span> </span><br><span class="line"><span class="keyword">int</span> <span class="number">0</span>      <span class="keyword">long</span> <span class="number">0L</span>  </span><br><span class="line"><span class="keyword">float</span> <span class="number">0.0F</span>    <span class="keyword">double</span> <span class="number">0.0</span>  </span><br><span class="line"><span class="keyword">boolean</span> <span class="keyword">false</span>   <span class="keyword">char</span> \u0000 引用数据类型 <span class="keyword">null</span></span><br></pre></td></tr></table></figure>
+<h3 id="4．实例变量">4．实例变量</h3>
 <ol>
-<li>final修饰的引用只能指向一个对象，并且它只能永远指向该对象</li>
-<li>并且该方法执行过程中，该引用指向对象后，该对象不会被垃圾回收器回收，知道当前方法结束，才会释放空间</li>
-<li>虽然final的引用指向对象A后，不能再重新向B,但是对象A内部的数据可以被修改</li>
+<li>对象级别的变量</li>
+<li>不能通过类名来直接访问实例变量</li>
 </ol>
-<h3 id="final修饰的实例变量">final修饰的实例变量</h3>
+<p>对象和引用的区别</p>
 <ol>
-<li>final修饰的实例变量，系统不管赋默认值，要求程序员必须手动赋值</li>
-<li>赶在系统赋默认值之前即可</li>
-<li>一般添加static修饰为静态常量（常量名建议大写单词之间_连接）</li>
-<li>常量和静态变量，都是存储在方法区，并且都是在类加载的时候初始化</li>
-<li>常量一般都是公开的</li>
+<li>对象是通过new出来的，在堆内存中储存</li>
+<li>引用但凡是变量，并且该变量中保存了内存地址指向了堆内存中的对象</li>
+<li>怎么访问实例变量：引用.实例变量名</li>
+<li>通过=赋值将堆内存中实例变量的值进行修改</li>
 </ol>
+<h2 id="三、空指针异常">三、空指针异常</h2>
+<ul>
+<li>该对象没有引用指向它了，Java中规定程序员无法直接操作堆内存，只能等待gc把垃圾对象回收走。</li>
+</ul>
+<h2 id="四、方法调用时参数的传递问题">四、方法调用时参数的传递问题</h2>
+<ul>
+<li>Java中规定：参数传递的时候，和类型无关，不管你是基本数据类型，还是引用数据类型</li>
+</ul>
 ]]></content>
       <categories>
-        <category>Java进阶</category>
+        <category>JavaSE基础</category>
       </categories>
       <tags>
         <tag>JavaSE基础</tag>
@@ -1608,6 +1562,125 @@ file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
 ]]></content>
       <categories>
         <category>Java进阶</category>
+      </categories>
+      <tags>
+        <tag>JavaSE基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java进阶学习笔记（二）final关键字</title>
+    <url>/post/8933.html</url>
+    <content><![CDATA[<h2 id="final关键字">final关键字</h2>
+<ol>
+<li>final是Java语言中的一个关键字</li>
+<li>表示最终的不可变的</li>
+<li>final修饰的变量
+<ul>
+<li>只能赋值一次</li>
+</ul>
+</li>
+<li>final修饰的方法
+<ul>
+<li>无法被覆盖，被重写</li>
+</ul>
+</li>
+<li>final修饰的类
+<ul>
+<li>无法继承</li>
+</ul>
+</li>
+<li>final控制不了能不能调用</li>
+</ol>
+<h3 id="final修饰的引用">final修饰的引用</h3>
+<ol>
+<li>final修饰的引用只能指向一个对象，并且它只能永远指向该对象</li>
+<li>并且该方法执行过程中，该引用指向对象后，该对象不会被垃圾回收器回收，知道当前方法结束，才会释放空间</li>
+<li>虽然final的引用指向对象A后，不能再重新向B,但是对象A内部的数据可以被修改</li>
+</ol>
+<h3 id="final修饰的实例变量">final修饰的实例变量</h3>
+<ol>
+<li>final修饰的实例变量，系统不管赋默认值，要求程序员必须手动赋值</li>
+<li>赶在系统赋默认值之前即可</li>
+<li>一般添加static修饰为静态常量（常量名建议大写单词之间_连接）</li>
+<li>常量和静态变量，都是存储在方法区，并且都是在类加载的时候初始化</li>
+<li>常量一般都是公开的</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java进阶</category>
+      </categories>
+      <tags>
+        <tag>JavaSE基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java进阶学习笔记（八）package和import</title>
+    <url>/post/20061.html</url>
+    <content><![CDATA[<h2 id="package和import">package和import</h2>
+<p>包机制<br>
+为了方便程序管理，不同功能的类，分别存放在不同的包下</p>
+<h3 id="package">package</h3>
+<p>包（package）</p>
+<ul>
+<li>把功能相似或相关的类组织在同一个包中</li>
+<li>包也采用了树形目录的存储方式</li>
+<li>通过包也可限定类的访问权限</li>
+<li>包的命名规范
+<ul>
+<li>包采用“逆域名法”进行命名，用”.”分割，单词全部小写</li>
+<li>标准格式 域名后缀.组织机构名.项目名[.模块名].包的职能</li>
+<li>类中需要声明隶属于的包</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>package出现在Java源文件第一行</li>
+<li>带有包名的编译
+<ul>
+<li>javac -d . xxx.java</li>
+</ul>
+</li>
+<li>运行 Java完整类名</li>
+</ol>
+<h3 id="import">import</h3>
+<p>Import关键词用于导入其他包的类</p>
+<ol>
+<li>import什么时候不需要
+<ul>
+<li>java.lang不需要</li>
+<li>同包不需要</li>
+<li>其他都需要</li>
+</ul>
+</li>
+<li>语法
+<ul>
+<li><code>import 完整类名</code></li>
+<li><code>import 包名.*</code></li>
+<li>import只能出现在package语句之下，class声明语句之上</li>
+</ul>
+</li>
+</ol>
+<h3 id="访问控制权限修饰符">访问控制权限修饰符</h3>
+<p>访问修饰符用于控制类、成员变量、方法的访问范围</p>
+<ul>
+<li>Private 私有 只能在类的内部访问</li>
+<li>Public 公共 在任何地方都能访问</li>
+<li>(default) 默认 相同包的其他类可以访问</li>
+<li>Protected 继承 只有继承的子类能访问到</li>
+</ul>
+<ol>
+<li>访问控制权限可以修饰什么？
+<ul>
+<li>4个属性</li>
+<li>4个方法</li>
+<li>类（public和默认）</li>
+<li>接口（public和默认）</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java基础</category>
       </categories>
       <tags>
         <tag>JavaSE基础</tag>
@@ -1744,79 +1817,6 @@ file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
 ]]></content>
       <categories>
         <category>Java进阶</category>
-      </categories>
-      <tags>
-        <tag>JavaSE基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java进阶学习笔记（八）package和import</title>
-    <url>/post/20061.html</url>
-    <content><![CDATA[<h2 id="package和import">package和import</h2>
-<p>包机制<br>
-为了方便程序管理，不同功能的类，分别存放在不同的包下</p>
-<h3 id="package">package</h3>
-<p>包（package）</p>
-<ul>
-<li>把功能相似或相关的类组织在同一个包中</li>
-<li>包也采用了树形目录的存储方式</li>
-<li>通过包也可限定类的访问权限</li>
-<li>包的命名规范
-<ul>
-<li>包采用“逆域名法”进行命名，用”.”分割，单词全部小写</li>
-<li>标准格式 域名后缀.组织机构名.项目名[.模块名].包的职能</li>
-<li>类中需要声明隶属于的包</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>package出现在Java源文件第一行</li>
-<li>带有包名的编译
-<ul>
-<li>javac -d . xxx.java</li>
-</ul>
-</li>
-<li>运行 Java完整类名</li>
-</ol>
-<h3 id="import">import</h3>
-<p>Import关键词用于导入其他包的类</p>
-<ol>
-<li>import什么时候不需要
-<ul>
-<li>java.lang不需要</li>
-<li>同包不需要</li>
-<li>其他都需要</li>
-</ul>
-</li>
-<li>语法
-<ul>
-<li><code>import 完整类名</code></li>
-<li><code>import 包名.*</code></li>
-<li>import只能出现在package语句之下，class声明语句之上</li>
-</ul>
-</li>
-</ol>
-<h3 id="访问控制权限修饰符">访问控制权限修饰符</h3>
-<p>访问修饰符用于控制类、成员变量、方法的访问范围</p>
-<ul>
-<li>Private 私有 只能在类的内部访问</li>
-<li>Public 公共 在任何地方都能访问</li>
-<li>(default) 默认 相同包的其他类可以访问</li>
-<li>Protected 继承 只有继承的子类能访问到</li>
-</ul>
-<ol>
-<li>访问控制权限可以修饰什么？
-<ul>
-<li>4个属性</li>
-<li>4个方法</li>
-<li>类（public和默认）</li>
-<li>接口（public和默认）</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Java基础</category>
       </categories>
       <tags>
         <tag>JavaSE基础</tag>
