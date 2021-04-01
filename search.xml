@@ -2,11 +2,12 @@
 <search>
   <entry>
     <title>Future Plan</title>
-    <url>/2021/04/01/%E4%B8%AA%E4%BA%BA%E6%9D%82%E8%B0%88/Future-Plan/</url>
+    <url>/post/16234.html</url>
     <content><![CDATA[<h2 id="Life-Desiging">Life Desiging</h2>
 <h3 id="What’s-the-most-interesting-design-problem">What’s the most interesting design problem?</h3>
 <pre><code>I think it's your life. As this life of yours, this amazing design of yours unfolds.
 </code></pre>
+<span id="more"></span>
 <h2 id="Designing-Thingking">Designing Thingking</h2>
 <pre><code>Designing thinking is a set of mindsets. Reality has the tendency to throw little things at us that we weren't expecting. Some of them are good, some are not.
 </code></pre>
@@ -59,26 +60,26 @@ Are you being the best possible version of you?
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2021/03/31/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+    <url>/post/16107.html</url>
+    <content><![CDATA[<p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo<i class="fa fa-external-link-alt"></i></span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv">documentation<i class="fa fa-external-link-alt"></i></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=">troubleshooting<i class="fa fa-external-link-alt"></i></span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">GitHub<i class="fa fa-external-link-alt"></i></span>.</p>
 <h2 id="Quick-Start">Quick Start</h2>
 <h3 id="Create-a-new-post">Create a new post</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s">Writing<i class="fa fa-external-link-alt"></i></span></p>
 <h3 id="Run-server">Run server</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=">Server<i class="fa fa-external-link-alt"></i></span></p>
 <h3 id="Generate-static-files">Generate static files</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s">Generating<i class="fa fa-external-link-alt"></i></span></p>
 <h3 id="Deploy-to-remote-sites">Deploy to remote sites</h3>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s">Deployment<i class="fa fa-external-link-alt"></i></span></p>
 ]]></content>
   </entry>
   <entry>
     <title>数据结构笔记（四）队列</title>
-    <url>/2021/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/C%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%EF%BC%88%E5%9B%9B%EF%BC%89%E9%98%9F%E5%88%97/</url>
+    <url>/post/0.html</url>
     <content><![CDATA[<h2 id="队列">队列</h2>
 <p><strong>队列</strong>：具有一定操作约束的线性表<br>
 数据插入：入队列（AddQ）<br>
@@ -122,13 +123,12 @@ Are you being the best possible version of you?
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>学习笔记</tag>
-        <tag>线性结构</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
     <title>数据结构笔记（六）二叉树</title>
-    <url>/2021/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/C%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%EF%BC%88%E5%85%AD%EF%BC%89%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
+    <url>/post/0.html</url>
     <content><![CDATA[<h2 id="二叉树的定义及基本特点">二叉树的定义及基本特点</h2>
 <h3 id="定义">定义</h3>
 <p>二叉树（Binary Tree）是n（n≥0）个结点所构成的集合，它或为空树（n = 0）；或为非空树</p>
@@ -253,13 +253,12 @@ int NodeCount(BiTree T) &#123;
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>学习笔记</tag>
-        <tag>树形结构</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
     <title>数据结构笔记（五）树与树的表示</title>
-    <url>/2021/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/C%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%94%EF%BC%89%E6%A0%91%E4%B8%8E%E6%A0%91%E7%9A%84%E8%A1%A8%E7%A4%BA/</url>
+    <url>/post/14197.html</url>
     <content><![CDATA[<h2 id="树的定义">树的定义</h2>
 <p>树（Tree）: n（n≥0）个结点构成的有限集合。</p>
 <ul>
@@ -305,13 +304,12 @@ int NodeCount(BiTree T) &#123;
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>学习笔记</tag>
-        <tag>树形结构</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
     <title>数据结构笔记（二）线性表</title>
-    <url>/2021/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/C%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%E7%BA%BF%E6%80%A7%E8%A1%A8/</url>
+    <url>/post/5904.html</url>
     <content><![CDATA[<h2 id="线性结构">线性结构</h2>
 <h3 id="2-1线性表及其表现">2.1线性表及其表现</h3>
 <h4 id="什么是线性表？">什么是线性表？</h4>
@@ -435,13 +433,12 @@ int NodeCount(BiTree T) &#123;
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>学习笔记</tag>
-        <tag>线性结构</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
     <title>数据结构笔记（三）栈</title>
-    <url>/2021/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/C%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89%E6%A0%88/</url>
+    <url>/post/39226.html</url>
     <content><![CDATA[<h2 id="堆栈">堆栈</h2>
 <h3 id="堆栈的抽象数据类型描述">堆栈的抽象数据类型描述</h3>
 <ul>
@@ -523,13 +520,12 @@ int NodeCount(BiTree T) &#123;
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>学习笔记</tag>
-        <tag>线性结构</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
     <title>数据结构笔记（七）二叉搜索树</title>
-    <url>/2021/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/C%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%83%EF%BC%89%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</url>
+    <url>/post/35884.html</url>
     <content><![CDATA[<h2 id="二叉搜索树">二叉搜索树</h2>
 <p>对于树中的每个节点X，它的左子树的所有关键字值小于X的关键字值，右子树中的所有关键字值大于X的关键字值<br>
 平均深度 $O(logn)$</p>
@@ -545,13 +541,12 @@ int NodeCount(BiTree T) &#123;
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>学习笔记</tag>
-        <tag>树形结构</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
     <title>数据结构笔记（一）数据结构概念</title>
-    <url>/2021/03/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/C%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <url>/post/48857.html</url>
     <content><![CDATA[<h2 id="1基本概念">1基本概念</h2>
 <h3 id="1-1数据结构">1.1数据结构</h3>
 <ul>
@@ -676,13 +671,12 @@ $$T_{avg}(n)\leq T_{worst}(n)$$</li>
         <category>数据结构</category>
       </categories>
       <tags>
-        <tag>学习笔记</tag>
-        <tag>数据结构基本概念</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
     <title>未完成计划</title>
-    <url>/2021/03/30/s/</url>
+    <url>/post/20301.html</url>
     <content><![CDATA[<ol>
 <li>平衡二叉树</li>
 <li>伸展树</li>
@@ -700,7 +694,7 @@ $$T_{avg}(n)\leq T_{worst}(n)$$</li>
   </entry>
   <entry>
     <title>Java学习笔记（一）语言概述</title>
-    <url>/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0/</url>
+    <url>/post/23193.html</url>
     <content><![CDATA[<h2 id="Java语言概述">Java语言概述</h2>
 <ul>
 <li>Java语言的概述一级Java语言的发展史</li>
@@ -803,14 +797,12 @@ JVM能识别字节码，Java代码这种普通文本变成字节码的过程被�
         <category>JavaSE基础</category>
       </categories>
       <tags>
-        <tag>JavaSE学习笔记</tag>
-        <tag>Java语言概述</tag>
-        <tag>Java特性</tag>
+        <tag>JavaSE基础</tag>
       </tags>
   </entry>
   <entry>
     <title>Java学习笔记（七）继承</title>
-    <url>/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%83%EF%BC%89%E7%BB%A7%E6%89%BF/</url>
+    <url>/post/48660.html</url>
     <content><![CDATA[<h2 id="继承">继承</h2>
 <ol>
 <li>使用继承机制来解决代码复用问题</li>
@@ -889,14 +881,154 @@ JVM能识别字节码，Java代码这种普通文本变成字节码的过程被�
         <category>JavaSE基础</category>
       </categories>
       <tags>
-        <tag>JavaSE学习笔记</tag>
-        <tag>Java继承</tag>
-        <tag>Java方法覆盖</tag>
+        <tag>JavaSE基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java学习笔记（三）基本概念</title>
+    <url>/post/5391.html</url>
+    <content><![CDATA[<h2 id="一、JVM虚拟机">一、JVM虚拟机</h2>
+<ol>
+<li>栈<br>
+在方法被调用的时候，该方法需要的内存空间在栈中分配</li>
+<li>堆<br>
+凡是通过new运算符创建的对象，储存在堆内存中</li>
+<li>方法区<br>
+类加载器classloader，将xxx.class字节码文件装载到JVM的时候<br>
+会将字节码文件装载到方法区中，方法区中存放代码片段</li>
+</ol>
+<h2 id="二、内存栈">二、内存栈</h2>
+<ul>
+<li>栈数据结构stack</li>
+</ul>
+<ol>
+<li>Java语言把常用的数据结构已经都写好了</li>
+<li>进栈入栈push</li>
+<li>出栈pop</li>
+<li>栈帧永远指向栈顶部的元素</li>
+<li>数据结构特点：先进后出</li>
+<li>注意处于栈顶部的元素最具活跃权</li>
+</ol>
+<h2 id="三、方法执行时内存变化">三、方法执行时内存变化</h2>
+<ol>
+<li>方法不调用是不会在栈中分配空间的</li>
+<li>方法只有在调用的时候会分配空间，并且调用就是压栈</li>
+<li>方法结束后该方法需要的空间就会释放，发生弹栈</li>
+</ol>
+<h2 id="四、方法重载">四、方法重载</h2>
+<ol>
+<li>Java怎么进行方法区分
+<ul>
+<li>Java编译器通过方法名进行区分</li>
+<li>Java语言中允许方法名相同的情况出现，可以通过参数类型区分</li>
+</ul>
+</li>
+<li>什么时候发生方法重载
+<ul>
+<li>在同一个类中</li>
+<li>方法名相同</li>
+<li>参数列表不同（个数、类型、顺序）</li>
+</ul>
+</li>
+</ol>
+<h2 id="五、递归算法">五、递归算法</h2>
+<ol>
+<li>方法递归，方法自己调用自己</li>
+<li>递归必须要有结束条件<br>
+递归有合法结束条件，有时候也会出现栈内存溢出错误，因为递归太深一直压栈</li>
+<li>实际开发中不建议轻易使用递归，能用for，while代替，尽量使用循环代替，循环效率高，调用内存少，少数情况不递归无法实现</li>
+<li>出现栈内存溢出
+<ol>
+<li>先检查递归结束条件对不对</li>
+<li>手动调整JVM栈内存初始化大小</li>
+<li>继续扩大栈内存大小Java -x</li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>JavaSE基础</category>
+      </categories>
+      <tags>
+        <tag>JavaSE基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java学习笔记（五）构造方法和封装</title>
+    <url>/post/35965.html</url>
+    <content><![CDATA[<h2 id="一．构造方法constructor">一．构造方法constructor</h2>
+<h3 id="1．什么是构造方法">1．什么是构造方法</h3>
+<ol>
+<li>
+<p>构造方法也是一个特殊的方法，通过构造方法可以完成对象的创建，以及实例变量的初始化，换句话来说，构造方法是用来创建对象，并同时给对象的属性赋值</p>
+</li>
+<li>
+<p>语法结构</p>
+ <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] 构造方法名 (形式参数列表)&#123;</span><br><span class="line">    构造方法体</span><br><span class="line">    通常在构造方法体中给属性赋值，完成属性的初始化</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>修饰符列表public</li>
+<li>构造方法名必须和类名一致</li>
+<li>构造方法不需要指定返回值类型</li>
+</ul>
+</li>
+<li>
+<p>调用构造方法</p>
+</li>
+</ol>
+<p><code>New 构造方法名(实际参数列表)</code></p>
+<ul>
+<li>当一个类中手动的提供了构造方法，那么系统将不再提供无参数的构造方法（建议把无参数构造方法写出来）</li>
+<li>当一个类没有提供任何构造方法，系统会默认构造一个没有参数的构造方法（缺省构造器）</li>
+<li>无参数构造方法和有参数构造方法都可以调用</li>
+<li>无参数构造方法虽然没有代码但是默认在这里赋系统默认值</li>
+<li>构造方法可以重载</li>
+</ul>
+<h2 id="二．封装">二．封装</h2>
+<h3 id="1．封装的作用">1．封装的作用</h3>
+<ol>
+<li>保证内部结构的安全</li>
+<li>屏蔽复杂，暴露简单</li>
+</ol>
+<h3 id="2．怎么进行封装">2．怎么进行封装</h3>
+<ol>
+<li>属性私有化（private）
+<ul>
+<li>Private表示私有的，被这个关键字修饰之后，该数据只能在本类中访问，出类不能访问。</li>
+</ul>
+</li>
+<li>对外提供简单的操作入口
+<ol>
+<li>带有static的方法</li>
+<li>不带有static的方法，用new对象引用去访问</li>
+</ol>
+<ul>
+<li>称为实例方法，对象级别的方法（对象被称为实例，实例相关的都需要new对象，和引用来访问）</li>
+</ul>
+</li>
+<li>空指针异常导致的最本质的原因是？
+<ol>
+<li>空引用访问实例相关的数据，会导致空指针异常</li>
+<li>实例相关的包括，实例变量+实例方法</li>
+</ol>
+</li>
+<li>对外提供公开的get方法和set方法作为操作入口，并且都不带static</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] 返回值类型 方法名 (形式参数列表)&#123;&#125;</span><br><span class="line"><span class="comment">/*get方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">(无参)</span></span>&#123;<span class="comment">//get属性名首字母大写</span></span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*set方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span> <span class="params">(<span class="keyword">int</span> a（一个参数）)</span></span>&#123;</span><br><span class="line">    A = a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>5．封装代码实现两步</p>
+<ul>
+<li>属性私有化  一个属性提供get和set方法</li>
+</ul>
+]]></content>
+      <categories>
+        <category>JavaSE基础</category>
+      </categories>
+      <tags>
+        <tag>JavaSE基础</tag>
       </tags>
   </entry>
   <entry>
     <title>Java学习笔记（二）基础语法</title>
-    <url>/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
+    <url>/post/55918.html</url>
     <content><![CDATA[<h2 id="一、注释">一、注释</h2>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1.单行注释</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*2.多行注释</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*3.注释文档</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 <h2 id="二、引入类">二、引入类</h2>
@@ -1006,166 +1138,116 @@ BigDecimal类 大实数</p>
         <category>JavaSE基础</category>
       </categories>
       <tags>
-        <tag>JavaSE学习笔记</tag>
-        <tag>Java基本概念</tag>
-        <tag>注释</tag>
-        <tag>类</tag>
-        <tag>标识符</tag>
-        <tag>变量</tag>
-        <tag>基本数据类型</tag>
+        <tag>JavaSE基础</tag>
       </tags>
   </entry>
   <entry>
-    <title>Java学习笔记（三）基本概念</title>
-    <url>/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%89%EF%BC%89%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</url>
-    <content><![CDATA[<h2 id="一、JVM虚拟机">一、JVM虚拟机</h2>
-<ol>
-<li>栈<br>
-在方法被调用的时候，该方法需要的内存空间在栈中分配</li>
-<li>堆<br>
-凡是通过new运算符创建的对象，储存在堆内存中</li>
-<li>方法区<br>
-类加载器classloader，将xxx.class字节码文件装载到JVM的时候<br>
-会将字节码文件装载到方法区中，方法区中存放代码片段</li>
-</ol>
-<h2 id="二、内存栈">二、内存栈</h2>
+    <title>Java学习笔记（四）面向对象</title>
+    <url>/post/29980.html</url>
+    <content><![CDATA[<h2 id="一、面向对象和面向过程的区别">一、面向对象和面向过程的区别</h2>
 <ul>
-<li>栈数据结构stack</li>
+<li>C 完全面向过程</li>
+<li>C++ 一半面向过程一半面向对象</li>
+<li>Java 完全面向对象</li>
 </ul>
+<h3 id="1-什么是面向过程的开发方式">1.什么是面向过程的开发方式</h3>
 <ol>
-<li>Java语言把常用的数据结构已经都写好了</li>
-<li>进栈入栈push</li>
-<li>出栈pop</li>
-<li>栈帧永远指向栈顶部的元素</li>
-<li>数据结构特点：先进后出</li>
-<li>注意处于栈顶部的元素最具活跃权</li>
+<li>特点
+<ol>
+<li>注重步骤</li>
+<li>注重因果关系</li>
 </ol>
-<h2 id="三、方法执行时内存变化">三、方法执行时内存变化</h2>
-<ol>
-<li>方法不调用是不会在栈中分配空间的</li>
-<li>方法只有在调用的时候会分配空间，并且调用就是压栈</li>
-<li>方法结束后该方法需要的空间就会释放，发生弹栈</li>
+</li>
 </ol>
-<h2 id="四、方法重载">四、方法重载</h2>
-<ol>
-<li>Java怎么进行方法区分
 <ul>
-<li>Java编译器通过方法名进行区分</li>
-<li>Java语言中允许方法名相同的情况出现，可以通过参数类型区分</li>
+<li>缺点
+<ul>
+<li>代码和代码之间耦合度太高，扩展力太差</li>
 </ul>
 </li>
-<li>什么时候发生方法重载
+<li>优点
 <ul>
-<li>在同一个类中</li>
-<li>方法名相同</li>
-<li>参数列表不同（个数、类型、顺序）</li>
+<li>小型项目，采用面向过程方式进行开发，效率高</li>
 </ul>
 </li>
-</ol>
-<h2 id="五、递归算法">五、递归算法</h2>
+</ul>
+<h3 id="2-什么是面向对象的开发方式">2.什么是面向对象的开发方式</h3>
 <ol>
-<li>方法递归，方法自己调用自己</li>
-<li>递归必须要有结束条件<br>
-递归有合法结束条件，有时候也会出现栈内存溢出错误，因为递归太深一直压栈</li>
-<li>实际开发中不建议轻易使用递归，能用for，while代替，尽量使用循环代替，循环效率高，调用内存少，少数情况不递归无法实现</li>
-<li>出现栈内存溢出
-<ol>
-<li>先检查递归结束条件对不对</li>
-<li>手动调整JVM栈内存初始化大小</li>
-<li>继续扩大栈内存大小Java -x</li>
+<li>将现实世界分隔成几个小的单元，然后每一个单元都实现成对象，然后驱动一下，让各个对象之间协作起来形成一个系统</li>
+<li>特点<br>
+耦合度低，扩展力强</li>
 </ol>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>JavaSE基础</category>
-      </categories>
-      <tags>
-        <tag>JavaSE学习笔记</tag>
-        <tag>Java基本概念</tag>
-        <tag>JVM虚拟机</tag>
-        <tag>内存栈</tag>
-        <tag>方法重载</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java学习笔记（五）构造方法和封装</title>
-    <url>/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%94%EF%BC%89%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E5%92%8C%E5%B0%81%E8%A3%85/</url>
-    <content><![CDATA[<h2 id="一．构造方法constructor">一．构造方法constructor</h2>
-<h3 id="1．什么是构造方法">1．什么是构造方法</h3>
-<ol>
-<li>
-<p>构造方法也是一个特殊的方法，通过构造方法可以完成对象的创建，以及实例变量的初始化，换句话来说，构造方法是用来创建对象，并同时给对象的属性赋值</p>
-</li>
-<li>
-<p>语法结构</p>
- <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] 构造方法名 (形式参数列表)&#123;</span><br><span class="line">    构造方法体</span><br><span class="line">    通常在构造方法体中给属性赋值，完成属性的初始化</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-采用面向对象的方式贯穿整个系统，涉及三个术语">3.采用面向对象的方式贯穿整个系统，涉及三个术语</h3>
 <ul>
-<li>修饰符列表public</li>
-<li>构造方法名必须和类名一致</li>
-<li>构造方法不需要指定返回值类型</li>
+<li>OOA：面向对象分析</li>
+<li>OOD：面向对象设计</li>
+<li>OOP：面向对象编程</li>
+</ul>
+<p>分析-&gt;设计-&gt;编程</p>
+<h3 id="4-面向对象包括三大特征">4.面向对象包括三大特征</h3>
+<ol>
+<li>封装</li>
+<li>继承</li>
+<li>多态</li>
+</ol>
+<h3 id="5-类和对象的概念">5.类和对象的概念</h3>
+<ol>
+<li>什么是类<br>
+一种模板，描述所有对象的共同特征信息</li>
+<li>什么是对象<br>
+实际存在的个体</li>
+</ol>
+<p>Java语言中，要想得到对象，必须先定义一个类，对象是通过类这个模板创造出来的</p>
+<p>术语</p>
+<p>类 对象 实例 实例化 抽象</p>
+<h2 id="二、类的定义">二、类的定义</h2>
+<h3 id="1．定义">1．定义</h3>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">[修饰符列表] <span class="class"><span class="keyword">class</span> 类名</span>&#123;&#125; 类体=属性加方法</span><br><span class="line">属性在代码上以变量的形式存在</span><br><span class="line">属性以数据的形式存在（成员变量）</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">xueSheng</span></span>&#123;</span><br><span class="line"> <span class="keyword">int</span> xueHao;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>java中所有的类都属于引用数据类型</p>
+<h3 id="2．对象的创建和使用">2．对象的创建和使用</h3>
+<ol>
+<li>new 类名 ()</li>
+<li>new是个运算符专门负责对象的创建
+<ul>
+<li><code>xueSheng s = new xueSheng ();</code></li>
 </ul>
 </li>
-<li>
-<p>调用构造方法</p>
-</li>
+<li>关于编译的过程，对于编译器来说先编译test.java会自动找xuesheng.class，如果没有会自动编译xuesheng.java生成.class 文件</li>
 </ol>
-<p><code>New 构造方法名(实际参数列表)</code></p>
+<h3 id="3．成员变量">3．成员变量</h3>
+<p>没有手动赋值，系统默认赋值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">byte</span> <span class="number">0</span>    <span class="keyword">short</span> <span class="number">0</span> </span><br><span class="line"><span class="keyword">int</span> <span class="number">0</span>      <span class="keyword">long</span> <span class="number">0L</span>  </span><br><span class="line"><span class="keyword">float</span> <span class="number">0.0F</span>    <span class="keyword">double</span> <span class="number">0.0</span>  </span><br><span class="line"><span class="keyword">boolean</span> <span class="keyword">false</span>   <span class="keyword">char</span> \u0000 引用数据类型 <span class="keyword">null</span></span><br></pre></td></tr></table></figure>
+<h3 id="4．实例变量">4．实例变量</h3>
+<ol>
+<li>对象级别的变量</li>
+<li>不能通过类名来直接访问实例变量</li>
+</ol>
+<p>对象和引用的区别</p>
+<ol>
+<li>对象是通过new出来的，在堆内存中储存</li>
+<li>引用但凡是变量，并且该变量中保存了内存地址指向了堆内存中的对象</li>
+<li>怎么访问实例变量：引用.实例变量名</li>
+<li>通过=赋值将堆内存中实例变量的值进行修改</li>
+</ol>
+<h2 id="三、空指针异常">三、空指针异常</h2>
 <ul>
-<li>当一个类中手动的提供了构造方法，那么系统将不再提供无参数的构造方法（建议把无参数构造方法写出来）</li>
-<li>当一个类没有提供任何构造方法，系统会默认构造一个没有参数的构造方法（缺省构造器）</li>
-<li>无参数构造方法和有参数构造方法都可以调用</li>
-<li>无参数构造方法虽然没有代码但是默认在这里赋系统默认值</li>
-<li>构造方法可以重载</li>
+<li>该对象没有引用指向它了，Java中规定程序员无法直接操作堆内存，只能等待gc把垃圾对象回收走。</li>
 </ul>
-<h2 id="二．封装">二．封装</h2>
-<h3 id="1．封装的作用">1．封装的作用</h3>
-<ol>
-<li>保证内部结构的安全</li>
-<li>屏蔽复杂，暴露简单</li>
-</ol>
-<h3 id="2．怎么进行封装">2．怎么进行封装</h3>
-<ol>
-<li>属性私有化（private）
+<h2 id="四、方法调用时参数的传递问题">四、方法调用时参数的传递问题</h2>
 <ul>
-<li>Private表示私有的，被这个关键字修饰之后，该数据只能在本类中访问，出类不能访问。</li>
-</ul>
-</li>
-<li>对外提供简单的操作入口
-<ol>
-<li>带有static的方法</li>
-<li>不带有static的方法，用new对象引用去访问</li>
-</ol>
-<ul>
-<li>称为实例方法，对象级别的方法（对象被称为实例，实例相关的都需要new对象，和引用来访问）</li>
-</ul>
-</li>
-<li>空指针异常导致的最本质的原因是？
-<ol>
-<li>空引用访问实例相关的数据，会导致空指针异常</li>
-<li>实例相关的包括，实例变量+实例方法</li>
-</ol>
-</li>
-<li>对外提供公开的get方法和set方法作为操作入口，并且都不带static</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] 返回值类型 方法名 (形式参数列表)&#123;&#125;</span><br><span class="line"><span class="comment">/*get方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">(无参)</span></span>&#123;<span class="comment">//get属性名首字母大写</span></span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*set方法*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span> <span class="params">(<span class="keyword">int</span> a（一个参数）)</span></span>&#123;</span><br><span class="line">    A = a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>5．封装代码实现两步</p>
-<ul>
-<li>属性私有化  一个属性提供get和set方法</li>
+<li>Java中规定：参数传递的时候，和类型无关，不管你是基本数据类型，还是引用数据类型</li>
 </ul>
 ]]></content>
       <categories>
         <category>JavaSE基础</category>
       </categories>
       <tags>
-        <tag>JavaSE学习笔记</tag>
-        <tag>Java构造方法</tag>
-        <tag>Java封装</tag>
+        <tag>JavaSE基础</tag>
       </tags>
   </entry>
   <entry>
     <title>Java学习笔记（八）多态</title>
-    <url>/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E5%85%AB%EF%BC%89%E5%A4%9A%E6%80%81/</url>
+    <url>/post/23987.html</url>
     <content><![CDATA[<h2 id="多态">多态</h2>
 <h3 id="一．多态的基础语法">一．多态的基础语法</h3>
 <ol>
@@ -1213,14 +1295,12 @@ BigDecimal类 大实数</p>
         <category>JavaSE基础</category>
       </categories>
       <tags>
-        <tag>JavaSE学习笔记</tag>
-        <tag>Java多态</tag>
-        <tag>Java Instanceof</tag>
+        <tag>JavaSE基础</tag>
       </tags>
   </entry>
   <entry>
     <title>Java学习笔记（六）关键字static、this、super</title>
-    <url>/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E5%85%AD%EF%BC%89%E5%85%B3%E9%94%AE%E5%AD%97static%E3%80%81this%E3%80%81super/</url>
+    <url>/post/6688.html</url>
     <content><![CDATA[<h2 id="Static">Static</h2>
 <ol>
 <li>Static意为静态</li>
@@ -1348,124 +1428,12 @@ BigDecimal类 大实数</p>
         <category>JavaSE基础</category>
       </categories>
       <tags>
-        <tag>JavaSE学习笔记</tag>
-        <tag>Java关键字</tag>
-        <tag>static</tag>
-        <tag>this</tag>
-        <tag>super</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java学习笔记（四）面向对象</title>
-    <url>/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%9B%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h2 id="一、面向对象和面向过程的区别">一、面向对象和面向过程的区别</h2>
-<ul>
-<li>C 完全面向过程</li>
-<li>C++ 一半面向过程一半面向对象</li>
-<li>Java 完全面向对象</li>
-</ul>
-<h3 id="1-什么是面向过程的开发方式">1.什么是面向过程的开发方式</h3>
-<ol>
-<li>特点
-<ol>
-<li>注重步骤</li>
-<li>注重因果关系</li>
-</ol>
-</li>
-</ol>
-<ul>
-<li>缺点
-<ul>
-<li>代码和代码之间耦合度太高，扩展力太差</li>
-</ul>
-</li>
-<li>优点
-<ul>
-<li>小型项目，采用面向过程方式进行开发，效率高</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-什么是面向对象的开发方式">2.什么是面向对象的开发方式</h3>
-<ol>
-<li>将现实世界分隔成几个小的单元，然后每一个单元都实现成对象，然后驱动一下，让各个对象之间协作起来形成一个系统</li>
-<li>特点<br>
-耦合度低，扩展力强</li>
-</ol>
-<h3 id="3-采用面向对象的方式贯穿整个系统，涉及三个术语">3.采用面向对象的方式贯穿整个系统，涉及三个术语</h3>
-<ul>
-<li>OOA：面向对象分析</li>
-<li>OOD：面向对象设计</li>
-<li>OOP：面向对象编程</li>
-</ul>
-<p>分析-&gt;设计-&gt;编程</p>
-<h3 id="4-面向对象包括三大特征">4.面向对象包括三大特征</h3>
-<ol>
-<li>封装</li>
-<li>继承</li>
-<li>多态</li>
-</ol>
-<h3 id="5-类和对象的概念">5.类和对象的概念</h3>
-<ol>
-<li>什么是类<br>
-一种模板，描述所有对象的共同特征信息</li>
-<li>什么是对象<br>
-实际存在的个体</li>
-</ol>
-<p>Java语言中，要想得到对象，必须先定义一个类，对象是通过类这个模板创造出来的</p>
-<p>术语</p>
-<p>类 对象 实例 实例化 抽象</p>
-<h2 id="二、类的定义">二、类的定义</h2>
-<h3 id="1．定义">1．定义</h3>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">[修饰符列表] <span class="class"><span class="keyword">class</span> 类名</span>&#123;&#125; 类体=属性加方法</span><br><span class="line">属性在代码上以变量的形式存在</span><br><span class="line">属性以数据的形式存在（成员变量）</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">xueSheng</span></span>&#123;</span><br><span class="line"> <span class="keyword">int</span> xueHao;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>java中所有的类都属于引用数据类型</p>
-<h3 id="2．对象的创建和使用">2．对象的创建和使用</h3>
-<ol>
-<li>new 类名 ()</li>
-<li>new是个运算符专门负责对象的创建
-<ul>
-<li><code>xueSheng s = new xueSheng ();</code></li>
-</ul>
-</li>
-<li>关于编译的过程，对于编译器来说先编译test.java会自动找xuesheng.class，如果没有会自动编译xuesheng.java生成.class 文件</li>
-</ol>
-<h3 id="3．成员变量">3．成员变量</h3>
-<p>没有手动赋值，系统默认赋值</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">byte</span> <span class="number">0</span>    <span class="keyword">short</span> <span class="number">0</span> </span><br><span class="line"><span class="keyword">int</span> <span class="number">0</span>      <span class="keyword">long</span> <span class="number">0L</span>  </span><br><span class="line"><span class="keyword">float</span> <span class="number">0.0F</span>    <span class="keyword">double</span> <span class="number">0.0</span>  </span><br><span class="line"><span class="keyword">boolean</span> <span class="keyword">false</span>   <span class="keyword">char</span> \u0000 引用数据类型 <span class="keyword">null</span></span><br></pre></td></tr></table></figure>
-<h3 id="4．实例变量">4．实例变量</h3>
-<ol>
-<li>对象级别的变量</li>
-<li>不能通过类名来直接访问实例变量</li>
-</ol>
-<p>对象和引用的区别</p>
-<ol>
-<li>对象是通过new出来的，在堆内存中储存</li>
-<li>引用但凡是变量，并且该变量中保存了内存地址指向了堆内存中的对象</li>
-<li>怎么访问实例变量：引用.实例变量名</li>
-<li>通过=赋值将堆内存中实例变量的值进行修改</li>
-</ol>
-<h2 id="三、空指针异常">三、空指针异常</h2>
-<ul>
-<li>该对象没有引用指向它了，Java中规定程序员无法直接操作堆内存，只能等待gc把垃圾对象回收走。</li>
-</ul>
-<h2 id="四、方法调用时参数的传递问题">四、方法调用时参数的传递问题</h2>
-<ul>
-<li>Java中规定：参数传递的时候，和类型无关，不管你是基本数据类型，还是引用数据类型</li>
-</ul>
-]]></content>
-      <categories>
-        <category>JavaSE基础</category>
-      </categories>
-      <tags>
-        <tag>JavaSE学习笔记</tag>
-        <tag>Java面向对象</tag>
-        <tag>Java类机制</tag>
-        <tag>成员变量</tag>
-        <tag>实例变量</tag>
+        <tag>JavaSE基础</tag>
       </tags>
   </entry>
   <entry>
     <title>Java进阶学习笔记（一）IDEA工具的使用</title>
-    <url>/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E4%B8%80%EF%BC%89%20IDEA%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <url>/post/56893.html</url>
     <content><![CDATA[<h2 id="IDEA工具的快捷键及设置">IDEA工具的快捷键及设置</h2>
 <ol>
 <li>字体设置<br>
@@ -1534,13 +1502,12 @@ file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
         <category>Java进阶</category>
       </categories>
       <tags>
-        <tag>Java学习笔记</tag>
-        <tag>IDEA工具的使用</tag>
+        <tag>JavaSE基础</tag>
       </tags>
   </entry>
   <entry>
     <title>Java进阶学习笔记（二）final关键字</title>
-    <url>/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E4%BA%8C%EF%BC%89final%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+    <url>/post/8933.html</url>
     <content><![CDATA[<h2 id="final关键字">final关键字</h2>
 <ol>
 <li>final是Java语言中的一个关键字</li>
@@ -1581,13 +1548,12 @@ file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
         <category>Java进阶</category>
       </categories>
       <tags>
-        <tag>Java学习笔记</tag>
-        <tag>final关键字</tag>
+        <tag>JavaSE基础</tag>
       </tags>
   </entry>
   <entry>
     <title>Java进阶学习笔记（三）抽象类</title>
-    <url>/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E4%B8%89%EF%BC%89%E6%8A%BD%E8%B1%A1%E7%B1%BB/</url>
+    <url>/post/37418.html</url>
     <content><![CDATA[<h2 id="抽象类">抽象类</h2>
 <ol>
 <li>
@@ -1644,146 +1610,12 @@ file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
         <category>Java进阶</category>
       </categories>
       <tags>
-        <tag>Java学习笔记</tag>
-        <tag>抽象类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java进阶学习笔记（四）接口</title>
-    <url>/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E5%9B%9B%EF%BC%89%E6%8E%A5%E5%8F%A3/</url>
-    <content><![CDATA[<h2 id="接口">接口</h2>
-<h3 id="接口的基础语法">接口的基础语法</h3>
-<ol>
-<li>
-<p>接口也是一种引用数据类型，编译后也是class文件</p>
-</li>
-<li>
-<p>接口是完全抽象</p>
-</li>
-<li>
-<p>接口怎么定义</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] <span class="class"><span class="keyword">interface</span> 接口名</span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>接口支持多继承</p>
-</li>
-<li>
-<p>接口中只含有两部分，一部分常量，另一部分抽象方法</p>
-</li>
-<li>
-<p>接口中的抽象方法可以省略<code>public abstract</code></p>
-</li>
-<li>
-<p>接口中的方法都是抽象方法不可以有方法体</p>
-</li>
-<li>
-<p>接口中的常量可以省略<code>public static final</code></p>
-</li>
-<li>
-<p>继承使用<code>extends</code>，实现使用<code>implements</code></p>
-</li>
-<li>
-<p><strong>当一个非抽象的类实现接口的话，必须将接口中所有的抽象方法实现</strong></p>
-</li>
-<li>
-<p>一个类可以实现多个接口，类似于多继承</p>
-</li>
-<li>
-<p>接口和接口之间进行强制类型转换的时候，没有继承关系也可以强转，但是一定要注意，运行时可能会出现<code>ClassCastException</code>异常，编译没问题，运行有问</p>
-</li>
-<li>
-<p>extends在前implements在后</p>
-</li>
-<li>
-<p>接口通常提取行为动作</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Java进阶</category>
-      </categories>
-      <tags>
-        <tag>Java学习笔记</tag>
-        <tag>接口</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java进阶学习笔记（八）package和import</title>
-    <url>/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E5%85%AB%EF%BC%89%20package%E5%92%8Cimport%E4%BB%A5%E5%8F%8A%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E6%9D%83%E9%99%90/</url>
-    <content><![CDATA[<h2 id="package和import">package和import</h2>
-<p>包机制<br>
-为了方便程序管理，不同功能的类，分别存放在不同的包下</p>
-<h3 id="package">package</h3>
-<p>包（package）</p>
-<ul>
-<li>把功能相似或相关的类组织在同一个包中</li>
-<li>包也采用了树形目录的存储方式</li>
-<li>通过包也可限定类的访问权限</li>
-<li>包的命名规范
-<ul>
-<li>包采用“逆域名法”进行命名，用”.”分割，单词全部小写</li>
-<li>标准格式 域名后缀.组织机构名.项目名[.模块名].包的职能</li>
-<li>类中需要声明隶属于的包</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>package出现在Java源文件第一行</li>
-<li>带有包名的编译
-<ul>
-<li>javac -d . xxx.java</li>
-</ul>
-</li>
-<li>运行 Java完整类名</li>
-</ol>
-<h3 id="import">import</h3>
-<p>Import关键词用于导入其他包的类</p>
-<ol>
-<li>import什么时候不需要
-<ul>
-<li>java.lang不需要</li>
-<li>同包不需要</li>
-<li>其他都需要</li>
-</ul>
-</li>
-<li>语法
-<ul>
-<li><code>import 完整类名</code></li>
-<li><code>import 包名.*</code></li>
-<li>import只能出现在package语句之下，class声明语句之上</li>
-</ul>
-</li>
-</ol>
-<h3 id="访问控制权限修饰符">访问控制权限修饰符</h3>
-<p>访问修饰符用于控制类、成员变量、方法的访问范围</p>
-<ul>
-<li>Private 私有 只能在类的内部访问</li>
-<li>Public 公共 在任何地方都能访问</li>
-<li>(default) 默认 相同包的其他类可以访问</li>
-<li>Protected 继承 只有继承的子类能访问到</li>
-</ul>
-<ol>
-<li>访问控制权限可以修饰什么？
-<ul>
-<li>4个属性</li>
-<li>4个方法</li>
-<li>类（public和默认）</li>
-<li>接口（public和默认）</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Java基础</category>
-      </categories>
-      <tags>
-        <tag>学习笔记</tag>
-        <tag>package和import</tag>
+        <tag>JavaSE基础</tag>
       </tags>
   </entry>
   <entry>
     <title>Java进阶学习笔记（五）源码及API文档概述</title>
-    <url>/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E4%BA%94%EF%BC%89%E6%BA%90%E7%A0%81%E5%8F%8AAPI%E6%96%87%E6%A1%A3%E6%A6%82%E8%BF%B0/</url>
+    <url>/post/6399.html</url>
     <content><![CDATA[<h2 id="Object类">Object类</h2>
 <h3 id="Java源码及API文档概述">Java源码及API文档概述</h3>
 <ol>
@@ -1914,18 +1746,143 @@ file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
         <category>Java进阶</category>
       </categories>
       <tags>
-        <tag>Java学习笔记</tag>
-        <tag>Java源码API文档</tag>
-        <tag>Object类</tag>
-        <tag>toString()方法</tag>
-        <tag>equals()方法</tag>
-        <tag>finalize()方法</tag>
-        <tag>hashCode()方法</tag>
+        <tag>JavaSE基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java进阶学习笔记（八）package和import</title>
+    <url>/post/20061.html</url>
+    <content><![CDATA[<h2 id="package和import">package和import</h2>
+<p>包机制<br>
+为了方便程序管理，不同功能的类，分别存放在不同的包下</p>
+<h3 id="package">package</h3>
+<p>包（package）</p>
+<ul>
+<li>把功能相似或相关的类组织在同一个包中</li>
+<li>包也采用了树形目录的存储方式</li>
+<li>通过包也可限定类的访问权限</li>
+<li>包的命名规范
+<ul>
+<li>包采用“逆域名法”进行命名，用”.”分割，单词全部小写</li>
+<li>标准格式 域名后缀.组织机构名.项目名[.模块名].包的职能</li>
+<li>类中需要声明隶属于的包</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>package出现在Java源文件第一行</li>
+<li>带有包名的编译
+<ul>
+<li>javac -d . xxx.java</li>
+</ul>
+</li>
+<li>运行 Java完整类名</li>
+</ol>
+<h3 id="import">import</h3>
+<p>Import关键词用于导入其他包的类</p>
+<ol>
+<li>import什么时候不需要
+<ul>
+<li>java.lang不需要</li>
+<li>同包不需要</li>
+<li>其他都需要</li>
+</ul>
+</li>
+<li>语法
+<ul>
+<li><code>import 完整类名</code></li>
+<li><code>import 包名.*</code></li>
+<li>import只能出现在package语句之下，class声明语句之上</li>
+</ul>
+</li>
+</ol>
+<h3 id="访问控制权限修饰符">访问控制权限修饰符</h3>
+<p>访问修饰符用于控制类、成员变量、方法的访问范围</p>
+<ul>
+<li>Private 私有 只能在类的内部访问</li>
+<li>Public 公共 在任何地方都能访问</li>
+<li>(default) 默认 相同包的其他类可以访问</li>
+<li>Protected 继承 只有继承的子类能访问到</li>
+</ul>
+<ol>
+<li>访问控制权限可以修饰什么？
+<ul>
+<li>4个属性</li>
+<li>4个方法</li>
+<li>类（public和默认）</li>
+<li>接口（public和默认）</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java基础</category>
+      </categories>
+      <tags>
+        <tag>JavaSE基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java进阶学习笔记（四）接口</title>
+    <url>/post/61624.html</url>
+    <content><![CDATA[<h2 id="接口">接口</h2>
+<h3 id="接口的基础语法">接口的基础语法</h3>
+<ol>
+<li>
+<p>接口也是一种引用数据类型，编译后也是class文件</p>
+</li>
+<li>
+<p>接口是完全抽象</p>
+</li>
+<li>
+<p>接口怎么定义</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">[修饰符列表] <span class="class"><span class="keyword">interface</span> 接口名</span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>接口支持多继承</p>
+</li>
+<li>
+<p>接口中只含有两部分，一部分常量，另一部分抽象方法</p>
+</li>
+<li>
+<p>接口中的抽象方法可以省略<code>public abstract</code></p>
+</li>
+<li>
+<p>接口中的方法都是抽象方法不可以有方法体</p>
+</li>
+<li>
+<p>接口中的常量可以省略<code>public static final</code></p>
+</li>
+<li>
+<p>继承使用<code>extends</code>，实现使用<code>implements</code></p>
+</li>
+<li>
+<p><strong>当一个非抽象的类实现接口的话，必须将接口中所有的抽象方法实现</strong></p>
+</li>
+<li>
+<p>一个类可以实现多个接口，类似于多继承</p>
+</li>
+<li>
+<p>接口和接口之间进行强制类型转换的时候，没有继承关系也可以强转，但是一定要注意，运行时可能会出现<code>ClassCastException</code>异常，编译没问题，运行有问</p>
+</li>
+<li>
+<p>extends在前implements在后</p>
+</li>
+<li>
+<p>接口通常提取行为动作</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java进阶</category>
+      </categories>
+      <tags>
+        <tag>JavaSE基础</tag>
       </tags>
   </entry>
   <entry>
     <title>Java集合框架</title>
-    <url>/2021/03/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/Java%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E6%A6%82%E8%BF%B0/</url>
+    <url>/post/40254.html</url>
     <content><![CDATA[<h2 id="Java-集合框架概述">Java 集合框架概述</h2>
 <p>Java集合工具包位于Java.util包下，包含了很多常用的数据结构，如数组、链表、栈、队列、集合、哈希表等。学习Java集合框架下大致可以分为如下五个部分：List列表、Set集合、Map映射、迭代器（Iterator、Enumeration）、工具类（Arrays、Collections）。</p>
 <ol>
@@ -2264,7 +2221,6 @@ file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
         <category>Java集合框架</category>
       </categories>
       <tags>
-        <tag>学习笔记</tag>
         <tag>Java集合框架</tag>
       </tags>
   </entry>

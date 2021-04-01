@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -14,27 +14,29 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+    var CONFIG = {"hostname":"beyondreamer.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":null,"post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":"ture","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="Try to make anything that happens into something of value.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Beyondreamer">
-<meta property="og:url" content="http://example.com/page/3/index.html">
+<meta property="og:url" content="http://beyondreamer.github.io/page/3/index.html">
 <meta property="og:site_name" content="Beyondreamer">
 <meta property="og:description" content="Try to make anything that happens into something of value.">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Beyondreamer">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/page/3/">
+<link rel="canonical" href="http://beyondreamer.github.io/page/3/">
 
 
 <script class="page-configurations">
@@ -43,10 +45,10 @@
     sidebar: "",
     isHome : true,
     isPost : false,
-    lang   : 'zh-Hans'
+    lang   : 'zh-CN'
   };
 </script>
-<title>Beyondreamer</title>
+<title>Beyondreamer - Just a nerd</title>
   
 
 
@@ -96,7 +98,10 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -107,19 +112,55 @@
       <h1 class="site-title">Beyondreamer</h1>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">Just a nerd</p>
   </div>
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
         
@@ -135,10 +176,10 @@
     <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          站点概览
         </li>
       </ul>
 
@@ -150,34 +191,63 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Beyondreamer"
+      src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">Beyondreamer</p>
   <div class="site-description" itemprop="description">Try to make anything that happens into something of value.</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+          <a href="/archives/">
+        
           <span class="site-state-item-count">25</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
+          
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">categories</span></a>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">43</span>
-        <span class="site-state-item-name">tags</span></a>
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JleW9uZHJlYW1lcg==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;beyondreamer"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+  </div>
 
 
 
         </div>
       </div>
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=549800502&auto=1&height=66"></iframe>
+
+      
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+        <h3 class="widget-title"></h3>
+        <div id="myCanvasContainer" class="widget tagcloud">
+        <canvas width="250" height="250" id="resCanvas" style="width=100%">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag">JavaSE基础</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" rel="tag">Java集合框架</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">7</span></li></ul>
+        </canvas>
+        </div>
+        </div>
+      
+        <div class="back-to-top animated" role="button">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
     </div>
   </aside>
   <div class="sidebar-dimmer"></div>
@@ -186,10 +256,9 @@
     </header>
 
     
-  <div class="back-to-top" role="button">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  <div class="reading-progress-bar"></div>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JleW9uZHJlYW1lcg==" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -206,7 +275,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E4%B8%89%EF%BC%89%E6%8A%BD%E8%B1%A1%E7%B1%BB/">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/37418.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -219,7 +288,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E4%B8%89%EF%BC%89%E6%8A%BD%E8%B1%A1%E7%B1%BB/" class="post-title-link" itemprop="url">Java进阶学习笔记（三）抽象类</a>
+          <a href="/post/37418.html" class="post-title-link" itemprop="url">Java进阶学习笔记（三）抽象类</a>
         </h2>
 
         <div class="post-meta-container">
@@ -228,16 +297,22 @@
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
+      <span class="post-meta-item-text">发表于</span>
 
-      <time title="Created: 2021-03-30 19:30:58 / Modified: 23:32:43" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
+      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-01 22:33:34" itemprop="dateModified" datetime="2021-04-01T22:33:34+08:00">2021-04-01</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
-      <span class="post-meta-item-text">In</span>
+      <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Java%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">Java进阶</span></a>
         </span>
@@ -246,19 +321,19 @@
   
       </div>
       <div class="post-meta">
-    <span class="post-meta-item" title="Symbols count in article">
+    <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
         <i class="far fa-file-word"></i>
       </span>
-      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span class="post-meta-item-text">本文字数：</span>
       <span>388</span>
     </span>
-    <span class="post-meta-item" title="Reading time">
+    <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>1 mins.</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
     </span>
 </div>
 
@@ -323,8 +398,8 @@
 
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E4%B8%89%EF%BC%89%E6%8A%BD%E8%B1%A1%E7%B1%BB/#more" rel="contents">
-                Read more &raquo;
+              <a class="btn" href="/post/37418.html#more" rel="contents">
+                阅读全文 &raquo;
               </a>
             </div>
           <!--/noindex-->
@@ -354,7 +429,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E5%9B%9B%EF%BC%89%E6%8E%A5%E5%8F%A3/">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/6399.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -367,7 +442,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E5%9B%9B%EF%BC%89%E6%8E%A5%E5%8F%A3/" class="post-title-link" itemprop="url">Java进阶学习笔记（四）接口</a>
+          <a href="/post/6399.html" class="post-title-link" itemprop="url">Java进阶学习笔记（五）源码及API文档概述</a>
         </h2>
 
         <div class="post-meta-container">
@@ -376,16 +451,22 @@
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
+      <span class="post-meta-item-text">发表于</span>
 
-      <time title="Created: 2021-03-30 19:30:58 / Modified: 23:32:43" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
+      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-01 22:33:40" itemprop="dateModified" datetime="2021-04-01T22:33:40+08:00">2021-04-01</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
-      <span class="post-meta-item-text">In</span>
+      <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Java%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">Java进阶</span></a>
         </span>
@@ -394,304 +475,19 @@
   
       </div>
       <div class="post-meta">
-    <span class="post-meta-item" title="Symbols count in article">
+    <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
         <i class="far fa-file-word"></i>
       </span>
-      <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>366</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>1 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="接口">接口</h2>
-<h3 id="接口的基础语法">接口的基础语法</h3>
-<ol>
-<li>
-<p>接口也是一种引用数据类型，编译后也是class文件</p>
-</li>
-<li>
-<p>接口是完全抽象</p>
-</li>
-<li>
-<p>接口怎么定义</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[修饰符列表] <span class="class"><span class="keyword">interface</span> 接口名</span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>接口支持多继承</p>
-</li>
-<li>
-<p>接口中只含有两部分，一部分常量，另一部分抽象方法</p>
-</li>
-<li>
-<p>接口中的抽象方法可以省略<code>public abstract</code></p>
-</li>
-<li>
-<p>接口中的方法都是抽象方法不可以有方法体</p>
-</li>
-<li>
-<p>接口中的常量可以省略<code>public static final</code></p>
-</li>
-<li>
-<p>继承使用<code>extends</code>，实现使用<code>implements</code></p>
-</li>
-<li>
-<p><strong>当一个非抽象的类实现接口的话，必须将接口中所有的抽象方法实现</strong></p>
-</li>
-<li>
-<p>一个类可以实现多个接口，类似于多继承</p>
-</li>
-<li>
-<p>接口和接口之间进行强制类型转换的时候，没有继承关系也可以强转，但是一定要注意，运行时可能会出现<code>ClassCastException</code>异常，编译没问题，运行有问</p>
-</li>
-<li>
-<p>extends在前implements在后</p>
-</li>
-<li>
-<p>接口通常提取行为动作</p>
-</li>
-</ol>
-
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E5%9B%9B%EF%BC%89%E6%8E%A5%E5%8F%A3/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E5%85%AB%EF%BC%89%20package%E5%92%8Cimport%E4%BB%A5%E5%8F%8A%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E6%9D%83%E9%99%90/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Beyondreamer">
-      <meta itemprop="description" content="Try to make anything that happens into something of value.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Beyondreamer">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E5%85%AB%EF%BC%89%20package%E5%92%8Cimport%E4%BB%A5%E5%8F%8A%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E6%9D%83%E9%99%90/" class="post-title-link" itemprop="url">Java进阶学习笔记（八）package和import</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-03-30 19:30:58 / Modified: 23:32:43" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Java%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">Java基础</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="Symbols count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>503</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>1 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="package和import">package和import</h2>
-<p>包机制<br>
-为了方便程序管理，不同功能的类，分别存放在不同的包下</p>
-<h3 id="package">package</h3>
-<p>包（package）</p>
-<ul>
-<li>把功能相似或相关的类组织在同一个包中</li>
-<li>包也采用了树形目录的存储方式</li>
-<li>通过包也可限定类的访问权限</li>
-<li>包的命名规范
-<ul>
-<li>包采用“逆域名法”进行命名，用”.”分割，单词全部小写</li>
-<li>标准格式 域名后缀.组织机构名.项目名[.模块名].包的职能</li>
-<li>类中需要声明隶属于的包</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>package出现在Java源文件第一行</li>
-<li>带有包名的编译
-<ul>
-<li>javac -d . xxx.java</li>
-</ul>
-</li>
-<li>运行 Java完整类名</li>
-</ol>
-<h3 id="import">import</h3>
-<p>Import关键词用于导入其他包的类</p>
-<ol>
-<li>import什么时候不需要
-<ul>
-<li>java.lang不需要</li>
-<li>同包不需要</li>
-<li>其他都需要</li>
-</ul>
-</li>
-<li>语法
-<ul>
-<li><code>import 完整类名</code></li>
-<li><code>import 包名.*</code></li>
-<li>import只能出现在package语句之下，class声明语句之上</li>
-</ul>
-</li>
-</ol>
-<h3 id="访问控制权限修饰符">访问控制权限修饰符</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E5%85%AB%EF%BC%89%20package%E5%92%8Cimport%E4%BB%A5%E5%8F%8A%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E6%9D%83%E9%99%90/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E4%BA%94%EF%BC%89%E6%BA%90%E7%A0%81%E5%8F%8AAPI%E6%96%87%E6%A1%A3%E6%A6%82%E8%BF%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Beyondreamer">
-      <meta itemprop="description" content="Try to make anything that happens into something of value.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Beyondreamer">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E4%BA%94%EF%BC%89%E6%BA%90%E7%A0%81%E5%8F%8AAPI%E6%96%87%E6%A1%A3%E6%A6%82%E8%BF%B0/" class="post-title-link" itemprop="url">Java进阶学习笔记（五）源码及API文档概述</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-03-30 19:30:58 / Modified: 23:32:43" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Java%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">Java进阶</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="Symbols count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span class="post-meta-item-text">本文字数：</span>
       <span>1.8k</span>
     </span>
-    <span class="post-meta-item" title="Reading time">
+    <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>2 mins.</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -771,8 +567,8 @@
 <h3 id="String类的toString-方法和equals-方法">String类的toString()方法和equals()方法</h3>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/03/30/%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/Java%E8%AF%AD%E8%A8%80/JavaSE/Java%E8%BF%9B%E9%98%B6%EF%BC%88%E4%BA%94%EF%BC%89%E6%BA%90%E7%A0%81%E5%8F%8AAPI%E6%96%87%E6%A1%A3%E6%A6%82%E8%BF%B0/#more" rel="contents">
-                Read more &raquo;
+              <a class="btn" href="/post/6399.html#more" rel="contents">
+                阅读全文 &raquo;
               </a>
             </div>
           <!--/noindex-->
@@ -802,7 +598,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/Java%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E6%A6%82%E8%BF%B0/">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/20061.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -815,7 +611,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/Java%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E6%A6%82%E8%BF%B0/" class="post-title-link" itemprop="url">Java集合框架</a>
+          <a href="/post/20061.html" class="post-title-link" itemprop="url">Java进阶学习笔记（八）package和import</a>
         </h2>
 
         <div class="post-meta-container">
@@ -824,16 +620,319 @@
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
+      <span class="post-meta-item-text">发表于</span>
 
-      <time title="Created: 2021-03-30 19:30:58 / Modified: 23:32:43" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
+      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-01 22:33:42" itemprop="dateModified" datetime="2021-04-01T22:33:42+08:00">2021-04-01</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
-      <span class="post-meta-item-text">In</span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">Java基础</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>503</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="package和import">package和import</h2>
+<p>包机制<br>
+为了方便程序管理，不同功能的类，分别存放在不同的包下</p>
+<h3 id="package">package</h3>
+<p>包（package）</p>
+<ul>
+<li>把功能相似或相关的类组织在同一个包中</li>
+<li>包也采用了树形目录的存储方式</li>
+<li>通过包也可限定类的访问权限</li>
+<li>包的命名规范
+<ul>
+<li>包采用“逆域名法”进行命名，用”.”分割，单词全部小写</li>
+<li>标准格式 域名后缀.组织机构名.项目名[.模块名].包的职能</li>
+<li>类中需要声明隶属于的包</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>package出现在Java源文件第一行</li>
+<li>带有包名的编译
+<ul>
+<li>javac -d . xxx.java</li>
+</ul>
+</li>
+<li>运行 Java完整类名</li>
+</ol>
+<h3 id="import">import</h3>
+<p>Import关键词用于导入其他包的类</p>
+<ol>
+<li>import什么时候不需要
+<ul>
+<li>java.lang不需要</li>
+<li>同包不需要</li>
+<li>其他都需要</li>
+</ul>
+</li>
+<li>语法
+<ul>
+<li><code>import 完整类名</code></li>
+<li><code>import 包名.*</code></li>
+<li>import只能出现在package语句之下，class声明语句之上</li>
+</ul>
+</li>
+</ol>
+<h3 id="访问控制权限修饰符">访问控制权限修饰符</h3>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/20061.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/61624.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/61624.html" class="post-title-link" itemprop="url">Java进阶学习笔记（四）接口</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-01 22:33:38" itemprop="dateModified" datetime="2021-04-01T22:33:38+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">Java进阶</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>366</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="接口">接口</h2>
+<h3 id="接口的基础语法">接口的基础语法</h3>
+<ol>
+<li>
+<p>接口也是一种引用数据类型，编译后也是class文件</p>
+</li>
+<li>
+<p>接口是完全抽象</p>
+</li>
+<li>
+<p>接口怎么定义</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[修饰符列表] <span class="class"><span class="keyword">interface</span> 接口名</span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>接口支持多继承</p>
+</li>
+<li>
+<p>接口中只含有两部分，一部分常量，另一部分抽象方法</p>
+</li>
+<li>
+<p>接口中的抽象方法可以省略<code>public abstract</code></p>
+</li>
+<li>
+<p>接口中的方法都是抽象方法不可以有方法体</p>
+</li>
+<li>
+<p>接口中的常量可以省略<code>public static final</code></p>
+</li>
+<li>
+<p>继承使用<code>extends</code>，实现使用<code>implements</code></p>
+</li>
+<li>
+<p><strong>当一个非抽象的类实现接口的话，必须将接口中所有的抽象方法实现</strong></p>
+</li>
+<li>
+<p>一个类可以实现多个接口，类似于多继承</p>
+</li>
+<li>
+<p>接口和接口之间进行强制类型转换的时候，没有继承关系也可以强转，但是一定要注意，运行时可能会出现<code>ClassCastException</code>异常，编译没问题，运行有问</p>
+</li>
+<li>
+<p>extends在前implements在后</p>
+</li>
+<li>
+<p>接口通常提取行为动作</p>
+</li>
+</ol>
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/61624.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/40254.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/40254.html" class="post-title-link" itemprop="url">Java集合框架</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-01 22:33:52" itemprop="dateModified" datetime="2021-04-01T22:33:52+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" itemprop="url" rel="index"><span itemprop="name">Java集合框架</span></a>
         </span>
@@ -842,19 +941,19 @@
   
       </div>
       <div class="post-meta">
-    <span class="post-meta-item" title="Symbols count in article">
+    <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
         <i class="far fa-file-word"></i>
       </span>
-      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span class="post-meta-item-text">本文字数：</span>
       <span>9.1k</span>
     </span>
-    <span class="post-meta-item" title="Reading time">
+    <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>8 mins.</span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
     </span>
 </div>
 
@@ -930,8 +1029,8 @@
 <h3 id="ArrayList和LinkedList">ArrayList和LinkedList</h3>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/03/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/Java%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E6%A6%82%E8%BF%B0/#more" rel="contents">
-                Read more &raquo;
+              <a class="btn" href="/post/40254.html#more" rel="contents">
+                阅读全文 &raquo;
               </a>
             </div>
           <!--/noindex-->
@@ -954,7 +1053,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
   </nav>
 
 
@@ -992,44 +1091,106 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Beyondreamer</span>
+  <span class="author" itemprop="copyrightHolder">by beyondreamer</span>
 </div>
 <div class="wordcount">
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="Symbols count total">37k</span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">37k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">33 mins.</span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">33 分钟</span>
   </span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
+<div class="busuanzi-count">
+</div>
 
     </div>
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
+<script src="/js/local-search.js"></script>
 
 
 
+
+
+  <script>
+    NProgress.configure({
+      showSpinner: true
+    });
+    NProgress.start();
+    document.addEventListener('readystatechange', () => {
+      if (document.readyState === 'interactive') {
+        NProgress.inc(0.8);
+      }
+      if (document.readyState === 'complete') {
+        NProgress.done();
+      }
+    });
+    document.addEventListener('pjax:send', () => {
+      NProgress.start();
+    });
+    document.addEventListener('pjax:success', () => {
+      NProgress.done();
+    });
+  </script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'all'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
 
 
   
-
-
-
-
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
 
 </body>
 </html>
