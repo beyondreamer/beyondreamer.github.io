@@ -25,20 +25,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"beyondreamer.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":null,"post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":"ture","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="Try to make anything that happens into something of value.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://beyondreamer.github.io/categories/index.html">
+<meta name="description" content="内部类 什么是内部类？ 在类的内部又定义了一个类。   内部类的分类 静态内部类：类似静态变量 实例内部类：类似实例变量 局部内部类：类似局部变量   使用内部类编写的代码可读性很差，能不用尽量不用  匿名内部类 匿名内部类是局部内部类中的一种，类没有名字 new 接口(){} 自动匿名实现内部类 不建议实现内部类，一个类没有名字无法重复使用，可读性太差  纠正错误快捷键alt+回车">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java进阶（七）内部类">
+<meta property="og:url" content="http://beyondreamer.github.io/post/7d48a3a6.html">
 <meta property="og:site_name" content="Beyondreamer">
-<meta property="og:description" content="Try to make anything that happens into something of value.">
+<meta property="og:description" content="内部类 什么是内部类？ 在类的内部又定义了一个类。   内部类的分类 静态内部类：类似静态变量 实例内部类：类似实例变量 局部内部类：类似局部变量   使用内部类编写的代码可读性很差，能不用尽量不用  匿名内部类 匿名内部类是局部内部类中的一种，类没有名字 new 接口(){} 自动匿名实现内部类 不建议实现内部类，一个类没有名字无法重复使用，可读性太差  纠正错误快捷键alt+回车">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-30T13:15:19.879Z">
-<meta property="article:modified_time" content="2021-03-30T13:15:19.879Z">
+<meta property="article:published_time" content="2021-04-04T11:34:41.000Z">
+<meta property="article:modified_time" content="2021-04-04T11:59:30.341Z">
 <meta property="article:author" content="Beyondreamer">
+<meta property="article:tag" content="JavaSE基础">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://beyondreamer.github.io/categories/">
+<link rel="canonical" href="http://beyondreamer.github.io/post/7d48a3a6.html">
 
 
 <script class="page-configurations">
@@ -46,12 +47,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
-<title>分类 | Beyondreamer
-</title>
+<title>Java进阶（七）内部类 | Beyondreamer</title>
   
 
 
@@ -176,7 +176,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -189,6 +189,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E7%B1%BB"><span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB"><span class="nav-text">匿名内部类</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -268,43 +269,139 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
   
   
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/7d48a3a6.html">
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
 
-<h1 class="post-title" itemprop="name headline">分类
-</h1>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java进阶（七）内部类
+        </h1>
 
-<div class="post-meta-container">
-</div>
-
-</header>
-
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-      
-      <div class="post-body"><div class="category-all-page">
-  <div class="category-all-title">
-    目前共计 5 个分类
-  </div>
-  <div class="category-all">
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaSE%E5%9F%BA%E7%A1%80/">JavaSE基础</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java%E5%9F%BA%E7%A1%80/">Java基础</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java%E8%BF%9B%E9%98%B6/">Java进阶</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">Java集合框架</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="category-list-count">8</span></li></ul>
-  </div>
-</div>
 
+      <time title="创建时间：2021-04-04 19:34:41 / 修改时间：19:59:30" itemprop="dateCreated datePublished" datetime="2021-04-04T19:34:41+08:00">2021-04-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">Java进阶</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
       </div>
-      
-      
-      
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>173</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><ol>
+<li>什么是内部类？<ul>
+<li>在类的内部又定义了一个类。</li>
+</ul>
+</li>
+<li>内部类的分类<ul>
+<li>静态内部类：类似静态变量</li>
+<li>实例内部类：类似实例变量</li>
+<li>局部内部类：类似局部变量</li>
+</ul>
+</li>
+<li>使用内部类编写的代码可读性很差，能不用尽量不用</li>
+</ol>
+<h2 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h2><ol>
+<li>匿名内部类是局部内部类中的一种，类没有名字</li>
+<li>new 接口(){} 自动匿名实现内部类</li>
+<li>不建议实现内部类，一个类没有名字无法重复使用，可读性太差</li>
+</ol>
+<p>纠正错误快捷键alt+回车</p>
+
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag"><i class="fa fa-tag"></i> JavaSE基础</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/post/16234.html" rel="prev" title="Future Plan">
+                  <i class="fa fa-chevron-left"></i> Future Plan
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/post/6ce4bc7d.html" rel="next" title="Java进阶（八）数组">
+                  Java进阶（八）数组 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 

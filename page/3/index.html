@@ -201,7 +201,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -239,7 +239,7 @@
         <h3 class="widget-title"></h3>
         <div id="myCanvasContainer" class="widget tagcloud">
         <canvas width="250" height="250" id="resCanvas" style="width=100%">
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag">JavaSE基础</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" rel="tag">Java集合框架</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">7</span></li></ul>
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag">JavaSE基础</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" rel="tag">Java集合框架</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">8</span></li></ul>
         </canvas>
         </div>
         </div>
@@ -266,6 +266,983 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/55918.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/55918.html" class="post-title-link" itemprop="url">Java学习笔记（二）基础语法</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-01 22:33:50" itemprop="dateModified" datetime="2021-04-01T22:33:50+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaSE%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaSE基础</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="一、注释"><a href="#一、注释" class="headerlink" title="一、注释"></a>一、注释</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.单行注释</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*2.多行注释</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*3.注释文档</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="二、引入类"><a href="#二、引入类" class="headerlink" title="二、引入类"></a>二、引入类</h2><ul>
+<li>在Java中任何有效的代码必须写到类体中</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[ ]args)</span></span>&#123;</span><br><span class="line">   System.<span class="function">out <span class="title">printlin</span><span class="params">(“Test1”)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ol>
+<li>一个Java文件可以定义多个class文件</li>
+<li>public的类不是必须的，可以没有</li>
+<li>在源文件中只要有一个class的定义，那么必然会对应生成一个class文件</li>
+<li>public的类可以没有，但是如果有，类名必须跟源文件的文件名一致</li>
+<li>public的类有且仅能有一个</li>
+<li>每个类可以有一个入口，想从哪个类进去加载哪个类</li>
+</ol>
+<h2 id="三、标识符"><a href="#三、标识符" class="headerlink" title="三、标识符"></a>三、标识符</h2><h3 id="标识符命名规则"><a href="#标识符命名规则" class="headerlink" title="标识符命名规则"></a>标识符命名规则</h3><h4 id="标识符必须遵守以下规则"><a href="#标识符必须遵守以下规则" class="headerlink" title="标识符必须遵守以下规则"></a>标识符必须遵守以下规则</h4>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/55918.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/35965.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/35965.html" class="post-title-link" itemprop="url">Java学习笔记（五）构造方法和封装</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-01 22:33:45" itemprop="dateModified" datetime="2021-04-01T22:33:45+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaSE%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaSE基础</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>827</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="一．构造方法constructor"><a href="#一．构造方法constructor" class="headerlink" title="一．构造方法constructor"></a>一．构造方法constructor</h2><h3 id="1．什么是构造方法"><a href="#1．什么是构造方法" class="headerlink" title="1．什么是构造方法"></a>1．什么是构造方法</h3><ol>
+<li><p>构造方法也是一个特殊的方法，通过构造方法可以完成对象的创建，以及实例变量的初始化，换句话来说，构造方法是用来创建对象，并同时给对象的属性赋值</p>
+</li>
+<li><p>语法结构</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[修饰符列表] 构造方法名 (形式参数列表)&#123;</span><br><span class="line">    构造方法体</span><br><span class="line">    通常在构造方法体中给属性赋值，完成属性的初始化</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修饰符列表public</li>
+<li>构造方法名必须和类名一致</li>
+<li>构造方法不需要指定返回值类型</li>
+</ul>
+</li>
+<li><p>调用构造方法</p>
+</li>
+</ol>
+<p><code>New 构造方法名(实际参数列表)</code></p>
+<ul>
+<li>当一个类中手动的提供了构造方法，那么系统将不再提供无参数的构造方法（建议把无参数构造方法写出来）</li>
+<li>当一个类没有提供任何构造方法，系统会默认构造一个没有参数的构造方法（缺省构造器）</li>
+<li>无参数构造方法和有参数构造方法都可以调用</li>
+<li>无参数构造方法虽然没有代码但是默认在这里赋系统默认值</li>
+<li>构造方法可以重载</li>
+</ul>
+<h2 id="二．封装"><a href="#二．封装" class="headerlink" title="二．封装"></a>二．封装</h2><h3 id="1．封装的作用"><a href="#1．封装的作用" class="headerlink" title="1．封装的作用"></a>1．封装的作用</h3><ol>
+<li>保证内部结构的安全</li>
+<li>屏蔽复杂，暴露简单</li>
+</ol>
+<h3 id="2．怎么进行封装"><a href="#2．怎么进行封装" class="headerlink" title="2．怎么进行封装"></a>2．怎么进行封装</h3><ol>
+<li>属性私有化（private）<ul>
+<li>Private表示私有的，被这个关键字修饰之后，该数据只能在本类中访问，出类不能访问。</li>
+</ul>
+</li>
+<li>对外提供简单的操作入口<ol>
+<li>带有static的方法</li>
+<li>不带有static的方法，用new对象引用去访问</li>
+</ol>
+<ul>
+<li>称为实例方法，对象级别的方法（对象被称为实例，实例相关的都需要new对象，和引用来访问）</li>
+</ul>
+</li>
+<li>空指针异常导致的最本质的原因是？<ol>
+<li>空引用访问实例相关的数据，会导致空指针异常</li>
+<li>实例相关的包括，实例变量+实例方法</li>
+</ol>
+</li>
+<li>对外提供公开的get方法和set方法作为操作入口，并且都不带static</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/35965.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/6688.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/6688.html" class="post-title-link" itemprop="url">Java学习笔记（六）关键字static、this、super</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-01 22:33:49" itemprop="dateModified" datetime="2021-04-01T22:33:49+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaSE%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaSE基础</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Static"><a href="#Static" class="headerlink" title="Static"></a>Static</h2><ol>
+<li>Static意为静态</li>
+<li>所有static关键字修饰的都是类相关的，类级别的</li>
+<li>所有static修饰的都是采用类名.的方式访问</li>
+<li>Static修饰的变量：静态变量</li>
+<li>Static修饰的方法：静态方法</li>
+<li>实例相关的，都是对象相关的，引用.的方式访问，需要先new对象（可能空指针异常）</li>
+<li>静态相关的，都是类相关的，类名.的方式访问，不需要new对象</li>
+</ol>
+<h3 id="一．变量的分类"><a href="#一．变量的分类" class="headerlink" title="一．变量的分类"></a>一．变量的分类</h3><ol>
+<li>根据声明的位置进行划分<ol>
+<li>在方法体中声明的变量：局部变量</li>
+<li>在方法体外声明的变量：成员变量</li>
+</ol>
+<ul>
+<li>实例变量 无static</li>
+<li>静态变量 有static</li>
+<li>实例方法 无static</li>
+<li>静态方法 有static</li>
+</ul>
+</li>
+</ol>
+<h3 id="二．什么时候声明实例变量，什么时候声明静态变量"><a href="#二．什么时候声明实例变量，什么时候声明静态变量" class="headerlink" title="二．什么时候声明实例变量，什么时候声明静态变量"></a>二．什么时候声明实例变量，什么时候声明静态变量</h3><ol>
+<li>静态变量在类加载时初始化分配好空间，不需要new对象</li>
+<li>静态变量储存在方法区</li>
+<li>所有对象的某个属性值都是一样的，不建议定义为实例变量（对象级别），建议定义为静态变量（类级别）</li>
+</ol>
+<h3 id="三．什么时候定义实例方法，什么时候定义静态方法"><a href="#三．什么时候定义实例方法，什么时候定义静态方法" class="headerlink" title="三．什么时候定义实例方法，什么时候定义静态方法"></a>三．什么时候定义实例方法，什么时候定义静态方法</h3><ol>
+<li>当这个方法体当中，直接访问了实例变量，这个方法一定是实例方法。</li>
+<li>工具类当中的方法，一般都是静态的。</li>
+</ol>
+<h3 id="四．静态代码块"><a href="#四．静态代码块" class="headerlink" title="四．静态代码块"></a>四．静态代码块</h3><ol>
+<li>Static{<br>静态代码块；<br>}</li>
+<li>Static静态代码块什么时候执行呢？<ol>
+<li>类加载时执行，并且只执行一次</li>
+<li>静态代码块，在main方法之前执行，自上而下的顺序执行</li>
+</ol>
+</li>
+<li>静态代码块作用<ol>
+<li>不常用（不是吗，每个类都要写）</li>
+<li>提供一个类加载的时间点（例如日志信息）</li>
+</ol>
+</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/6688.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/29980.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/29980.html" class="post-title-link" itemprop="url">Java学习笔记（四）面向对象</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-01 22:33:46" itemprop="dateModified" datetime="2021-04-01T22:33:46+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaSE%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaSE基础</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>978</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="一、面向对象和面向过程的区别"><a href="#一、面向对象和面向过程的区别" class="headerlink" title="一、面向对象和面向过程的区别"></a>一、面向对象和面向过程的区别</h2><ul>
+<li>C 完全面向过程</li>
+<li>C++ 一半面向过程一半面向对象</li>
+<li>Java 完全面向对象</li>
+</ul>
+<h3 id="1-什么是面向过程的开发方式"><a href="#1-什么是面向过程的开发方式" class="headerlink" title="1.什么是面向过程的开发方式"></a>1.什么是面向过程的开发方式</h3><ol>
+<li>特点<ol>
+<li>注重步骤</li>
+<li>注重因果关系</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>缺点<ul>
+<li>代码和代码之间耦合度太高，扩展力太差</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>小型项目，采用面向过程方式进行开发，效率高</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-什么是面向对象的开发方式"><a href="#2-什么是面向对象的开发方式" class="headerlink" title="2.什么是面向对象的开发方式"></a>2.什么是面向对象的开发方式</h3><ol>
+<li>将现实世界分隔成几个小的单元，然后每一个单元都实现成对象，然后驱动一下，让各个对象之间协作起来形成一个系统</li>
+<li>特点<br>耦合度低，扩展力强</li>
+</ol>
+<h3 id="3-采用面向对象的方式贯穿整个系统，涉及三个术语"><a href="#3-采用面向对象的方式贯穿整个系统，涉及三个术语" class="headerlink" title="3.采用面向对象的方式贯穿整个系统，涉及三个术语"></a>3.采用面向对象的方式贯穿整个系统，涉及三个术语</h3><ul>
+<li>OOA：面向对象分析</li>
+<li>OOD：面向对象设计</li>
+<li>OOP：面向对象编程</li>
+</ul>
+<p>分析-&gt;设计-&gt;编程</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/29980.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/23987.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/23987.html" class="post-title-link" itemprop="url">Java学习笔记（八）多态</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-01 22:33:51" itemprop="dateModified" datetime="2021-04-01T22:33:51+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaSE%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaSE基础</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>444</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><h3 id="一．多态的基础语法"><a href="#一．多态的基础语法" class="headerlink" title="一．多态的基础语法"></a>一．多态的基础语法</h3><ol>
+<li>Java中允许（向上转型子转父（类似自动类型转换））和（向下转型父转子（类似强制类型转换加转换符））{必须具有继承关系}</li>
+<li>编译阶段只知道引用的数据类型，静态绑定成功</li>
+<li>运行阶段，动态绑定，动态执行</li>
+<li>多态表示多种形态，编译阶段一种（绑定父类方法），运行阶段一种（绑定子类方法）</li>
+<li>什么时候使用向下转型（子类特有方法）</li>
+<li>向上转型 子到父 自动类型转换 animal a = new cat();</li>
+<li>向下转型 父到子 强制类型转换 cat c = (cat)a;<ol>
+<li>Java.lang.NullPointException:空指针异常</li>
+<li>Java.lang.ClassCastException:类型转换异常</li>
+</ol>
+</li>
+</ol>
+<h3 id="二．Instanceof-运算符"><a href="#二．Instanceof-运算符" class="headerlink" title="二．Instanceof 运算符"></a>二．Instanceof 运算符</h3><ol>
+<li>Instanceof运算符可以在运行阶段动态判断引用指向的对象的类型</li>
+<li>语法结构<ol>
+<li>(引用 instanceof 类型)</li>
+<li>运算结果只能是true/false</li>
+</ol>
+</li>
+</ol>
+<h3 id="三．多态在开发中的应用"><a href="#三．多态在开发中的应用" class="headerlink" title="三．多态在开发中的应用"></a>三．多态在开发中的应用</h3><h3 id="四．软件开发原则"><a href="#四．软件开发原则" class="headerlink" title="四．软件开发原则"></a>四．软件开发原则</h3><ol>
+<li>开闭原则<ol>
+<li>对扩展开放，</li>
+<li>对修改关闭，</li>
+</ol>
+</li>
+</ol>
+<h3 id="五．静态方法不存在覆盖"><a href="#五．静态方法不存在覆盖" class="headerlink" title="五．静态方法不存在覆盖"></a>五．静态方法不存在覆盖</h3><ol>
+<li>多态和对象有关</li>
+<li>静态方法不需要对象</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/23987.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/56893.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/56893.html" class="post-title-link" itemprop="url">Java进阶学习笔记（一）IDEA工具的使用</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-01 22:33:39" itemprop="dateModified" datetime="2021-04-01T22:33:39+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">Java进阶</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>265</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="IDEA工具的快捷键及设置"><a href="#IDEA工具的快捷键及设置" class="headerlink" title="IDEA工具的快捷键及设置"></a>IDEA工具的快捷键及设置</h2><ol>
+<li>字体设置<br>file-&gt;settings-&gt;输入font-&gt;设置字体样式及字号大小</li>
+<li>快速生成main()方法<ul>
+<li>psvm</li>
+</ul>
+</li>
+<li>快速生成System.out.println()<ul>
+<li>sout</li>
+</ul>
+</li>
+<li>IDEA自动保存</li>
+<li>删除一行<ul>
+<li>ctrl+y</li>
+</ul>
+</li>
+<li>运行——<ul>
+<li>右键+run</li>
+<li>ctrl+shift+F10</li>
+</ul>
+</li>
+<li>退出窗口<ul>
+<li>esc</li>
+</ul>
+</li>
+<li>新增/新建/添加<ul>
+<li>alt+insert</li>
+</ul>
+</li>
+<li>窗口变大变小<ul>
+<li>ctrl+shift+F12</li>
+</ul>
+</li>
+<li>切换Java程序窗口<ul>
+<li>alt+右箭头/左箭头</li>
+</ul>
+</li>
+<li>切换窗口<ul>
+<li>alt+快捷键</li>
+</ul>
+</li>
+<li>提示方法的参数<ul>
+<li>ctrl+p</li>
+</ul>
+</li>
+<li>注释<ul>
+<li>单行注释ctrl+/</li>
+<li>多行注释ctrl+shift+/</li>
+</ul>
+</li>
+</ol>
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/56893.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/37418.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/37418.html" class="post-title-link" itemprop="url">Java进阶学习笔记（三）抽象类</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-01 22:33:34" itemprop="dateModified" datetime="2021-04-01T22:33:34+08:00">2021-04-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">Java进阶</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>388</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><ol>
+<li><p>什么是抽象类？</p>
+<ul>
+<li>类和类之间具有共同特征，将这些共同特征提取出来，形成的就是抽象类</li>
+<li>类到对象是实例化，对象到类是抽象</li>
+<li>抽象类无法实例化，无法创建对象</li>
+</ul>
+</li>
+<li><p>抽象类属于什么类型？</p>
+<ul>
+<li>抽象类也属于引用数据类型</li>
+</ul>
+</li>
+<li><p>抽象类怎么定义？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[修饰符列表]<span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> 类名</span>&#123;</span><br><span class="line">    类体;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>抽象类是用来被子类集成的</p>
+<ul>
+<li>子类继承抽象类，子类可以实例化</li>
+</ul>
+</li>
+<li><p>final和abstract不能联合使用，这两个关键字是对立的</p>
+</li>
+<li><p>抽象类的子类可以是抽象类</p>
+</li>
+<li><p>抽象类但是抽象类有构造方法，构造方法供子类使用</p>
+</li>
+<li><p>抽象类关联到一个概念，抽象方法</p>
+<ol>
+<li>抽象方法表示没有实现的方法，没有方法体的方法</li>
+<li><code>public abstract void dosome();</code></li>
+<li>没有方法体，以分号结尾</li>
+<li>前面修饰符列表中有abstract关键字</li>
+</ol>
+</li>
+<li><p>抽象类中不一定有抽象方法，抽象方法必须出现在抽象类中</p>
+</li>
+<li><p><strong>一个非抽象的类继承抽象类，必须将抽象类中的方法覆盖/重写/实现</strong></p>
+</li>
+</ol>
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/37418.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -344,35 +1321,29 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="final关键字">final关键字</h2>
-<ol>
+          <h2 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h2><ol>
 <li>final是Java语言中的一个关键字</li>
 <li>表示最终的不可变的</li>
-<li>final修饰的变量
-<ul>
+<li>final修饰的变量<ul>
 <li>只能赋值一次</li>
 </ul>
 </li>
-<li>final修饰的方法
-<ul>
+<li>final修饰的方法<ul>
 <li>无法被覆盖，被重写</li>
 </ul>
 </li>
-<li>final修饰的类
-<ul>
+<li>final修饰的类<ul>
 <li>无法继承</li>
 </ul>
 </li>
 <li>final控制不了能不能调用</li>
 </ol>
-<h3 id="final修饰的引用">final修饰的引用</h3>
-<ol>
+<h3 id="final修饰的引用"><a href="#final修饰的引用" class="headerlink" title="final修饰的引用"></a>final修饰的引用</h3><ol>
 <li>final修饰的引用只能指向一个对象，并且它只能永远指向该对象</li>
 <li>并且该方法执行过程中，该引用指向对象后，该对象不会被垃圾回收器回收，知道当前方法结束，才会释放空间</li>
 <li>虽然final的引用指向对象A后，不能再重新向B,但是对象A内部的数据可以被修改</li>
 </ol>
-<h3 id="final修饰的实例变量">final修饰的实例变量</h3>
-<ol>
+<h3 id="final修饰的实例变量"><a href="#final修饰的实例变量" class="headerlink" title="final修饰的实例变量"></a>final修饰的实例变量</h3><ol>
 <li>final修饰的实例变量，系统不管赋默认值，要求程序员必须手动赋值</li>
 <li>赶在系统赋默认值之前即可</li>
 <li>一般添加static修饰为静态常量（常量名建议大写单词之间_连接）</li>
@@ -383,6 +1354,162 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/post/8933.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/6399.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/6399.html" class="post-title-link" itemprop="url">Java进阶学习笔记（六）源码及API文档概述</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-04 19:35:39" itemprop="dateModified" datetime="2021-04-04T19:35:39+08:00">2021-04-04</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">Java进阶</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h2><h3 id="Java源码及API文档概述"><a href="#Java源码及API文档概述" class="headerlink" title="Java源码及API文档概述"></a>Java源码及API文档概述</h3><ol>
+<li>如何获取方法<ul>
+<li>去源代码当中查看</li>
+<li>去查阅Java类库的帮助文档</li>
+</ul>
+</li>
+<li>API（Application Program Interface）<ul>
+<li>应用程序编程接口</li>
+<li>整个JDK类库就是一个JavaSE的API</li>
+<li>每一个API都会配置一套API帮助文档</li>
+</ul>
+</li>
+</ol>
+<h3 id="Object类的几个方法"><a href="#Object类的几个方法" class="headerlink" title="Object类的几个方法"></a>Object类的几个方法</h3><ul>
+<li><code>protected Object clone();//负责对象克隆</code></li>
+<li><code>int hashCode();//获取对象哈希值</code></li>
+<li><code>boolean equals(Object obj1);//判断两个对象是否相等</code></li>
+<li><code>String toString();//将对象转换成字符串形式</code></li>
+<li><code>protected void finalize();//垃圾回收负责调用的方法</code></li>
+</ul>
+<h3 id="Object中的toString-方法"><a href="#Object中的toString-方法" class="headerlink" title="Object中的toString()方法"></a>Object中的toString()方法</h3><ol>
+<li><p>toString()方法源码</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.getClass().getName() + <span class="string">&quot;0&quot;</span> + Integer.toHexString(hashCodde());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> 源代码上toString()方法的默认实现是：</p>
+<ul>
+<li>类名@对象的内存地址转换为十六进制的形式</li>
+</ul>
+</li>
+<li><p>toString()方法的作用</p>
+<ul>
+<li>通过调用这个方法可以将一个Java对象转换成字符串形式</li>
+</ul>
+</li>
+<li><p>建议所有子类都重写toString()方法，越简洁越好，可读性越强越好</p>
+</li>
+</ol>
+<h3 id="Object的equals-方法"><a href="#Object的equals-方法" class="headerlink" title="Object的equals()方法"></a>Object的equals()方法</h3><ol>
+<li><p>equals()方法源码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span>(<span class="keyword">this</span>==obj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>equals()方法作用是判断两个对象是否相等</p>
+</li>
+<li><p>判断两个Java对象是否相等不能用”==”，”==”判断的是两个Java对象的内存地址是否相等，需要重写equals()方法</p>
+</li>
+<li><p>如何重写equals()方法</p>
+<ul>
+<li>相同的返回值类型、相同的方法名、相同的形式参数列表</li>
+</ul>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span></span>&#123;</span><br><span class="line">    <span class="comment">//如果为空直接false</span></span><br><span class="line">    <span class="keyword">if</span>(obj == <span class="keyword">null</span>)<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    <span class="comment">//如果不是类A直接false</span></span><br><span class="line">    <span class="keyword">if</span>(!(obj <span class="keyword">instanceof</span> A))<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    <span class="comment">//如果地址相等直接false</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span> == obj)<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    <span class="comment">//转型开始比较各项的值</span></span><br><span class="line">    A a = (A)obj;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.m==a.m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(obj <span class="keyword">instanceof</span> A)&#123;</span><br><span class="line">    <span class="keyword">this</span>.B = A.B</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p> IDEA工具可以快捷重写方法</p>
+</li>
+</ol>
+<h3 id="String类的toString-方法和equals-方法"><a href="#String类的toString-方法和equals-方法" class="headerlink" title="String类的toString()方法和equals()方法"></a>String类的toString()方法和equals()方法</h3>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/6399.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -482,17 +1609,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="package和import">package和import</h2>
-<p>包机制<br>
-为了方便程序管理，不同功能的类，分别存放在不同的包下</p>
-<h3 id="package">package</h3>
-<p>包（package）</p>
+          <h2 id="package和import"><a href="#package和import" class="headerlink" title="package和import"></a>package和import</h2><p>包机制<br>为了方便程序管理，不同功能的类，分别存放在不同的包下</p>
+<h3 id="package"><a href="#package" class="headerlink" title="package"></a>package</h3><p>包（package）</p>
 <ul>
 <li>把功能相似或相关的类组织在同一个包中</li>
 <li>包也采用了树形目录的存储方式</li>
 <li>通过包也可限定类的访问权限</li>
-<li>包的命名规范
-<ul>
+<li>包的命名规范<ul>
 <li>包采用“逆域名法”进行命名，用”.”分割，单词全部小写</li>
 <li>标准格式 域名后缀.组织机构名.项目名[.模块名].包的职能</li>
 <li>类中需要声明隶属于的包</li>
@@ -501,32 +1624,28 @@
 </ul>
 <ol>
 <li>package出现在Java源文件第一行</li>
-<li>带有包名的编译
-<ul>
+<li>带有包名的编译<ul>
 <li>javac -d . xxx.java</li>
 </ul>
 </li>
 <li>运行 Java完整类名</li>
 </ol>
-<h3 id="import">import</h3>
-<p>Import关键词用于导入其他包的类</p>
+<h3 id="import"><a href="#import" class="headerlink" title="import"></a>import</h3><p>Import关键词用于导入其他包的类</p>
 <ol>
-<li>import什么时候不需要
-<ul>
+<li>import什么时候不需要<ul>
 <li>java.lang不需要</li>
 <li>同包不需要</li>
 <li>其他都需要</li>
 </ul>
 </li>
-<li>语法
-<ul>
+<li>语法<ul>
 <li><code>import 完整类名</code></li>
 <li><code>import 包名.*</code></li>
 <li>import只能出现在package语句之下，class声明语句之上</li>
 </ul>
 </li>
 </ol>
-<h3 id="访问控制权限修饰符">访问控制权限修饰符</h3>
+<h3 id="访问控制权限修饰符"><a href="#访问控制权限修饰符" class="headerlink" title="访问控制权限修饰符"></a>访问控制权限修饰符</h3>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/post/20061.html#more" rel="contents">
@@ -552,492 +1671,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/6399.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Beyondreamer">
-      <meta itemprop="description" content="Try to make anything that happens into something of value.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Beyondreamer">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/6399.html" class="post-title-link" itemprop="url">Java进阶学习笔记（五）源码及API文档概述</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-01 22:33:40" itemprop="dateModified" datetime="2021-04-01T22:33:40+08:00">2021-04-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Java%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">Java进阶</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Object类">Object类</h2>
-<h3 id="Java源码及API文档概述">Java源码及API文档概述</h3>
-<ol>
-<li>如何获取方法
-<ul>
-<li>去源代码当中查看</li>
-<li>去查阅Java类库的帮助文档</li>
-</ul>
-</li>
-<li>API（Application Program Interface）
-<ul>
-<li>应用程序编程接口</li>
-<li>整个JDK类库就是一个JavaSE的API</li>
-<li>每一个API都会配置一套API帮助文档</li>
-</ul>
-</li>
-</ol>
-<h3 id="Object类的几个方法">Object类的几个方法</h3>
-<ul>
-<li><code>protected Object clone();//负责对象克隆</code></li>
-<li><code>int hashCode();//获取对象哈希值</code></li>
-<li><code>boolean equals(Object obj1);//判断两个对象是否相等</code></li>
-<li><code>String toString();//将对象转换成字符串形式</code></li>
-<li><code>protected void finalize();//垃圾回收负责调用的方法</code></li>
-</ul>
-<h3 id="Object中的toString-方法">Object中的toString()方法</h3>
-<ol>
-<li>
-<p>toString()方法源码</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.getClass().getName() + <span class="string">&quot;0&quot;</span> + Integer.toHexString(hashCodde());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>源代码上toString()方法的默认实现是：</p>
-<ul>
-<li>类名@对象的内存地址转换为十六进制的形式</li>
-</ul>
-</li>
-<li>
-<p>toString()方法的作用</p>
-<ul>
-<li>通过调用这个方法可以将一个Java对象转换成字符串形式</li>
-</ul>
-</li>
-<li>
-<p>建议所有子类都重写toString()方法，越简洁越好，可读性越强越好</p>
-</li>
-</ol>
-<h3 id="Object的equals-方法">Object的equals()方法</h3>
-<ol>
-<li>
-<p>equals()方法源码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span>(<span class="keyword">this</span>==obj);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>equals()方法作用是判断两个对象是否相等</p>
-</li>
-<li>
-<p>判断两个Java对象是否相等不能用&quot;==“，”==&quot;判断的是两个Java对象的内存地址是否相等，需要重写equals()方法</p>
-</li>
-<li>
-<p>如何重写equals()方法</p>
-<ul>
-<li>相同的返回值类型、相同的方法名、相同的形式参数列表</li>
-</ul>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span></span>&#123;</span><br><span class="line">    <span class="comment">//如果为空直接false</span></span><br><span class="line">    <span class="keyword">if</span>(obj == <span class="keyword">null</span>)<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    <span class="comment">//如果不是类A直接false</span></span><br><span class="line">    <span class="keyword">if</span>(!(obj <span class="keyword">instanceof</span> A))<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    <span class="comment">//如果地址相等直接false</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span> == obj)<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    <span class="comment">//转型开始比较各项的值</span></span><br><span class="line">    A a = (A)obj;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.m==a.m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(obj <span class="keyword">instanceof</span> A)&#123;</span><br><span class="line">    <span class="keyword">this</span>.B = A.B</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>IDEA工具可以快捷重写方法</p>
-</li>
-</ol>
-<h3 id="String类的toString-方法和equals-方法">String类的toString()方法和equals()方法</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/post/6399.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/61624.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Beyondreamer">
-      <meta itemprop="description" content="Try to make anything that happens into something of value.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Beyondreamer">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/61624.html" class="post-title-link" itemprop="url">Java进阶学习笔记（四）接口</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-01 22:33:38" itemprop="dateModified" datetime="2021-04-01T22:33:38+08:00">2021-04-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Java%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">Java进阶</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>366</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="接口">接口</h2>
-<h3 id="接口的基础语法">接口的基础语法</h3>
-<ol>
-<li>
-<p>接口也是一种引用数据类型，编译后也是class文件</p>
-</li>
-<li>
-<p>接口是完全抽象</p>
-</li>
-<li>
-<p>接口怎么定义</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[修饰符列表] <span class="class"><span class="keyword">interface</span> 接口名</span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>接口支持多继承</p>
-</li>
-<li>
-<p>接口中只含有两部分，一部分常量，另一部分抽象方法</p>
-</li>
-<li>
-<p>接口中的抽象方法可以省略<code>public abstract</code></p>
-</li>
-<li>
-<p>接口中的方法都是抽象方法不可以有方法体</p>
-</li>
-<li>
-<p>接口中的常量可以省略<code>public static final</code></p>
-</li>
-<li>
-<p>继承使用<code>extends</code>，实现使用<code>implements</code></p>
-</li>
-<li>
-<p><strong>当一个非抽象的类实现接口的话，必须将接口中所有的抽象方法实现</strong></p>
-</li>
-<li>
-<p>一个类可以实现多个接口，类似于多继承</p>
-</li>
-<li>
-<p>接口和接口之间进行强制类型转换的时候，没有继承关系也可以强转，但是一定要注意，运行时可能会出现<code>ClassCastException</code>异常，编译没问题，运行有问</p>
-</li>
-<li>
-<p>extends在前implements在后</p>
-</li>
-<li>
-<p>接口通常提取行为动作</p>
-</li>
-</ol>
-
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/post/61624.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/40254.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Beyondreamer">
-      <meta itemprop="description" content="Try to make anything that happens into something of value.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Beyondreamer">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/40254.html" class="post-title-link" itemprop="url">Java集合框架</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-30 19:30:58" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-01 22:33:52" itemprop="dateModified" datetime="2021-04-01T22:33:52+08:00">2021-04-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" itemprop="url" rel="index"><span itemprop="name">Java集合框架</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>9.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>8 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Java-集合框架概述">Java 集合框架概述</h2>
-<p>Java集合工具包位于Java.util包下，包含了很多常用的数据结构，如数组、链表、栈、队列、集合、哈希表等。学习Java集合框架下大致可以分为如下五个部分：List列表、Set集合、Map映射、迭代器（Iterator、Enumeration）、工具类（Arrays、Collections）。</p>
-<ol>
-<li>所有集合类都位于java.util包下。</li>
-<li>Java的集合类主要由两个接口派生而出：Collection和Map</li>
-<li>集合接口：6个接口，表示不同集合类型，是集合框架的基础。
-<ul>
-<li>Collection、Map、List、Set、Queue、Iterator、LinkIterator</li>
-</ul>
-</li>
-<li>抽象类：5个抽象类，对集合接口的部分实现。可扩展为自定义集合类。
-<ul>
-<li>AbstractMap、AbstractCollection、AbstractList、AbstractSet、AbstractSequenttialList</li>
-</ul>
-</li>
-<li>实现类：对接口的具体实现。
-<ul>
-<li>ArrayList、LinkedList、Vector、Stack、HashSet、LinkedHashSet、TreeSet、HashMap、TreeMap</li>
-</ul>
-</li>
-</ol>
-<h2 id="Collection">Collection</h2>
-<ol>
-<li>Collection是一个接口，是高度抽象出来的集合，它包含了集合的基本操作和属性。是一组允许重复的对象。</li>
-<li>另外，Collection中有一个iterator()函数，它的作用是返回一个Iterator接口。我们通过Iterator迭代器来遍历集合。
-<ul>
-<li>ListIterator是List接口所特有的，在List接口中，通过ListIterator()返回一个ListIterator对象。</li>
-</ul>
-</li>
-<li>Set 接口继承 Collection，集合元素不重复。
-<ul>
-<li>Set集合是无序集合，集合中的元素不可以重复，访问集合中的元素只能根据元素本身来访问。</li>
-<li>Set的实现类有HastSet和TreeSet。
-<ul>
-<li>HashSet依赖于HashMap，它实际上是通过HashMap实现的；</li>
-<li>TreeSet依赖于TreeMap，它实际上是通过TreeMap实现的。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>List 接口继承 Collection，允许重复，维护元素插入顺序。
-<ul>
-<li>List集合是有序集合，集合中的元素可以重复，访问集合中的元素可以根据元素的索引来访问。</li>
-<li>List的实现类有LinkedList, ArrayList, Vector, Stack。</li>
-</ul>
-</li>
-</ol>
-<h3 id="ArrayList">ArrayList</h3>
-<ul>
-<li>ArrayList是动态数组。</li>
-<li>它允许任何符合规则的元素插入甚至包括null。</li>
-<li>每一个ArrayList都有一个初始容量（10），该容量代表了数组的大小。</li>
-<li>随着容器中的元素不断增加，容器的大小也会随着增加。在每次向容器中增加元素的同时都会进行容量检查，当快溢出时，就会进行扩容操作。所以如果我们明确所插入元素的多少，最好指定一个初始容量值，避免过多的进行扩容操作而浪费时间、效率。</li>
-<li>ArrayList擅长于随机访问。同时ArrayList是非同步的。</li>
-</ul>
-<h3 id="LinkedList">LinkedList</h3>
-<ul>
-<li>LinkedList是双向链表。</li>
-<li>由于实现的方式不同，LinkedList不能随机访问，它所有的操作都是要按照双重链表的需要执行。在列表中索引的操作将从开头或结尾遍历列表（从靠近指定索引的一端）。这样做的好处就是可以通过较低的代价在List中进行插入和删除操作。</li>
-<li>与ArrayList一样，LinkedList也是非同步的。如果多个线程同时访问一个List，则必须自己实现访问同步。一种解决方法是在创建List时构造一个同步的List：</li>
-<li><code>List list = Collections.synchronizedList(new LinkedList(...));</code></li>
-</ul>
-<h3 id="ArrayList和LinkedList">ArrayList和LinkedList</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/post/40254.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1083,14 +1718,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">37k</span>
+    <span title="站点总字数">44k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">33 分钟</span>
+    <span title="站点阅读时长">40 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

@@ -201,7 +201,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -239,7 +239,7 @@
         <h3 class="widget-title"></h3>
         <div id="myCanvasContainer" class="widget tagcloud">
         <canvas width="250" height="250" id="resCanvas" style="width=100%">
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag">JavaSE基础</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" rel="tag">Java集合框架</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">7</span></li></ul>
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag">JavaSE基础</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" rel="tag">Java集合框架</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">8</span></li></ul>
         </canvas>
         </div>
         </div>
@@ -266,6 +266,834 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/e94c5315.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/e94c5315.html" class="post-title-link" itemprop="url">Java集合框架Set</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-10 13:51:55 / 修改时间：23:01:56" itemprop="dateCreated datePublished" datetime="2021-04-10T13:51:55+08:00">2021-04-10</time>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><h3 id="Set集合概述和特点"><a href="#Set集合概述和特点" class="headerlink" title="Set集合概述和特点"></a>Set集合概述和特点</h3><ul>
+<li>可以去除重复</li>
+<li>存取顺序不一致</li>
+<li>没有带索引方法，所以不能使用普通for循环遍历，也不能通过索引来获取，删除Set集合里的元素</li>
+</ul>
+<h3 id="Set集合练习"><a href="#Set集合练习" class="headerlink" title="Set集合练习"></a>Set集合练习</h3><ul>
+<li>存储字符串并遍历</li>
+</ul>
+<h2 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h2><h3 id="TreeSet集合概述和特点"><a href="#TreeSet集合概述和特点" class="headerlink" title="TreeSet集合概述和特点"></a>TreeSet集合概述和特点</h3><ul>
+<li><p>不包含重复元素的集合</p>
+</li>
+<li><p>没有带索引的方法</p>
+</li>
+<li><p>可以将元素按照规则进行排序</p>
+</li>
+<li><p><strong>想要使用TreeSet必须制定排序规则</strong></p>
+</li>
+</ul>
+<h3 id="TreeSet集合练习"><a href="#TreeSet集合练习" class="headerlink" title="TreeSet集合练习"></a>TreeSet集合练习</h3><ul>
+<li>存储integer类型的整数并遍历</li>
+<li>存储学生对象并遍历</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/e94c5315.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/a546d74d.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/a546d74d.html" class="post-title-link" itemprop="url">RoboCup Rescue作业1-Swing快速入门</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-10 13:48:18" itemprop="dateCreated datePublished" datetime="2021-04-10T13:48:18+08:00">2021-04-10</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-11 21:03:24" itemprop="dateModified" datetime="2021-04-11T21:03:24+08:00">2021-04-11</time>
+      </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>488</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Swing快速入门"><a href="#Swing快速入门" class="headerlink" title="Swing快速入门"></a>Swing快速入门</h2><h2 id="JFrame"><a href="#JFrame" class="headerlink" title="JFrame"></a>JFrame</h2><ul>
+<li>设置标题</li>
+<li>设置图标</li>
+<li>设置大小，位置</li>
+<li>设置关闭时退出程序</li>
+<li>默认布局BorderLayout[hgap=0,vgap=0]</li>
+</ul>
+<h2 id="JButton"><a href="#JButton" class="headerlink" title="JButton"></a>JButton</h2><ul>
+<li>窗口添加component类型</li>
+<li>设置大小</li>
+</ul>
+<h2 id="布局管理器"><a href="#布局管理器" class="headerlink" title="布局管理器"></a>布局管理器</h2><h3 id="FlowLayout"><a href="#FlowLayout" class="headerlink" title="FlowLayout"></a>FlowLayout</h3><ul>
+<li>默认从左边开始排列，默认中间显示</li>
+<li>设置对齐方式</li>
+<li>设置间距</li>
+</ul>
+<h3 id="BorderLayout"><a href="#BorderLayout" class="headerlink" title="BorderLayout"></a>BorderLayout</h3><ul>
+<li>将容器分为，东西南北中的五个区域</li>
+<li>设置间距</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/a546d74d.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/0.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/0.html" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-08 21:20:04" itemprop="dateCreated datePublished" datetime="2021-04-08T21:20:04+08:00">2021-04-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-11 21:02:39" itemprop="dateModified" datetime="2021-04-11T21:02:39+08:00">2021-04-11</time>
+      </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="意外发现神器Typora"><a href="#意外发现神器Typora" class="headerlink" title="意外发现神器Typora"></a>意外发现神器Typora</h1><h2 id="标题的使用"><a href="#标题的使用" class="headerlink" title="标题的使用"></a>标题的使用</h2><p>快捷键：Ctrl+数字</p>
+<h2 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h2><p><code>\&lt;center\&gt;居中的文本内容\&lt;/center\&gt;</code></p>
+<p>注：Typora目前并不会直接预览居中效果——相应的效果只有输出文本的时候才会显现。</p>
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p><code>&lt;u&gt;下划线的内容&lt;\u&gt; 或者快捷键Ctrl+U</code></p>
+<p><u>下划线的内容或者快捷键Ctrl+U</u></p>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/0.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/75b04d04.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/75b04d04.html" class="post-title-link" itemprop="url">数据结构笔记（八）平衡二叉树</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-08 19:11:43 / 修改时间：21:19:54" itemprop="dateCreated datePublished" datetime="2021-04-08T19:11:43+08:00">2021-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>216</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h2><ul>
+<li>平衡因子（Balance Factor，简称BF）: BF(T) = hL-hR</li>
+<li>其中hL和hR分别为T的左、右子树的高度。</li>
+<li>平衡二叉树（Balanced Binary Tree）（AVL树）空树，或者任一结点左、右子树高度差的绝对值不超过1，即|BF(T) |≤ 1</li>
+<li>给定结点数为n的AVL树的最大高度为O(log2n)！</li>
+</ul>
+<h2 id="平衡二叉树的调整"><a href="#平衡二叉树的调整" class="headerlink" title="平衡二叉树的调整"></a>平衡二叉树的调整</h2><ul>
+<li>不平衡的“发现者”是Mar，“麻烦结点”Nov 在发现者右子树的右边，因而叫 RR 插入，需要RR 旋转（右单旋</li>
+</ul>
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/75b04d04.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/1f9f4785.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/1f9f4785.html" class="post-title-link" itemprop="url">Java进阶（九）常用类</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-05 13:26:06" itemprop="dateCreated datePublished" datetime="2021-04-05T13:26:06+08:00">2021-04-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-06 19:35:05" itemprop="dateModified" datetime="2021-04-06T19:35:05+08:00">2021-04-06</time>
+      </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Arrays工具类"><a href="#Arrays工具类" class="headerlink" title="Arrays工具类"></a>Arrays工具类</h2><ol>
+<li>所有方法都是静态的，可以直接类名调用</li>
+<li>主要运用<code>sort()</code>和<code>binarySearch()</code>，多查阅参考API文档</li>
+</ol>
+<h2 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h2><ol>
+<li><p>String类代表字符串，属于引用数据类型，Java中””的字符串都是String对象</p>
+</li>
+<li><p>字符串是常量，不可变，直接存储在方法区中的字符串常量池中</p>
+</li>
+<li><p>String中不能用==判断字符串是否相等，需要用equals()方法比较字符串是否相等。并且建议使用<code>&quot;abc&quot;.equals(a)</code>的形式书写，避免空指针异常</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String a1 = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">String a2 = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">String b1 = <span class="keyword">new</span> String(<span class="string">&quot;world&quot;</span>);</span><br><span class="line">String b2 = <span class="keyword">new</span> String(<span class="string">&quot;world&quot;</span>);</span><br><span class="line">a1==a2;<span class="comment">//true</span></span><br><span class="line">b1==b2;<span class="comment">//false</span></span><br></pre></td></tr></table></figure></li>
+<li><p>String类中重写了toString()方法，直接输出字符串</p>
+</li>
+</ol>
+<h3 id="常用构造方法"><a href="#常用构造方法" class="headerlink" title="常用构造方法"></a>常用构造方法</h3><ol>
+<li><code>String s = new String(字节数据，起始数据元素下标，长度)</code></li>
+<li><code>String s = new String(bytes)</code></li>
+<li>将char数组全部转换为字符串<code>String s = new String(chars)</code></li>
+<li>将char数组部分转化为字符串<code>String s = new String(chars,offset,length)</code></li>
+</ol>
+<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><ol>
+<li><code>char charAt(int index);//返回指定下标的char</code></li>
+<li><code>int compareTo(String anotherString);//0前后一致 1前大后小 -1前小后大</code></li>
+<li><code>boolean contains(CharSequence s);//判断前面的字符串是否包含后面的子字符串</code></li>
+<li><code>boolean endsWith(String suffix);//判断是否以该字符串结尾</code></li>
+<li><code>boolean equals(Object anObject)</code></li>
+<li><code>boolean equalsIgnoreCase​(String anotherString);//判断两个字符串是否相等，忽略大小写</code></li>
+<li><code>byte[] getBytes();//将字符串转换为字节数据</code></li>
+<li><code>int indexOf​(String str)；//判断子字符串在当前字符串第一次出现的位置</code></li>
+<li><code>boolean isEmpty();//判断字符串是否为空</code></li>
+<li><code>int length()</code></li>
+<li><code>intlastIndexOf​(String str);//判断某个字符串最后一次出现的下标</code></li>
+<li><code>String replace​(CharSequence target, CharSequence replacement);//新的字符串替换所有老字符串</code></li>
+<li><code>String[] split​(String regex);//拆分字符串</code></li>
+<li>442</li>
+</ol>
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/1f9f4785.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/6ce4bc7d.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/6ce4bc7d.html" class="post-title-link" itemprop="url">Java进阶（八）数组</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-04 19:59:44" itemprop="dateCreated datePublished" datetime="2021-04-04T19:59:44+08:00">2021-04-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-05 14:10:29" itemprop="dateModified" datetime="2021-04-05T14:10:29+08:00">2021-04-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">Java进阶</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>767</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><ol>
+<li>Java中的数组是一种引用数据类型，不属于基本数据类型，父类是Object</li>
+<li>数组实际上是一个容器，可以用来容纳多个数据，数组是一组数据的集合</li>
+<li>数组中可存放基本数据类型数据，也可存储引用数据类型</li>
+<li>数组为引用类型，数组存储在堆中</li>
+<li>数组中如果是Java对象的话，实际上存储的是对象的引用（内存地址），数组不能直接存储Java对象</li>
+<li>数组一旦创建，长度不可变</li>
+<li>数组的分类，包括一维数组，二维数组，多维数组</li>
+<li>所有的数组对象都要length属性（Java自带）用来获取数组中元素个数</li>
+<li>Java中的数组要求数据元素类型统一</li>
+<li>数组在内存存储的时候，内存地址是连续的</li>
+<li>数组中首元素的内存地址，作为所有元素的内存地址</li>
+<li>数组下标从0开始</li>
+<li>数组的优缺点<ol>
+<li>优点<ul>
+<li>查找查询某个下标元素时，效率最高<ul>
+<li>每一个元素的内存地址在存储上市连续的</li>
+<li>每一个元素类型相同，占用空间大小一样</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>随机增删元素效率较低</li>
+</ul>
+</li>
+<li>对最后一个数据修改无影响</li>
+</ol>
+</li>
+</ol>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><pre><code>int[] array
+</code></pre>
+<ol>
+<li>怎么初始化一个数组<ul>
+<li>静态初始化数组</li>
+<li><code>int[] array = &#123;1&#125;</code></li>
+<li>动态初始化数组</li>
+<li><code>int[] array = new int [2]//每个元素默认初始为null</code></li>
+</ul>
+</li>
+<li>一维数组怎么遍历<ul>
+<li>for(int i=0;i&lt;a.length-1;i++)</li>
+</ul>
+</li>
+</ol>
+<h2 id="main方法String-args数组"><a href="#main方法String-args数组" class="headerlink" title="main方法String[] args数组"></a>main方法String[] args数组</h2><ol>
+<li>用户可以在控制台上输出参数，直接控制String，</li>
+<li><code>java a abc def xyz</code>JVM自动将abc def xyz通过空格方式进行分离，存入args中</li>
+</ol>
+<h2 id="一维数组的深入"><a href="#一维数组的深入" class="headerlink" title="一维数组的深入"></a>一维数组的深入</h2><ol>
+<li>数组中存储引用数据类型</li>
+</ol>
+<p><code>Animal a = &#123;new Cat(),new Bird()&#125;;</code></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/6ce4bc7d.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/7d48a3a6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/7d48a3a6.html" class="post-title-link" itemprop="url">Java进阶（七）内部类</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-04 19:34:41 / 修改时间：19:59:30" itemprop="dateCreated datePublished" datetime="2021-04-04T19:34:41+08:00">2021-04-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">Java进阶</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>173</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><ol>
+<li>什么是内部类？<ul>
+<li>在类的内部又定义了一个类。</li>
+</ul>
+</li>
+<li>内部类的分类<ul>
+<li>静态内部类：类似静态变量</li>
+<li>实例内部类：类似实例变量</li>
+<li>局部内部类：类似局部变量</li>
+</ul>
+</li>
+<li>使用内部类编写的代码可读性很差，能不用尽量不用</li>
+</ol>
+<h2 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h2><ol>
+<li>匿名内部类是局部内部类中的一种，类没有名字</li>
+<li>new 接口(){} 自动匿名实现内部类</li>
+<li>不建议实现内部类，一个类没有名字无法重复使用，可读性太差</li>
+</ol>
+<p>纠正错误快捷键alt+回车</p>
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/7d48a3a6.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -306,7 +1134,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-02 00:18:06" itemprop="dateModified" datetime="2021-04-02T00:18:06+08:00">2021-04-02</time>
+        <time title="修改时间：2021-04-08 19:08:27" itemprop="dateModified" datetime="2021-04-08T19:08:27+08:00">2021-04-08</time>
       </span>
 
   
@@ -335,24 +1163,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="Life-Desiging">Life Desiging</h2>
-<h3 id="What’s-the-most-interesting-design-problem">What’s the most interesting design problem?</h3>
-<pre><code>I think it's your life. As this life of yours, this amazing design of yours unfolds.
+          <h2 id="Life-Designing"><a href="#Life-Designing" class="headerlink" title="Life Designing"></a>Life Designing</h2><h3 id="What’s-the-most-interesting-design-problem"><a href="#What’s-the-most-interesting-design-problem" class="headerlink" title="What’s the most interesting design problem?"></a>What’s the most interesting design problem?</h3><pre><code>I think it&#39;s your life. As this life of yours, this amazing design of yours unfolds.
 </code></pre>
 <span id="more"></span>
-<h2 id="Designing-Thingking">Designing Thingking</h2>
-<pre><code>Designing thinking is a set of mindsets. Reality has the tendency to throw little things at us that we weren't expecting. Some of them are good, some are not.
+<h2 id="Designing-Thinking"><a href="#Designing-Thinking" class="headerlink" title="Designing Thinking"></a>Designing Thinking</h2><pre><code>Designing thinking is a set of mindsets. Reality has the tendency to throw little things at us that we weren&#39;t expecting. Some of them are good, some are not.
 </code></pre>
-<h2 id="Quesions-Not-Appropriable">Quesions Not Appropriable</h2>
-<pre><code>What's your passion?
+<h2 id="Questions-Not-Appropriate"><a href="#Questions-Not-Appropriate" class="headerlink" title="Questions Not Appropriate"></a>Questions Not Appropriate</h2><pre><code>What&#39;s your passion?
     It brings up to me the movie *Soul*.
-You should know where you're going by now.
+You should know where you&#39;re going by now.
     But what exactly are you late for?
 Are you being the best possible version of you?
     Life is anything but linear.
 </code></pre>
-<h3 id="Connecting-Dots">Connecting Dots</h3>
-<pre><code>1. Who you are?
+<h3 id="Connecting-Dots"><a href="#Connecting-Dots" class="headerlink" title="Connecting Dots"></a>Connecting Dots</h3><pre><code>1. Who you are?
 
 2. What you believe?
 
@@ -452,15 +1275,13 @@ Are you being the best possible version of you?
     
     <div class="post-body" itemprop="articleBody">
           <p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo<i class="fa fa-external-link-alt"></i></span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv">documentation<i class="fa fa-external-link-alt"></i></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=">troubleshooting<i class="fa fa-external-link-alt"></i></span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">GitHub<i class="fa fa-external-link-alt"></i></span>.</p>
-<h2 id="Quick-Start">Quick Start</h2>
-<h3 id="Create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s">Writing<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="Run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
 <p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=">Server<i class="fa fa-external-link-alt"></i></span></p>
-<h3 id="Generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/post/16107.html#more" rel="contents">
@@ -563,16 +1384,8 @@ Are you being the best possible version of you?
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="队列">队列</h2>
-<p><strong>队列</strong>：具有一定操作约束的线性表<br>
-数据插入：入队列（AddQ）<br>
-数据删除：出队列（DeleteQ）<br>
-先来先服务<br>
-先进先出：FIFO</p>
-<h3 id="队列的抽象数据类型描述">队列的抽象数据类型描述</h3>
-<p><strong>类型名称</strong>：队列(Queue)<br>
-<strong>数据对象集</strong>：一个有0个或多个元素的有穷线性表。<br>
-<strong>操作集</strong>：长度为MaxSize的队列Q，队列元素item</p>
+          <h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p><strong>队列</strong>：具有一定操作约束的线性表<br>数据插入：入队列（AddQ）<br>数据删除：出队列（DeleteQ）<br>先来先服务<br>先进先出：FIFO</p>
+<h3 id="队列的抽象数据类型描述"><a href="#队列的抽象数据类型描述" class="headerlink" title="队列的抽象数据类型描述"></a>队列的抽象数据类型描述</h3><p><strong>类型名称</strong>：队列(Queue)<br><strong>数据对象集</strong>：一个有0个或多个元素的有穷线性表。<br><strong>操作集</strong>：长度为MaxSize的队列Q，队列元素item</p>
 <ol>
 <li><code>Queue CreatQueue( int MaxSize )</code>：生成长度为MaxSize的空队列；</li>
 <li><code>int IsFullQ( Queue Q, int MaxSize )</code>：判断队列Q是否已满；</li>
@@ -580,892 +1393,19 @@ Are you being the best possible version of you?
 <li><code>int IsEmptyQ( Queue Q )</code>： 判断队列Q是否为空；</li>
 <li><code>ElementType DeleteQ( Queue Q )</code>：将队头数据元素从队列中删除并返回</li>
 </ol>
-<h3 id="队列的顺序存储实现">队列的顺序存储实现</h3>
-<p>通常由一个一维数组和一个记录队列头元素位置的变量front，以及一个记录队列尾元素位置的变量rear组成。</p>
+<h3 id="队列的顺序存储实现"><a href="#队列的顺序存储实现" class="headerlink" title="队列的顺序存储实现"></a>队列的顺序存储实现</h3><p>通常由一个一维数组和一个记录队列头元素位置的变量front，以及一个记录队列尾元素位置的变量rear组成。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize <span class="meta-string">&lt;储存数据元素的最大个数&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">QNode</span> &#123;</span></span><br><span class="line">ElementType Data[ MaxSize ];</span><br><span class="line"><span class="keyword">int</span> rear;</span><br><span class="line"><span class="keyword">int</span> front;</span><br><span class="line">&#125;; </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">QNode</span> *<span class="title">Queue</span>;</span></span><br></pre></td></tr></table></figure>
+
 <ol>
-<li>
-<p>入队</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AddQ</span><span class="params">( Queue PtrQ, ElementType item)</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">     <span class="keyword">if</span>((PtrQ-&gt;rear+<span class="number">1</span>)%MaxSize == PtrQ-&gt;front )&#123;</span><br><span class="line">         <span class="built_in">printf</span>(“队列满”); </span><br><span class="line">         <span class="keyword">return</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     PtrQ-&gt;rear = (PtrQ-&gt;rear+<span class="number">1</span>)% MaxSize;</span><br><span class="line">     PtrQ-&gt;Data[PtrQ-&gt;rear] = item;</span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>出队</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">DeleteQ</span> <span class="params">( Queue PtrQ )</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">     <span class="keyword">if</span>(PtrQ-&gt;front == PtrQ-&gt;rear)&#123; </span><br><span class="line">         <span class="built_in">printf</span>(“队列空”);</span><br><span class="line">         <span class="keyword">return</span> ERROR;</span><br><span class="line">     &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">         PtrQ-&gt;front = (PtrQ-&gt;front+<span class="number">1</span>)% MaxSize;</span><br><span class="line">         <span class="keyword">return</span> PtrQ-&gt;Data[PtrQ-&gt;front];</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li><p>入队</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AddQ</span><span class="params">( Queue PtrQ, ElementType item)</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">     <span class="keyword">if</span>((PtrQ-&gt;rear+<span class="number">1</span>)%MaxSize == PtrQ-&gt;front )&#123;</span><br><span class="line">         <span class="built_in">printf</span>(“队列满”); </span><br><span class="line">         <span class="keyword">return</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     PtrQ-&gt;rear = (PtrQ-&gt;rear+<span class="number">1</span>)% MaxSize;</span><br><span class="line">     PtrQ-&gt;Data[PtrQ-&gt;rear] = item;</span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure></li>
+<li><p>出队</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">DeleteQ</span> <span class="params">( Queue PtrQ )</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">     <span class="keyword">if</span>(PtrQ-&gt;front == PtrQ-&gt;rear)&#123; </span><br><span class="line">         <span class="built_in">printf</span>(“队列空”);</span><br><span class="line">         <span class="keyword">return</span> ERROR;</span><br><span class="line">     &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">         PtrQ-&gt;front = (PtrQ-&gt;front+<span class="number">1</span>)% MaxSize;</span><br><span class="line">         <span class="keyword">return</span> PtrQ-&gt;Data[PtrQ-&gt;front];</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="队列的链式存储实现">队列的链式存储实现</h3>
+<h3 id="队列的链式存储实现"><a href="#队列的链式存储实现" class="headerlink" title="队列的链式存储实现"></a>队列的链式存储实现</h3>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/post/0.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/0.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Beyondreamer">
-      <meta itemprop="description" content="Try to make anything that happens into something of value.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Beyondreamer">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/0.html" class="post-title-link" itemprop="url">数据结构笔记（六）二叉树</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-31 15:00:20" itemprop="dateCreated datePublished" datetime="2021-03-31T15:00:20+08:00">2021-03-31</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-02 00:06:27" itemprop="dateModified" datetime="2021-04-02T00:06:27+08:00">2021-04-02</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3.8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="二叉树的定义及基本特点">二叉树的定义及基本特点</h2>
-<h3 id="定义">定义</h3>
-<p>二叉树（Binary Tree）是n（n≥0）个结点所构成的集合，它或为空树（n = 0）；或为非空树</p>
-<p>对于非空树T：</p>
-<ol>
-<li>有且仅有一个称之为根的结点</li>
-<li>除根结点以外的其余结点分为两个互不相交的子集T1和T2，分别称为T的左子树和右子树，且T1和T2本身又都是二叉树。</li>
-</ol>
-<h3 id="基本特点">基本特点</h3>
-<ol>
-<li>结点的度小于等于2</li>
-<li>有序树：二叉树的子树有<strong>左右顺序</strong>之分</li>
-</ol>
-<h3 id="二叉树的性质">二叉树的性质</h3>
-<ol>
-<li>在二叉树的第i层上至多有$2^{i-1}$个结点</li>
-<li>深度为k的二叉树至多有$2^k-1$个结点</li>
-<li>对于任何一棵二叉树，若2度的结点数有$n_{2}$个，则叶子数$n_{0}$必定为$n_{2}+1$（即$n_{0}=n_{2}+1$）</li>
-<li>完全二叉树：深度为k 的，有n个结点的二叉树，当且仅当其每一个结点都与深度为k 的满二叉树中编号从1至n的结点一一对应</li>
-<li>满二叉树：一棵深度为k 且有$2k − 1$个结点的二叉树。（特点：每层都“充满”了结点） 满二叉树是完全二叉树的一个特例。</li>
-<li>具有n个结点的完全二叉树的深度必为$⌊log2n⌋＋1$</li>
-<li>对完全二叉树，若从上至下、从左至右编号，则编号为i 的结点，其左孩子编号必为$2i$，其右孩子编号必为$2i＋1$；其双亲的编号必为$\frac {i} {2}$</li>
-</ol>
-<h3 id="二叉树的抽象数据类型定义">二叉树的抽象数据类型定义</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/post/0.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/14197.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Beyondreamer">
-      <meta itemprop="description" content="Try to make anything that happens into something of value.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Beyondreamer">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/14197.html" class="post-title-link" itemprop="url">数据结构笔记（五）树与树的表示</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-31 15:00:20" itemprop="dateCreated datePublished" datetime="2021-03-31T15:00:20+08:00">2021-03-31</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-01 22:31:59" itemprop="dateModified" datetime="2021-04-01T22:31:59+08:00">2021-04-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>730</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="树的定义">树的定义</h2>
-<p>树（Tree）: n（n≥0）个结点构成的有限集合。</p>
-<ul>
-<li>当n=0时，称为空树；</li>
-<li>对于任一棵非空树（n&gt; 0），它具备以下性质：
-<ul>
-<li>树中有一个称为“根（Root）”的特殊结点，用 r 表示；</li>
-<li>其余结点可分为m(m&gt;0)个互不相交的有限集T1，T2，… ，Tm，其中每个集合本身又是一棵树，称为原来树的“子树（SubTree）”</li>
-</ul>
-</li>
-<li>子树是不相交的；</li>
-<li>除了根结点外，每个结点有且仅有一个父结点；</li>
-<li>一棵N个结点的树有N-1条边。</li>
-</ul>
-<h3 id="基本术语">基本术语</h3>
-<ol>
-<li>结点的度（Degree）：结点的子树个数</li>
-<li>树的度：树的所有结点中最大的度数</li>
-<li>叶结点（Leaf）：度为0的结点</li>
-<li>父结点（Parent）：有子树的结点是其子树<br>
-的根结点的父结点</li>
-<li>子结点（Child）：若A结点是B结点的父结<br>
-点，则称B结点是A结点的子结点；子结点也<br>
-称孩子结点。</li>
-<li>兄弟结点（Sibling）：具有同一父结点的各<br>
-结点彼此是兄弟结点。</li>
-<li>路径和路径长度：从结点n1到nk的路径为一<br>
-个结点序列n1 , n2,… , nk, ni是 ni+1的父结点。路径所包含边的个数为路径的长度。</li>
-<li>祖先结点(Ancestor)：沿树根到某一结点路<br>
-径上的所有结点都是这个结点的祖先结点。</li>
-<li>子孙结点(Descendant)：某一结点的子树<br>
-中的所有结点是这个结点的子孙。</li>
-<li>结点的层次（Level）：规定根结点在1层，<br>
-其它任一结点的层数是其父结点的层数加1。</li>
-<li>树的深度（Depth）：树中所有结点中的最<br>
-大层次是这棵树的深度。</li>
-</ol>
-<h3 id="树的实现">树的实现</h3>
-<p>儿子兄弟表示法</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">PtrToNode</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Element;</span><br><span class="line">    PtrToNode FirstChild;</span><br><span class="line">    PtrToNode NextSibiling;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/post/14197.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/5904.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Beyondreamer">
-      <meta itemprop="description" content="Try to make anything that happens into something of value.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Beyondreamer">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/5904.html" class="post-title-link" itemprop="url">数据结构笔记（二）线性表</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-31 15:00:20" itemprop="dateCreated datePublished" datetime="2021-03-31T15:00:20+08:00">2021-03-31</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-02 00:06:22" itemprop="dateModified" datetime="2021-04-02T00:06:22+08:00">2021-04-02</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3.5k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="线性结构">线性结构</h2>
-<h3 id="2-1线性表及其表现">2.1线性表及其表现</h3>
-<h4 id="什么是线性表？">什么是线性表？</h4>
-<p>线性表是由同类型<strong>数据结构</strong>构成<strong>有序序列</strong>的线性结构</p>
-<ul>
-<li>表中元素个数称为线性表的<strong>长度</strong></li>
-<li>线性表没有元素时，称为<strong>空表</strong></li>
-<li>表起始位置称<strong>表头</strong>，表结束位置称<strong>表尾</strong></li>
-</ul>
-<h3 id="2-2线性表的抽象数据类型描述">2.2线性表的抽象数据类型描述</h3>
-<p><strong>类型名称</strong>：线性表<br>
-<strong>数据对象集</strong>：线性表是n(&gt;=0)个元素构成的有序序列($a_{1},a_{2}…$)<br>
-<strong>操作集</strong>：线性表L，整数i表示位置，元素X，线性表的基本操作有：</p>
-<ol>
-<li><code>List MakeEmpty()</code>：初始化一个空线性表</li>
-<li><code>ElementType FindKth(int K,List L)</code>：根据位序K，返回相应元素</li>
-<li><code>int Find(ElementType X,List L)</code>：在线性表L中查找X的第一次出现位置</li>
-<li><code>void Insert(ElementType X,int i,List L)</code>：在位序i先插入一个新元素X</li>
-<li><code>void Delete(int i,List L)</code>:删除指定位序i的元素</li>
-<li><code>int Length(List L)</code>：返回线性表L的长度n</li>
-</ol>
-<h4 id="2-2-1线性表的顺序存储实现">2.2.1线性表的顺序存储实现</h4>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> *<span class="title">List</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LNode</span>&#123;</span></span><br><span class="line">    ElementType Data[MAXSIZE];</span><br><span class="line">    <span class="keyword">int</span> Last;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">LNode</span> <span class="title">L</span>;</span></span><br><span class="line">List PtrL;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/post/5904.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/39226.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Beyondreamer">
-      <meta itemprop="description" content="Try to make anything that happens into something of value.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Beyondreamer">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/39226.html" class="post-title-link" itemprop="url">数据结构笔记（三）栈</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-31 15:00:20" itemprop="dateCreated datePublished" datetime="2021-03-31T15:00:20+08:00">2021-03-31</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-01 22:31:49" itemprop="dateModified" datetime="2021-04-01T22:31:49+08:00">2021-04-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="堆栈">堆栈</h2>
-<h3 id="堆栈的抽象数据类型描述">堆栈的抽象数据类型描述</h3>
-<ul>
-<li>具有一定操作约束的线性表</li>
-<li>只在栈顶做插入删除</li>
-<li>插入数据：<strong>入栈（push）</strong></li>
-<li>删除数据：<strong>出栈（pop）</strong></li>
-<li><strong>后入先出</strong>：Last In First Out(LIFO)</li>
-</ul>
-<p><strong>类型名称</strong>：堆栈<br>
-<strong>数据对象集</strong>：一个有0个或多个元素的有穷线性表<br>
-<strong>操作集</strong>：长度为Maxsize的堆栈Stack 栈顶元素item</p>
-<ol>
-<li><code>Stack CreatStack(int Maxsize)</code>:生成空堆栈</li>
-<li><code>int IsFull(Stack S,int Maxsize)</code>:判断堆栈是否已满</li>
-<li><code>void Push(Stack S,ElementType item)</code>:将元素压入堆栈</li>
-<li><code>int isEmpty(Stack S)</code>:判断堆栈是否为空</li>
-<li><code>ElementType Pop(Stack S)</code>:删除并返回栈顶元素</li>
-</ol>
-<h3 id="堆栈的顺序存储的实现">堆栈的顺序存储的实现</h3>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize <span class="meta-string">&lt;存储数据元素的最大个数&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">Stack</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Data[MaxSize];</span><br><span class="line">    <span class="keyword">int</span> Top;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>
-<p>入栈</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span><span class="params">(Stack Ptrl,ElementType item)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Ptrl-&gt;Top==MaxSize)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;堆栈满&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        Ptrl-&gt;Data[++(Ptrl-&gt;Top)] = item;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>出栈</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">Pop</span><span class="params">(Stack PtrS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Ptrs-&gt;Top==<span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> Error;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (Ptrs-&gt;Data[(PtrS-&gt;Top)--]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="堆栈的链式存储的实现">堆栈的链式存储的实现</h3>
-<p>栈的链式储存实际上就是一个单链表，叫做<strong>链栈</strong>，插入和删除操作只能在链栈的栈顶进行</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/post/39226.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/35884.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Beyondreamer">
-      <meta itemprop="description" content="Try to make anything that happens into something of value.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Beyondreamer">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/35884.html" class="post-title-link" itemprop="url">数据结构笔记（七）二叉搜索树</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-31 15:00:20" itemprop="dateCreated datePublished" datetime="2021-03-31T15:00:20+08:00">2021-03-31</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-02 00:06:34" itemprop="dateModified" datetime="2021-04-02T00:06:34+08:00">2021-04-02</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>655</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="二叉搜索树">二叉搜索树</h2>
-<p>对于树中的每个节点X，它的左子树的所有关键字值小于X的关键字值，右子树中的所有关键字值大于X的关键字值<br>
-平均深度 $O(logn)$</p>
-<ol>
-<li>
-<p>MakeEmpty 二叉树的初始化</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">Position</span>;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">SearchTree</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="function">SearchTree <span class="title">MakeEmpty</span><span class="params">(SearchTree T)</span></span>;</span><br><span class="line"><span class="function">Position <span class="title">Find</span><span class="params">(Elementtype X,SearctTree T)</span></span>;</span><br><span class="line"><span class="function">Position <span class="title">FindMin</span><span class="params">(SearchTree T)</span></span>;</span><br><span class="line"><span class="function">Position <span class="title">FindMax</span><span class="params">(SearchTree T)</span></span>;</span><br><span class="line"><span class="function">SearchTree <span class="title">Insert</span><span class="params">(Elementtype X,SearctTree T)</span></span>;</span><br><span class="line"><span class="function">SearchTree <span class="title">Delete</span><span class="params">(Elementtype X,SearctTree T)</span></span>;</span><br><span class="line"><span class="function">ElementType <span class="title">Retrieve</span><span class="params">(Position P)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Element;</span><br><span class="line">    SearchTree Left;</span><br><span class="line">    SearchTree Right;   </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">SearchTree <span class="title">MakeEmpty</span><span class="params">(SearchTree T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        MakeEmpty(T-&gt;Left);</span><br><span class="line">        MakeEmpty(T-&gt;Left);</span><br><span class="line">        <span class="built_in">free</span>(T);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/post/35884.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/48857.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Beyondreamer">
-      <meta itemprop="description" content="Try to make anything that happens into something of value.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Beyondreamer">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/48857.html" class="post-title-link" itemprop="url">数据结构笔记（一）数据结构概念</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-03-31 15:00:20" itemprop="dateCreated datePublished" datetime="2021-03-31T15:00:20+08:00">2021-03-31</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-01 22:33:54" itemprop="dateModified" datetime="2021-04-01T22:33:54+08:00">2021-04-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.2k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="1基本概念">1基本概念</h2>
-<h3 id="1-1数据结构">1.1数据结构</h3>
-<ul>
-<li>解决问题方法的效率，跟数据的组织方式有关。</li>
-</ul>
-<h4 id="1-1-2关于空间使用">1.1.2关于空间使用</h4>
-<ul>
-<li>解决问题方法的效率，跟空间的利用效率有关。</li>
-</ul>
-<h4 id="1-1-3关于算法效率">1.1.3关于算法效率</h4>
-<ul>
-<li>clock():捕捉从程序运行开始到clock()被调用是所耗费的时间。这个时间单位是clock tick，即“时钟打点”。</li>
-<li>常数CLK_TCK:机器时钟每秒所走的时钟打点数。</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">clock_t</span> start, stop;</span><br><span class="line"><span class="comment">/* clock_t是clock()函数返回的变量类型*/</span></span><br><span class="line"><span class="keyword">double</span> duration;</span><br><span class="line"><span class="comment">/* 记录被测函数运行时间，以秒为单位*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;   <span class="comment">/* 不在测试范围内的准备工作写在clock()调用之前*/</span></span><br><span class="line">    start = clock();    <span class="comment">/*开始计时*/</span></span><br><span class="line">    MyFunction();   <span class="comment">/* 被测函数加在这里*/</span></span><br><span class="line">    stop = clock;   <span class="comment">/* 停止计时*/</span></span><br><span class="line">    duration = ((<span class="keyword">double</span>)(stop - start))/CLK_TCK;</span><br><span class="line">    <span class="comment">/* 其他不在测试范围的处理写在后面*/</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>
-<p>注意：如果一个函数跑的太快，无法被测，让被测函数<strong>重复运行</strong>充分多次，使得测出的总的时钟打点间隔充分长，最后计算被测函数<strong>平均每场</strong>运行的时间即可！</p>
-</li>
-<li>
-<p>解决问题方法的效率，跟算法的巧妙程度有关。</p>
-</li>
-</ul>
-<h4 id="1-1-3抽象数据类型">1.1.3抽象数据类型</h4>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/post/48857.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/20301.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Beyondreamer">
-      <meta itemprop="description" content="Try to make anything that happens into something of value.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Beyondreamer">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/20301.html" class="post-title-link" itemprop="url">未完成计划</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-03-30 19:30:58 / 修改时间：23:32:43" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:58+08:00">2021-03-30</time>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>68</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ol>
-<li>平衡二叉树</li>
-<li>伸展树</li>
-<li>B树、B+树</li>
-<li>优先队列（堆）、d堆</li>
-<li>左偏堆、斜堆</li>
-<li>二项队列、斐波那契堆</li>
-<li>图论概念和拓扑排序</li>
-<li>最短路</li>
-<li>最小生成树</li>
-<li>并查集+路径压缩</li>
-<li>散列表</li>
-</ol>
-
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/post/20301.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1489,7 +1429,7 @@ Are you being the best possible version of you?
 
 
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1535,14 +1475,14 @@ Are you being the best possible version of you?
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">37k</span>
+    <span title="站点总字数">44k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">33 分钟</span>
+    <span title="站点阅读时长">40 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

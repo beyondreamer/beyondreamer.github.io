@@ -25,20 +25,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"beyondreamer.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":null,"post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":"ture","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="Try to make anything that happens into something of value.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://beyondreamer.github.io/categories/index.html">
+<meta name="description" content="平衡二叉树 平衡因子（Balance Factor，简称BF）: BF(T) &#x3D; hL-hR 其中hL和hR分别为T的左、右子树的高度。 平衡二叉树（Balanced Binary Tree）（AVL树）空树，或者任一结点左、右子树高度差的绝对值不超过1，即|BF(T) |≤ 1 给定结点数为n的AVL树的最大高度为O(log2n)！  平衡二叉树的调整 不平衡的“发现者”是Mar，“麻烦结点”N">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构笔记（八）平衡二叉树">
+<meta property="og:url" content="http://beyondreamer.github.io/post/75b04d04.html">
 <meta property="og:site_name" content="Beyondreamer">
-<meta property="og:description" content="Try to make anything that happens into something of value.">
+<meta property="og:description" content="平衡二叉树 平衡因子（Balance Factor，简称BF）: BF(T) &#x3D; hL-hR 其中hL和hR分别为T的左、右子树的高度。 平衡二叉树（Balanced Binary Tree）（AVL树）空树，或者任一结点左、右子树高度差的绝对值不超过1，即|BF(T) |≤ 1 给定结点数为n的AVL树的最大高度为O(log2n)！  平衡二叉树的调整 不平衡的“发现者”是Mar，“麻烦结点”N">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-30T13:15:19.879Z">
-<meta property="article:modified_time" content="2021-03-30T13:15:19.879Z">
+<meta property="article:published_time" content="2021-04-08T11:11:43.000Z">
+<meta property="article:modified_time" content="2021-04-08T13:19:54.657Z">
 <meta property="article:author" content="Beyondreamer">
+<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://beyondreamer.github.io/categories/">
+<link rel="canonical" href="http://beyondreamer.github.io/post/75b04d04.html">
 
 
 <script class="page-configurations">
@@ -46,12 +47,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
-<title>分类 | Beyondreamer
-</title>
+<title>数据结构笔记（八）平衡二叉树 | Beyondreamer</title>
   
 
 
@@ -176,7 +176,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -189,6 +189,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-text">平衡二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%B0%83%E6%95%B4"><span class="nav-text">平衡二叉树的调整</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -268,43 +269,129 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
   
   
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/75b04d04.html">
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
 
-<h1 class="post-title" itemprop="name headline">分类
-</h1>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数据结构笔记（八）平衡二叉树
+        </h1>
 
-<div class="post-meta-container">
-</div>
-
-</header>
-
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-      
-      <div class="post-body"><div class="category-all-page">
-  <div class="category-all-title">
-    目前共计 5 个分类
-  </div>
-  <div class="category-all">
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaSE%E5%9F%BA%E7%A1%80/">JavaSE基础</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java%E5%9F%BA%E7%A1%80/">Java基础</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java%E8%BF%9B%E9%98%B6/">Java进阶</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">Java集合框架</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="category-list-count">8</span></li></ul>
-  </div>
-</div>
 
+      <time title="创建时间：2021-04-08 19:11:43 / 修改时间：21:19:54" itemprop="dateCreated datePublished" datetime="2021-04-08T19:11:43+08:00">2021-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
       </div>
-      
-      
-      
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>216</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h2><ul>
+<li>平衡因子（Balance Factor，简称BF）: BF(T) = hL-hR</li>
+<li>其中hL和hR分别为T的左、右子树的高度。</li>
+<li>平衡二叉树（Balanced Binary Tree）（AVL树）空树，或者任一结点左、右子树高度差的绝对值不超过1，即|BF(T) |≤ 1</li>
+<li>给定结点数为n的AVL树的最大高度为O(log2n)！</li>
+</ul>
+<h2 id="平衡二叉树的调整"><a href="#平衡二叉树的调整" class="headerlink" title="平衡二叉树的调整"></a>平衡二叉树的调整</h2><ul>
+<li>不平衡的“发现者”是Mar，“麻烦结点”Nov 在发现者右子树的右边，因而叫 RR 插入，需要RR 旋转（右单旋</li>
+</ul>
+
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"><i class="fa fa-tag"></i> 数据结构</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/post/1f9f4785.html" rel="prev" title="Java进阶（九）常用类">
+                  <i class="fa fa-chevron-left"></i> Java进阶（九）常用类
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/post/0.html" rel="next" title="">
+                   <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 

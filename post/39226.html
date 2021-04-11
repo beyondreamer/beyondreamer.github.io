@@ -25,12 +25,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"beyondreamer.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":null,"post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":"ture","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="堆栈 堆栈的抽象数据类型描述  具有一定操作约束的线性表 只在栈顶做插入删除 插入数据：入栈（push） 删除数据：出栈（pop） 后入先出：Last In First Out(LIFO)  类型名称：堆栈 数据对象集：一个有0个或多个元素的有穷线性表 操作集：长度为Maxsize的堆栈Stack 栈顶元素item  Stack CreatStack(int Maxsize):生成空堆栈 int">
+<meta name="description" content="堆栈堆栈的抽象数据类型描述 具有一定操作约束的线性表 只在栈顶做插入删除 插入数据：入栈（push） 删除数据：出栈（pop） 后入先出：Last In First Out(LIFO)  类型名称：堆栈数据对象集：一个有0个或多个元素的有穷线性表操作集：长度为Maxsize的堆栈Stack 栈顶元素item  Stack CreatStack(int Maxsize):生成空堆栈 int IsFu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构笔记（三）栈">
 <meta property="og:url" content="http://beyondreamer.github.io/post/39226.html">
 <meta property="og:site_name" content="Beyondreamer">
-<meta property="og:description" content="堆栈 堆栈的抽象数据类型描述  具有一定操作约束的线性表 只在栈顶做插入删除 插入数据：入栈（push） 删除数据：出栈（pop） 后入先出：Last In First Out(LIFO)  类型名称：堆栈 数据对象集：一个有0个或多个元素的有穷线性表 操作集：长度为Maxsize的堆栈Stack 栈顶元素item  Stack CreatStack(int Maxsize):生成空堆栈 int">
+<meta property="og:description" content="堆栈堆栈的抽象数据类型描述 具有一定操作约束的线性表 只在栈顶做插入删除 插入数据：入栈（push） 删除数据：出栈（pop） 后入先出：Last In First Out(LIFO)  类型名称：堆栈数据对象集：一个有0个或多个元素的有穷线性表操作集：长度为Maxsize的堆栈Stack 栈顶元素item  Stack CreatStack(int Maxsize):生成空堆栈 int IsFu">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-31T07:00:20.327Z">
 <meta property="article:modified_time" content="2021-04-01T14:31:49.496Z">
@@ -205,7 +205,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -243,7 +243,7 @@
         <h3 class="widget-title"></h3>
         <div id="myCanvasContainer" class="widget tagcloud">
         <canvas width="250" height="250" id="resCanvas" style="width=100%">
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag">JavaSE基础</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" rel="tag">Java集合框架</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">7</span></li></ul>
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag">JavaSE基础</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" rel="tag">Java集合框架</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">8</span></li></ul>
         </canvas>
         </div>
         </div>
@@ -356,18 +356,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="堆栈">堆栈</h2>
-<h3 id="堆栈的抽象数据类型描述">堆栈的抽象数据类型描述</h3>
-<ul>
+        <h2 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h2><h3 id="堆栈的抽象数据类型描述"><a href="#堆栈的抽象数据类型描述" class="headerlink" title="堆栈的抽象数据类型描述"></a>堆栈的抽象数据类型描述</h3><ul>
 <li>具有一定操作约束的线性表</li>
 <li>只在栈顶做插入删除</li>
 <li>插入数据：<strong>入栈（push）</strong></li>
 <li>删除数据：<strong>出栈（pop）</strong></li>
 <li><strong>后入先出</strong>：Last In First Out(LIFO)</li>
 </ul>
-<p><strong>类型名称</strong>：堆栈<br>
-<strong>数据对象集</strong>：一个有0个或多个元素的有穷线性表<br>
-<strong>操作集</strong>：长度为Maxsize的堆栈Stack 栈顶元素item</p>
+<p><strong>类型名称</strong>：堆栈<br><strong>数据对象集</strong>：一个有0个或多个元素的有穷线性表<br><strong>操作集</strong>：长度为Maxsize的堆栈Stack 栈顶元素item</p>
 <ol>
 <li><code>Stack CreatStack(int Maxsize)</code>:生成空堆栈</li>
 <li><code>int IsFull(Stack S,int Maxsize)</code>:判断堆栈是否已满</li>
@@ -375,51 +371,34 @@
 <li><code>int isEmpty(Stack S)</code>:判断堆栈是否为空</li>
 <li><code>ElementType Pop(Stack S)</code>:删除并返回栈顶元素</li>
 </ol>
-<h3 id="堆栈的顺序存储的实现">堆栈的顺序存储的实现</h3>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize <span class="meta-string">&lt;存储数据元素的最大个数&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">Stack</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Data[MaxSize];</span><br><span class="line">    <span class="keyword">int</span> Top;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="堆栈的顺序存储的实现"><a href="#堆栈的顺序存储的实现" class="headerlink" title="堆栈的顺序存储的实现"></a>堆栈的顺序存储的实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MaxSize <span class="meta-string">&lt;存储数据元素的最大个数&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">Stack</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Data[MaxSize];</span><br><span class="line">    <span class="keyword">int</span> Top;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <ol>
-<li>
-<p>入栈</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span><span class="params">(Stack Ptrl,ElementType item)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Ptrl-&gt;Top==MaxSize)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;堆栈满&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        Ptrl-&gt;Data[++(Ptrl-&gt;Top)] = item;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>出栈</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">Pop</span><span class="params">(Stack PtrS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Ptrs-&gt;Top==<span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> Error;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (Ptrs-&gt;Data[(PtrS-&gt;Top)--]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li><p>入栈</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span><span class="params">(Stack Ptrl,ElementType item)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Ptrl-&gt;Top==MaxSize)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;堆栈满&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        Ptrl-&gt;Data[++(Ptrl-&gt;Top)] = item;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>出栈</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">Pop</span><span class="params">(Stack PtrS)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(Ptrs-&gt;Top==<span class="number">-1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> Error;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (Ptrs-&gt;Data[(PtrS-&gt;Top)--]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="堆栈的链式存储的实现">堆栈的链式存储的实现</h3>
-<p>栈的链式储存实际上就是一个单链表，叫做<strong>链栈</strong>，插入和删除操作只能在链栈的栈顶进行</p>
+<h3 id="堆栈的链式存储的实现"><a href="#堆栈的链式存储的实现" class="headerlink" title="堆栈的链式存储的实现"></a>堆栈的链式存储的实现</h3><p>栈的链式储存实际上就是一个单链表，叫做<strong>链栈</strong>，插入和删除操作只能在链栈的栈顶进行</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">Stack</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">SNode</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    ElementType Data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">Next</span>;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 <ol>
-<li>
-<p>堆栈的初始化</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Stack <span class="title">CreatStack</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Stack S;</span><br><span class="line">    S = (Stack)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct SNode));</span><br><span class="line">    S-&gt;Next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> S;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>判断栈空</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">IsEmpty</span><span class="params">(Stack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (S-&gt;Next == <span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>压栈</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span><span class="params">(ElementType item,Stack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">TmpCell</span>;</span></span><br><span class="line">    TmpCell = (struct SNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Struct SNode));</span><br><span class="line">    TmpCell-&gt;Element = item;</span><br><span class="line">    TmpCell-&gt;Next = S-&gt;Next;</span><br><span class="line">    S-&gt;Next = TmpCell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>出栈</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">Pop</span><span class="params">(Stack S)</span><span class="comment">//删除并返回栈顶元素</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">FirstCell</span>;</span></span><br><span class="line">    ElementType TopElem;</span><br><span class="line">    <span class="keyword">if</span>(IsEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        FirstCell = S-&gt;Next;</span><br><span class="line">        S-&gt;Next = FirstCell-&gt;Next;</span><br><span class="line">        TopElem = FirstCell-&gt;Element;</span><br><span class="line">        <span class="built_in">free</span>(FirstCell);</span><br><span class="line">        <span class="keyword">return</span> TopElem</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<li><p>堆栈的初始化</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Stack <span class="title">CreatStack</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Stack S;</span><br><span class="line">    S = (Stack)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct SNode));</span><br><span class="line">    S-&gt;Next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> S;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>判断栈空</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">IsEmpty</span><span class="params">(Stack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (S-&gt;Next == <span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>压栈</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Push</span><span class="params">(ElementType item,Stack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">TmpCell</span>;</span></span><br><span class="line">    TmpCell = (struct SNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Struct SNode));</span><br><span class="line">    TmpCell-&gt;Element = item;</span><br><span class="line">    TmpCell-&gt;Next = S-&gt;Next;</span><br><span class="line">    S-&gt;Next = TmpCell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>出栈</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">Pop</span><span class="params">(Stack S)</span><span class="comment">//删除并返回栈顶元素</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">SNode</span> *<span class="title">FirstCell</span>;</span></span><br><span class="line">    ElementType TopElem;</span><br><span class="line">    <span class="keyword">if</span>(IsEmpty(S))&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        FirstCell = S-&gt;Next;</span><br><span class="line">        S-&gt;Next = FirstCell-&gt;Next;</span><br><span class="line">        TopElem = FirstCell-&gt;Element;</span><br><span class="line">        <span class="built_in">free</span>(FirstCell);</span><br><span class="line">        <span class="keyword">return</span> TopElem</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="应用——后缀表达式">应用——后缀表达式</h3>
-<p>中缀表达式：运算符号位于两个运算数之间a+b<em>c-d/e<br>
-后缀表达式：运算符号位于两个运算数之后abc</em>+de/-</p>
-<h4 id="中缀表达式如何转换为后缀表达式">中缀表达式如何转换为后缀表达式</h4>
-<ul>
-<li>从头到尾读取<strong>中缀表达式的每个对象</strong>对不同对象按不同的情况处理
-<ul>
+<h3 id="应用——后缀表达式"><a href="#应用——后缀表达式" class="headerlink" title="应用——后缀表达式"></a>应用——后缀表达式</h3><p>中缀表达式：运算符号位于两个运算数之间a+b<em>c-d/e<br>后缀表达式：运算符号位于两个运算数之后abc</em>+de/-</p>
+<h4 id="中缀表达式如何转换为后缀表达式"><a href="#中缀表达式如何转换为后缀表达式" class="headerlink" title="中缀表达式如何转换为后缀表达式"></a>中缀表达式如何转换为后缀表达式</h4><ul>
+<li>从头到尾读取<strong>中缀表达式的每个对象</strong>对不同对象按不同的情况处理<ul>
 <li>运算数：直接输出</li>
 <li>左括号：压入堆栈</li>
 <li>右括号：将<strong>栈顶的运算符弹出并输出</strong>，<strong>直到遇到左括号</strong></li>
-<li>运算符
-<ul>
+<li>运算符<ul>
 <li>若<strong>优先级大于栈顶元素</strong>压栈</li>
 <li>若<strong>优先级小于等于栈顶运算符</strong>，将栈顶运算符弹出并输出，再比较新的运算符，直到该运算符大于栈顶运算符优先级</li>
 </ul>
@@ -428,10 +407,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="其他">其他</h4>
-<p>函数调用及递归实现<br>
-深度优先搜索<br>
-回溯算法</p>
+<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p>函数调用及递归实现<br>深度优先搜索<br>回溯算法</p>
 
     </div>
 
@@ -510,14 +486,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">37k</span>
+    <span title="站点总字数">44k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">33 分钟</span>
+    <span title="站点阅读时长">40 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

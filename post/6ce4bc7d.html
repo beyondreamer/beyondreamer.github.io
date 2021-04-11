@@ -25,20 +25,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"beyondreamer.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":null,"post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":"ture","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="Try to make anything that happens into something of value.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://beyondreamer.github.io/categories/index.html">
+<meta name="description" content="Array Java中的数组是一种引用数据类型，不属于基本数据类型，父类是Object 数组实际上是一个容器，可以用来容纳多个数据，数组是一组数据的集合 数组中可存放基本数据类型数据，也可存储引用数据类型 数组为引用类型，数组存储在堆中 数组中如果是Java对象的话，实际上存储的是对象的引用（内存地址），数组不能直接存储Java对象 数组一旦创建，长度不可变 数组的分类，包括一维数组，二维数组，多">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java进阶（八）数组">
+<meta property="og:url" content="http://beyondreamer.github.io/post/6ce4bc7d.html">
 <meta property="og:site_name" content="Beyondreamer">
-<meta property="og:description" content="Try to make anything that happens into something of value.">
+<meta property="og:description" content="Array Java中的数组是一种引用数据类型，不属于基本数据类型，父类是Object 数组实际上是一个容器，可以用来容纳多个数据，数组是一组数据的集合 数组中可存放基本数据类型数据，也可存储引用数据类型 数组为引用类型，数组存储在堆中 数组中如果是Java对象的话，实际上存储的是对象的引用（内存地址），数组不能直接存储Java对象 数组一旦创建，长度不可变 数组的分类，包括一维数组，二维数组，多">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-30T13:15:19.879Z">
-<meta property="article:modified_time" content="2021-03-30T13:15:19.879Z">
+<meta property="article:published_time" content="2021-04-04T11:59:44.000Z">
+<meta property="article:modified_time" content="2021-04-05T06:10:29.323Z">
 <meta property="article:author" content="Beyondreamer">
+<meta property="article:tag" content="JavaSE基础">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://beyondreamer.github.io/categories/">
+<link rel="canonical" href="http://beyondreamer.github.io/post/6ce4bc7d.html">
 
 
 <script class="page-configurations">
@@ -46,12 +47,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
-<title>分类 | Beyondreamer
-</title>
+<title>Java进阶（八）数组 | Beyondreamer</title>
   
 
 
@@ -176,7 +176,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -189,6 +189,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Array"><span class="nav-text">Array</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#main%E6%96%B9%E6%B3%95String-args%E6%95%B0%E7%BB%84"><span class="nav-text">main方法String[] args数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E6%B7%B1%E5%85%A5"><span class="nav-text">一维数组的深入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95"><span class="nav-text">常见算法</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -268,43 +269,189 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
   
   
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/6ce4bc7d.html">
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
 
-<h1 class="post-title" itemprop="name headline">分类
-</h1>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java进阶（八）数组
+        </h1>
 
-<div class="post-meta-container">
-</div>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-</header>
+      <time title="创建时间：2021-04-04 19:59:44" itemprop="dateCreated datePublished" datetime="2021-04-04T19:59:44+08:00">2021-04-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-05 14:10:29" itemprop="dateModified" datetime="2021-04-05T14:10:29+08:00">2021-04-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E8%BF%9B%E9%98%B6/" itemprop="url" rel="index"><span itemprop="name">Java进阶</span></a>
+        </span>
+    </span>
 
-      
-      
-      <div class="post-body"><div class="category-all-page">
-  <div class="category-all-title">
-    目前共计 5 个分类
-  </div>
-  <div class="category-all">
-    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaSE%E5%9F%BA%E7%A1%80/">JavaSE基础</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java%E5%9F%BA%E7%A1%80/">Java基础</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java%E8%BF%9B%E9%98%B6/">Java进阶</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/">Java集合框架</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="category-list-count">8</span></li></ul>
-  </div>
-</div>
-
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
       </div>
-      
-      
-      
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>767</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><ol>
+<li>Java中的数组是一种引用数据类型，不属于基本数据类型，父类是Object</li>
+<li>数组实际上是一个容器，可以用来容纳多个数据，数组是一组数据的集合</li>
+<li>数组中可存放基本数据类型数据，也可存储引用数据类型</li>
+<li>数组为引用类型，数组存储在堆中</li>
+<li>数组中如果是Java对象的话，实际上存储的是对象的引用（内存地址），数组不能直接存储Java对象</li>
+<li>数组一旦创建，长度不可变</li>
+<li>数组的分类，包括一维数组，二维数组，多维数组</li>
+<li>所有的数组对象都要length属性（Java自带）用来获取数组中元素个数</li>
+<li>Java中的数组要求数据元素类型统一</li>
+<li>数组在内存存储的时候，内存地址是连续的</li>
+<li>数组中首元素的内存地址，作为所有元素的内存地址</li>
+<li>数组下标从0开始</li>
+<li>数组的优缺点<ol>
+<li>优点<ul>
+<li>查找查询某个下标元素时，效率最高<ul>
+<li>每一个元素的内存地址在存储上市连续的</li>
+<li>每一个元素类型相同，占用空间大小一样</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>随机增删元素效率较低</li>
+</ul>
+</li>
+<li>对最后一个数据修改无影响</li>
+</ol>
+</li>
+</ol>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><pre><code>int[] array
+</code></pre>
+<ol>
+<li>怎么初始化一个数组<ul>
+<li>静态初始化数组</li>
+<li><code>int[] array = &#123;1&#125;</code></li>
+<li>动态初始化数组</li>
+<li><code>int[] array = new int [2]//每个元素默认初始为null</code></li>
+</ul>
+</li>
+<li>一维数组怎么遍历<ul>
+<li>for(int i=0;i&lt;a.length-1;i++)</li>
+</ul>
+</li>
+</ol>
+<h2 id="main方法String-args数组"><a href="#main方法String-args数组" class="headerlink" title="main方法String[] args数组"></a>main方法String[] args数组</h2><ol>
+<li>用户可以在控制台上输出参数，直接控制String，</li>
+<li><code>java a abc def xyz</code>JVM自动将abc def xyz通过空格方式进行分离，存入args中</li>
+</ol>
+<h2 id="一维数组的深入"><a href="#一维数组的深入" class="headerlink" title="一维数组的深入"></a>一维数组的深入</h2><ol>
+<li>数组中存储引用数据类型</li>
+</ol>
+<p><code>Animal a = &#123;new Cat(),new Bird()&#125;;</code></p>
+<p>父类数组存放子类元素<br>2. 关于一维数组的扩容</p>
+<ul>
+<li>在Java中数组扩容，先新建一个大容量的数组，然后原数组元素拷贝到新数组中</li>
+<li>数组扩容效率较低</li>
+<li><code>System.arraycopy(5个参数与)</code></li>
+</ul>
+<h2 id="常见算法"><a href="#常见算法" class="headerlink" title="常见算法"></a>常见算法</h2><ol>
+<li>排序算法</li>
+<li>查找算法</li>
+</ol>
+
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag"><i class="fa fa-tag"></i> JavaSE基础</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/post/7d48a3a6.html" rel="prev" title="Java进阶（七）内部类">
+                  <i class="fa fa-chevron-left"></i> Java进阶（七）内部类
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/post/1f9f4785.html" rel="next" title="Java进阶（九）常用类">
+                  Java进阶（九）常用类 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 
