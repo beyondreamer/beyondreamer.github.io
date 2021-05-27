@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"beyondreamer.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":null,"post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":"ture","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="基础算法模拟 暴力枚举 搜索剪枝 二分，三分 贪心 倍增 构造 前缀和，差分 递归和分治">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ACM学习笔记——基础算法">
+<meta property="og:url" content="http://beyondreamer.github.io/post/6254c32e.html">
+<meta property="og:site_name" content="Beyondreamer">
+<meta property="og:description" content="基础算法模拟 暴力枚举 搜索剪枝 二分，三分 贪心 倍增 构造 前缀和，差分 递归和分治">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-15T11:43:45.000Z">
+<meta property="article:modified_time" content="2021-04-15T23:37:18.423Z">
+<meta property="article:author" content="Beyondreamer">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://beyondreamer.github.io/post/6254c32e.html">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>ACM学习笔记——基础算法 | Beyondreamer</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Beyondreamer</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Just a nerd</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95"><span class="nav-text">基础算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E6%8B%9F"><span class="nav-text">模拟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9A%B4%E5%8A%9B%E6%9E%9A%E4%B8%BE"><span class="nav-text">暴力枚举</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95"><span class="nav-text">搜索算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DFS%EF%BC%88%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%EF%BC%89"><span class="nav-text">DFS（深度优先搜索）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%89%AA%E6%9E%9D%E6%80%9D%E8%B7%AF"><span class="nav-text">剪枝思路</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%88%86"><span class="nav-text">二分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%AA%E5%BF%83"><span class="nav-text">贪心</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%80%8D%E5%A2%9E"><span class="nav-text">倍增</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0"><span class="nav-text">构造</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E7%BC%80%E5%92%8C"><span class="nav-text">前缀和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%AE%E5%88%86"><span class="nav-text">差分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E5%92%8C%E5%88%86%E6%B2%BB"><span class="nav-text">递归和分治</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%92%E5%BD%92"><span class="nav-text">递归</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%B2%BB"><span class="nav-text">分治</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Beyondreamer"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Beyondreamer</p>
+  <div class="site-description" itemprop="description">Try to make anything that happens into something of value.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JleW9uZHJlYW1lcg==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;beyondreamer"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=549800502&auto=1&height=66"></iframe>
+
+      
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+        <h3 class="widget-title"></h3>
+        <div id="myCanvasContainer" class="widget tagcloud">
+        <canvas width="250" height="250" id="resCanvas" style="width=100%">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag">JavaSE基础</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" rel="tag">Java集合框架</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">8</span></li></ul>
+        </canvas>
+        </div>
+        </div>
+      
+        <div class="back-to-top animated" role="button">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL2JleW9uZHJlYW1lcg==" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/6254c32e.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ACM学习笔记——基础算法
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-15 19:43:45" itemprop="dateCreated datePublished" datetime="2021-04-15T19:43:45+08:00">2021-04-15</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-16 07:37:18" itemprop="dateModified" datetime="2021-04-16T07:37:18+08:00">2021-04-16</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="基础算法"><a href="#基础算法" class="headerlink" title="基础算法"></a>基础算法</h2><p>模拟</p>
+<p>暴力枚举</p>
+<p>搜索剪枝</p>
+<p>二分，三分</p>
+<p>贪心</p>
+<p>倍增</p>
+<p>构造</p>
+<p>前缀和，差分</p>
+<p>递归和分治</p>
+<h3 id="模拟"><a href="#模拟" class="headerlink" title="模拟"></a>模拟</h3><ul>
+<li><p>按照题意模拟做一遍</p>
+</li>
+<li><p>模拟题目通常具有码量大、操作多、思路复杂的特点。并且由于码量大，会导致很难查错，如果在比赛中写错是相当浪费时间</p>
+</li>
+<li><p>建议</p>
+<ul>
+<li>在动手写代码之前，在草稿纸上尽可能地写好要实现的流程</li>
+<li>在代码中，尽量把每个部分模块化、写成函数、结构体或类</li>
+<li>对于一些可能重复用到的概念，可以统一转化，方便处理，如某题给“YY-MM-DD”把它扔到一个函数处理成秒，会减少概念混淆</li>
+<li>调试时分块调试，模块化的好处就是可以方便的单独调某一部分</li>
+<li>写代码时一定要思路清晰，不要想到什么写什么，要按照落在纸上的步骤写</li>
+</ul>
+</li>
+<li><p>小技巧：面对数据写题，简化思路</p>
+</li>
+</ul>
+<h3 id="暴力枚举"><a href="#暴力枚举" class="headerlink" title="暴力枚举"></a>暴力枚举</h3><ul>
+<li>暴力算法（brute force）</li>
+<li>对于一个问题，其所有可能的解都去尝试一遍，总有一个解是答案</li>
+<li>效率低下，适用于数据范围较小的题目</li>
+<li>有的题可以利用暴力枚举来寻找规律，还可以用暴力来进行小数据对拍来确定其他算法的正确性</li>
+</ul>
+<h3 id="搜索算法"><a href="#搜索算法" class="headerlink" title="搜索算法"></a>搜索算法</h3><ul>
+<li>搜索算法是利用计算机的高性能来有目的的穷举一个问题解空间的部分或所有的可能情况，从而求出问题的解的一种方法。</li>
+<li>现阶段一般有<ul>
+<li>枚举算法、</li>
+<li>深度优先搜索、</li>
+<li>广度优先搜索、</li>
+<li>A*算法、</li>
+<li>回溯算法、</li>
+<li>蒙特卡洛树搜索、</li>
+<li>散列函数等算法。</li>
+</ul>
+</li>
+<li>在大规模实验环境中，<ul>
+<li>通常通过在搜索前，根据条件降低搜索规模；</li>
+<li>根据问题的约束条件进行剪枝；</li>
+<li>利用搜索过程中的中间解，避免重复计算这几种方法进行优化。</li>
+</ul>
+</li>
+</ul>
+<h4 id="DFS（深度优先搜索）"><a href="#DFS（深度优先搜索）" class="headerlink" title="DFS（深度优先搜索）"></a>DFS（深度优先搜索）</h4><ul>
+<li><p>DFS（Depth First Search）用于遍历或搜索树或图的算法。每次尝试往更深的节点走</p>
+</li>
+<li><p>最显著的特征是<strong>递归调用自身</strong>。同时与BFS类似，DFS会对其访问过的点打商标及，在遍历图是跳过已打过标记的点，以确保<strong>每个点仅访问一次</strong></p>
+</li>
+<li><p>```c++<br>bool check(参数)<br>{</p>
+<pre><code>if(满足条件)return 1;
+return 0;
+</code></pre>
+<p>}<br>void dfs(int dep,参数)<br>{</p>
+<pre><code>if(边界判断)
+&#123;
+    对应操作;
+    return;
+&#125;
+for(枚举每种可能)
+&#123;
+    if(check())
+    &#123;
+        标记;
+        dfs(dep+1,参数);
+        标记还原;
+    &#125;
+&#125;
+其他操作;
+</code></pre>
+<p>}</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### BFS（广度优先搜索）</span><br><span class="line"></span><br><span class="line">- BFS（Breadth First Search）</span><br><span class="line"></span><br><span class="line">- 每次尝试访问同一层的节点。同一层的访问完了，就访问下一层的节点。</span><br><span class="line"></span><br><span class="line">- BFS找到的路径时从起点开始**最短合法路径**。</span><br><span class="line"></span><br><span class="line">- ```c++</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">bfs</span><span class="params">(参数)</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">      queue&lt;<span class="keyword">int</span>&gt;q;</span><br><span class="line">      <span class="keyword">bool</span> visited[];<span class="comment">//标记数组</span></span><br><span class="line">      <span class="keyword">int</span> u,v;</span><br><span class="line">      q.<span class="built_in">push</span>(起点);</span><br><span class="line">      visited[起点] = <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">while</span>(!q.<span class="built_in">empty</span>())</span><br><span class="line">      &#123;</span><br><span class="line">          u = q.<span class="built_in">front</span>();q.<span class="built_in">pop</span>();</span><br><span class="line">          <span class="function"><span class="keyword">for</span> each <span class="title">edge</span><span class="params">(u,v)</span></span></span><br><span class="line"><span class="function">          </span>&#123;</span><br><span class="line">              <span class="keyword">if</span>(!visited[v])</span><br><span class="line">              &#123;</span><br><span class="line">                  对应操作;</span><br><span class="line">                  q.<span class="built_in">push</span>(v);</span><br><span class="line">                  visited[v] = <span class="number">1</span>;</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>小技巧</p>
+</li>
+<li><p>方向数组</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1左2上3右4下</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> fx[<span class="number">5</span>] = &#123;<span class="number">0</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> fy[<span class="number">5</span>] = &#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">-1</span>&#125;;</span><br></pre></td></tr></table></figure></li>
+<li><p>```c++<br>ans[];<br>memset(ans,0x3f3f3f3f,sizeof(ans));<br>memset(ans,0,sizeof(ans));<br>#define INF 1e9<br>const int INF = 1e9;<br>for(int i=0;i&lt;n;i++)ans[i] = INF;</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#### 搜索剪枝</span></span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> 记忆化搜索</span><br><span class="line"></span><br><span class="line">   - 在搜索时，第二次进入某个节点时，节点的答案已经知道，直接将其判掉，提高效率</span><br><span class="line"></span><br><span class="line">   - 使用时要注意是否后续操作会改变已经到达的点的答案，若不改变则可使用，若改变则记忆化搜索错误</span><br><span class="line"></span><br><span class="line">   - ```c++</span><br><span class="line">     <span class="function"><span class="built_in">bool</span> <span class="title">check</span>(<span class="params">参数</span>)</span></span><br><span class="line"><span class="function"></span>     &#123;</span><br><span class="line">         <span class="keyword">if</span>(满足条件)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">         <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="function"><span class="keyword">void</span> <span class="title">dfs</span>(<span class="params"><span class="built_in">int</span> dep,参数</span>)</span></span><br><span class="line"><span class="function"></span>     &#123;</span><br><span class="line">         <span class="keyword">if</span>(边界判断)</span><br><span class="line">         &#123;</span><br><span class="line">             对应操作;</span><br><span class="line">             <span class="keyword">return</span>;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">if</span>(状态已经达到过)<span class="keyword">return</span>;</span><br><span class="line">         记录当前状态已经到达;</span><br><span class="line">         <span class="keyword">for</span>(枚举每种可能)</span><br><span class="line">         &#123;</span><br><span class="line">             <span class="keyword">if</span>(check())</span><br><span class="line">             &#123;</span><br><span class="line">                 标记;</span><br><span class="line">                 dfs(dep+<span class="number">1</span>,参数);</span><br><span class="line">                 标记还原;</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">         其他操作;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="2">
+<li><p>最优性剪枝</p>
+<ul>
+<li><p>当前解已经比已有解差时仍在搜索，判断当前解是否已经差于已有解</p>
+</li>
+<li><p>使用时要注意使用当前糟糕会导致以后一直糟糕，若当前糟糕以后不一定糟糕，则最优性剪枝错误</p>
+</li>
+<li><p>```c++<br>bool check(参数)<br>{</p>
+<pre><code>if(满足条件)return 1;
+return 0;
+</code></pre>
+<p>}<br>void dfs(int dep,参数)<br>{</p>
+<pre><code>if(当前值已经比当前答案还要糟糕)return;
+if(边界判断)
+&#123;
+    对应操作;
+    return;
+&#125;
+for(枚举每种可能)
+&#123;
+    if(check())
+    &#123;
+        标记;
+        dfs(dep+1,参数);
+        标记还原;
+    &#125;
+&#125;
+其他操作;
+</code></pre>
+<p>}</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">3.</span> 可行性剪枝</span><br><span class="line"></span><br><span class="line">   - 在搜索中如果当前解已经不可用了还运行，也是搜索中导致运行慢的原因</span><br><span class="line"></span><br><span class="line">   - 使用时要注意是否当前不可用而之后突然可用，若如此，则可行性剪枝错误</span><br><span class="line"></span><br><span class="line">   - ```c++</span><br><span class="line">     <span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(参数)</span></span></span><br><span class="line"><span class="function">     </span>&#123;</span><br><span class="line">         <span class="keyword">if</span>(满足条件)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">         <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> dep,参数)</span></span></span><br><span class="line"><span class="function">     </span>&#123;</span><br><span class="line">         <span class="keyword">if</span>(当前值已不满足题意)<span class="keyword">return</span>;</span><br><span class="line">         <span class="keyword">if</span>(边界判断)</span><br><span class="line">         &#123;</span><br><span class="line">             对应操作;</span><br><span class="line">             <span class="keyword">return</span>;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">for</span>(枚举每种可能)</span><br><span class="line">         &#123;</span><br><span class="line">             <span class="keyword">if</span>(<span class="built_in">check</span>())</span><br><span class="line">             &#123;</span><br><span class="line">                 标记;</span><br><span class="line">                 <span class="built_in">dfs</span>(dep+<span class="number">1</span>,参数);</span><br><span class="line">                 标记还原;</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">         其他操作;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h4 id="剪枝思路"><a href="#剪枝思路" class="headerlink" title="剪枝思路"></a>剪枝思路</h4><ol>
+<li>极端法：考虑极端情况，如果最极端（最理想）的情况都无法满足，那么肯定实际情况搜出来的结果不会更优了</li>
+<li>调整法：通过对子树的比较，减掉重复子树和明显不是最有前途的子树</li>
+<li>数学方法：比如图论中借助连通分量，数论中借助模方程的分析，借助不等式放缩来估计下界</li>
+</ol>
+<h3 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h3><ul>
+<li><p>效率为O(log n)</p>
+</li>
+<li><p>```c++<br>int l,r,mid;<br>//答案在l上<br>while(l&lt;r)<br>{</p>
+<pre><code>mid = (l+r+1)&gt;&gt;1;//注意细节防止死循环
+if(check(mid))l = mid;
+else r = mid-1;
+</code></pre>
+<p>}<br>//答案在r上<br>while(l&lt;r)<br>{</p>
+<pre><code>mid = l+r&gt;&gt;1;
+if(check(mid))r=mid;
+else l = mid+1;
+</code></pre>
+<p>}</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">-<span class="ruby"> STL的二分查找</span></span><br><span class="line"><span class="ruby">  - 对于一个有序的数组</span></span><br><span class="line"><span class="ruby">  - lower_bound()来找到一个大于等于你的值的数</span></span><br><span class="line"><span class="ruby">  - upper_bound()来找到第一个大于你的值的数</span></span><br><span class="line"><span class="ruby">  - 注意必须是有序数组，否则将会出错</span></span><br><span class="line"></span><br><span class="line"><span class="ruby"><span class="comment">##### 三分</span></span></span><br><span class="line"></span><br><span class="line"><span class="ruby">- 三分可以寻找单峰函数的最大（小）值</span></span><br><span class="line"></span><br><span class="line"><span class="ruby">- <span class="string">``</span><span class="string">`c++</span></span></span><br><span class="line"><span class="ruby">  lmid = l+(r-l&gt;&gt;<span class="number">1</span>);</span></span><br><span class="line"><span class="ruby">  rmid = lmid+(r-lmid&gt;&gt;<span class="number">1</span>);<span class="regexp">//</span>对右侧区间取半</span></span><br><span class="line"><span class="ruby">  <span class="keyword">if</span>(cal(lmid)&gt;cal(rmid))r = rmid;</span></span><br><span class="line"><span class="ruby">  <span class="keyword">else</span> l = lmid;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>如果lmid和rmid在最大值的同一侧：那么由于单调性，一定是二者中较大的那个离最值近一些，较远的那个点对应的区间不可能包含最值，所以可以舍弃</p>
+</li>
+<li><p>如果在两侧：由于最值在二者中间，我们舍弃两侧的一个区间后，也不会影响最值，所以可以舍弃</p>
+</li>
+</ul>
+<h3 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h3><ul>
+<li>贪心算法——只看眼前，并不考虑以后可能造成的影响</li>
+</ul>
+<h3 id="倍增"><a href="#倍增" class="headerlink" title="倍增"></a>倍增</h3><ul>
+<li>RMQ（区间最值问题）</li>
+<li>LCA（最近公共祖先）</li>
+<li>复杂度是O(log)级别的可以优化效率</li>
+</ul>
+<h3 id="构造"><a href="#构造" class="headerlink" title="构造"></a>构造</h3><ul>
+<li>问题的答案往往具有某种规律性，使得在问题规模迅速增大的时候，仍然有机会比较容易地得到答案</li>
+<li>这要求我们在解题时，要思考问题规模增长对答案的影响，这种影响是否可以推广。（比如在设计动态规划方法的时候，要考虑从一个状态到后继状态的转移会造成什么影响）</li>
+<li>高自由度，构造方式可以有很多种。</li>
+</ul>
+<h3 id="前缀和"><a href="#前缀和" class="headerlink" title="前缀和"></a>前缀和</h3><ul>
+<li><p>前缀和是一种重要的预处理，能大大降低查询的时间复杂度。我们可以简单理解为“数列的前n项和”</p>
+</li>
+<li><p>实际上，前缀和不局限于一维数组，二维三维都可以前缀和</p>
+</li>
+<li><pre><code class="c++">for(int i=0;i&lt;n;i++)
+&#123;
+    cin&gt;&gt;a[i];
+    s[i]+=a[i]+s[i-1];
+&#125;
+</code></pre>
+</li>
+<li><p>大多数前缀和都是基于容斥原理——在数论部分</p>
+</li>
+</ul>
+<h3 id="差分"><a href="#差分" class="headerlink" title="差分"></a>差分</h3><ul>
+<li>差分是一种和前缀和相对的策略</li>
+<li>这种策略是，令bi = ai-ai-1,即相邻两数的差</li>
+<li>易得对这个序列做一遍前缀和就得到了原来的a序列</li>
+<li>它可以维护多次对序列的一个区间加上一个数，并在最后询问某一位的数或是多次询问某一位的数</li>
+<li>例题：给定一个序列a，有k次操作，每次操作给[li,ri]加上一个数vi，最后问操作完后的序列长什么样<ul>
+<li>对a进行差分</li>
+<li>每次操作相当于对ali += vi，ari+1 -=vi</li>
+<li>这样我们就可以以O(1)完成对序列的修改</li>
+<li>最后再对序列a做一个前缀和，就将a恢复原状</li>
+</ul>
+</li>
+</ul>
+<h3 id="递归和分治"><a href="#递归和分治" class="headerlink" title="递归和分治"></a>递归和分治</h3><ul>
+<li>递归、分治、动态规划、贪心的区别</li>
+<li>递归：一种编程技巧，一种解决问题的思维方式</li>
+<li>分治和动态规划：很大程度上是递归思想基础上的（虽然实现动态规划大都不上递归了）</li>
+<li>贪心：是动态规划的一个子集，可以更高效解决一部分更特殊的问题</li>
+</ul>
+<h4 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h4><ul>
+<li>递归——我们只需要关注如何把原文太划分成符合条件的子问题，而不需要去研究这个子问题是如何被解决的</li>
+<li>递归的两个特征：结束条件和自我调用</li>
+<li>自我调用是在解决子问题，而结束条件定义了最简子问题的答案</li>
+</ul>
+<h3 id="分治"><a href="#分治" class="headerlink" title="分治"></a>分治</h3><ul>
+<li>分治的例子——归并排序</li>
+<li><ol>
+<li>分解原问题为结构相同的子问题</li>
+<li>分解到某个容易求解的边界之后，进行递归求解</li>
+<li>将子问题的解合并成原问题的解</li>
+</ol>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/post/e94c5315.html" rel="prev" title="Java集合框架Set">
+                  <i class="fa fa-chevron-left"></i> Java集合框架Set
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/post/417ae8e6.html" rel="next" title="ACM学习笔记——基础数据结构">
+                  ACM学习笔记——基础数据结构 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">by beyondreamer</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">50k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">45 分钟</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+  <script>
+    NProgress.configure({
+      showSpinner: true
+    });
+    NProgress.start();
+    document.addEventListener('readystatechange', () => {
+      if (document.readyState === 'interactive') {
+        NProgress.inc(0.8);
+      }
+      if (document.readyState === 'complete') {
+        NProgress.done();
+      }
+    });
+    document.addEventListener('pjax:send', () => {
+      NProgress.start();
+    });
+    document.addEventListener('pjax:success', () => {
+      NProgress.done();
+    });
+  </script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'all'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+</body>
+</html>

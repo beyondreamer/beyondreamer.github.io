@@ -25,20 +25,20 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"beyondreamer.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.2.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":null,"post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":"ture","trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="Life DesigningWhat’s the most interesting design problem?I think it&#39;s your life. As this life of yours, this amazing design of yours unfolds.   Designing ThinkingDesigning thinking is a set of min">
+<meta name="description" content="什么是堆 优先队列（Priority Queue）：特殊的“队列”，取出元素的顺序是依照元素的优先权（关键字）大小，而不是元素进入队列的先后顺序。  堆的两个特性  结构性：用数组表示的完全二叉树； 有序性：任一结点的关键字是其子树所有结点的最大值(或最小值)   “最大堆(MaxHeap)”,也称“大顶堆”：最大值 “最小堆(MinHeap)”,也称“小顶堆” ：最小值      堆的抽象数据类">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Future Plan">
-<meta property="og:url" content="http://beyondreamer.github.io/post/16234.html">
+<meta property="og:title" content="数据结构笔记（九）堆">
+<meta property="og:url" content="http://beyondreamer.github.io/post/3d5074f5.html">
 <meta property="og:site_name" content="Beyondreamer">
-<meta property="og:description" content="Life DesigningWhat’s the most interesting design problem?I think it&#39;s your life. As this life of yours, this amazing design of yours unfolds.   Designing ThinkingDesigning thinking is a set of min">
+<meta property="og:description" content="什么是堆 优先队列（Priority Queue）：特殊的“队列”，取出元素的顺序是依照元素的优先权（关键字）大小，而不是元素进入队列的先后顺序。  堆的两个特性  结构性：用数组表示的完全二叉树； 有序性：任一结点的关键字是其子树所有结点的最大值(或最小值)   “最大堆(MaxHeap)”,也称“大顶堆”：最大值 “最小堆(MinHeap)”,也称“小顶堆” ：最小值      堆的抽象数据类">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-01T11:10:42.000Z">
-<meta property="article:modified_time" content="2021-04-08T11:08:27.310Z">
+<meta property="article:published_time" content="2021-04-26T07:07:25.000Z">
+<meta property="article:modified_time" content="2021-05-27T11:25:59.556Z">
 <meta property="article:author" content="Beyondreamer">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://beyondreamer.github.io/post/16234.html">
+<link rel="canonical" href="http://beyondreamer.github.io/post/3d5074f5.html">
 
 
 <script class="page-configurations">
@@ -50,7 +50,7 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>Future Plan | Beyondreamer</title>
+<title>数据结构笔记（九）堆 | Beyondreamer</title>
   
 
 
@@ -188,7 +188,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Life-Designing"><span class="nav-text">Life Designing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#What%E2%80%99s-the-most-interesting-design-problem"><span class="nav-text">What’s the most interesting design problem?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Designing-Thinking"><span class="nav-text">Designing Thinking</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Questions-Not-Appropriate"><span class="nav-text">Questions Not Appropriate</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Connecting-Dots"><span class="nav-text">Connecting Dots</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Designing-The-Future"><span class="nav-text">Designing The Future</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Accepting-The-Gravity-Problem"><span class="nav-text">Accepting The Gravity Problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#You-Could-Have-Many-Lives-In-Parallel"><span class="nav-text">You Could Have Many Lives In Parallel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ideal-Three-Of-You"><span class="nav-text">Ideal Three Of You</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-If-I-Try-This"><span class="nav-text">What If I Try This</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-Do-You-Know-When-You-Know-You-Know"><span class="nav-text">How Do You Know When You Know You Know</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%A0%86"><span class="nav-text">什么是堆</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A0%86%E7%9A%84%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%8F%8F%E8%BF%B0"><span class="nav-text">堆的抽象数据类型描述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%A4%A7%E5%A0%86%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-text">最大堆的操作</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -204,7 +204,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -242,7 +242,7 @@
         <h3 class="widget-title"></h3>
         <div id="myCanvasContainer" class="widget tagcloud">
         <canvas width="250" height="250" id="resCanvas" style="width=100%">
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag">JavaSE基础</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" rel="tag">Java集合框架</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">8</span></li></ul>
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag">JavaSE基础</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" rel="tag">Java集合框架</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">8</span></li></ul>
         </canvas>
         </div>
         </div>
@@ -279,7 +279,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/16234.html">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/3d5074f5.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -292,7 +292,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Future Plan
+          数据结构笔记（九）堆
         </h1>
 
         <div class="post-meta-container">
@@ -303,14 +303,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-04-01 19:10:42" itemprop="dateCreated datePublished" datetime="2021-04-01T19:10:42+08:00">2021-04-01</time>
+      <time title="创建时间：2021-04-26 15:07:25" itemprop="dateCreated datePublished" datetime="2021-04-26T15:07:25+08:00">2021-04-26</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-04-08 19:08:27" itemprop="dateModified" datetime="2021-04-08T19:08:27+08:00">2021-04-08</time>
+        <time title="修改时间：2021-05-27 19:25:59" itemprop="dateModified" datetime="2021-05-27T19:25:59+08:00">2021-05-27</time>
       </span>
 
   
@@ -328,7 +328,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
+      <span>893</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -346,48 +346,42 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="Life-Designing"><a href="#Life-Designing" class="headerlink" title="Life Designing"></a>Life Designing</h2><h3 id="What’s-the-most-interesting-design-problem"><a href="#What’s-the-most-interesting-design-problem" class="headerlink" title="What’s the most interesting design problem?"></a>What’s the most interesting design problem?</h3><pre><code>I think it&#39;s your life. As this life of yours, this amazing design of yours unfolds.
+        <h2 id="什么是堆"><a href="#什么是堆" class="headerlink" title="什么是堆"></a>什么是堆</h2><ul>
+<li><p>优先队列（Priority Queue）：特殊的“队列”，取出元素的顺序是依照元素的优先权（关键字）大小，而不是元素进入队列的先后顺序。</p>
+</li>
+<li><p>堆的两个特性</p>
+<ul>
+<li>结构性：用数组表示的完全二叉树；</li>
+<li>有序性：任一结点的关键字是其子树所有结点的最大值(或最小值) <ul>
+<li> “最大堆(MaxHeap)”,也称“大顶堆”：最大值</li>
+<li>“最小堆(MinHeap)”,也称“小顶堆” ：最小值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="堆的抽象数据类型描述"><a href="#堆的抽象数据类型描述" class="headerlink" title="堆的抽象数据类型描述"></a>堆的抽象数据类型描述</h2><ul>
+<li><strong>类型名称</strong>：最大堆（MaxHeap）</li>
+<li><strong>数据对象集</strong>：完全二叉树，每个结点的元素值不小于其子结点的元素值</li>
+<li><strong>操作集</strong>：最大堆H：MaxHeap，元素item ：ElementType，主要操作有：</li>
+<li><code>MaxHeap Create(int MaxSize)</code>：创建一个空的最大堆。</li>
+<li><code>Boolean IsFull(MaxHeap H)</code>：判断最大堆H是否已满。</li>
+<li><code>Insert(MaxHeap H,ElementType item)</code>：将元素item插入最大堆H。 </li>
+<li><code>Boolean IsEmpty(MaxHeap H)</code>：判断最大堆H是否为空。</li>
+<li><code>ElementType DeleteMax( MaxHeap H )</code>：返回H中最大元素(高优先级)。</li>
+</ul>
+<h3 id="最大堆的操作"><a href="#最大堆的操作" class="headerlink" title="最大堆的操作"></a>最大堆的操作</h3><ul>
+<li><p>最大堆的创建</p>
+</li>
+<li><p>```c<br>typedef struct HeapStruct *MaxHeap;<br>struct HeapStruct {</p>
+<pre><code>ElementType *Elements; /* 存储堆元素的数组 */
+int Size; /* 堆的当前元素个数 */
+int Capacity; /* 堆的最大容量 */
 </code></pre>
-<span id="more"></span>
-<h2 id="Designing-Thinking"><a href="#Designing-Thinking" class="headerlink" title="Designing Thinking"></a>Designing Thinking</h2><pre><code>Designing thinking is a set of mindsets. Reality has the tendency to throw little things at us that we weren&#39;t expecting. Some of them are good, some are not.
-</code></pre>
-<h2 id="Questions-Not-Appropriate"><a href="#Questions-Not-Appropriate" class="headerlink" title="Questions Not Appropriate"></a>Questions Not Appropriate</h2><pre><code>What&#39;s your passion?
-    It brings up to me the movie *Soul*.
-You should know where you&#39;re going by now.
-    But what exactly are you late for?
-Are you being the best possible version of you?
-    Life is anything but linear.
-</code></pre>
-<h3 id="Connecting-Dots"><a href="#Connecting-Dots" class="headerlink" title="Connecting Dots"></a>Connecting Dots</h3><pre><code>1. Who you are?
-
-2. What you believe?
-
-3. What you do?
-</code></pre>
-<h2 id="Designing-The-Future"><a href="#Designing-The-Future" class="headerlink" title="Designing The Future"></a>Designing The Future</h2><h3 id="Accepting-The-Gravity-Problem"><a href="#Accepting-The-Gravity-Problem" class="headerlink" title="Accepting The Gravity Problem"></a>Accepting The Gravity Problem</h3><pre><code>You can&#39;t solve a problem you&#39;re not willing to have.
-</code></pre>
-<h3 id="You-Could-Have-Many-Lives-In-Parallel"><a href="#You-Could-Have-Many-Lives-In-Parallel" class="headerlink" title="You Could Have Many Lives In Parallel"></a>You Could Have Many Lives In Parallel</h3><pre><code>It&#39;s what you choose in life that makes you happy
-</code></pre>
-<h3 id="Ideal-Three-Of-You"><a href="#Ideal-Three-Of-You" class="headerlink" title="Ideal Three Of You"></a>Ideal Three Of You</h3><pre><code>1. Your life is getting better.
-
-2. Back up plan
-
-3. Wild-card plan
-</code></pre>
-<h3 id="What-If-I-Try-This"><a href="#What-If-I-Try-This" class="headerlink" title="What If I Try This"></a>What If I Try This</h3><pre><code>1. The future is already here it&#39;s just unevenly distributed
-
-2. There are someone else in the world who is doing what I like. They are living in my future now.
-
-3. I&#39;m going to sneak up on the future because I don&#39;t know if this is exactly what I want.
-</code></pre>
-<h3 id="How-Do-You-Know-When-You-Know-You-Know"><a href="#How-Do-You-Know-When-You-Know-You-Know" class="headerlink" title="How Do You Know When You Know You Know"></a>How Do You Know When You Know You Know</h3><pre><code>1. Pay attention to what you&#39;re doing and keep your perpheral vision open.
-
-2. When you have too many choices you have no choice.
-
-3. You won&#39;t decide how you feel about the decision till the decision is made.
-
-4. Wanting what you get not getting what you want.
-</code></pre>
+<p>};</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ```c</span><br><span class="line">  <span class="function">MaxHeap <span class="title">Create</span><span class="params">( <span class="keyword">int</span> MaxSize )</span></span></span><br><span class="line"><span class="function">  </span>&#123; 	<span class="comment">/* 创建容量为MaxSize的空的最大堆 */</span></span><br><span class="line">  	MaxHeap H = <span class="built_in">malloc</span>( <span class="built_in"><span class="keyword">sizeof</span></span>( struct HeapStruct ) );</span><br><span class="line">  	H-&gt;Elements = <span class="built_in">malloc</span>( (MaxSize+<span class="number">1</span>) * <span class="built_in"><span class="keyword">sizeof</span></span>(ElementType));</span><br><span class="line">  	H-&gt;Size = <span class="number">0</span>;</span><br><span class="line">  	H-&gt;Capacity = MaxSize; H-&gt;Elements[<span class="number">0</span>] = MaxData; </span><br><span class="line">   	<span class="comment">/* 定义“哨兵”为大于堆中所有可能元素的值，便于以后更快操作 */</span></span><br><span class="line">  	<span class="keyword">return</span> H;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
+<li></li>
+</ul>
 
     </div>
 
@@ -401,14 +395,11 @@ Are you being the best possible version of you?
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/post/16107.html" rel="prev" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
+                <a href="/post/da36b6b0.html" rel="prev" title="算法学习——动态规划">
+                  <i class="fa fa-chevron-left"></i> 算法学习——动态规划
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/post/7d48a3a6.html" rel="next" title="Java进阶（七）内部类">
-                  Java进阶（七）内部类 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -463,14 +454,14 @@ Are you being the best possible version of you?
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">44k</span>
+    <span title="站点总字数">50k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">40 分钟</span>
+    <span title="站点阅读时长">45 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
