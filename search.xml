@@ -683,6 +683,166 @@ else l = mid+1;
       </tags>
   </entry>
   <entry>
+    <title>typora</title>
+    <url>/post/dabb0af1.html</url>
+    <content><![CDATA[<h1 id="意外发现神器Typora"><a href="#意外发现神器Typora" class="headerlink" title="意外发现神器Typora"></a>意外发现神器Typora</h1><h2 id="标题的使用"><a href="#标题的使用" class="headerlink" title="标题的使用"></a>标题的使用</h2><p>快捷键：Ctrl+数字</p>
+<h2 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h2><p><code>\&lt;center\&gt;居中的文本内容\&lt;/center\&gt;</code></p>
+<p>注：Typora目前并不会直接预览居中效果——相应的效果只有输出文本的时候才会显现。</p>
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p><code>&lt;u&gt;下划线的内容&lt;\u&gt; 或者快捷键Ctrl+U</code></p>
+<p><u>下划线的内容或者快捷键Ctrl+U</u></p>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p><code>~~删除线的内容~~</code></p>
+<p><del>删除线的内容</del></p>
+<h2 id="字体加粗"><a href="#字体加粗" class="headerlink" title="字体加粗"></a>字体加粗</h2><p><code>**加粗字体** 或者快捷键Ctrl+B</code><br><strong>加粗字体或者快捷键Ctrl+B</strong></p>
+<h2 id="字体倾斜"><a href="#字体倾斜" class="headerlink" title="字体倾斜"></a>字体倾斜</h2><p><code>*字体倾斜了* 或者快捷键Ctrl+I</code></p>
+<p><em>字体倾斜了 或者快捷键Ctrl+I</em></p>
+<h2 id="图片的插入"><a href="#图片的插入" class="headerlink" title="图片的插入"></a>图片的插入</h2><p><img src="https://support.typora.io/media/about-image/drag-img.gif" alt="drag-img"></p>
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>`第一种：<span class="exturl" data-url="aHR0cDovL3d3dy5zaW1iYS5jb20v">http://www.simba.com<i class="fa fa-external-link-alt"></i></span></p>
+<p><code>第二种：快捷键Ctrl+K</code></p>
+<p><code>[自定义内容](超链接地址) </code></p>
+<p>超链接在Typora显示形式是：（必须以http开头）<br>第一种：<span class="exturl" data-url="aHR0cDovL3d3dy5zaW1iYS5jb20v">http://www.simba.com<i class="fa fa-external-link-alt"></i></span></p>
+<p>第二种：<a href="www.baidu.com">百度一下</a></p>
+<p>按住Ctrl键+点击上面链接就可以直接访问该链接</p>
+<h2 id="代码区域"><a href="#代码区域" class="headerlink" title="代码区域"></a>代码区域</h2><p>Typora支持对多种语言的代码区域进行语法高亮。这些语言可以说是涵盖了绝大部分经常使用的编程语言，包括C++，Python，MATLAB，甚至包含spreadsheet（也就是Excel电子表格）。用Typora记编程笔记，看起来一清二楚。如果设置代码语言为flow，那么可以直接画出一个流程图；还可以使用相应的方法画出时序图等图表。</p>
+<p><code> ```+编程语言：例如java代码：```java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Typora</span></span>&#123;</span><br><span class="line">  	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Typora&quot;</span>);</span><br><span class="line">  	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="表格的使用"><a href="#表格的使用" class="headerlink" title="表格的使用"></a>表格的使用</h2><p>快捷键Ctrl+T，会自动跳出设置行和列的设置框，</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><p><code>-[] 文字</code></p>
+<ul>
+<li><input disabled="" type="checkbox"> 文字 </li>
+</ul>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>列表的使用格式</p>
+<p><code>+、- 、* 创建无序列，任意数字开始+空格创建有序列表</code></p>
+<ul>
+<li>java</li>
+</ul>
+<h2 id="数学表达式"><a href="#数学表达式" class="headerlink" title="数学表达式"></a>数学表达式</h2><p>Typora支持加入用LaTeX写成的数学公式，并且在软件界面下用MathJax直接渲染。</p>
+<p>数学公式分为两种：</p>
+<p>一种是行内公式(inline math)，可以在偏好设置中单独打开，由一个美元符号$将公式围起来；</p>
+<p>一种是行外公式，直接按Ctrl+Shift+M；</p>
+<p>注：上标和下标可以使用数学表达式来获取</p>
+<h2 id="水平分割线"><a href="#水平分割线" class="headerlink" title="水平分割线"></a>水平分割线</h2><p><code>***或者- - -</code></p>
+<hr>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p><code>&gt;+空格</code></p>
+<blockquote>
+<p>空格</p>
+</blockquote>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p><code>要添加注释的文字[^注释内容]</code></p>
+<p>要添加注释的文字[^注释内容]</p>
+<h2 id="Typora快捷键"><a href="#Typora快捷键" class="headerlink" title="Typora快捷键"></a>Typora快捷键</h2><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+L</td>
+<td>选中某句话</td>
+<td>Ctrl+D</td>
+<td>选中某个单词</td>
+</tr>
+<tr>
+<td>Ctrl+E</td>
+<td>选中相同格式的文字</td>
+<td>Ctrl+H</td>
+<td>搜索并替换</td>
+</tr>
+<tr>
+<td>Ctrl+F</td>
+<td>搜索</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>个人杂谈</category>
+      </categories>
+      <tags>
+        <tag>个人杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Future Plan</title>
+    <url>/post/16234.html</url>
+    <content><![CDATA[<h2 id="Life-Designing"><a href="#Life-Designing" class="headerlink" title="Life Designing"></a>Life Designing</h2><h3 id="What’s-the-most-interesting-design-problem"><a href="#What’s-the-most-interesting-design-problem" class="headerlink" title="What’s the most interesting design problem?"></a>What’s the most interesting design problem?</h3><pre><code>I think it&#39;s your life. As this life of yours, this amazing design of yours unfolds.
+</code></pre>
+<span id="more"></span>
+<h2 id="Designing-Thinking"><a href="#Designing-Thinking" class="headerlink" title="Designing Thinking"></a>Designing Thinking</h2><pre><code>Designing thinking is a set of mindsets. Reality has the tendency to throw little things at us that we weren&#39;t expecting. Some of them are good, some are not.
+</code></pre>
+<h2 id="Questions-Not-Appropriate"><a href="#Questions-Not-Appropriate" class="headerlink" title="Questions Not Appropriate"></a>Questions Not Appropriate</h2><pre><code>What&#39;s your passion?
+    It brings up to me the movie *Soul*.
+You should know where you&#39;re going by now.
+    But what exactly are you late for?
+Are you being the best possible version of you?
+    Life is anything but linear.
+</code></pre>
+<h3 id="Connecting-Dots"><a href="#Connecting-Dots" class="headerlink" title="Connecting Dots"></a>Connecting Dots</h3><pre><code>1. Who you are?
+
+2. What you believe?
+
+3. What you do?
+</code></pre>
+<h2 id="Designing-The-Future"><a href="#Designing-The-Future" class="headerlink" title="Designing The Future"></a>Designing The Future</h2><h3 id="Accepting-The-Gravity-Problem"><a href="#Accepting-The-Gravity-Problem" class="headerlink" title="Accepting The Gravity Problem"></a>Accepting The Gravity Problem</h3><pre><code>You can&#39;t solve a problem you&#39;re not willing to have.
+</code></pre>
+<h3 id="You-Could-Have-Many-Lives-In-Parallel"><a href="#You-Could-Have-Many-Lives-In-Parallel" class="headerlink" title="You Could Have Many Lives In Parallel"></a>You Could Have Many Lives In Parallel</h3><pre><code>It&#39;s what you choose in life that makes you happy
+</code></pre>
+<h3 id="Ideal-Three-Of-You"><a href="#Ideal-Three-Of-You" class="headerlink" title="Ideal Three Of You"></a>Ideal Three Of You</h3><pre><code>1. Your life is getting better.
+
+2. Back up plan
+
+3. Wild-card plan
+</code></pre>
+<h3 id="What-If-I-Try-This"><a href="#What-If-I-Try-This" class="headerlink" title="What If I Try This"></a>What If I Try This</h3><pre><code>1. The future is already here it&#39;s just unevenly distributed
+
+2. There are someone else in the world who is doing what I like. They are living in my future now.
+
+3. I&#39;m going to sneak up on the future because I don&#39;t know if this is exactly what I want.
+</code></pre>
+<h3 id="How-Do-You-Know-When-You-Know-You-Know"><a href="#How-Do-You-Know-When-You-Know-You-Know" class="headerlink" title="How Do You Know When You Know You Know"></a>How Do You Know When You Know You Know</h3><pre><code>1. Pay attention to what you&#39;re doing and keep your perpheral vision open.
+
+2. When you have too many choices you have no choice.
+
+3. You won&#39;t decide how you feel about the decision till the decision is made.
+
+4. Wanting what you get not getting what you want.
+</code></pre>
+]]></content>
+      <categories>
+        <category>个人杂谈</category>
+      </categories>
+      <tags>
+        <tag>个人杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/post/16107.html</url>
     <content><![CDATA[<p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo<i class="fa fa-external-link-alt"></i></span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv">documentation<i class="fa fa-external-link-alt"></i></span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=">troubleshooting<i class="fa fa-external-link-alt"></i></span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">GitHub<i class="fa fa-external-link-alt"></i></span>.</p>
@@ -1658,15 +1818,19 @@ int NodeCount(BiTree T) &#123;
       </tags>
   </entry>
   <entry>
-    <title>Java进阶学习笔记（八）package和import</title>
+    <title>Java进阶学习笔记（五）package和import</title>
     <url>/post/20061.html</url>
-    <content><![CDATA[<h2 id="package和import"><a href="#package和import" class="headerlink" title="package和import"></a>package和import</h2><p>包机制<br>为了方便程序管理，不同功能的类，分别存放在不同的包下</p>
-<h3 id="package"><a href="#package" class="headerlink" title="package"></a>package</h3><p>包（package）</p>
+    <content><![CDATA[<h2 id="package和import">package和import</h2>
+<p>包机制<br>
+为了方便程序管理，不同功能的类，分别存放在不同的包下</p>
+<h3 id="package">package</h3>
+<p>包（package）</p>
 <ul>
 <li>把功能相似或相关的类组织在同一个包中</li>
 <li>包也采用了树形目录的存储方式</li>
 <li>通过包也可限定类的访问权限</li>
-<li>包的命名规范<ul>
+<li>包的命名规范
+<ul>
 <li>包采用“逆域名法”进行命名，用”.”分割，单词全部小写</li>
 <li>标准格式 域名后缀.组织机构名.项目名[.模块名].包的职能</li>
 <li>类中需要声明隶属于的包</li>
@@ -1675,28 +1839,33 @@ int NodeCount(BiTree T) &#123;
 </ul>
 <ol>
 <li>package出现在Java源文件第一行</li>
-<li>带有包名的编译<ul>
+<li>带有包名的编译
+<ul>
 <li>javac -d . xxx.java</li>
 </ul>
 </li>
 <li>运行 Java完整类名</li>
 </ol>
-<h3 id="import"><a href="#import" class="headerlink" title="import"></a>import</h3><p>Import关键词用于导入其他包的类</p>
+<h3 id="import">import</h3>
+<p>Import关键词用于导入其他包的类</p>
 <ol>
-<li>import什么时候不需要<ul>
+<li>import什么时候不需要
+<ul>
 <li>java.lang不需要</li>
 <li>同包不需要</li>
 <li>其他都需要</li>
 </ul>
 </li>
-<li>语法<ul>
+<li>语法
+<ul>
 <li><code>import 完整类名</code></li>
 <li><code>import 包名.*</code></li>
 <li>import只能出现在package语句之下，class声明语句之上</li>
 </ul>
 </li>
 </ol>
-<h3 id="访问控制权限修饰符"><a href="#访问控制权限修饰符" class="headerlink" title="访问控制权限修饰符"></a>访问控制权限修饰符</h3><p>访问修饰符用于控制类、成员变量、方法的访问范围</p>
+<h3 id="访问控制权限修饰符">访问控制权限修饰符</h3>
+<p>访问修饰符用于控制类、成员变量、方法的访问范围</p>
 <ul>
 <li>Private 私有 只能在类的内部访问</li>
 <li>Public 公共 在任何地方都能访问</li>
@@ -1704,7 +1873,8 @@ int NodeCount(BiTree T) &#123;
 <li>Protected 继承 只有继承的子类能访问到</li>
 </ul>
 <ol>
-<li>访问控制权限可以修饰什么？<ul>
+<li>访问控制权限可以修饰什么？
+<ul>
 <li>4个属性</li>
 <li>4个方法</li>
 <li>类（public和默认）</li>
@@ -1714,7 +1884,7 @@ int NodeCount(BiTree T) &#123;
 </ol>
 ]]></content>
       <categories>
-        <category>Java基础</category>
+        <category>Java进阶</category>
       </categories>
       <tags>
         <tag>JavaSE基础</tag>

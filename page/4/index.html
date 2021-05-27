@@ -201,7 +201,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -214,7 +214,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -239,7 +239,7 @@
         <h3 class="widget-title"></h3>
         <div id="myCanvasContainer" class="widget tagcloud">
         <canvas width="250" height="250" id="resCanvas" style="width=100%">
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag">JavaSE基础</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" rel="tag">Java集合框架</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">8</span></li></ul>
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE%E5%9F%BA%E7%A1%80/" rel="tag">JavaSE基础</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" rel="tag">Java集合框架</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AA%E4%BA%BA%E6%9D%82%E8%B0%88/" rel="tag">个人杂谈</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">8</span></li></ul>
         </canvas>
         </div>
         </div>
@@ -266,6 +266,301 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/6688.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/6688.html" class="post-title-link" itemprop="url">Java学习笔记（六）关键字static、this、super</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-30 19:30:06" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:06+08:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-05-27 19:15:18" itemprop="dateModified" datetime="2021-05-27T19:15:18+08:00">2021-05-27</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaSE%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaSE基础</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Static"><a href="#Static" class="headerlink" title="Static"></a>Static</h2><ol>
+<li>Static意为静态</li>
+<li>所有static关键字修饰的都是类相关的，类级别的</li>
+<li>所有static修饰的都是采用类名.的方式访问</li>
+<li>Static修饰的变量：静态变量</li>
+<li>Static修饰的方法：静态方法</li>
+<li>实例相关的，都是对象相关的，引用.的方式访问，需要先new对象（可能空指针异常）</li>
+<li>静态相关的，都是类相关的，类名.的方式访问，不需要new对象</li>
+</ol>
+<h3 id="一．变量的分类"><a href="#一．变量的分类" class="headerlink" title="一．变量的分类"></a>一．变量的分类</h3><ol>
+<li>根据声明的位置进行划分<ol>
+<li>在方法体中声明的变量：局部变量</li>
+<li>在方法体外声明的变量：成员变量</li>
+</ol>
+<ul>
+<li>实例变量 无static</li>
+<li>静态变量 有static</li>
+<li>实例方法 无static</li>
+<li>静态方法 有static</li>
+</ul>
+</li>
+</ol>
+<h3 id="二．什么时候声明实例变量，什么时候声明静态变量"><a href="#二．什么时候声明实例变量，什么时候声明静态变量" class="headerlink" title="二．什么时候声明实例变量，什么时候声明静态变量"></a>二．什么时候声明实例变量，什么时候声明静态变量</h3><ol>
+<li>静态变量在类加载时初始化分配好空间，不需要new对象</li>
+<li>静态变量储存在方法区</li>
+<li>所有对象的某个属性值都是一样的，不建议定义为实例变量（对象级别），建议定义为静态变量（类级别）</li>
+</ol>
+<h3 id="三．什么时候定义实例方法，什么时候定义静态方法"><a href="#三．什么时候定义实例方法，什么时候定义静态方法" class="headerlink" title="三．什么时候定义实例方法，什么时候定义静态方法"></a>三．什么时候定义实例方法，什么时候定义静态方法</h3><ol>
+<li>当这个方法体当中，直接访问了实例变量，这个方法一定是实例方法。</li>
+<li>工具类当中的方法，一般都是静态的。</li>
+</ol>
+<h3 id="四．静态代码块"><a href="#四．静态代码块" class="headerlink" title="四．静态代码块"></a>四．静态代码块</h3><ol>
+<li>Static{<br>静态代码块；<br>}</li>
+<li>Static静态代码块什么时候执行呢？<ol>
+<li>类加载时执行，并且只执行一次</li>
+<li>静态代码块，在main方法之前执行，自上而下的顺序执行</li>
+</ol>
+</li>
+<li>静态代码块作用<ol>
+<li>不常用（不是吗，每个类都要写）</li>
+<li>提供一个类加载的时间点（例如日志信息）</li>
+</ol>
+</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/6688.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://beyondreamer.github.io/post/35965.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Beyondreamer">
+      <meta itemprop="description" content="Try to make anything that happens into something of value.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Beyondreamer">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/35965.html" class="post-title-link" itemprop="url">Java学习笔记（五）构造方法和封装</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-30 19:30:05" itemprop="dateCreated datePublished" datetime="2021-03-30T19:30:05+08:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-05-27 19:15:12" itemprop="dateModified" datetime="2021-05-27T19:15:12+08:00">2021-05-27</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaSE%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaSE基础</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>827</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="一．构造方法constructor"><a href="#一．构造方法constructor" class="headerlink" title="一．构造方法constructor"></a>一．构造方法constructor</h2><h3 id="1．什么是构造方法"><a href="#1．什么是构造方法" class="headerlink" title="1．什么是构造方法"></a>1．什么是构造方法</h3><ol>
+<li><p>构造方法也是一个特殊的方法，通过构造方法可以完成对象的创建，以及实例变量的初始化，换句话来说，构造方法是用来创建对象，并同时给对象的属性赋值</p>
+</li>
+<li><p>语法结构</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[修饰符列表] 构造方法名 (形式参数列表)&#123;</span><br><span class="line">    构造方法体</span><br><span class="line">    通常在构造方法体中给属性赋值，完成属性的初始化</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修饰符列表public</li>
+<li>构造方法名必须和类名一致</li>
+<li>构造方法不需要指定返回值类型</li>
+</ul>
+</li>
+<li><p>调用构造方法</p>
+</li>
+</ol>
+<p><code>New 构造方法名(实际参数列表)</code></p>
+<ul>
+<li>当一个类中手动的提供了构造方法，那么系统将不再提供无参数的构造方法（建议把无参数构造方法写出来）</li>
+<li>当一个类没有提供任何构造方法，系统会默认构造一个没有参数的构造方法（缺省构造器）</li>
+<li>无参数构造方法和有参数构造方法都可以调用</li>
+<li>无参数构造方法虽然没有代码但是默认在这里赋系统默认值</li>
+<li>构造方法可以重载</li>
+</ul>
+<h2 id="二．封装"><a href="#二．封装" class="headerlink" title="二．封装"></a>二．封装</h2><h3 id="1．封装的作用"><a href="#1．封装的作用" class="headerlink" title="1．封装的作用"></a>1．封装的作用</h3><ol>
+<li>保证内部结构的安全</li>
+<li>屏蔽复杂，暴露简单</li>
+</ol>
+<h3 id="2．怎么进行封装"><a href="#2．怎么进行封装" class="headerlink" title="2．怎么进行封装"></a>2．怎么进行封装</h3><ol>
+<li>属性私有化（private）<ul>
+<li>Private表示私有的，被这个关键字修饰之后，该数据只能在本类中访问，出类不能访问。</li>
+</ul>
+</li>
+<li>对外提供简单的操作入口<ol>
+<li>带有static的方法</li>
+<li>不带有static的方法，用new对象引用去访问</li>
+</ol>
+<ul>
+<li>称为实例方法，对象级别的方法（对象被称为实例，实例相关的都需要new对象，和引用来访问）</li>
+</ul>
+</li>
+<li>空指针异常导致的最本质的原因是？<ol>
+<li>空引用访问实例相关的数据，会导致空指针异常</li>
+<li>实例相关的包括，实例变量+实例方法</li>
+</ol>
+</li>
+<li>对外提供公开的get方法和set方法作为操作入口，并且都不带static</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/35965.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -824,14 +1119,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">50k</span>
+    <span title="站点总字数">52k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">45 分钟</span>
+    <span title="站点阅读时长">48 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
